@@ -528,10 +528,17 @@ async function init() {
 // Ejecutar el script
 init();
 
-// Analizer funcionando bien.
-// Agregar deteccion de productOptions.
-// Revisar categorias. Ok, pero no las borra, deberia ser como los tags.
-// Revisar tags. Ok.
+// Revisar productOptions.
+// Revisar categorias.
+// Revisar tags.
+
+// Colors debe pasar a tags. 
+
+// Archivo para crear las categorias reales en base al categories.json
+// Archivo para crear las tags reales en base al tags.json
+// Archivo para crear las productOptions reales en base al productOptions.json
+
+
 
 // Una vez todo lo de arriba esta ok, vamos con los productos.
 // Que pasa con los repetidos o que ya no estan mas? 
