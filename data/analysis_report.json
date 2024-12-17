@@ -1,0 +1,1492 @@
+{
+  "categories": [
+    {
+      "id": "14440085-f93a-4fbf-8451-d5c5c38c6909",
+      "path": [
+        "Deportes",
+        "Fútbol"
+      ],
+      "name": "Futbol",
+      "description": "Deporte fútbol"
+    },
+    {
+      "id": "a30874f1-18ce-4283-ae6e-06dfdce37393",
+      "path": [
+        "Productos",
+        "Camisetas"
+      ],
+      "name": "Camisetas",
+      "description": "Indumentaria camisetas"
+    },
+    {
+      "id": "f4c9073b-5a60-4334-8f53-733e20a82aed",
+      "path": [
+        "Productos",
+        "Retro"
+      ],
+      "name": "Retro",
+      "description": "Indumentaria retro"
+    },
+    {
+      "id": "4ce22422-8677-4c7a-8a09-5afc3a85227f",
+      "path": [
+        "Productos",
+        "Entrenamiento"
+      ],
+      "name": "Entrenamiento",
+      "description": "Indumentaria entrenamiento"
+    },
+    {
+      "id": "095829ff-e34c-4d5a-8eb7-111aa5fcd526",
+      "path": [
+        "Productos",
+        "Casual",
+        "Remeras"
+      ],
+      "name": "Remeras",
+      "description": "Indumentaria Remeras casual"
+    },
+    {
+      "id": "a0db878d-f534-4441-84db-b674923b470d",
+      "path": [
+        "Productos",
+        "Abrigos",
+        "Rompevientos"
+      ],
+      "name": "Rompevientos",
+      "description": "Indumentaria de abrigo rompeviento"
+    },
+    {
+      "id": "abfb844f-b824-49f0-9470-f21bea6549f9",
+      "path": [
+        "Productos",
+        "Conjuntos"
+      ],
+      "name": "Conjuntos",
+      "description": "Indumentaria conjuntos"
+    }
+  ],
+  "newTags": [
+    {
+      "id": "6e022367-8c9b-49aa-acc8-8179c0c3e545",
+      "name": "2024-25",
+      "type": "temporada",
+      "metadata": {
+        "categoryPath": [
+          "Productos"
+        ]
+      }
+    },
+    {
+      "id": "40778e90-d5a1-423d-b01f-b925f12077e1",
+      "name": "Bayern Munich",
+      "type": "equipo",
+      "metadata": {
+        "categoryPath": [
+          "Deportes",
+          "Fútbol",
+          "Clubes",
+          "Bundesliga"
+        ]
+      }
+    },
+    {
+      "id": "a6ea488f-74bc-44e7-8e51-47a80d8f6e11",
+      "name": "Version Fanatico",
+      "type": "version",
+      "metadata": {
+        "categoryPath": [
+          "Productos"
+        ]
+      }
+    },
+    {
+      "id": "34f11a36-60f1-4fb7-8dd2-02dc58e33c0e",
+      "name": "Edicion Especial",
+      "type": "edicion",
+      "metadata": {
+        "categoryPath": [
+          "Productos"
+        ]
+      }
+    },
+    {
+      "id": "653e3e85-7b88-4958-b879-2546f7a21e62",
+      "name": "Manga Corta",
+      "type": "caracteristica",
+      "metadata": {
+        "categoryPath": [
+          "Productos"
+        ]
+      }
+    },
+    {
+      "id": "d125423b-5dc2-48ef-b571-712014f93dc6",
+      "name": "2003-2004",
+      "type": "temporada",
+      "metadata": {
+        "categoryPath": [
+          "Productos"
+        ]
+      }
+    },
+    {
+      "id": "08ebcb88-3113-4d42-b47c-8e5af1516c67",
+      "name": "Manga Larga",
+      "type": "caracteristica",
+      "metadata": {
+        "categoryPath": [
+          "Productos"
+        ]
+      }
+    },
+    {
+      "id": "b20a0098-2dc3-45ca-9c0e-112f7ad64922",
+      "name": "Everton",
+      "type": "equipo",
+      "metadata": {
+        "categoryPath": [
+          "Deportes",
+          "Fútbol",
+          "Clubes",
+          "Premier League"
+        ]
+      }
+    },
+    {
+      "id": "86dd4a4a-ab57-4919-82e8-342aaf7fa706",
+      "name": "Auxerre",
+      "type": "equipo",
+      "metadata": {
+        "categoryPath": [
+          "Deportes",
+          "Fútbol",
+          "Clubes",
+          "Otros"
+        ]
+      }
+    },
+    {
+      "id": "0b1ad3ab-7355-4116-b9eb-782bbf2f55de",
+      "name": "Local",
+      "type": "edicion",
+      "metadata": {
+        "categoryPath": [
+          "Productos"
+        ]
+      }
+    },
+    {
+      "id": "a8a34f43-d322-41f1-b884-6179276053b2",
+      "name": "Visitante",
+      "type": "edicion",
+      "metadata": {
+        "categoryPath": [
+          "Productos"
+        ]
+      }
+    },
+    {
+      "id": "8d58c21e-36d6-4a91-a491-778620760fa2",
+      "name": "Real Madrid",
+      "type": "equipo",
+      "metadata": {
+        "categoryPath": [
+          "Deportes",
+          "Fútbol",
+          "Clubes",
+          "La Liga"
+        ]
+      }
+    },
+    {
+      "id": "22452cb0-f6cc-47dd-b46d-54b71cd05446",
+      "name": "Blanco",
+      "type": "color",
+      "metadata": {}
+    },
+    {
+      "id": "b925b5ef-363e-45df-8278-959481f85476",
+      "name": "2025-26",
+      "type": "temporada",
+      "metadata": {
+        "categoryPath": [
+          "Productos"
+        ]
+      }
+    },
+    {
+      "id": "378276e0-cf47-4174-8a45-f946e847acc4",
+      "name": "Inter de Milan",
+      "type": "equipo",
+      "metadata": {
+        "categoryPath": [
+          "Deportes",
+          "Fútbol",
+          "Clubes",
+          "Serie A"
+        ]
+      }
+    },
+    {
+      "id": "06b6b559-95e7-478b-a5ee-0f069044d910",
+      "name": "Negro",
+      "type": "color",
+      "metadata": {}
+    },
+    {
+      "id": "84e5e8b1-1a41-4865-9510-537327dba472",
+      "name": "Werder Bremen",
+      "type": "equipo",
+      "metadata": {
+        "categoryPath": [
+          "Deportes",
+          "Fútbol",
+          "Clubes",
+          "Bundesliga"
+        ]
+      }
+    },
+    {
+      "id": "f2ec7fbb-f4a0-4151-b565-d30cdd171690",
+      "name": "Niños",
+      "type": "version",
+      "metadata": {
+        "categoryPath": [
+          "Productos"
+        ]
+      }
+    },
+    {
+      "id": "82188aed-9f6e-4e75-bbe1-d6ecd7533da5",
+      "name": "Alternativa",
+      "type": "edicion",
+      "metadata": {
+        "categoryPath": [
+          "Productos"
+        ]
+      }
+    },
+    {
+      "id": "dc9f213d-cea5-466e-9706-daec298a9d41",
+      "name": "Leicester City",
+      "type": "equipo",
+      "metadata": {
+        "categoryPath": [
+          "Deportes",
+          "Fútbol",
+          "Clubes",
+          "Premier League"
+        ]
+      }
+    },
+    {
+      "id": "61083f19-e47b-40ba-86c6-0496767d587e",
+      "name": "River Plate",
+      "type": "equipo",
+      "metadata": {
+        "categoryPath": [
+          "Deportes",
+          "Fútbol",
+          "Clubes"
+        ]
+      }
+    },
+    {
+      "id": "245a3b48-7378-4d00-bb3c-776ad74a04df",
+      "name": "Arquero",
+      "type": "edicion",
+      "metadata": {
+        "categoryPath": [
+          "Productos"
+        ]
+      }
+    },
+    {
+      "id": "90abd878-99a8-4c3d-98aa-3b66cee5b443",
+      "name": "Verde",
+      "type": "color",
+      "metadata": {}
+    },
+    {
+      "id": "b1b45ac1-c7e1-4834-a93f-921132819d4d",
+      "name": "2024",
+      "type": "temporada",
+      "metadata": {
+        "categoryPath": [
+          "Productos"
+        ]
+      }
+    },
+    {
+      "id": "3ef22eb9-d505-4af2-bf14-22668b5b03e9",
+      "name": "Azul",
+      "type": "color",
+      "metadata": {}
+    },
+    {
+      "id": "ce816e49-3e02-4813-b6d4-96aeb8801f92",
+      "name": "1983-1984",
+      "type": "temporada",
+      "metadata": {
+        "categoryPath": [
+          "Productos"
+        ]
+      }
+    },
+    {
+      "id": "c00a49ef-5dd7-493a-a51b-459408206081",
+      "name": "Cadiz",
+      "type": "equipo",
+      "metadata": {
+        "categoryPath": [
+          "Deportes",
+          "Fútbol",
+          "Clubes",
+          "La Liga"
+        ]
+      }
+    },
+    {
+      "id": "dda043f4-da7e-4800-bdbf-ee7e6bb94c1a",
+      "name": "Version Jugador",
+      "type": "version",
+      "metadata": {
+        "categoryPath": [
+          "Productos"
+        ]
+      }
+    },
+    {
+      "id": "6053d7e5-f439-4346-81b9-24018367141e",
+      "name": "Egypt",
+      "type": "equipo",
+      "metadata": {
+        "categoryPath": [
+          "Deportes",
+          "Fútbol",
+          "Selecciones",
+          "Otros"
+        ]
+      }
+    },
+    {
+      "id": "2f835736-37bd-4d8d-98aa-9c6b9d11d7a9",
+      "name": "Rojo",
+      "type": "color",
+      "metadata": {}
+    },
+    {
+      "id": "8b3446f8-6b57-470c-9908-478494b676de",
+      "name": "Barcelona",
+      "type": "equipo",
+      "metadata": {
+        "categoryPath": [
+          "Deportes",
+          "Fútbol",
+          "Clubes",
+          "La Liga"
+        ]
+      }
+    },
+    {
+      "id": "834e3c75-1a3d-4cfb-9cb1-882dc780ff3a",
+      "name": "Gris",
+      "type": "color",
+      "metadata": {}
+    },
+    {
+      "id": "494c90ca-e235-432a-a664-5530e021923c",
+      "name": "Ghana",
+      "type": "equipo",
+      "metadata": {
+        "categoryPath": [
+          "Deportes",
+          "Fútbol",
+          "Selecciones",
+          "Otros"
+        ]
+      }
+    },
+    {
+      "id": "92e7f204-8c0c-4090-a7be-d231286ba9f9",
+      "name": "Amarillo",
+      "type": "color",
+      "metadata": {}
+    },
+    {
+      "id": "65db86eb-dfb9-4767-9ff6-a043ec04f232",
+      "name": "Argentina",
+      "type": "equipo",
+      "metadata": {
+        "categoryPath": [
+          "Deportes",
+          "Fútbol",
+          "Selecciones",
+          "Copa America"
+        ]
+      }
+    },
+    {
+      "id": "9fd5a5b8-2132-4869-b304-91d4e4b203d9",
+      "name": "Estampado",
+      "type": "color",
+      "metadata": {}
+    },
+    {
+      "id": "3e8de859-bb82-4396-8335-0cec53e7cb5b",
+      "name": "Brasil",
+      "type": "equipo",
+      "metadata": {
+        "categoryPath": [
+          "Deportes",
+          "Fútbol",
+          "Selecciones",
+          "Copa America"
+        ]
+      }
+    },
+    {
+      "id": "f40f2559-a3bc-474a-90bc-49cbacc1162b",
+      "name": "Portugal",
+      "type": "equipo",
+      "metadata": {
+        "categoryPath": [
+          "Deportes",
+          "Fútbol",
+          "Selecciones",
+          "Euro"
+        ]
+      }
+    },
+    {
+      "id": "751c06db-fbed-444b-ad02-ab2dd52a5301",
+      "name": "AC Milan",
+      "type": "equipo",
+      "metadata": {
+        "categoryPath": [
+          "Deportes",
+          "Fútbol",
+          "Clubes",
+          "Serie A"
+        ]
+      }
+    },
+    {
+      "id": "2099eff9-9482-4d7c-96cf-9897e6351674",
+      "name": "2000-2001",
+      "type": "temporada",
+      "metadata": {
+        "categoryPath": [
+          "Productos"
+        ]
+      }
+    },
+    {
+      "id": "1a66275e-e1d0-49fa-84e6-cde4045475f7",
+      "name": "Toluca",
+      "type": "equipo",
+      "metadata": {
+        "categoryPath": [
+          "Deportes",
+          "Fútbol",
+          "Clubes",
+          "Otros"
+        ]
+      }
+    },
+    {
+      "id": "cfb5a965-5fcb-4aa3-bbd7-a3a28d4a91ce",
+      "name": "1999-2000",
+      "type": "temporada",
+      "metadata": {
+        "categoryPath": [
+          "Productos"
+        ]
+      }
+    },
+    {
+      "id": "00944e3d-e481-46cf-bb61-8637433ca444",
+      "name": "Chelsea",
+      "type": "equipo",
+      "metadata": {
+        "categoryPath": [
+          "Deportes",
+          "Fútbol",
+          "Clubes",
+          "Premier League"
+        ]
+      }
+    },
+    {
+      "id": "28f8c461-6a35-470c-ba19-ba4cbbdc83e1",
+      "name": "Arsenal",
+      "type": "equipo",
+      "metadata": {
+        "categoryPath": [
+          "Deportes",
+          "Fútbol",
+          "Clubes",
+          "Premier League"
+        ]
+      }
+    },
+    {
+      "id": "977fa50b-af83-42b9-b433-cb2cc0ef4b09",
+      "name": "Juventus",
+      "type": "equipo",
+      "metadata": {
+        "categoryPath": [
+          "Deportes",
+          "Fútbol",
+          "Clubes",
+          "Serie A"
+        ]
+      }
+    },
+    {
+      "id": "1451c07f-1f30-4d03-a650-9c0136cc1e39",
+      "name": "Monchengladbach",
+      "type": "equipo",
+      "metadata": {
+        "categoryPath": [
+          "Deportes",
+          "Fútbol",
+          "Clubes",
+          "Bundesliga"
+        ]
+      }
+    },
+    {
+      "id": "56a37d2c-c767-443c-a719-3d6f5ce24123",
+      "name": "RC Lens",
+      "type": "equipo",
+      "metadata": {
+        "categoryPath": [
+          "Deportes",
+          "Fútbol",
+          "Clubes",
+          "Ligue 1"
+        ]
+      }
+    },
+    {
+      "id": "cff8ec73-02aa-476e-85f7-5d055793a83c",
+      "name": "Copenhagen",
+      "type": "equipo",
+      "metadata": {
+        "categoryPath": [
+          "Deportes",
+          "Fútbol",
+          "Clubes",
+          "Otros"
+        ]
+      }
+    },
+    {
+      "id": "68d72e76-d00c-4291-a2c8-5be207828805",
+      "name": "Monaco",
+      "type": "equipo",
+      "metadata": {
+        "categoryPath": [
+          "Deportes",
+          "Fútbol",
+          "Clubes",
+          "Ligue 1"
+        ]
+      }
+    },
+    {
+      "id": "3fc527a0-b4a6-464d-8516-90419bd3964f",
+      "name": "Edicion Limitada",
+      "type": "edicion",
+      "metadata": {
+        "categoryPath": [
+          "Productos"
+        ]
+      }
+    },
+    {
+      "id": "9d376075-f550-4e1f-a5a8-dc7f8e0458bf",
+      "name": "Zaragoza",
+      "type": "equipo",
+      "metadata": {
+        "categoryPath": [
+          "Deportes",
+          "Fútbol",
+          "Clubes",
+          "La Liga"
+        ]
+      }
+    },
+    {
+      "id": "2a8f62f1-88b0-4a48-a4af-15e78cf79beb",
+      "name": "1995-1996",
+      "type": "temporada",
+      "metadata": {
+        "categoryPath": [
+          "Productos"
+        ]
+      }
+    },
+    {
+      "id": "c4b52785-f821-46fc-84ad-19a69f6620f7",
+      "name": "Valencia",
+      "type": "equipo",
+      "metadata": {
+        "categoryPath": [
+          "Deportes",
+          "Fútbol",
+          "Clubes",
+          "La Liga"
+        ]
+      }
+    },
+    {
+      "id": "b439313a-effb-4ce8-8922-367704901ce4",
+      "name": "1990-1992",
+      "type": "temporada",
+      "metadata": {
+        "categoryPath": [
+          "Productos"
+        ]
+      }
+    },
+    {
+      "id": "95b7d2ea-dc17-49ec-9cee-378fa0cd8f61",
+      "name": "2019-2020",
+      "type": "temporada",
+      "metadata": {
+        "categoryPath": [
+          "Productos"
+        ]
+      }
+    },
+    {
+      "id": "a6d6236a-cded-43dc-844c-a643a6fae0ba",
+      "name": "Mexico",
+      "type": "equipo",
+      "metadata": {
+        "categoryPath": [
+          "Deportes",
+          "Fútbol",
+          "Selecciones",
+          "Copa America"
+        ]
+      }
+    },
+    {
+      "id": "ad9eb12e-1fe4-4150-8e33-86a41424a97f",
+      "name": "Rayo Vallecano",
+      "type": "equipo",
+      "metadata": {
+        "categoryPath": [
+          "Deportes",
+          "Fútbol",
+          "Clubes",
+          "La Liga"
+        ]
+      }
+    },
+    {
+      "id": "e2f1dc56-d769-4404-9801-cc1dca86f727",
+      "name": "Atalanta",
+      "type": "equipo",
+      "metadata": {
+        "categoryPath": [
+          "Deportes",
+          "Fútbol",
+          "Clubes",
+          "Serie A"
+        ]
+      }
+    },
+    {
+      "id": "8160f972-8707-4ee9-8d9b-8f33000598fa",
+      "name": "Conjuntos",
+      "type": "product_type",
+      "metadata": {
+        "categoryPath": [
+          "Productos"
+        ]
+      }
+    },
+    {
+      "id": "63a53bc3-fe15-4f9b-84b2-dbd00d8230fd",
+      "name": "Rompevientos",
+      "type": "caracteristica",
+      "metadata": {
+        "categoryPath": [
+          "Productos"
+        ]
+      }
+    }
+  ],
+  "unrecognizedTerms": [
+    "125th",
+    "Havre",
+    "Athletic",
+    "Purple",
+    "Miami",
+    "Palmas",
+    "Light"
+  ],
+  "unmappedOptions": {
+    "badges": [
+      {
+        "matches": [
+          "No Badge"
+        ],
+        "type": "badge",
+        "price": 0,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/17/e/8/e80a811156ddf959.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "Bundesliga (德普章)"
+        ],
+        "type": "badge",
+        "price": 1,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/17/1/c/1c8b2e3d86130fe3.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "UCL(新平条 6)右袖"
+        ],
+        "type": "badge",
+        "price": 2,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/17/b/a/ba8fd6939ccc0bf8.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "No Badge"
+        ],
+        "type": "badge",
+        "price": 0,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/17/b/8/b88f1b364c8202be.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "La Liga +23/24C (红冠军+45西甲)右袖"
+        ],
+        "type": "badge",
+        "price": 2,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/17/9/9/991dc3efe982de61.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "UCL (新平条/大耳杯15) 右袖"
+        ],
+        "type": "badge",
+        "price": 2,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/17/4/c/4c41b825baa83f7b.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "No Badge"
+        ],
+        "type": "badge",
+        "price": 0,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/17/2/9/29e135fdc9819c00.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "MLS /TV (专用色/章下粉TV)印左袖"
+        ],
+        "type": "badge",
+        "price": 1.5,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/17/b/b/bb03d51591b41af6.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "MLS /TV +Fra. GR. (专用色/章下粉TV+右袖广告)"
+        ],
+        "type": "badge",
+        "price": 3,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/17/a/1/a1688afe5bf708d1.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "No Badge"
+        ],
+        "type": "badge",
+        "price": 0,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/17/3/f/3fffe9ab950100c0.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "Bundesliga (德普章)"
+        ],
+        "type": "badge",
+        "price": 1,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/17/7/1/71a91693f7c4a653.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "No Badge"
+        ],
+        "type": "badge",
+        "price": 0,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/17/6/4/6439aafeb27a0597.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "Premier League (34英超普)"
+        ],
+        "type": "badge",
+        "price": 1,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/17/e/0/e0adc9e981e60478.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "La Liga (45西甲章)"
+        ],
+        "type": "badge",
+        "price": 1,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/17/0/e/0e35407942b61480.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "No Badge"
+        ],
+        "type": "badge",
+        "price": 0,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/5/7/577d8a6cebc7abd2.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "2026 World Cup Qualifying (世预选)"
+        ],
+        "type": "badge",
+        "price": 2,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/d/7/d7c2e730236a2430.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "No Badge"
+        ],
+        "type": "badge",
+        "price": 0,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/17/3/e/3e9454095cecfdfa.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "MLS /TV (专用色/章下粉TV)印左袖"
+        ],
+        "type": "badge",
+        "price": 1.5,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/17/3/0/30f4fc8253b6a365.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "MLS /TV +Fra. GR. (专用色/章下粉TV+右袖广告)"
+        ],
+        "type": "badge",
+        "price": 3,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/17/2/8/2806cdcf73a4145a.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "No Badge"
+        ],
+        "type": "badge",
+        "price": 0,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/f/8/f8e955b697d72721.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "La Liga (45西甲章)"
+        ],
+        "type": "badge",
+        "price": 1,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/e/8/e848a7b2387469c2.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "UCL (新平条 5)右袖"
+        ],
+        "type": "badge",
+        "price": 2,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/0/d/0d9b4f7095c090ef.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "No Badge"
+        ],
+        "type": "badge",
+        "price": 0,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/e/5/e565d99bd529df15.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "2026 World Cup Qualifying (世预选)"
+        ],
+        "type": "badge",
+        "price": 2,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/2/4/244dc1739aabfc82.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "No Badge"
+        ],
+        "type": "badge",
+        "price": 0,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/0/f/0f0d4a4a6026f784.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "2026FWC Qualifying (世预赛)"
+        ],
+        "type": "badge",
+        "price": 2,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/5/d/5db94e1fa308dec0.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "No Badge"
+        ],
+        "type": "badge",
+        "price": 0,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/f/0/f0cd195f50c4ac7d.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "2026FWC Qualifying (世预赛)"
+        ],
+        "type": "badge",
+        "price": 2,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/7/0/70bbc9927d56a19f.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "No Badge"
+        ],
+        "type": "badge",
+        "price": 0,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/6/4/641de1bb045d59e9.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "Serie A (意甲45)"
+        ],
+        "type": "badge",
+        "price": 1,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/f/9/f914017bce28acbe.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "UCL (新平条 7)右袖"
+        ],
+        "type": "badge",
+        "price": 2,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/1/a/1a97d934efdcbe3b.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "Premier league (34英超普)"
+        ],
+        "type": "badge",
+        "price": 1,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/1/f/1f0c70870b1ff851.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "Pre L + NO..for (34英超普+章下字)"
+        ],
+        "type": "badge",
+        "price": 2,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/a/5/a5fe84cd04fb3bc5.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "UECL(欧会杯45)右袖"
+        ],
+        "type": "badge",
+        "price": 2,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/d/4/d418ad790ac91c1e.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "Pre L +NO.or+ Flower (英超/章下字+红花)"
+        ],
+        "type": "badge",
+        "price": 3,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/3/2/32f4c6a47b7b9434.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "Carabao Cup (英联赛杯)右袖"
+        ],
+        "type": "badge",
+        "price": 1,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/f/7/f70df2f88f8ebdab.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "No Badge"
+        ],
+        "type": "badge",
+        "price": 0,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/9/c/9ce758d296a89a2d.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "No Badge"
+        ],
+        "type": "badge",
+        "price": 0,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/2/7/27f5938902142ae6.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "La Liga +23/24C (红冠军+45西甲)右袖"
+        ],
+        "type": "badge",
+        "price": 2,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/6/8/686e84c18c0004f3.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "UCL (新平条/大耳杯15) 右袖"
+        ],
+        "type": "badge",
+        "price": 2,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/8/3/8371526d80c58eaf.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "No Badge"
+        ],
+        "type": "badge",
+        "price": 0,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/0/d/0d1b75f170320b9b.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "Serie A (意甲45)"
+        ],
+        "type": "badge",
+        "price": 1,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/4/6/462e2dd4ce4860bd.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "UCL (欧冠新章)右袖"
+        ],
+        "type": "badge",
+        "price": 2,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/a/0/a0acf265b53042a0.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "No Badge"
+        ],
+        "type": "badge",
+        "price": 0,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/8/e/8e23151753d96624.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "Shield (冠军盾20)"
+        ],
+        "type": "badge",
+        "price": 1,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/6/5/65db16ccbf52eaba.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "Serie A +Shield (意甲45+冠军盾20)"
+        ],
+        "type": "badge",
+        "price": 2,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/2/9/29276c6c26b0554b.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "UCL +Shield (欧冠+冠军盾20)"
+        ],
+        "type": "badge",
+        "price": 3,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/f/1/f13917a931afeee8.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "Sonepar (左袖广告)"
+        ],
+        "type": "badge",
+        "price": 0,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/8/1/8120ece630f938df.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "Bundesliga +Sonepar (德普章+左袖广告)"
+        ],
+        "type": "badge",
+        "price": 1,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/2/7/273bb0d84fe23ed3.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "No Badge"
+        ],
+        "type": "badge",
+        "price": 0,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/8/4/843c1956113075cd.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "Ligue1 (45法甲黑)"
+        ],
+        "type": "badge",
+        "price": 1,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/5/a/5a468395af88d6cd.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "No Badge"
+        ],
+        "type": "badge",
+        "price": 0,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/f/3/f391f878b59cd4f6.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "Ligue1 (45法甲黑)"
+        ],
+        "type": "badge",
+        "price": 1,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/7/3/736c26b4c0b5f98b.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "No Badge"
+        ],
+        "type": "badge",
+        "price": 0,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/8/9/898cd9f3ff7b147b.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "UECL(欧会杯45)右袖"
+        ],
+        "type": "badge",
+        "price": 2,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/8/9/890e8174942ec559.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "No Badge"
+        ],
+        "type": "badge",
+        "price": 0,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/c/a/ca6bcb6dfadb787b.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "Ligue1 (45法甲黑)"
+        ],
+        "type": "badge",
+        "price": 1,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/a/d/ad5b8c77cdbeb4f5.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "UCL (欧冠新章)右袖"
+        ],
+        "type": "badge",
+        "price": 2,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/2/f/2fea7d4e6c5b5fc8.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "La Liga +MGS.. (45西甲章+左袖广告)"
+        ],
+        "type": "badge",
+        "price": 1,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/0/7/07b915e429e4c8c9.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "La Liga (45西甲章)"
+        ],
+        "type": "badge",
+        "price": 1,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/e/7/e7cded08f771a44b.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "No Badge"
+        ],
+        "type": "badge",
+        "price": 0,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/a/6/a694cbce20e6746a.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "Serie A (意甲45)"
+        ],
+        "type": "badge",
+        "price": 1,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/8/6/867246f2b8d20d66.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      },
+      {
+        "matches": [
+          "UEL 2024 Winners (欧冠-亚特兰大)右袖"
+        ],
+        "type": "badge",
+        "price": 2,
+        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/16/8/d/8d4a09dbabbd4f43.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+      }
+    ],
+    "customize": [
+      {
+        "matches": [
+          "No Name No Number"
+        ],
+        "type": "customize",
+        "price": 0
+      },
+      {
+        "matches": [
+          "Name / Number (FC BAY.. MUN..)(带广告-名在号下)"
+        ],
+        "type": "customize",
+        "price": 4
+      },
+      {
+        "matches": [
+          "Name / Number"
+        ],
+        "type": "customize",
+        "price": 3
+      },
+      {
+        "matches": [
+          "Name/ Number"
+        ],
+        "type": "customize",
+        "price": 3
+      },
+      {
+        "matches": [
+          "Name / Number (WERDER) (上带广告-名在号下)"
+        ],
+        "type": "customize",
+        "price": 4
+      },
+      {
+        "matches": [
+          "Name / Number (Pre League Fonts)联赛字体"
+        ],
+        "type": "customize",
+        "price": 3
+      },
+      {
+        "matches": [
+          "Name / Number (La Liga Fonts)联赛字体"
+        ],
+        "type": "customize",
+        "price": 3
+      },
+      {
+        "matches": [
+          "No Name Number"
+        ],
+        "type": "customize",
+        "price": 0
+      },
+      {
+        "matches": [
+          "Name / Number (La Liga Fonts) 联赛带吼"
+        ],
+        "type": "customize",
+        "price": 3
+      },
+      {
+        "matches": [
+          "Name / Number (UCL Fonts) 欧冠字体"
+        ],
+        "type": "customize",
+        "price": 4
+      },
+      {
+        "matches": [
+          "Name / Number (专用周年标)"
+        ],
+        "type": "customize",
+        "price": 3
+      },
+      {
+        "matches": [
+          "Name / Number (名在号下)"
+        ],
+        "type": "customize",
+        "price": 3
+      },
+      {
+        "matches": [
+          "Number"
+        ],
+        "type": "customize",
+        "price": 3
+      },
+      {
+        "matches": [
+          "Name / Number (Cup match Fonts)杯赛字体"
+        ],
+        "type": "customize",
+        "price": 4
+      },
+      {
+        "matches": [
+          "Name/ Number (名在号下)"
+        ],
+        "type": "customize",
+        "price": 3
+      },
+      {
+        "matches": [
+          "Name / Number ( Ligue1 Fonts )联赛字体"
+        ],
+        "type": "customize",
+        "price": 3
+      }
+    ],
+    "sizes": [
+      {
+        "matches": [
+          "S"
+        ],
+        "type": "size",
+        "price": 0
+      },
+      {
+        "matches": [
+          "M"
+        ],
+        "type": "size",
+        "price": 0
+      },
+      {
+        "matches": [
+          "L"
+        ],
+        "type": "size",
+        "price": 0
+      },
+      {
+        "matches": [
+          "XL"
+        ],
+        "type": "size",
+        "price": 0
+      },
+      {
+        "matches": [
+          "XXL"
+        ],
+        "type": "size",
+        "price": 0
+      },
+      {
+        "matches": [
+          "16"
+        ],
+        "type": "size",
+        "price": 0
+      },
+      {
+        "matches": [
+          "18"
+        ],
+        "type": "size",
+        "price": 0
+      },
+      {
+        "matches": [
+          "20"
+        ],
+        "type": "size",
+        "price": 0
+      },
+      {
+        "matches": [
+          "22"
+        ],
+        "type": "size",
+        "price": 0
+      },
+      {
+        "matches": [
+          "24"
+        ],
+        "type": "size",
+        "price": 0
+      },
+      {
+        "matches": [
+          "26"
+        ],
+        "type": "size",
+        "price": 0
+      },
+      {
+        "matches": [
+          "28"
+        ],
+        "type": "size",
+        "price": 0
+      },
+      {
+        "matches": [
+          "Adult Size S"
+        ],
+        "type": "size",
+        "price": 0
+      },
+      {
+        "matches": [
+          "Adult Size M"
+        ],
+        "type": "size",
+        "price": 0
+      },
+      {
+        "matches": [
+          "Adult Size L"
+        ],
+        "type": "size",
+        "price": 0
+      },
+      {
+        "matches": [
+          "Adult Size XL"
+        ],
+        "type": "size",
+        "price": 0
+      },
+      {
+        "matches": [
+          "Adult Size XXL"
+        ],
+        "type": "size",
+        "price": 0
+      }
+    ],
+    "colors": []
+  },
+  "statistics": {
+    "totalProducts": 50,
+    "processedProducts": 50,
+    "totalPages": 1,
+    "newTagsFound": 60,
+    "newCategoriesFound": 7,
+    "unrecognizedTermsFound": 7,
+    "newOptionsFound": {
+      "badges": 63,
+      "customize": 16,
+      "sizes": 17,
+      "colors": 0
+    }
+  }
+}

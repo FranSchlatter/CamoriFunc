@@ -1,0 +1,10 @@
+{
+  "name": "grkits-scraper",
+  "version": "1.0.0",
+  "description": "Web scraper for grkits3.com",
+  "main": "scraper.js",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "cheerio": "^1.0.0-rc.12"
+  }
+}
