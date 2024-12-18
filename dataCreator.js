@@ -1,5 +1,6 @@
 const fs = require('fs').promises;
 const path = require('path');
+const crypto = require('crypto');
 
 // Paths
 const DATA_DIR = path.join(__dirname, 'data');
@@ -10,9 +11,9 @@ const PRODUCT_OPTIONS_PATH = path.join(DATA_DIR, 'productOptions.json');
 
 // Storage for logs
 const logs = {
-  categories: { created: [], errors: [] },
-  tags: { created: [], errors: [] },
-  productOptions: { created: [], errors: [] }
+  categories: { created: [], skipped: [], errors: [] },
+  tags: { created: [], skipped: [], errors: [] },
+  productOptions: { created: [], skipped: [], errors: [] }
 };
 
 // Utility functions
@@ -32,108 +33,198 @@ async function writeJsonFile(filePath, data) {
   await fs.writeFile(filePath, JSON.stringify(data, null, 2), 'utf8');
 }
 
+// Build hierarchical category structure
+function buildCategoryTree(categories) {
+  const categoryMap = new Map();
+  const rootCategories = [];
+
+  // Crear Map con todas las categorías
+  categories.forEach(cat => {
+    const pathString = cat.path.join('/');
+    categoryMap.set(pathString, {
+      id: crypto.randomUUID(),
+      name: cat.name,
+      description: cat.description,
+      subcategories: []
+    });
+  });
+
+  // Procesar cada nivel de path y crear si no existe
+  categories.forEach(cat => {
+    const pathParts = cat.path;
+    let currentPath = '';
+    
+    // Crear categorías padre si no existen
+    for (let i = 0; i < pathParts.length - 1; i++) {
+      const parentPath = pathParts.slice(0, i + 1).join('/');
+      if (!categoryMap.has(parentPath)) {
+        const parentCategory = {
+          id: crypto.randomUUID(),
+          name: pathParts[i],
+          description: `Categoría ${pathParts[i]}`,
+          subcategories: []
+        };
+        categoryMap.set(parentPath, parentCategory);
+      }
+    }
+  });
+
+  // Construir la jerarquía
+  categoryMap.forEach((category, pathString) => {
+    const pathParts = pathString.split('/');
+    if (pathParts.length === 1) {
+      rootCategories.push(category);
+    } else {
+      const parentPath = pathParts.slice(0, -1).join('/');
+      const parent = categoryMap.get(parentPath);
+      if (parent) {
+        parent.subcategories.push(category);
+      }
+    }
+  });
+
+  return rootCategories;
+}
+
 // Categories processing
 async function processCategories(analysisReport) {
   const existingData = await readJsonFile(CATEGORIES_PATH) || { categories: [] };
-  const categoryMap = new Map(existingData.categories.map(cat => [cat.name, cat]));
-  
-  for (const category of analysisReport.categories) {
-    try {
-      let parentId = null;
-      
-      // Process each level in the path
-      for (let i = 0; i < category.path.length; i++) {
-        const name = category.path[i];
-        const description = i === category.path.length - 1 ? category.description : "Vacío";
-        
-        if (!categoryMap.has(name)) {
-          const newCategory = {
-            id: i === category.path.length - 1 ? category.id : `${name}-${Date.now()}`,
-            name,
-            description,
-            parentId
-          };
-          
-          categoryMap.set(name, newCategory);
-          logs.categories.created.push(name);
-        }
-        
-        parentId = categoryMap.get(name).id;
-      }
-    } catch (error) {
-      logs.categories.errors.push(`Error processing category ${category.name}: ${error.message}`);
+  const allCategoryPaths = new Set();
+
+  // Recolectar todos los paths de categorías desde tags
+  analysisReport.newTags.forEach(tag => {
+    if (tag.metadata.categoryPath) {
+      let currentPath = [];
+      tag.metadata.categoryPath.forEach(catName => {
+        currentPath.push(catName);
+        allCategoryPaths.add([...currentPath]);
+      });
     }
+  });
+
+  // Convertir paths a formato de categorías
+  const additionalCategories = Array.from(allCategoryPaths).map(path => ({
+    id: crypto.randomUUID(),
+    path: path,
+    name: path[path.length - 1],
+    description: `Categoría ${path[path.length - 1]}`
+  }));
+
+  // Combinar categorías existentes con las nuevas de los tags
+  const allCategories = [
+    ...analysisReport.newCategories,
+    ...additionalCategories
+  ];
+
+  try {
+    const categoryTree = buildCategoryTree(allCategories);
+    existingData.categories = categoryTree;
+    
+    // Log creations
+    function logCategories(categories) {
+      categories.forEach(cat => {
+        logs.categories.created.push(cat.name);
+        if (cat.subcategories) {
+          logCategories(cat.subcategories);
+        }
+      });
+    }
+    logCategories(categoryTree);
+    
+    await writeJsonFile(CATEGORIES_PATH, existingData);
+    return { tree: existingData.categories, map: buildCategoryMap(categoryTree) };
+  } catch (error) {
+    logs.categories.errors.push(`Error procesando categorías: ${error.message}`);
+    return { tree: existingData.categories, map: new Map() };
   }
-  
-  existingData.categories = Array.from(categoryMap.values());
-  await writeJsonFile(CATEGORIES_PATH, existingData);
-  return categoryMap;
+}
+
+// Build flat map of categories with their IDs
+function buildCategoryMap(categories, map = new Map(), parentPath = []) {
+  categories.forEach(category => {
+    const currentPath = [...parentPath, category.name];
+    map.set(currentPath.join('/'), category.id);
+    if (category.subcategories) {
+      buildCategoryMap(category.subcategories, map, currentPath);
+    }
+  });
+  return map;
 }
 
 // Tags processing
 async function processTags(analysisReport, categoryMap) {
   const existingData = await readJsonFile(TAGS_PATH) || { tags: [] };
-  const tagMap = new Map(existingData.tags.map(tag => [tag.name, tag]));
   
-  for (const tag of analysisReport.tags) {
+  for (const newTag of analysisReport.newTags) {
     try {
-      const categoryPath = tag.metadata.categoryPath;
-      const categoryIds = [];
-      let validPath = true;
-      
-      // Verify and convert category names to IDs
-      for (const catName of categoryPath) {
-        const category = Array.from(categoryMap.values()).find(c => c.name === catName);
-        if (!category) {
-          validPath = false;
-          logs.tags.errors.push(`Category ${catName} not found for tag ${tag.name}`);
-          break;
+      // Verificar duplicados por nombre
+      const existingByName = existingData.tags.find(tag => tag.name === newTag.name);
+      if (existingByName) {
+        logs.tags.skipped.push(`${newTag.name} (nombre existente)`);
+        continue;
+      }
+
+      // Convertir nombres de categorías a IDs
+      let currentPath = [];
+      const categoryIds = newTag.metadata.categoryPath.map(catName => {
+        currentPath.push(catName);
+        const pathString = currentPath.join('/');
+        const categoryId = categoryMap.get(pathString);
+        if (!categoryId) {
+          throw new Error(`Categoría no encontrada: ${pathString}`);
         }
-        categoryIds.push(category.id);
-      }
-      
-      if (validPath) {
-        const newTag = {
-          id: tag.id,
-          name: tag.name,
-          type: tag.type,
-          categoryPath: categoryIds
-        };
-        
-        tagMap.set(tag.name, newTag);
-        logs.tags.created.push(tag.name);
-      }
+        return categoryId;
+      });
+
+      const tagToAdd = {
+        id: crypto.randomUUID(),
+        name: newTag.name,
+        type: newTag.type,
+        categoryPath: categoryIds
+      };
+
+      existingData.tags.push(tagToAdd);
+      logs.tags.created.push(newTag.name);
     } catch (error) {
-      logs.tags.errors.push(`Error processing tag ${tag.name}: ${error.message}`);
+      logs.tags.errors.push(`Error procesando tag ${newTag.name}: ${error.message}`);
     }
   }
   
-  existingData.tags = Array.from(tagMap.values());
   await writeJsonFile(TAGS_PATH, existingData);
 }
 
 // Product Options processing
 async function processProductOptions(analysisReport) {
   const existingData = await readJsonFile(PRODUCT_OPTIONS_PATH) || { productOptions: [] };
-  const optionsMap = new Map(existingData.productOptions.map(opt => [opt.name, opt]));
+  const nameSet = new Set(existingData.productOptions.map(opt => opt.name));
   
-  for (const [name, option] of Object.entries(analysisReport.productOptions)) {
-    try {
-      const newOption = {
-        name,
-        type: option.type,
-        price: option.price.toString(),
-        image: option.images
-      };
-      
-      optionsMap.set(name, newOption);
-      logs.productOptions.created.push(name);
-    } catch (error) {
-      logs.productOptions.errors.push(`Error processing option ${name}: ${error.message}`);
+  for (const type in analysisReport.newProductOptions) {
+    const options = analysisReport.newProductOptions[type];
+    
+    for (const option of options) {
+      try {
+        if (nameSet.has(option.name)) {
+          logs.productOptions.skipped.push(`${option.name} (nombre existente)`);
+          continue;
+        }
+
+        const optionToAdd = {
+          id: crypto.randomUUID(),
+          name: option.name,
+          type: option.type,
+          price: option.price.toString(),
+          image: option.images || null
+        };
+
+        existingData.productOptions.push(optionToAdd);
+        nameSet.add(option.name);
+        logs.productOptions.created.push(`${option.name}`);
+      } catch (error) {
+        logs.productOptions.errors.push(`Error procesando opción ${option.name}: ${error.message}`);
+      }
     }
   }
   
-  existingData.productOptions = Array.from(optionsMap.values());
   await writeJsonFile(PRODUCT_OPTIONS_PATH, existingData);
 }
 
@@ -141,19 +232,34 @@ async function processProductOptions(analysisReport) {
 function printReport() {
   console.log('\n=== PROCESSING REPORT ===\n');
   
-  console.log('Categories Created:', logs.categories.created.length);
+  console.log('Categories:');
+  console.log(`- Created: ${logs.categories.created.length}`);
+  console.log(`- Skipped: ${logs.categories.skipped.length}`);
   if (logs.categories.created.length) {
-    console.log('Names:', logs.categories.created.join(', '));
+    console.log('Created:', logs.categories.created.join(', '));
+  }
+  if (logs.categories.skipped.length) {
+    console.log('Skipped:', logs.categories.skipped.join(', '));
   }
   
-  console.log('\nTags Created:', logs.tags.created.length);
+  console.log('\nTags:');
+  console.log(`- Created: ${logs.tags.created.length}`);
+  console.log(`- Skipped: ${logs.tags.skipped.length}`);
   if (logs.tags.created.length) {
-    console.log('Names:', logs.tags.created.join(', '));
+    console.log('Created:', logs.tags.created.join(', '));
+  }
+  if (logs.tags.skipped.length) {
+    console.log('Skipped:', logs.tags.skipped.join(', '));
   }
   
-  console.log('\nProduct Options Created:', logs.productOptions.created.length);
+  console.log('\nProduct Options:');
+  console.log(`- Created: ${logs.productOptions.created.length}`);
+  console.log(`- Skipped: ${logs.productOptions.skipped.length}`);
   if (logs.productOptions.created.length) {
-    console.log('Names:', logs.productOptions.created.join(', '));
+    console.log('Created:', logs.productOptions.created.join(', '));
+  }
+  if (logs.productOptions.skipped.length) {
+    console.log('Skipped:', logs.productOptions.skipped.join(', '));
   }
   
   console.log('\n=== ERRORS ===\n');
@@ -177,7 +283,7 @@ async function main() {
       throw new Error('Analysis report not found');
     }
     
-    const categoryMap = await processCategories(analysisReport);
+    const { map: categoryMap } = await processCategories(analysisReport);
     await processTags(analysisReport, categoryMap);
     await processProductOptions(analysisReport);
     

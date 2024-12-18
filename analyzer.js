@@ -483,7 +483,7 @@ async function analyzeAllProducts() {
                 nameAnalysis.categories.forEach(category => {
                     const categoryKey = `${category.path.join('/')}/${category.name}`;
                     const existingCategory = existingCategories.categories.find(c => 
-                        c.path.join('/') === category.path.join('/') && c.name === category.name
+                        c.name === category.name
                     );
                     
                     if (!existingCategory && !newCategories.has(categoryKey)) {

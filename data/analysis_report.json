@@ -1,7 +1,7 @@
 {
   "newCategories": [
     {
-      "id": "7f9e0e0d-a963-4584-9da8-37f571c1f15d",
+      "id": "0221de84-5765-4864-ab95-2878d092c0f0",
       "path": [
         "Deportes",
         "Fútbol"
@@ -10,7 +10,7 @@
       "description": "Deporte fútbol"
     },
     {
-      "id": "3389c428-6766-4b80-ace5-49882bf0862f",
+      "id": "dfb636ae-0c09-4a10-8ac1-5c98fff2e413",
       "path": [
         "Productos",
         "Camisetas"
@@ -19,7 +19,7 @@
       "description": "Indumentaria camisetas"
     },
     {
-      "id": "e53d2d13-88bf-4950-bf8e-1c49dc8a7913",
+      "id": "648fea18-822f-4d62-a956-b3a232e2a9c7",
       "path": [
         "Productos",
         "Retro"
@@ -28,7 +28,7 @@
       "description": "Indumentaria retro"
     },
     {
-      "id": "9d235063-e308-4632-b6c7-a2bc8715cef2",
+      "id": "792cfdc4-8be1-458b-8159-c5227b45b90e",
       "path": [
         "Productos",
         "Entrenamiento"
@@ -37,7 +37,7 @@
       "description": "Indumentaria entrenamiento"
     },
     {
-      "id": "c34a7e74-0e14-4ab2-ab38-e820d3eed7c6",
+      "id": "10e4af9e-1bb5-4a21-8be1-4f809a1baaf9",
       "path": [
         "Productos",
         "Casual",
@@ -47,7 +47,7 @@
       "description": "Indumentaria Remeras casual"
     },
     {
-      "id": "f381f978-3d06-47a3-971e-a3b84d290993",
+      "id": "1aa8742f-f92e-4942-b9ea-3130204c0ce4",
       "path": [
         "Productos",
         "Abrigos",
@@ -57,7 +57,7 @@
       "description": "Indumentaria de abrigo rompeviento"
     },
     {
-      "id": "914913d2-127f-4afe-abb8-7fe9d812a314",
+      "id": "6196b4b7-6281-4dcd-a4b5-64ad67559397",
       "path": [
         "Productos",
         "Conjuntos"
@@ -68,658 +68,52 @@
   ],
   "newTags": [
     {
-      "id": "b1b43d20-381a-4ba7-b9af-0d08315c4843",
-      "name": "2024-25",
-      "type": "temporada",
-      "metadata": {
-        "categoryPath": [
-          "Productos"
-        ]
-      }
-    },
-    {
-      "id": "0a7dda57-76ae-46e8-9541-3e7421d05409",
-      "name": "Bayern Munich",
-      "type": "equipo",
-      "metadata": {
-        "categoryPath": [
-          "Deportes",
-          "Fútbol",
-          "Clubes",
-          "Bundesliga"
-        ]
-      }
-    },
-    {
-      "id": "6ffe1a70-2d2e-449a-bbf0-44e02fd4cb49",
-      "name": "Version Fanatico",
-      "type": "version",
-      "metadata": {
-        "categoryPath": [
-          "Productos"
-        ]
-      }
-    },
-    {
-      "id": "f862791e-2457-4227-8c41-c3a94f15fe62",
-      "name": "Edicion Especial",
-      "type": "edicion",
-      "metadata": {
-        "categoryPath": [
-          "Productos"
-        ]
-      }
-    },
-    {
-      "id": "06992a04-1d7f-4ac6-a8bf-389b0955ff97",
-      "name": "Manga Corta",
-      "type": "caracteristica",
-      "metadata": {
-        "categoryPath": [
-          "Productos"
-        ]
-      }
-    },
-    {
-      "id": "4c60cf69-7a7a-485e-8bf9-fba69f18327a",
-      "name": "2003-2004",
-      "type": "temporada",
-      "metadata": {
-        "categoryPath": [
-          "Productos"
-        ]
-      }
-    },
-    {
-      "id": "99f829ba-217a-43ef-9708-6640fd6d5e0c",
-      "name": "Manga Larga",
-      "type": "caracteristica",
-      "metadata": {
-        "categoryPath": [
-          "Productos"
-        ]
-      }
-    },
-    {
-      "id": "aee2be18-5be1-42e6-91cd-24e2a2fab37d",
-      "name": "Everton",
-      "type": "equipo",
-      "metadata": {
-        "categoryPath": [
-          "Deportes",
-          "Fútbol",
-          "Clubes",
-          "Premier League"
-        ]
-      }
-    },
-    {
-      "id": "e575d272-587e-482e-8635-a83bf90b1936",
-      "name": "Auxerre",
-      "type": "equipo",
-      "metadata": {
-        "categoryPath": [
-          "Deportes",
-          "Fútbol",
-          "Clubes",
-          "Otros"
-        ]
-      }
-    },
-    {
-      "id": "d0e3b252-c7ca-4f60-85d9-fa307d9bbce9",
-      "name": "Local",
-      "type": "edicion",
-      "metadata": {
-        "categoryPath": [
-          "Productos"
-        ]
-      }
-    },
-    {
-      "id": "2ccfb20e-949f-4870-b9df-9503dfd9d667",
-      "name": "Visitante",
-      "type": "edicion",
-      "metadata": {
-        "categoryPath": [
-          "Productos"
-        ]
-      }
-    },
-    {
-      "id": "2ccd6c69-789f-4e2d-9c7b-8ec242a8e827",
-      "name": "Real Madrid",
-      "type": "equipo",
-      "metadata": {
-        "categoryPath": [
-          "Deportes",
-          "Fútbol",
-          "Clubes",
-          "La Liga"
-        ]
-      }
-    },
-    {
-      "id": "d077aa4c-3226-499b-b127-9ba6f6d06230",
+      "id": "907574ae-d716-45bb-95dd-3be1bc5c0d35",
       "name": "Blanco",
       "type": "color",
       "metadata": {}
     },
     {
-      "id": "87fbf641-020b-4ec7-9e72-db73392133fc",
-      "name": "2025-26",
-      "type": "temporada",
-      "metadata": {
-        "categoryPath": [
-          "Productos"
-        ]
-      }
-    },
-    {
-      "id": "6e25ec2c-8df7-47c7-957d-df7090fa80e5",
-      "name": "Inter de Milan",
-      "type": "equipo",
-      "metadata": {
-        "categoryPath": [
-          "Deportes",
-          "Fútbol",
-          "Clubes",
-          "Serie A"
-        ]
-      }
-    },
-    {
-      "id": "04b47c71-8240-4d33-86f9-090088fdb13a",
+      "id": "2dde7604-8d25-402b-934f-7f40c70e98ab",
       "name": "Negro",
       "type": "color",
       "metadata": {}
     },
     {
-      "id": "23f5fe03-c536-469d-b702-871106b47bd6",
-      "name": "Werder Bremen",
-      "type": "equipo",
-      "metadata": {
-        "categoryPath": [
-          "Deportes",
-          "Fútbol",
-          "Clubes",
-          "Bundesliga"
-        ]
-      }
-    },
-    {
-      "id": "c8ee5959-36cf-4cd4-8331-a968ea57aa51",
-      "name": "Niños",
-      "type": "version",
-      "metadata": {
-        "categoryPath": [
-          "Productos"
-        ]
-      }
-    },
-    {
-      "id": "70b0a03b-739a-4227-9da4-20665f5e0847",
-      "name": "Alternativa",
-      "type": "edicion",
-      "metadata": {
-        "categoryPath": [
-          "Productos"
-        ]
-      }
-    },
-    {
-      "id": "d380f2cd-1e05-434d-893a-7121fa286c0c",
-      "name": "Leicester City",
-      "type": "equipo",
-      "metadata": {
-        "categoryPath": [
-          "Deportes",
-          "Fútbol",
-          "Clubes",
-          "Premier League"
-        ]
-      }
-    },
-    {
-      "id": "fd09be90-4ef6-43af-ab92-f9038a752f08",
-      "name": "River Plate",
-      "type": "equipo",
-      "metadata": {
-        "categoryPath": [
-          "Deportes",
-          "Fútbol",
-          "Clubes"
-        ]
-      }
-    },
-    {
-      "id": "f5e57291-e592-4533-8095-30c166d30cb2",
-      "name": "Arquero",
-      "type": "edicion",
-      "metadata": {
-        "categoryPath": [
-          "Productos"
-        ]
-      }
-    },
-    {
-      "id": "10fc5172-97b7-44e3-b7b0-adadbe4d3ae7",
+      "id": "72a56646-193e-45cc-aa71-436ee413d186",
       "name": "Verde",
       "type": "color",
       "metadata": {}
     },
     {
-      "id": "073a002d-126e-48fd-8b05-9556fe02b499",
-      "name": "2024",
-      "type": "temporada",
-      "metadata": {
-        "categoryPath": [
-          "Productos"
-        ]
-      }
-    },
-    {
-      "id": "54bb2045-29d6-4ebd-8dd2-9ef167eb5da1",
+      "id": "41f8c066-97af-4c1d-9504-396ff28a68ba",
       "name": "Azul",
       "type": "color",
       "metadata": {}
     },
     {
-      "id": "b7d52e3a-ea21-4473-80e4-e151ed76fc55",
-      "name": "1983-1984",
-      "type": "temporada",
-      "metadata": {
-        "categoryPath": [
-          "Productos"
-        ]
-      }
-    },
-    {
-      "id": "8e35bed1-6740-4744-a3f1-976946da9d90",
-      "name": "Cadiz",
-      "type": "equipo",
-      "metadata": {
-        "categoryPath": [
-          "Deportes",
-          "Fútbol",
-          "Clubes",
-          "La Liga"
-        ]
-      }
-    },
-    {
-      "id": "2963b9a1-7bb4-468d-a79d-b547aaf4f0db",
-      "name": "Version Jugador",
-      "type": "version",
-      "metadata": {
-        "categoryPath": [
-          "Productos"
-        ]
-      }
-    },
-    {
-      "id": "b2da4b14-60f2-4f90-ae7e-0628a474658b",
-      "name": "Egypt",
-      "type": "equipo",
-      "metadata": {
-        "categoryPath": [
-          "Deportes",
-          "Fútbol",
-          "Selecciones",
-          "Otros"
-        ]
-      }
-    },
-    {
-      "id": "71da340e-29fe-4af2-954d-802d3dc62a43",
+      "id": "b34e5fa3-e1bb-4d88-a144-e35a260cf38c",
       "name": "Rojo",
       "type": "color",
       "metadata": {}
     },
     {
-      "id": "30edee0d-c652-4ab7-8ce5-7480045c36d4",
-      "name": "Barcelona",
-      "type": "equipo",
-      "metadata": {
-        "categoryPath": [
-          "Deportes",
-          "Fútbol",
-          "Clubes",
-          "La Liga"
-        ]
-      }
-    },
-    {
-      "id": "eed0c70c-e6e2-430e-b48a-e2722866cbd4",
+      "id": "84132ed3-e911-455d-aeca-d1853bb93213",
       "name": "Gris",
       "type": "color",
       "metadata": {}
     },
     {
-      "id": "423a95c3-b817-4561-9c16-2ad2cea02df4",
-      "name": "Ghana",
-      "type": "equipo",
-      "metadata": {
-        "categoryPath": [
-          "Deportes",
-          "Fútbol",
-          "Selecciones",
-          "Otros"
-        ]
-      }
-    },
-    {
-      "id": "30ce1b1c-f67e-44ca-ac2a-4cc94f8215bd",
+      "id": "5ce92256-355c-4ca9-bdda-11354bbc9f2e",
       "name": "Amarillo",
       "type": "color",
       "metadata": {}
     },
     {
-      "id": "1f64dd8c-c61e-4c56-a3c6-368fff7fdfce",
-      "name": "Argentina",
-      "type": "equipo",
-      "metadata": {
-        "categoryPath": [
-          "Deportes",
-          "Fútbol",
-          "Selecciones",
-          "Copa America"
-        ]
-      }
-    },
-    {
-      "id": "90dafa0b-afa1-4c54-9a7c-6c56d3e889af",
+      "id": "89de00f7-2d83-4002-8cda-1ca0165bbb71",
       "name": "Estampado",
       "type": "color",
       "metadata": {}
-    },
-    {
-      "id": "c3736288-d4ad-48e3-b23f-d2f133d929a4",
-      "name": "Brasil",
-      "type": "equipo",
-      "metadata": {
-        "categoryPath": [
-          "Deportes",
-          "Fútbol",
-          "Selecciones",
-          "Copa America"
-        ]
-      }
-    },
-    {
-      "id": "d7affac2-4ac9-4ea2-b386-b654efb4f535",
-      "name": "Portugal",
-      "type": "equipo",
-      "metadata": {
-        "categoryPath": [
-          "Deportes",
-          "Fútbol",
-          "Selecciones",
-          "Euro"
-        ]
-      }
-    },
-    {
-      "id": "df1b4b30-cb4a-4c05-a094-159b650b8c51",
-      "name": "AC Milan",
-      "type": "equipo",
-      "metadata": {
-        "categoryPath": [
-          "Deportes",
-          "Fútbol",
-          "Clubes",
-          "Serie A"
-        ]
-      }
-    },
-    {
-      "id": "e4657ded-902c-44ba-864a-6fb45ffc67b2",
-      "name": "2000-2001",
-      "type": "temporada",
-      "metadata": {
-        "categoryPath": [
-          "Productos"
-        ]
-      }
-    },
-    {
-      "id": "c01e22ab-718f-4e66-aee3-3c05cb098957",
-      "name": "Toluca",
-      "type": "equipo",
-      "metadata": {
-        "categoryPath": [
-          "Deportes",
-          "Fútbol",
-          "Clubes",
-          "Otros"
-        ]
-      }
-    },
-    {
-      "id": "945e521e-c43d-4d91-a1ea-823e673c2e4e",
-      "name": "1999-2000",
-      "type": "temporada",
-      "metadata": {
-        "categoryPath": [
-          "Productos"
-        ]
-      }
-    },
-    {
-      "id": "66adc22d-39f3-4a9c-8632-6cfcbebee083",
-      "name": "Chelsea",
-      "type": "equipo",
-      "metadata": {
-        "categoryPath": [
-          "Deportes",
-          "Fútbol",
-          "Clubes",
-          "Premier League"
-        ]
-      }
-    },
-    {
-      "id": "356559c3-a6f1-4d55-b596-171a2cd4ef96",
-      "name": "Arsenal",
-      "type": "equipo",
-      "metadata": {
-        "categoryPath": [
-          "Deportes",
-          "Fútbol",
-          "Clubes",
-          "Premier League"
-        ]
-      }
-    },
-    {
-      "id": "7d479717-7d60-44c0-9ccf-2ec1acb928c3",
-      "name": "Juventus",
-      "type": "equipo",
-      "metadata": {
-        "categoryPath": [
-          "Deportes",
-          "Fútbol",
-          "Clubes",
-          "Serie A"
-        ]
-      }
-    },
-    {
-      "id": "874f67fb-9a3e-4a48-bc54-7dc66cd94144",
-      "name": "Monchengladbach",
-      "type": "equipo",
-      "metadata": {
-        "categoryPath": [
-          "Deportes",
-          "Fútbol",
-          "Clubes",
-          "Bundesliga"
-        ]
-      }
-    },
-    {
-      "id": "86bbc1b9-a7ca-4e0a-85ae-a9557cd85500",
-      "name": "RC Lens",
-      "type": "equipo",
-      "metadata": {
-        "categoryPath": [
-          "Deportes",
-          "Fútbol",
-          "Clubes",
-          "Ligue 1"
-        ]
-      }
-    },
-    {
-      "id": "6d8f90e4-9878-46b6-8301-2d7d6c1a7bb2",
-      "name": "Copenhagen",
-      "type": "equipo",
-      "metadata": {
-        "categoryPath": [
-          "Deportes",
-          "Fútbol",
-          "Clubes",
-          "Otros"
-        ]
-      }
-    },
-    {
-      "id": "803f443c-3ffe-4b00-83ad-abf9aea8353e",
-      "name": "Monaco",
-      "type": "equipo",
-      "metadata": {
-        "categoryPath": [
-          "Deportes",
-          "Fútbol",
-          "Clubes",
-          "Ligue 1"
-        ]
-      }
-    },
-    {
-      "id": "d30aabbc-12a1-47e3-a44c-61daf44b58f8",
-      "name": "Edicion Limitada",
-      "type": "edicion",
-      "metadata": {
-        "categoryPath": [
-          "Productos"
-        ]
-      }
-    },
-    {
-      "id": "1871c3bf-a3a6-4cf2-8784-bd0c054777f2",
-      "name": "Zaragoza",
-      "type": "equipo",
-      "metadata": {
-        "categoryPath": [
-          "Deportes",
-          "Fútbol",
-          "Clubes",
-          "La Liga"
-        ]
-      }
-    },
-    {
-      "id": "429c4f1f-eb35-4536-bbba-6e154f26e62a",
-      "name": "1995-1996",
-      "type": "temporada",
-      "metadata": {
-        "categoryPath": [
-          "Productos"
-        ]
-      }
-    },
-    {
-      "id": "2b8d9205-ddf9-42d7-adb1-a864ccb61a41",
-      "name": "Valencia",
-      "type": "equipo",
-      "metadata": {
-        "categoryPath": [
-          "Deportes",
-          "Fútbol",
-          "Clubes",
-          "La Liga"
-        ]
-      }
-    },
-    {
-      "id": "f248045e-d8a0-4c88-ba7b-4ad4106203ae",
-      "name": "1990-1992",
-      "type": "temporada",
-      "metadata": {
-        "categoryPath": [
-          "Productos"
-        ]
-      }
-    },
-    {
-      "id": "8cfbef32-48b5-493d-a4b3-15a5b9eaf736",
-      "name": "2019-2020",
-      "type": "temporada",
-      "metadata": {
-        "categoryPath": [
-          "Productos"
-        ]
-      }
-    },
-    {
-      "id": "e4357daf-137a-4e3a-b236-66c317d7170f",
-      "name": "Mexico",
-      "type": "equipo",
-      "metadata": {
-        "categoryPath": [
-          "Deportes",
-          "Fútbol",
-          "Selecciones",
-          "Copa America"
-        ]
-      }
-    },
-    {
-      "id": "3e00dd9b-77fd-4d60-887e-b12251671180",
-      "name": "Rayo Vallecano",
-      "type": "equipo",
-      "metadata": {
-        "categoryPath": [
-          "Deportes",
-          "Fútbol",
-          "Clubes",
-          "La Liga"
-        ]
-      }
-    },
-    {
-      "id": "1df9ac29-8c5d-47ca-ba5f-311a31876d8f",
-      "name": "Atalanta",
-      "type": "equipo",
-      "metadata": {
-        "categoryPath": [
-          "Deportes",
-          "Fútbol",
-          "Clubes",
-          "Serie A"
-        ]
-      }
-    },
-    {
-      "id": "5d659e11-9d5f-42cf-8eca-b0854053957a",
-      "name": "Conjuntos",
-      "type": "product_type",
-      "metadata": {
-        "categoryPath": [
-          "Productos"
-        ]
-      }
-    },
-    {
-      "id": "449580b3-8bf9-4f5c-acea-19ca95f8e11c",
-      "name": "Rompevientos",
-      "type": "caracteristica",
-      "metadata": {
-        "categoryPath": [
-          "Productos"
-        ]
-      }
     }
   ],
   "newProductOptions": {
@@ -1323,7 +717,7 @@
     "processedProducts": 50,
     "totalPages": 1,
     "newCategoriesFound": 7,
-    "newTagsFound": 60,
+    "newTagsFound": 8,
     "newOptionsFound": {
       "badges": 2,
       "customize": 1,

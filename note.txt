@@ -1,0 +1,6 @@
+Analyzer
+> error en productOptions name. (o es error de dataCreator)
+> no revisa "subcategories"
+> no revisa productOptions.json > "newProductOptions" que ya existen.
+
+dataCreator error en colores
