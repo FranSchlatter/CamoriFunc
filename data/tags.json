@@ -1,505 +1,553 @@
 {
   "tags": [
     {
-      "id": "243d0577-db4b-432d-a8f2-8a95cfe492be",
+      "id": "e5cc84bd-d6f0-439d-99ae-2753a94a4d85",
       "name": "2024-25",
       "type": "temporada",
       "categoryPath": [
-        "2b9dbf51-644c-462f-ac39-e126b458d319"
+        "6aca3034-1786-4959-9ca1-7418aa487579"
       ]
     },
     {
-      "id": "7316010e-a62b-4bfa-abb5-2f8fb64d2eb5",
+      "id": "7f5dd5d9-18ed-40c5-954a-1197ad8e4a9e",
       "name": "Bayern Munich",
       "type": "equipo",
       "categoryPath": [
-        "bd4415d0-ca14-41e8-9ea3-b48b2b6b628c",
-        "242dc6b2-35fa-483a-a06b-826bb42d810f",
-        "15182335-2e7a-4948-a8a3-4ff88d083709",
-        "10df3bb5-297b-4c0a-b38d-0758d1f809e2"
+        "666a84c2-7c69-4c12-a820-beb4f2dca9d2",
+        "871fcac2-dd24-4270-9c37-05ced835acc5",
+        "b952d446-f45b-4e9c-a866-2d537a88f558",
+        "10de306c-ff2a-495b-bf1e-5fa80f1db35d"
       ]
     },
     {
-      "id": "43833ba5-bc8d-468b-a217-d36f4b73342f",
+      "id": "3be22f80-03c7-472f-bc46-3e1c6150df18",
       "name": "Version Fanatico",
       "type": "version",
       "categoryPath": [
-        "2b9dbf51-644c-462f-ac39-e126b458d319"
+        "6aca3034-1786-4959-9ca1-7418aa487579"
       ]
     },
     {
-      "id": "2a49a14c-348b-491e-b1f9-12de9d503541",
+      "id": "40980851-6f1d-4fef-b5d5-3f54be203a25",
       "name": "Edicion Especial",
       "type": "edicion",
       "categoryPath": [
-        "2b9dbf51-644c-462f-ac39-e126b458d319"
+        "6aca3034-1786-4959-9ca1-7418aa487579"
       ]
     },
     {
-      "id": "874893f0-379f-42b1-aad6-8264eb63ff29",
+      "id": "b53d246a-7e77-4aeb-8e3c-8689b5fe2787",
       "name": "Manga Corta",
       "type": "caracteristica",
       "categoryPath": [
-        "2b9dbf51-644c-462f-ac39-e126b458d319"
+        "6aca3034-1786-4959-9ca1-7418aa487579"
       ]
     },
     {
-      "id": "7fb41753-1623-47b1-b8f7-a81e66cecdc9",
+      "id": "4df5ba6b-aeb3-4443-9fb7-69d0965f6c3d",
       "name": "2003-2004",
       "type": "temporada",
       "categoryPath": [
-        "2b9dbf51-644c-462f-ac39-e126b458d319"
+        "6aca3034-1786-4959-9ca1-7418aa487579"
       ]
     },
     {
-      "id": "0ca42a4d-0890-494e-a15c-3e54cc5a1b0f",
+      "id": "85617bc7-f4e6-49f4-a7a7-7a41f8887156",
       "name": "Manga Larga",
       "type": "caracteristica",
       "categoryPath": [
-        "2b9dbf51-644c-462f-ac39-e126b458d319"
+        "6aca3034-1786-4959-9ca1-7418aa487579"
       ]
     },
     {
-      "id": "bdc6c764-fda7-40cd-ac90-ddddc4b52f85",
+      "id": "dcbdbe2a-f6d2-4bd1-a0cb-40d392b542b3",
       "name": "Everton",
       "type": "equipo",
       "categoryPath": [
-        "bd4415d0-ca14-41e8-9ea3-b48b2b6b628c",
-        "242dc6b2-35fa-483a-a06b-826bb42d810f",
-        "15182335-2e7a-4948-a8a3-4ff88d083709",
-        "19dcb912-f44c-4ecb-91f7-7a223e80b0b3"
+        "666a84c2-7c69-4c12-a820-beb4f2dca9d2",
+        "871fcac2-dd24-4270-9c37-05ced835acc5",
+        "b952d446-f45b-4e9c-a866-2d537a88f558",
+        "2432c71b-7875-485d-bb1c-fc18fa046e43"
       ]
     },
     {
-      "id": "83c40f0a-39f4-4af3-81b4-ec9ae7d87f74",
+      "id": "fd1890a7-eb91-4d4a-b2da-26cde2bb211b",
       "name": "Auxerre",
       "type": "equipo",
       "categoryPath": [
-        "bd4415d0-ca14-41e8-9ea3-b48b2b6b628c",
-        "242dc6b2-35fa-483a-a06b-826bb42d810f",
-        "15182335-2e7a-4948-a8a3-4ff88d083709",
-        "7c4098c9-cd6c-4cee-b038-099e38872a3b"
+        "666a84c2-7c69-4c12-a820-beb4f2dca9d2",
+        "871fcac2-dd24-4270-9c37-05ced835acc5",
+        "b952d446-f45b-4e9c-a866-2d537a88f558",
+        "ea030eec-7d33-4ba1-b434-9869d4d7e8cf"
       ]
     },
     {
-      "id": "880dc9e5-b27b-49c2-ba4c-5d78846ed6f9",
+      "id": "f7fe5e23-478a-4603-8aa1-ac8e4cb0c7be",
       "name": "Local",
       "type": "edicion",
       "categoryPath": [
-        "2b9dbf51-644c-462f-ac39-e126b458d319"
+        "6aca3034-1786-4959-9ca1-7418aa487579"
       ]
     },
     {
-      "id": "86362a04-d914-42ce-b2f8-1b5e1a8ac75d",
+      "id": "9cd2143b-3984-4c33-902b-c53e3797128b",
       "name": "Visitante",
       "type": "edicion",
       "categoryPath": [
-        "2b9dbf51-644c-462f-ac39-e126b458d319"
+        "6aca3034-1786-4959-9ca1-7418aa487579"
       ]
     },
     {
-      "id": "12c42794-e096-4783-a2ab-174366455ff2",
+      "id": "d8c7b4bd-fe66-455d-b78e-ec8d52b3b1e6",
       "name": "Real Madrid",
       "type": "equipo",
       "categoryPath": [
-        "bd4415d0-ca14-41e8-9ea3-b48b2b6b628c",
-        "242dc6b2-35fa-483a-a06b-826bb42d810f",
-        "15182335-2e7a-4948-a8a3-4ff88d083709",
-        "89e9be35-f42e-4854-abdf-1935392b4ab1"
+        "666a84c2-7c69-4c12-a820-beb4f2dca9d2",
+        "871fcac2-dd24-4270-9c37-05ced835acc5",
+        "b952d446-f45b-4e9c-a866-2d537a88f558",
+        "7480c29a-be82-4f5a-876f-bd22d47da17b"
       ]
     },
     {
-      "id": "9ff2cd38-b5e4-41d8-8479-0d6035f08aa5",
+      "id": "688f98b3-187e-4e23-bb13-8bb748dfde2c",
+      "name": "Blanco",
+      "type": "color",
+      "categoryPath": []
+    },
+    {
+      "id": "aa3edce3-42ad-4976-9bcc-8c6cdfa84b10",
       "name": "2025-26",
       "type": "temporada",
       "categoryPath": [
-        "2b9dbf51-644c-462f-ac39-e126b458d319"
+        "6aca3034-1786-4959-9ca1-7418aa487579"
       ]
     },
     {
-      "id": "107b0f3e-e664-4bcb-b607-4dac339e23a5",
+      "id": "fa1761c3-3d1e-4c02-98f0-9275703b3f9b",
       "name": "Inter de Milan",
       "type": "equipo",
       "categoryPath": [
-        "bd4415d0-ca14-41e8-9ea3-b48b2b6b628c",
-        "242dc6b2-35fa-483a-a06b-826bb42d810f",
-        "15182335-2e7a-4948-a8a3-4ff88d083709",
-        "15107873-fbb7-46da-951d-93548f4debd2"
+        "666a84c2-7c69-4c12-a820-beb4f2dca9d2",
+        "871fcac2-dd24-4270-9c37-05ced835acc5",
+        "b952d446-f45b-4e9c-a866-2d537a88f558",
+        "97ff12fb-4770-4bd7-bf23-9a2540fe59df"
       ]
     },
     {
-      "id": "fbd7b688-6ba7-4ec3-bc9e-a1006fe6ff20",
+      "id": "a86d106d-d60e-4e8a-8e9e-66121b7e9115",
+      "name": "Negro",
+      "type": "color",
+      "categoryPath": []
+    },
+    {
+      "id": "0334f607-81a2-4580-8a93-6bdffc945ba4",
       "name": "Werder Bremen",
       "type": "equipo",
       "categoryPath": [
-        "bd4415d0-ca14-41e8-9ea3-b48b2b6b628c",
-        "242dc6b2-35fa-483a-a06b-826bb42d810f",
-        "15182335-2e7a-4948-a8a3-4ff88d083709",
-        "10df3bb5-297b-4c0a-b38d-0758d1f809e2"
+        "666a84c2-7c69-4c12-a820-beb4f2dca9d2",
+        "871fcac2-dd24-4270-9c37-05ced835acc5",
+        "b952d446-f45b-4e9c-a866-2d537a88f558",
+        "10de306c-ff2a-495b-bf1e-5fa80f1db35d"
       ]
     },
     {
-      "id": "928220e7-fbe3-46ad-b071-9baafe660243",
+      "id": "50aa3ccc-5e7a-45fa-a9f8-212dc8cc3a7e",
       "name": "Niños",
       "type": "version",
       "categoryPath": [
-        "2b9dbf51-644c-462f-ac39-e126b458d319"
+        "6aca3034-1786-4959-9ca1-7418aa487579"
       ]
     },
     {
-      "id": "14374a59-803d-4b30-8543-47242661d293",
+      "id": "5eaaea72-b62a-44b0-950e-c17ed7199653",
       "name": "Alternativa",
       "type": "edicion",
       "categoryPath": [
-        "2b9dbf51-644c-462f-ac39-e126b458d319"
+        "6aca3034-1786-4959-9ca1-7418aa487579"
       ]
     },
     {
-      "id": "1f46816f-b765-48e6-bead-5f84adc8987c",
+      "id": "bc2c1bab-ea09-4ad3-bfbc-dd43d062ff0c",
       "name": "Leicester City",
       "type": "equipo",
       "categoryPath": [
-        "bd4415d0-ca14-41e8-9ea3-b48b2b6b628c",
-        "242dc6b2-35fa-483a-a06b-826bb42d810f",
-        "15182335-2e7a-4948-a8a3-4ff88d083709",
-        "19dcb912-f44c-4ecb-91f7-7a223e80b0b3"
+        "666a84c2-7c69-4c12-a820-beb4f2dca9d2",
+        "871fcac2-dd24-4270-9c37-05ced835acc5",
+        "b952d446-f45b-4e9c-a866-2d537a88f558",
+        "2432c71b-7875-485d-bb1c-fc18fa046e43"
       ]
     },
     {
-      "id": "8b3fcb3e-8ba7-4988-b28f-1f6d8e6b88e4",
+      "id": "33385313-6ee1-40fe-b44c-668f8b3b6e1e",
       "name": "River Plate",
       "type": "equipo",
       "categoryPath": [
-        "bd4415d0-ca14-41e8-9ea3-b48b2b6b628c",
-        "242dc6b2-35fa-483a-a06b-826bb42d810f",
-        "15182335-2e7a-4948-a8a3-4ff88d083709"
+        "666a84c2-7c69-4c12-a820-beb4f2dca9d2",
+        "871fcac2-dd24-4270-9c37-05ced835acc5",
+        "b952d446-f45b-4e9c-a866-2d537a88f558"
       ]
     },
     {
-      "id": "830e63cb-ec1a-4483-92c8-fccc75102523",
+      "id": "20c2b090-315b-40e8-bc8c-f7261893b64e",
       "name": "Arquero",
       "type": "edicion",
       "categoryPath": [
-        "2b9dbf51-644c-462f-ac39-e126b458d319"
+        "6aca3034-1786-4959-9ca1-7418aa487579"
       ]
     },
     {
-      "id": "d6a97bb5-007c-469a-b576-ec92f70efa4d",
+      "id": "f547fe89-dcc2-43b2-8f44-cb510eafb02e",
+      "name": "Verde",
+      "type": "color",
+      "categoryPath": []
+    },
+    {
+      "id": "c3585034-f2ca-47bd-a97d-7817b220222e",
       "name": "2024",
       "type": "temporada",
       "categoryPath": [
-        "2b9dbf51-644c-462f-ac39-e126b458d319"
+        "6aca3034-1786-4959-9ca1-7418aa487579"
       ]
     },
     {
-      "id": "38b4660a-7bb4-4fda-aac0-53a564da1a3b",
+      "id": "2a99c23c-5904-40a8-b117-d21db5c94496",
+      "name": "Azul",
+      "type": "color",
+      "categoryPath": []
+    },
+    {
+      "id": "60fd779f-3e7c-4f98-9860-5846c1dfe927",
       "name": "1983-1984",
       "type": "temporada",
       "categoryPath": [
-        "2b9dbf51-644c-462f-ac39-e126b458d319"
+        "6aca3034-1786-4959-9ca1-7418aa487579"
       ]
     },
     {
-      "id": "2a8ea84c-c87b-4bfd-88a9-9ca816d18e3c",
+      "id": "909c6047-6eb2-4fdc-bc95-e244bf331051",
       "name": "Cadiz",
       "type": "equipo",
       "categoryPath": [
-        "bd4415d0-ca14-41e8-9ea3-b48b2b6b628c",
-        "242dc6b2-35fa-483a-a06b-826bb42d810f",
-        "15182335-2e7a-4948-a8a3-4ff88d083709",
-        "89e9be35-f42e-4854-abdf-1935392b4ab1"
+        "666a84c2-7c69-4c12-a820-beb4f2dca9d2",
+        "871fcac2-dd24-4270-9c37-05ced835acc5",
+        "b952d446-f45b-4e9c-a866-2d537a88f558",
+        "7480c29a-be82-4f5a-876f-bd22d47da17b"
       ]
     },
     {
-      "id": "3283e4d2-36b5-48f3-825d-ca4ead6ac060",
+      "id": "65f7df72-d1cf-465a-9790-04c2e4f1f924",
       "name": "Version Jugador",
       "type": "version",
       "categoryPath": [
-        "2b9dbf51-644c-462f-ac39-e126b458d319"
+        "6aca3034-1786-4959-9ca1-7418aa487579"
       ]
     },
     {
-      "id": "1ac2590a-28ef-46f0-9498-5f3a0be91c18",
+      "id": "1e43d01d-d0ba-47f4-a5eb-7af5d06c5b44",
       "name": "Egypt",
       "type": "equipo",
       "categoryPath": [
-        "bd4415d0-ca14-41e8-9ea3-b48b2b6b628c",
-        "242dc6b2-35fa-483a-a06b-826bb42d810f",
-        "1d7b706e-58e6-47f9-93e6-11fe4ba19041",
-        "d5f5f16b-1640-4e46-a001-c66eb8661916"
+        "666a84c2-7c69-4c12-a820-beb4f2dca9d2",
+        "871fcac2-dd24-4270-9c37-05ced835acc5",
+        "69c0847f-6498-4716-9a1c-c538bf14c11d",
+        "9024feff-adfd-42d1-be49-a6ab2111c768"
       ]
     },
     {
-      "id": "2e9c599f-eb85-4ef6-921d-6fb1f1c56197",
+      "id": "f566a5f0-62e9-4cdb-ad4e-10708e70082c",
+      "name": "Rojo",
+      "type": "color",
+      "categoryPath": []
+    },
+    {
+      "id": "eb1b1cf7-a770-4029-b272-0923cb0cdc00",
       "name": "Barcelona",
       "type": "equipo",
       "categoryPath": [
-        "bd4415d0-ca14-41e8-9ea3-b48b2b6b628c",
-        "242dc6b2-35fa-483a-a06b-826bb42d810f",
-        "15182335-2e7a-4948-a8a3-4ff88d083709",
-        "89e9be35-f42e-4854-abdf-1935392b4ab1"
+        "666a84c2-7c69-4c12-a820-beb4f2dca9d2",
+        "871fcac2-dd24-4270-9c37-05ced835acc5",
+        "b952d446-f45b-4e9c-a866-2d537a88f558",
+        "7480c29a-be82-4f5a-876f-bd22d47da17b"
       ]
     },
     {
-      "id": "e16c1acc-9daf-4dfb-bd45-89912f66d032",
+      "id": "0c66955b-7f18-4a6f-8ea3-a68beebab05e",
+      "name": "Gris",
+      "type": "color",
+      "categoryPath": []
+    },
+    {
+      "id": "8adb96f6-55c5-42c0-bbff-0a86e45a633c",
       "name": "Ghana",
       "type": "equipo",
       "categoryPath": [
-        "bd4415d0-ca14-41e8-9ea3-b48b2b6b628c",
-        "242dc6b2-35fa-483a-a06b-826bb42d810f",
-        "1d7b706e-58e6-47f9-93e6-11fe4ba19041",
-        "d5f5f16b-1640-4e46-a001-c66eb8661916"
+        "666a84c2-7c69-4c12-a820-beb4f2dca9d2",
+        "871fcac2-dd24-4270-9c37-05ced835acc5",
+        "69c0847f-6498-4716-9a1c-c538bf14c11d",
+        "9024feff-adfd-42d1-be49-a6ab2111c768"
       ]
     },
     {
-      "id": "c3f6a86c-fef0-4ee5-9905-845b062c39cd",
+      "id": "821674bd-0440-41ba-bb24-90767032cf2e",
+      "name": "Amarillo",
+      "type": "color",
+      "categoryPath": []
+    },
+    {
+      "id": "64a0aa2d-bfab-4b3c-9daf-0c2240142dd7",
       "name": "Argentina",
       "type": "equipo",
       "categoryPath": [
-        "bd4415d0-ca14-41e8-9ea3-b48b2b6b628c",
-        "242dc6b2-35fa-483a-a06b-826bb42d810f",
-        "1d7b706e-58e6-47f9-93e6-11fe4ba19041",
-        "3c0daf18-9864-4fa6-8747-0ef6a4b46007"
+        "666a84c2-7c69-4c12-a820-beb4f2dca9d2",
+        "871fcac2-dd24-4270-9c37-05ced835acc5",
+        "69c0847f-6498-4716-9a1c-c538bf14c11d",
+        "19252080-1870-4a48-92ca-c2778c6b60c0"
       ]
     },
     {
-      "id": "f093237d-c529-4b57-aeac-fa0d071cb110",
+      "id": "0d9fd86c-7e21-41bf-91e3-bef44594e293",
+      "name": "Estampado",
+      "type": "color",
+      "categoryPath": []
+    },
+    {
+      "id": "df36b03a-850d-4eba-b5ff-9c911469dc87",
       "name": "Brasil",
       "type": "equipo",
       "categoryPath": [
-        "bd4415d0-ca14-41e8-9ea3-b48b2b6b628c",
-        "242dc6b2-35fa-483a-a06b-826bb42d810f",
-        "1d7b706e-58e6-47f9-93e6-11fe4ba19041",
-        "3c0daf18-9864-4fa6-8747-0ef6a4b46007"
+        "666a84c2-7c69-4c12-a820-beb4f2dca9d2",
+        "871fcac2-dd24-4270-9c37-05ced835acc5",
+        "69c0847f-6498-4716-9a1c-c538bf14c11d",
+        "19252080-1870-4a48-92ca-c2778c6b60c0"
       ]
     },
     {
-      "id": "2120d2f4-df6d-4e19-b36b-271cf04030ec",
+      "id": "3edbabdf-46a8-447b-ac27-a03a98efd607",
       "name": "Portugal",
       "type": "equipo",
       "categoryPath": [
-        "bd4415d0-ca14-41e8-9ea3-b48b2b6b628c",
-        "242dc6b2-35fa-483a-a06b-826bb42d810f",
-        "1d7b706e-58e6-47f9-93e6-11fe4ba19041",
-        "b6fb6dd7-eeb8-4613-8594-5ef76ce01f50"
+        "666a84c2-7c69-4c12-a820-beb4f2dca9d2",
+        "871fcac2-dd24-4270-9c37-05ced835acc5",
+        "69c0847f-6498-4716-9a1c-c538bf14c11d",
+        "1b81aada-ec3c-45e5-9125-ea3c5d05453d"
       ]
     },
     {
-      "id": "5544a04e-8ced-4cbd-ba9b-d606f9107fad",
+      "id": "e0ed1172-b9bc-4f33-b773-f5101603ae70",
       "name": "AC Milan",
       "type": "equipo",
       "categoryPath": [
-        "bd4415d0-ca14-41e8-9ea3-b48b2b6b628c",
-        "242dc6b2-35fa-483a-a06b-826bb42d810f",
-        "15182335-2e7a-4948-a8a3-4ff88d083709",
-        "15107873-fbb7-46da-951d-93548f4debd2"
+        "666a84c2-7c69-4c12-a820-beb4f2dca9d2",
+        "871fcac2-dd24-4270-9c37-05ced835acc5",
+        "b952d446-f45b-4e9c-a866-2d537a88f558",
+        "97ff12fb-4770-4bd7-bf23-9a2540fe59df"
       ]
     },
     {
-      "id": "cc4081fc-e542-4edf-8bbd-8a35cd5451a6",
+      "id": "ac00a4eb-dc81-4e4d-b3da-1aad68c1432e",
       "name": "2000-2001",
       "type": "temporada",
       "categoryPath": [
-        "2b9dbf51-644c-462f-ac39-e126b458d319"
+        "6aca3034-1786-4959-9ca1-7418aa487579"
       ]
     },
     {
-      "id": "52e0b45e-2c6d-4479-9291-7a640c74c123",
+      "id": "b228058e-77c5-40a1-ad1e-6b2ef7552de0",
       "name": "Toluca",
       "type": "equipo",
       "categoryPath": [
-        "bd4415d0-ca14-41e8-9ea3-b48b2b6b628c",
-        "242dc6b2-35fa-483a-a06b-826bb42d810f",
-        "15182335-2e7a-4948-a8a3-4ff88d083709",
-        "7c4098c9-cd6c-4cee-b038-099e38872a3b"
+        "666a84c2-7c69-4c12-a820-beb4f2dca9d2",
+        "871fcac2-dd24-4270-9c37-05ced835acc5",
+        "b952d446-f45b-4e9c-a866-2d537a88f558",
+        "ea030eec-7d33-4ba1-b434-9869d4d7e8cf"
       ]
     },
     {
-      "id": "66869d69-9b49-4dd9-8f36-247bad621fe1",
+      "id": "1ae89ff5-b63b-473f-9749-845d58c7a3b1",
       "name": "1999-2000",
       "type": "temporada",
       "categoryPath": [
-        "2b9dbf51-644c-462f-ac39-e126b458d319"
+        "6aca3034-1786-4959-9ca1-7418aa487579"
       ]
     },
     {
-      "id": "36c53286-4154-48c7-8134-f33c11cceee3",
+      "id": "2fb5096b-c91f-4940-b3e8-767f87dea683",
       "name": "Chelsea",
       "type": "equipo",
       "categoryPath": [
-        "bd4415d0-ca14-41e8-9ea3-b48b2b6b628c",
-        "242dc6b2-35fa-483a-a06b-826bb42d810f",
-        "15182335-2e7a-4948-a8a3-4ff88d083709",
-        "19dcb912-f44c-4ecb-91f7-7a223e80b0b3"
+        "666a84c2-7c69-4c12-a820-beb4f2dca9d2",
+        "871fcac2-dd24-4270-9c37-05ced835acc5",
+        "b952d446-f45b-4e9c-a866-2d537a88f558",
+        "2432c71b-7875-485d-bb1c-fc18fa046e43"
       ]
     },
     {
-      "id": "b21637b8-640e-4399-970e-d365ef73aaa3",
+      "id": "8b4c9ddb-66c9-44f1-a1f8-7e4bc66654cc",
       "name": "Arsenal",
       "type": "equipo",
       "categoryPath": [
-        "bd4415d0-ca14-41e8-9ea3-b48b2b6b628c",
-        "242dc6b2-35fa-483a-a06b-826bb42d810f",
-        "15182335-2e7a-4948-a8a3-4ff88d083709",
-        "19dcb912-f44c-4ecb-91f7-7a223e80b0b3"
+        "666a84c2-7c69-4c12-a820-beb4f2dca9d2",
+        "871fcac2-dd24-4270-9c37-05ced835acc5",
+        "b952d446-f45b-4e9c-a866-2d537a88f558",
+        "2432c71b-7875-485d-bb1c-fc18fa046e43"
       ]
     },
     {
-      "id": "ef250d96-c799-4152-b020-fdafe7b453c5",
+      "id": "490499cc-2eb8-4abc-a6b4-90310574d01a",
       "name": "Juventus",
       "type": "equipo",
       "categoryPath": [
-        "bd4415d0-ca14-41e8-9ea3-b48b2b6b628c",
-        "242dc6b2-35fa-483a-a06b-826bb42d810f",
-        "15182335-2e7a-4948-a8a3-4ff88d083709",
-        "15107873-fbb7-46da-951d-93548f4debd2"
+        "666a84c2-7c69-4c12-a820-beb4f2dca9d2",
+        "871fcac2-dd24-4270-9c37-05ced835acc5",
+        "b952d446-f45b-4e9c-a866-2d537a88f558",
+        "97ff12fb-4770-4bd7-bf23-9a2540fe59df"
       ]
     },
     {
-      "id": "5dff26d0-6a38-44f4-b62b-d3e55209a9d8",
+      "id": "9459d485-398e-48bb-abca-72f36a776a30",
       "name": "Monchengladbach",
       "type": "equipo",
       "categoryPath": [
-        "bd4415d0-ca14-41e8-9ea3-b48b2b6b628c",
-        "242dc6b2-35fa-483a-a06b-826bb42d810f",
-        "15182335-2e7a-4948-a8a3-4ff88d083709",
-        "10df3bb5-297b-4c0a-b38d-0758d1f809e2"
+        "666a84c2-7c69-4c12-a820-beb4f2dca9d2",
+        "871fcac2-dd24-4270-9c37-05ced835acc5",
+        "b952d446-f45b-4e9c-a866-2d537a88f558",
+        "10de306c-ff2a-495b-bf1e-5fa80f1db35d"
       ]
     },
     {
-      "id": "8b2ae838-9b5b-4559-ad08-92c1ace5beb8",
+      "id": "1f67d0ce-11c2-4404-9a43-ae933de58278",
       "name": "RC Lens",
       "type": "equipo",
       "categoryPath": [
-        "bd4415d0-ca14-41e8-9ea3-b48b2b6b628c",
-        "242dc6b2-35fa-483a-a06b-826bb42d810f",
-        "15182335-2e7a-4948-a8a3-4ff88d083709",
-        "66e34488-75cf-4606-90ce-cc45ab75f467"
+        "666a84c2-7c69-4c12-a820-beb4f2dca9d2",
+        "871fcac2-dd24-4270-9c37-05ced835acc5",
+        "b952d446-f45b-4e9c-a866-2d537a88f558",
+        "306ea080-77db-42c3-99a3-2d43c4c0e9a2"
       ]
     },
     {
-      "id": "c46a4e27-c1e9-4065-ab62-9ebf63fbe5cf",
+      "id": "201c3798-d117-4970-bef0-edbd3b4aa762",
       "name": "Copenhagen",
       "type": "equipo",
       "categoryPath": [
-        "bd4415d0-ca14-41e8-9ea3-b48b2b6b628c",
-        "242dc6b2-35fa-483a-a06b-826bb42d810f",
-        "15182335-2e7a-4948-a8a3-4ff88d083709",
-        "7c4098c9-cd6c-4cee-b038-099e38872a3b"
+        "666a84c2-7c69-4c12-a820-beb4f2dca9d2",
+        "871fcac2-dd24-4270-9c37-05ced835acc5",
+        "b952d446-f45b-4e9c-a866-2d537a88f558",
+        "ea030eec-7d33-4ba1-b434-9869d4d7e8cf"
       ]
     },
     {
-      "id": "bc823c31-7445-4031-b425-c0a4ed6dc9be",
+      "id": "34d7e775-dc82-48c3-8585-8e6588f27f0a",
       "name": "Monaco",
       "type": "equipo",
       "categoryPath": [
-        "bd4415d0-ca14-41e8-9ea3-b48b2b6b628c",
-        "242dc6b2-35fa-483a-a06b-826bb42d810f",
-        "15182335-2e7a-4948-a8a3-4ff88d083709",
-        "66e34488-75cf-4606-90ce-cc45ab75f467"
+        "666a84c2-7c69-4c12-a820-beb4f2dca9d2",
+        "871fcac2-dd24-4270-9c37-05ced835acc5",
+        "b952d446-f45b-4e9c-a866-2d537a88f558",
+        "306ea080-77db-42c3-99a3-2d43c4c0e9a2"
       ]
     },
     {
-      "id": "4819fa8a-7abf-4079-b4cd-fb0464b147f7",
+      "id": "ec2745ba-2df0-462b-a681-38d3b061a671",
       "name": "Edicion Limitada",
       "type": "edicion",
       "categoryPath": [
-        "2b9dbf51-644c-462f-ac39-e126b458d319"
+        "6aca3034-1786-4959-9ca1-7418aa487579"
       ]
     },
     {
-      "id": "69c8d6e7-41fe-49bd-ae86-7e03d3bbd6fb",
+      "id": "2df23d16-5905-40b3-88f3-a5e9f8f185d7",
       "name": "Zaragoza",
       "type": "equipo",
       "categoryPath": [
-        "bd4415d0-ca14-41e8-9ea3-b48b2b6b628c",
-        "242dc6b2-35fa-483a-a06b-826bb42d810f",
-        "15182335-2e7a-4948-a8a3-4ff88d083709",
-        "89e9be35-f42e-4854-abdf-1935392b4ab1"
+        "666a84c2-7c69-4c12-a820-beb4f2dca9d2",
+        "871fcac2-dd24-4270-9c37-05ced835acc5",
+        "b952d446-f45b-4e9c-a866-2d537a88f558",
+        "7480c29a-be82-4f5a-876f-bd22d47da17b"
       ]
     },
     {
-      "id": "5183fe49-b19e-4579-ab3c-e3013fa1abc7",
+      "id": "f213fb4b-58be-4312-a57b-f02aff76c384",
       "name": "1995-1996",
       "type": "temporada",
       "categoryPath": [
-        "2b9dbf51-644c-462f-ac39-e126b458d319"
+        "6aca3034-1786-4959-9ca1-7418aa487579"
       ]
     },
     {
-      "id": "e2c42a26-50df-4f94-915d-1cc7aeb86183",
+      "id": "cb726970-1589-4332-b435-9a8c687acb68",
       "name": "Valencia",
       "type": "equipo",
       "categoryPath": [
-        "bd4415d0-ca14-41e8-9ea3-b48b2b6b628c",
-        "242dc6b2-35fa-483a-a06b-826bb42d810f",
-        "15182335-2e7a-4948-a8a3-4ff88d083709",
-        "89e9be35-f42e-4854-abdf-1935392b4ab1"
+        "666a84c2-7c69-4c12-a820-beb4f2dca9d2",
+        "871fcac2-dd24-4270-9c37-05ced835acc5",
+        "b952d446-f45b-4e9c-a866-2d537a88f558",
+        "7480c29a-be82-4f5a-876f-bd22d47da17b"
       ]
     },
     {
-      "id": "c191803d-9d8f-4ca6-97a2-a9b0d0bbd0d4",
+      "id": "6cb64f90-8e88-473d-b0f1-666df1de1aef",
       "name": "1990-1992",
       "type": "temporada",
       "categoryPath": [
-        "2b9dbf51-644c-462f-ac39-e126b458d319"
+        "6aca3034-1786-4959-9ca1-7418aa487579"
       ]
     },
     {
-      "id": "c716f137-60aa-445f-b93f-977f276b0736",
+      "id": "98132ee8-c145-4546-b8e3-9fce43583e0c",
       "name": "2019-2020",
       "type": "temporada",
       "categoryPath": [
-        "2b9dbf51-644c-462f-ac39-e126b458d319"
+        "6aca3034-1786-4959-9ca1-7418aa487579"
       ]
     },
     {
-      "id": "6d67868a-f817-44d5-b00a-40158e68988a",
+      "id": "a8d1335a-a465-474a-92a2-bd54a27a310b",
       "name": "Mexico",
       "type": "equipo",
       "categoryPath": [
-        "bd4415d0-ca14-41e8-9ea3-b48b2b6b628c",
-        "242dc6b2-35fa-483a-a06b-826bb42d810f",
-        "1d7b706e-58e6-47f9-93e6-11fe4ba19041",
-        "3c0daf18-9864-4fa6-8747-0ef6a4b46007"
+        "666a84c2-7c69-4c12-a820-beb4f2dca9d2",
+        "871fcac2-dd24-4270-9c37-05ced835acc5",
+        "69c0847f-6498-4716-9a1c-c538bf14c11d",
+        "19252080-1870-4a48-92ca-c2778c6b60c0"
       ]
     },
     {
-      "id": "654fb099-ef7d-452e-8a24-46690c62ae77",
+      "id": "22f31861-4c8f-4c19-a465-d56f0b8606ff",
       "name": "Rayo Vallecano",
       "type": "equipo",
       "categoryPath": [
-        "bd4415d0-ca14-41e8-9ea3-b48b2b6b628c",
-        "242dc6b2-35fa-483a-a06b-826bb42d810f",
-        "15182335-2e7a-4948-a8a3-4ff88d083709",
-        "89e9be35-f42e-4854-abdf-1935392b4ab1"
+        "666a84c2-7c69-4c12-a820-beb4f2dca9d2",
+        "871fcac2-dd24-4270-9c37-05ced835acc5",
+        "b952d446-f45b-4e9c-a866-2d537a88f558",
+        "7480c29a-be82-4f5a-876f-bd22d47da17b"
       ]
     },
     {
-      "id": "0782aebd-3f52-4088-a583-815e55e0f6ef",
+      "id": "6984d35c-c984-48f1-8dfd-c1cb0f2a885b",
       "name": "Atalanta",
       "type": "equipo",
       "categoryPath": [
-        "bd4415d0-ca14-41e8-9ea3-b48b2b6b628c",
-        "242dc6b2-35fa-483a-a06b-826bb42d810f",
-        "15182335-2e7a-4948-a8a3-4ff88d083709",
-        "15107873-fbb7-46da-951d-93548f4debd2"
+        "666a84c2-7c69-4c12-a820-beb4f2dca9d2",
+        "871fcac2-dd24-4270-9c37-05ced835acc5",
+        "b952d446-f45b-4e9c-a866-2d537a88f558",
+        "97ff12fb-4770-4bd7-bf23-9a2540fe59df"
       ]
     },
     {
-      "id": "28b1813e-556b-4d13-b625-a61f5a5dde0c",
+      "id": "0315ba98-cb21-4185-9669-5ca9db4e9ae1",
       "name": "Conjuntos",
       "type": "product_type",
       "categoryPath": [
-        "2b9dbf51-644c-462f-ac39-e126b458d319"
+        "6aca3034-1786-4959-9ca1-7418aa487579"
       ]
     },
     {
-      "id": "7fc404c8-abc5-4420-908c-3751b4998b62",
+      "id": "fb6c3627-f5e7-42a6-9f05-ccd307381060",
       "name": "Rompevientos",
       "type": "caracteristica",
       "categoryPath": [
-        "2b9dbf51-644c-462f-ac39-e126b458d319"
+        "6aca3034-1786-4959-9ca1-7418aa487579"
       ]
     }
   ]

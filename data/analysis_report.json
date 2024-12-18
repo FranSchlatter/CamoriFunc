@@ -1,162 +1,10 @@
 {
-  "newCategories": [
-    {
-      "id": "0221de84-5765-4864-ab95-2878d092c0f0",
-      "path": [
-        "Deportes",
-        "Fútbol"
-      ],
-      "name": "Futbol",
-      "description": "Deporte fútbol"
-    },
-    {
-      "id": "dfb636ae-0c09-4a10-8ac1-5c98fff2e413",
-      "path": [
-        "Productos",
-        "Camisetas"
-      ],
-      "name": "Camisetas",
-      "description": "Indumentaria camisetas"
-    },
-    {
-      "id": "648fea18-822f-4d62-a956-b3a232e2a9c7",
-      "path": [
-        "Productos",
-        "Retro"
-      ],
-      "name": "Retro",
-      "description": "Indumentaria retro"
-    },
-    {
-      "id": "792cfdc4-8be1-458b-8159-c5227b45b90e",
-      "path": [
-        "Productos",
-        "Entrenamiento"
-      ],
-      "name": "Entrenamiento",
-      "description": "Indumentaria entrenamiento"
-    },
-    {
-      "id": "10e4af9e-1bb5-4a21-8be1-4f809a1baaf9",
-      "path": [
-        "Productos",
-        "Casual",
-        "Remeras"
-      ],
-      "name": "Remeras",
-      "description": "Indumentaria Remeras casual"
-    },
-    {
-      "id": "1aa8742f-f92e-4942-b9ea-3130204c0ce4",
-      "path": [
-        "Productos",
-        "Abrigos",
-        "Rompevientos"
-      ],
-      "name": "Rompevientos",
-      "description": "Indumentaria de abrigo rompeviento"
-    },
-    {
-      "id": "6196b4b7-6281-4dcd-a4b5-64ad67559397",
-      "path": [
-        "Productos",
-        "Conjuntos"
-      ],
-      "name": "Conjuntos",
-      "description": "Indumentaria conjuntos"
-    }
-  ],
-  "newTags": [
-    {
-      "id": "907574ae-d716-45bb-95dd-3be1bc5c0d35",
-      "name": "Blanco",
-      "type": "color",
-      "metadata": {}
-    },
-    {
-      "id": "2dde7604-8d25-402b-934f-7f40c70e98ab",
-      "name": "Negro",
-      "type": "color",
-      "metadata": {}
-    },
-    {
-      "id": "72a56646-193e-45cc-aa71-436ee413d186",
-      "name": "Verde",
-      "type": "color",
-      "metadata": {}
-    },
-    {
-      "id": "41f8c066-97af-4c1d-9504-396ff28a68ba",
-      "name": "Azul",
-      "type": "color",
-      "metadata": {}
-    },
-    {
-      "id": "b34e5fa3-e1bb-4d88-a144-e35a260cf38c",
-      "name": "Rojo",
-      "type": "color",
-      "metadata": {}
-    },
-    {
-      "id": "84132ed3-e911-455d-aeca-d1853bb93213",
-      "name": "Gris",
-      "type": "color",
-      "metadata": {}
-    },
-    {
-      "id": "5ce92256-355c-4ca9-bdda-11354bbc9f2e",
-      "name": "Amarillo",
-      "type": "color",
-      "metadata": {}
-    },
-    {
-      "id": "89de00f7-2d83-4002-8cda-1ca0165bbb71",
-      "name": "Estampado",
-      "type": "color",
-      "metadata": {}
-    }
-  ],
+  "newCategories": [],
+  "newTags": [],
   "newProductOptions": {
-    "badges": [
-      {
-        "name": "No Badge",
-        "matches": [
-          "No Badge"
-        ],
-        "type": "badge",
-        "price": 0,
-        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/17/e/8/e80a811156ddf959.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-      },
-      {
-        "name": "Bundesliga (德普章)",
-        "matches": [
-          "Bundesliga (德普章)"
-        ],
-        "type": "badge",
-        "price": 1,
-        "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/17/1/c/1c8b2e3d86130fe3.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-      }
-    ],
-    "customize": [
-      {
-        "name": "No Name No Number",
-        "matches": [
-          "No Name No Number"
-        ],
-        "type": "customize",
-        "price": 0
-      }
-    ],
-    "sizes": [
-      {
-        "name": "S",
-        "matches": [
-          "S"
-        ],
-        "type": "size",
-        "price": 0
-      }
-    ]
+    "badges": [],
+    "customize": [],
+    "sizes": []
   },
   "unrecognizedTerms": [
     "125th",
@@ -716,12 +564,12 @@
     "totalProducts": 50,
     "processedProducts": 50,
     "totalPages": 1,
-    "newCategoriesFound": 7,
-    "newTagsFound": 8,
+    "newCategoriesFound": 0,
+    "newTagsFound": 0,
     "newOptionsFound": {
-      "badges": 2,
-      "customize": 1,
-      "sizes": 1
+      "badges": 0,
+      "customize": 0,
+      "sizes": 0
     },
     "unrecognizedTermsFound": 7,
     "unmappedOptionsFound": {

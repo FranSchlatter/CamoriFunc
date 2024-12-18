@@ -1,28 +1,28 @@
 {
   "productOptions": [
     {
-      "id": "658970ba-a19b-48ed-9ff5-61005fcce4d7",
+      "id": "952ec21a-45c6-4cb0-a1ca-72dfbeb7f9c7",
       "name": "No Badge",
       "type": "badge",
       "price": "0",
       "image": "https://us03-imgcdn.ymcart.com/97006/2024/12/17/e/8/e80a811156ddf959.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
     },
     {
-      "id": "c4f72cc8-3d5d-413b-a515-6fac6aad1c4c",
-      "name": "Bundesliga (德普章)",
+      "id": "fd92caf3-c26b-43f3-a000-06bdc7025954",
+      "name": "Bundesliga",
       "type": "badge",
       "price": "1",
       "image": "https://us03-imgcdn.ymcart.com/97006/2024/12/17/1/c/1c8b2e3d86130fe3.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
     },
     {
-      "id": "14662658-1164-4b5b-af07-4f33d8604ff0",
-      "name": "No Name No Number",
+      "id": "40c017d5-d9c3-4f16-a092-11d2e469524a",
+      "name": "Sin dorsal",
       "type": "customize",
       "price": "0",
       "image": null
     },
     {
-      "id": "23a7860a-72bc-4769-b385-91edcc7c51ae",
+      "id": "b928969a-2f3b-481e-ac7a-bd2cef005e6f",
       "name": "S",
       "type": "size",
       "price": "0",

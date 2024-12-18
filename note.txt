@@ -1,6 +1,11 @@
 Analyzer
-> error en productOptions name. (o es error de dataCreator)
-> no revisa "subcategories"
-> no revisa productOptions.json > "newProductOptions" que ya existen.
+> Agregar mappings de productOptions
+> Facil de cambiar + prod o + pages
+> Se puede extraer el brand de alguna manera? 
 
-dataCreator error en colores
+> dataCreator creo que esta OK. Testear bien todo.
+
+> Arrancamos con products. Empezar x 5. Con todas sus variants. 
+
+En front ademas de las variants. Deberia mostrar, versiones (home away third) y abajo prod relacionados.
+Remake prods, tags, categories, prodOptions... prod brand img?  

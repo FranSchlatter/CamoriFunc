@@ -35,6 +35,47 @@ const BASE_FILES = {
 const generateUUID = () => crypto.randomUUID();
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
+// Helpers de verificación para categorías y productOptions (agregar al inicio del archivo)
+const categoryExists = (existingCategories, categoryToCheck) => {
+    // Función auxiliar recursiva para buscar en subcategorías
+    const checkSubcategories = (categories) => {
+        if (!categories) return false;
+        
+        for (const category of categories) {
+            // Verificar el nombre de la categoría actual
+            if (category.name === categoryToCheck.name) {
+                return true;
+            }
+            
+            // Si tiene subcategorías, buscar recursivamente en ellas
+            if (category.subcategories && category.subcategories.length > 0) {
+                if (checkSubcategories(category.subcategories)) {
+                    return true;
+                }
+            }
+        }
+        
+        return false;
+    };
+
+    // Verificar en categorías principales
+    const existsInMain = existingCategories.categories.some(c => 
+        c.name === categoryToCheck.name
+    );
+    
+    if (existsInMain) return true;
+
+    // Verificar recursivamente en todas las subcategorías
+    return checkSubcategories(existingCategories.categories);
+};
+
+const productOptionExists = (existingOptions, optionToCheck) => {
+    return existingOptions.productOptions.some(option => 
+        option.name === optionToCheck.name && 
+        option.type === optionToCheck.type
+    );
+};
+
 async function analyzeProductDetail(url) {
     try {
         const response = await axios.get(url, { headers: CONFIG.headers });
@@ -65,6 +106,16 @@ async function analyzeProductDetail(url) {
             return match ? parseFloat(match[1]) : 0;
         };
 
+        // Helper para encontrar el nombre del mapping que coincide
+        const findMappingName = (mappings, itemName) => {
+            for (const [key, mapping] of Object.entries(mappings)) {
+                if (mapping.matches.includes(itemName)) {
+                    return key;
+                }
+            }
+            return itemName;
+        };
+
         // Validar si existe la estructura de mappings
         const mappings = MAPPINGS.productOptions || {
             sizes: {},
@@ -88,9 +139,9 @@ async function analyzeProductDetail(url) {
                     );
                     
                     if (isMatched) {
+                        const mappedName = findMappingName(mappings.sizes, name);
                         matchedOptions.sizes.add(JSON.stringify({
-                            name,
-                            matches: [name],
+                            name: mappedName,
                             type: "size",
                             price: extractPrice(priceStr)
                         }));
@@ -122,9 +173,9 @@ async function analyzeProductDetail(url) {
                     );
                     
                     if (isMatched) {
+                        const mappedName = findMappingName(mappings.badges, name);
                         matchedOptions.badges.add(JSON.stringify({
-                            name,
-                            matches: [name],
+                            name: mappedName,
                             type: "badge",
                             price: extractPrice(priceStr),
                             images: image || null
@@ -157,9 +208,9 @@ async function analyzeProductDetail(url) {
                     );
                     
                     if (isMatched) {
+                        const mappedName = findMappingName(mappings.customize, name);
                         matchedOptions.customize.add(JSON.stringify({
-                            name,
-                            matches: [name],
+                            name: mappedName,
                             type: "customize",
                             price: extractPrice(priceStr)
                         }));
@@ -211,12 +262,9 @@ function analyzeProductName(name) {
         const temporada = match[0];
         recognizedWords.add(temporada);
         foundTags.add({
-            id: generateUUID(),
             name: temporada,
             type: "temporada",
-            metadata: {
-                categoryPath: ["Productos"]
-            }
+            categoryPath: ["Productos"]
         });
         
         temporada.split(/[-\/\s]/).forEach(num => {
@@ -239,12 +287,9 @@ function analyzeProductName(name) {
             }
             
             foundTags.add({
-                id: generateUUID(),
                 name: normalized,
                 type: type,
-                metadata: {
-                    categoryPath: categoryPath
-                }
+                categoryPath: categoryPath
             });
         }
     });
@@ -280,12 +325,9 @@ function analyzeProductName(name) {
                         });
                     } else {
                         foundTags.add({
-                            id: generateUUID(),
                             name: itemName,
                             type: data.type,
-                            metadata: {
-                                categoryPath: data.categoryPath
-                            }
+                            categoryPath: data.categoryPath
                         });
                     }
                 }
@@ -296,16 +338,13 @@ function analyzeProductName(name) {
     // Agregar manga corta por defecto
     if (!hasLongSleeve) {
         foundTags.add({
-            id: generateUUID(),
             name: "Manga Corta",
             type: "caracteristica",
-            metadata: {
-                categoryPath: ["Productos"]
-            }
+            categoryPath: ["Productos"]
         });
     }
 
-    // Identificar términos no reconocidos solo si realmente no están en ningún mapping
+    // Identificar términos no reconocidos
     processedName.split(/[\s-]+/).forEach(word => {
         if (!recognizedWords.has(word.toLowerCase()) && 
             word.length > 2 && 
@@ -444,6 +483,130 @@ async function ensureBaseFiles() {
 }
 
 // Analizar productos
+function analyzeProductName(name) {
+    const foundCategories = new Set();
+    const foundTags = new Set();
+    const unrecognizedTerms = new Set();
+    const recognizedWords = new Set();
+
+    let normalizedName = name.toUpperCase();
+    let processedName = name;
+    let hasLongSleeve = false;
+
+    // Procesar temporadas
+    const temporadaRegex = /(\d{4})(?:-(\d{2,4})|\/(\d{2,4})|\s+(\d{2,4}))|(\d{4})/g;
+    const temporadaMatches = name.matchAll(temporadaRegex);
+    
+    for (const match of temporadaMatches) {
+        const temporada = match[0];
+        recognizedWords.add(temporada);
+        foundTags.add({
+            name: temporada,
+            type: "temporada",
+            categoryPath: ["Productos"]
+        });
+        
+        temporada.split(/[-\/\s]/).forEach(num => {
+            recognizedWords.add(num.toLowerCase());
+        });
+    }
+
+    // Procesar frases compuestas
+    COMPOUND_PHRASES.phrases.forEach(({ phrase, normalized, type }) => {
+        if (normalizedName.includes(phrase.toUpperCase())) {
+            if (normalized === 'Manga Larga') {
+                hasLongSleeve = true;
+            }
+            phrase.split(' ').forEach(word => recognizedWords.add(word.toLowerCase()));
+            processedName = processedName.replace(phrase, `__${normalized}__`);
+            
+            let categoryPath = ["Productos"];
+            if (type === "equipo") {
+                categoryPath = ["Deportes", "Fútbol", "Clubes"];
+            }
+            
+            foundTags.add({
+                name: normalized,
+                type: type,
+                categoryPath: categoryPath
+            });
+        }
+    });
+
+    // Verificar todos los tipos de mappings
+    const mappingTypes = {
+        categories: MAPPINGS.categories,
+        teams: MAPPINGS.tags.teams,
+        versions: MAPPINGS.tags.versions,
+        editions: MAPPINGS.tags.editions,
+        features: MAPPINGS.tags.features,
+        colors: MAPPINGS.tags.colors
+    };
+
+    // Procesar cada tipo de mapping
+    Object.entries(mappingTypes).forEach(([mappingType, mappingData]) => {
+        Object.entries(mappingData).forEach(([itemName, data]) => {
+            if (data.matches) {
+                const found = data.matches.some(match => {
+                    if (normalizedName.includes(match.toUpperCase())) {
+                        match.split(' ').forEach(word => recognizedWords.add(word.toLowerCase()));
+                        return true;
+                    }
+                    return false;
+                });
+
+                if (found) {
+                    if (mappingType === 'categories') {
+                        foundCategories.add({
+                            path: data.categoryPath,
+                            name: itemName,
+                            description: data.description
+                        });
+                    } else {
+                        foundTags.add({
+                            name: itemName,
+                            type: data.type,
+                            categoryPath: data.categoryPath
+                        });
+                    }
+                }
+            }
+        });
+    });
+
+    // Agregar manga corta por defecto
+    if (!hasLongSleeve) {
+        foundTags.add({
+            name: "Manga Corta",
+            type: "caracteristica",
+            categoryPath: ["Productos"]
+        });
+    }
+
+    // Identificar términos no reconocidos
+    processedName.split(/[\s-]+/).forEach(word => {
+        if (!recognizedWords.has(word.toLowerCase()) && 
+            word.length > 2 && 
+            !word.startsWith('__') && 
+            !word.endsWith('__') &&
+            !Object.values(mappingTypes).some(mappingData => 
+                Object.values(mappingData).some(data => 
+                    data.matches?.some(match => 
+                        match.toLowerCase().includes(word.toLowerCase())
+                    )
+                )
+            )) {
+            unrecognizedTerms.add(word);
+        }
+    });
+
+    return {
+        categories: Array.from(foundCategories),
+        tags: Array.from(foundTags),
+        unrecognized: Array.from(unrecognizedTerms)
+    };
+}
+
 async function analyzeAllProducts() {
     try {
         console.log('\n=== Iniciando análisis de productos ===\n');
@@ -482,13 +645,8 @@ async function analyzeAllProducts() {
                 // Solo agregar categorías que no existen en categories.json
                 nameAnalysis.categories.forEach(category => {
                     const categoryKey = `${category.path.join('/')}/${category.name}`;
-                    const existingCategory = existingCategories.categories.find(c => 
-                        c.name === category.name
-                    );
-                    
-                    if (!existingCategory && !newCategories.has(categoryKey)) {
+                    if (!categoryExists(existingCategories, category) && !newCategories.has(categoryKey)) {
                         newCategories.set(categoryKey, {
-                            id: generateUUID(),
                             path: category.path,
                             name: category.name,
                             description: category.description
@@ -511,11 +669,7 @@ async function analyzeAllProducts() {
                         // Procesar opciones mapeadas que no existen en productOptions.json
                         Object.entries(detailAnalysis.matchedOptions).forEach(([type, options]) => {
                             options.forEach(option => {
-                                const existingOption = existingProductOptions[type]?.find(opt => 
-                                    opt.name === option.name
-                                );
-                                
-                                if (!existingOption && !newProductOptions[type].has(option.name)) {
+                                if (!productOptionExists(existingProductOptions, option) && !newProductOptions[type].has(option.name)) {
                                     newProductOptions[type].set(option.name, option);
                                 }
                             });
@@ -525,15 +679,15 @@ async function analyzeAllProducts() {
                 }
                 
                 nameAnalysis.tags.forEach(tag => {
-                    if (!existingTags.tags.find(t => t.name === tag.name) && !newTags.has(tag.name)) {
-                        newTags.set(tag.name, tag);
+                    const tagKey = `${tag.name}-${tag.type}`;
+                    if (!existingTags.tags.find(t => t.name === tag.name && t.type === tag.type) && !newTags.has(tagKey)) {
+                        newTags.set(tagKey, tag);
                     }
                 });
             }
         }
 
-        // Generar reporte
-        console.log('\n=== Generando reporte final ===\n');
+        // Generar reporte con el mismo formato que tenías antes...
         const report = {
             newCategories: Array.from(newCategories.values()),
             newTags: Array.from(newTags.values()),

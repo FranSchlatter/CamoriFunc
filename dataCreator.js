@@ -52,7 +52,6 @@ function buildCategoryTree(categories) {
   // Procesar cada nivel de path y crear si no existe
   categories.forEach(cat => {
     const pathParts = cat.path;
-    let currentPath = '';
     
     // Crear categorías padre si no existen
     for (let i = 0; i < pathParts.length - 1; i++) {
@@ -93,9 +92,9 @@ async function processCategories(analysisReport) {
 
   // Recolectar todos los paths de categorías desde tags
   analysisReport.newTags.forEach(tag => {
-    if (tag.metadata.categoryPath) {
+    if (tag.categoryPath) {
       let currentPath = [];
-      tag.metadata.categoryPath.forEach(catName => {
+      tag.categoryPath.forEach(catName => {
         currentPath.push(catName);
         allCategoryPaths.add([...currentPath]);
       });
@@ -104,7 +103,6 @@ async function processCategories(analysisReport) {
 
   // Convertir paths a formato de categorías
   const additionalCategories = Array.from(allCategoryPaths).map(path => ({
-    id: crypto.randomUUID(),
     path: path,
     name: path[path.length - 1],
     description: `Categoría ${path[path.length - 1]}`
@@ -164,17 +162,20 @@ async function processTags(analysisReport, categoryMap) {
         continue;
       }
 
-      // Convertir nombres de categorías a IDs
-      let currentPath = [];
-      const categoryIds = newTag.metadata.categoryPath.map(catName => {
-        currentPath.push(catName);
-        const pathString = currentPath.join('/');
-        const categoryId = categoryMap.get(pathString);
-        if (!categoryId) {
-          throw new Error(`Categoría no encontrada: ${pathString}`);
-        }
-        return categoryId;
-      });
+      let categoryIds = [];
+      if (newTag.categoryPath) {
+        // Convertir nombres de categorías a IDs
+        let currentPath = [];
+        categoryIds = newTag.categoryPath.map(catName => {
+          currentPath.push(catName);
+          const pathString = currentPath.join('/');
+          const categoryId = categoryMap.get(pathString);
+          if (!categoryId) {
+            throw new Error(`Categoría no encontrada: ${pathString}`);
+          }
+          return categoryId;
+        });
+      }
 
       const tagToAdd = {
         id: crypto.randomUUID(),

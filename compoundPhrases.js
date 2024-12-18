@@ -46,7 +46,7 @@ module.exports = {
             phrase: 'Double Sided', 
             normalized: 'Rompevientos', 
             type: 'caracteristica',
-            categoryPath: ['Productos', 'Rompevientos']
+            categoryPath: ['Productos', 'Abrigos', 'Rompevientos']
         },
         
         // Equipos compuestos
@@ -75,26 +75,6 @@ module.exports = {
             normalized: 'Bebes', 
             type: 'version',
             categoryPath: ['Productos']
-        },
-
-        // Traducciones del chino
-        { 
-            phrase: '(长袖)', 
-            normalized: 'Manga Larga', 
-            type: 'caracteristica',
-            categoryPath: ['Productos']
-        },
-        { 
-            phrase: '(双面风衣)', 
-            normalized: 'Rompevientos', 
-            type: 'product_type',
-            categoryPath: ['Productos', 'Rompevientos']
-        },
-        { 
-            phrase: '(卫衣套装)', 
-            normalized: 'Conjuntos', 
-            type: 'product_type',
-            categoryPath: ['Productos', 'Conjuntos']
         }
     ],
 

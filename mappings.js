@@ -3,7 +3,7 @@ module.exports = {
     // Categorías con sus jerarquías
     categories: {
         // Deportes y sus subcategorías
-        "Futbol": {
+        "Fútbol": {
             matches: ['Soccer'],
             description: "Deporte fútbol",
             categoryPath: ["Deportes", "Fútbol"]
@@ -118,7 +118,7 @@ module.exports = {
             categoryPath: ["Productos", "Camisetas"]
         },
         "Conjuntos": {
-            matches: ['Tracksuit', 'Hoodie', 'Half Pull', 'Training Short', 'Tank top and shorts suit'],
+            matches: ['Tracksuit', 'Hoodie', 'Half Pull', 'Training Short', 'Tank top and shorts suit', '(卫衣套装)'],
             description: "Indumentaria conjuntos",
             categoryPath: ["Productos", "Conjuntos"]
         },
@@ -178,7 +178,7 @@ module.exports = {
                 categoryPath: ["Productos", "Abrigos", "Camperon"]
             },
             "Rompevientos": {
-                matches: ['Windbreaker', 'Double Sided'],
+                matches: ['Windbreaker', 'Double Sided', '(双面风衣)'],
                 description: "Indumentaria de abrigo rompeviento",
                 categoryPath: ["Productos", "Abrigos", "Rompevientos"]
             }
@@ -991,7 +991,7 @@ module.exports = {
                 categoryPath: ["Productos"]
             },
             "Manga Larga": {
-                matches: ['Long Sleeve', '长袖'],
+                matches: ['Long Sleeve', '长袖', '(长袖)'],
                 type: "caracteristica",
                 categoryPath: ["Productos"]
             }
