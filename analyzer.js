@@ -46,6 +46,12 @@ async function analyzeProductDetail(url) {
             sizes: new Set()
         };
 
+        const matchedOptions = {
+            badges: new Set(),
+            customize: new Set(),
+            sizes: new Set()
+        };
+
         const productData = {
             sizes: [],
             badges: [],
@@ -77,13 +83,23 @@ async function analyzeProductDetail(url) {
                     
                     productData.sizes.push({ name, price: priceStr });
                     
-                    if (!mappings.sizes[name]) {
-                        const newSize = {
+                    const isMatched = Object.values(mappings.sizes).some(mapping => 
+                        mapping.matches.includes(name)
+                    );
+                    
+                    if (isMatched) {
+                        matchedOptions.sizes.add(JSON.stringify({
+                            name,
                             matches: [name],
                             type: "size",
                             price: extractPrice(priceStr)
-                        };
-                        unmappedOptions.sizes.add(JSON.stringify(newSize));
+                        }));
+                    } else {
+                        unmappedOptions.sizes.add(JSON.stringify({
+                            matches: [name],
+                            type: "size",
+                            price: extractPrice(priceStr)
+                        }));
                     }
                 });
             }
@@ -101,14 +117,25 @@ async function analyzeProductDetail(url) {
                     
                     productData.badges.push({ name, price: priceStr, image });
                     
-                    if (!mappings.badges[name]) {
-                        const newBadge = {
+                    const isMatched = Object.values(mappings.badges).some(mapping => 
+                        mapping.matches.includes(name)
+                    );
+                    
+                    if (isMatched) {
+                        matchedOptions.badges.add(JSON.stringify({
+                            name,
                             matches: [name],
                             type: "badge",
                             price: extractPrice(priceStr),
                             images: image || null
-                        };
-                        unmappedOptions.badges.add(JSON.stringify(newBadge));
+                        }));
+                    } else {
+                        unmappedOptions.badges.add(JSON.stringify({
+                            matches: [name],
+                            type: "badge",
+                            price: extractPrice(priceStr),
+                            images: image || null
+                        }));
                     }
                 });
             }
@@ -125,13 +152,23 @@ async function analyzeProductDetail(url) {
                     
                     productData.customize.push({ name, price: priceStr });
                     
-                    if (!mappings.customize[name]) {
-                        const newCustomize = {
+                    const isMatched = Object.values(mappings.customize).some(mapping => 
+                        mapping.matches.includes(name)
+                    );
+                    
+                    if (isMatched) {
+                        matchedOptions.customize.add(JSON.stringify({
+                            name,
                             matches: [name],
                             type: "customize",
                             price: extractPrice(priceStr)
-                        };
-                        unmappedOptions.customize.add(JSON.stringify(newCustomize));
+                        }));
+                    } else {
+                        unmappedOptions.customize.add(JSON.stringify({
+                            matches: [name],
+                            type: "customize",
+                            price: extractPrice(priceStr)
+                        }));
                     }
                 });
             }
@@ -140,52 +177,19 @@ async function analyzeProductDetail(url) {
         return {
             productData,
             unmappedOptions: {
-                badges: Array.from(unmappedOptions.badges),
-                customize: Array.from(unmappedOptions.customize),
-                sizes: Array.from(unmappedOptions.sizes)
+                badges: Array.from(unmappedOptions.badges).map(opt => JSON.parse(opt)),
+                customize: Array.from(unmappedOptions.customize).map(opt => JSON.parse(opt)),
+                sizes: Array.from(unmappedOptions.sizes).map(opt => JSON.parse(opt))
+            },
+            matchedOptions: {
+                badges: Array.from(matchedOptions.badges).map(opt => JSON.parse(opt)),
+                customize: Array.from(matchedOptions.customize).map(opt => JSON.parse(opt)),
+                sizes: Array.from(matchedOptions.sizes).map(opt => JSON.parse(opt))
             }
         };
     } catch (error) {
         console.error(`Error analizando detalle del producto: ${error.message}`);
         return null;
-    }
-}
-
-async function getTotalProducts() {
-    const firstPage = await getProductsFromPage(1);
-    const totalPages = await getTotalPages();
-    return firstPage.length * totalPages;
-}
-
-async function getProductsFromPage(pageNum) {
-    try {
-        const url = `${CONFIG.baseUrl}/Products/list-r${pageNum}.html`;
-        const response = await axios.get(url, { headers: CONFIG.headers });
-        const $ = cheerio.load(response.data);
-        
-        const products = [];
-        $('li .pro_content').each((_, el) => {
-            const $el = $(el);
-            const $link = $el.find('a');
-            const name = $link.attr('title');
-            const detailUrl = $link.attr('href');
-            const price = $el.find('.price').text().trim();
-            const image = $el.find('img').attr('src');
-            
-            if (name) {
-                products.push({
-                    name,
-                    detailUrl: detailUrl ? `${CONFIG.baseUrl}${detailUrl}` : null,
-                    price,
-                    image,
-                    itemNo: $el.find('.itemNo').text().trim()
-                });
-            }
-        });
-        return products;
-    } catch (error) {
-        console.error(`Error en página ${pageNum}:`, error.message);
-        return [];
     }
 }
 
@@ -252,7 +256,7 @@ function analyzeProductName(name) {
         versions: MAPPINGS.tags.versions,
         editions: MAPPINGS.tags.editions,
         features: MAPPINGS.tags.features,
-        colors: MAPPINGS.productOptions.colors
+        colors: MAPPINGS.tags.colors
     };
 
     // Procesar cada tipo de mapping
@@ -325,7 +329,44 @@ function analyzeProductName(name) {
     };
 }
 
-// Obtener total de páginas
+async function getTotalProducts() {
+    const firstPage = await getProductsFromPage(1);
+    const totalPages = await getTotalPages();
+    return firstPage.length * totalPages;
+}
+
+async function getProductsFromPage(pageNum) {
+    try {
+        const url = `${CONFIG.baseUrl}/Products/list-r${pageNum}.html`;
+        const response = await axios.get(url, { headers: CONFIG.headers });
+        const $ = cheerio.load(response.data);
+        
+        const products = [];
+        $('li .pro_content').each((_, el) => {
+            const $el = $(el);
+            const $link = $el.find('a');
+            const name = $link.attr('title');
+            const detailUrl = $link.attr('href');
+            const price = $el.find('.price').text().trim();
+            const image = $el.find('img').attr('src');
+            
+            if (name) {
+                products.push({
+                    name,
+                    detailUrl: detailUrl ? `${CONFIG.baseUrl}${detailUrl}` : null,
+                    price,
+                    image,
+                    itemNo: $el.find('.itemNo').text().trim()
+                });
+            }
+        });
+        return products;
+    } catch (error) {
+        console.error(`Error en página ${pageNum}:`, error.message);
+        return [];
+    }
+}
+
 async function getTotalPages() {
     try {
         const response = await axios.get(`${CONFIG.baseUrl}/Products/list-r1.html`, { headers: CONFIG.headers });
@@ -335,7 +376,6 @@ async function getTotalPages() {
         $('.pagination li').each((_, el) => {
             const pageText = $(el).text().trim();
             const pageNum = parseInt(pageText);
-            console.log(`Encontrado número de página: ${pageText}`);
             if (!isNaN(pageNum) && pageNum > maxPage) {
                 maxPage = pageNum;
             }
@@ -355,21 +395,25 @@ async function analyzeExistingData() {
     try {
         const categoriesPath = path.join(CONFIG.dataDir, 'categories.json');
         const tagsPath = path.join(CONFIG.dataDir, 'tags.json');
+        const productOptionsPath = path.join(CONFIG.dataDir, 'productOptions.json');
 
-        const [categoriesData, tagsData] = await Promise.all([
+        const [categoriesData, tagsData, productOptionsData] = await Promise.all([
             fs.readFile(categoriesPath, 'utf8'),
-            fs.readFile(tagsPath, 'utf8')
+            fs.readFile(tagsPath, 'utf8'),
+            fs.readFile(productOptionsPath, 'utf8')
         ]);
 
         return {
             categories: JSON.parse(categoriesData),
-            tags: JSON.parse(tagsData)
+            tags: JSON.parse(tagsData),
+            productOptions: JSON.parse(productOptionsData)
         };
     } catch (error) {
         console.log('Error leyendo archivos existentes:', error.message);
         return {
-            categories: BASE_CATEGORIES,
-            tags: { tags: [] }
+            categories: BASE_FILES['categories.json'],
+            tags: BASE_FILES['tags.json'],
+            productOptions: BASE_FILES['productOptions.json']
         };
     }
 }
@@ -404,37 +448,45 @@ async function analyzeAllProducts() {
     try {
         console.log('\n=== Iniciando análisis de productos ===\n');
         
-        const { categories: existingCategories, tags: existingTags } = await analyzeExistingData();
+        const { categories: existingCategories, tags: existingTags, productOptions: existingProductOptions } = await analyzeExistingData();
         const newCategories = new Map();
         const newTags = new Map();
+        const newProductOptions = {
+            badges: new Map(),
+            customize: new Map(),
+            sizes: new Map()
+        };
         const allUnrecognizedTerms = new Set();
         const allUnmappedOptions = {
             badges: new Set(),
             customize: new Set(),
-            sizes: new Set(),
-            colors: new Set()
+            sizes: new Set()
         };
         
         const totalPages = await getTotalPages();
         console.log(`Total de páginas detectadas: ${totalPages}`);
         const totalProducts = await getTotalProducts();
         console.log(`Total de productos detectados: ${totalProducts}`);
-        let processedProducts = 0;  // Añadimos el contador aquí
+        let processedProducts = 0;
 
         for (let page = 1; page <= totalPages; page++) {
             const products = await getProductsFromPage(page);
             
             for (const product of products) {
-                processedProducts++;  // Incrementamos el contador
+                processedProducts++;
                 console.log(`Procesando producto (${processedProducts}/${totalProducts}) - ${product.name}`);
 
                 const nameAnalysis = analyzeProductName(product.name);
                 nameAnalysis.unrecognized.forEach(term => allUnrecognizedTerms.add(term));
 
-                // Manejar categorías como tags
+                // Solo agregar categorías que no existen en categories.json
                 nameAnalysis.categories.forEach(category => {
                     const categoryKey = `${category.path.join('/')}/${category.name}`;
-                    if (!newCategories.has(categoryKey)) {
+                    const existingCategory = existingCategories.categories.find(c => 
+                        c.path.join('/') === category.path.join('/') && c.name === category.name
+                    );
+                    
+                    if (!existingCategory && !newCategories.has(categoryKey)) {
                         newCategories.set(categoryKey, {
                             id: generateUUID(),
                             path: category.path,
@@ -448,10 +500,24 @@ async function analyzeAllProducts() {
                     const detailAnalysis = await analyzeProductDetail(product.detailUrl);
                     if (detailAnalysis) {
                         product.options = detailAnalysis.productData;
+                        
+                        // Procesar opciones no mapeadas
                         Object.entries(detailAnalysis.unmappedOptions).forEach(([type, options]) => {
-                            options.forEach(optionStr => {
-                                const option = JSON.parse(optionStr);
-                                allUnmappedOptions[type].add(optionStr);
+                            options.forEach(option => {
+                                allUnmappedOptions[type].add(JSON.stringify(option));
+                            });
+                        });
+
+                        // Procesar opciones mapeadas que no existen en productOptions.json
+                        Object.entries(detailAnalysis.matchedOptions).forEach(([type, options]) => {
+                            options.forEach(option => {
+                                const existingOption = existingProductOptions[type]?.find(opt => 
+                                    opt.name === option.name
+                                );
+                                
+                                if (!existingOption && !newProductOptions[type].has(option.name)) {
+                                    newProductOptions[type].set(option.name, option);
+                                }
                             });
                         });
                     }
@@ -469,27 +535,35 @@ async function analyzeAllProducts() {
         // Generar reporte
         console.log('\n=== Generando reporte final ===\n');
         const report = {
-            categories: Array.from(newCategories.values()),
+            newCategories: Array.from(newCategories.values()),
             newTags: Array.from(newTags.values()),
+            newProductOptions: {
+                badges: Array.from(newProductOptions.badges.values()),
+                customize: Array.from(newProductOptions.customize.values()),
+                sizes: Array.from(newProductOptions.sizes.values())
+            },
             unrecognizedTerms: Array.from(allUnrecognizedTerms),
             unmappedOptions: {
                 badges: Array.from(allUnmappedOptions.badges).map(opt => JSON.parse(opt)),
                 customize: Array.from(allUnmappedOptions.customize).map(opt => JSON.parse(opt)),
-                sizes: Array.from(allUnmappedOptions.sizes).map(opt => JSON.parse(opt)),
-                colors: Array.from(allUnmappedOptions.colors).map(opt => JSON.parse(opt))
+                sizes: Array.from(allUnmappedOptions.sizes).map(opt => JSON.parse(opt))
             },
             statistics: {
                 totalProducts,
                 processedProducts,
                 totalPages,
-                newTagsFound: newTags.size,
                 newCategoriesFound: newCategories.size,
-                unrecognizedTermsFound: allUnrecognizedTerms.size,
+                newTagsFound: newTags.size,
                 newOptionsFound: {
+                    badges: newProductOptions.badges.size,
+                    customize: newProductOptions.customize.size,
+                    sizes: newProductOptions.sizes.size
+                },
+                unrecognizedTermsFound: allUnrecognizedTerms.size,
+                unmappedOptionsFound: {
                     badges: allUnmappedOptions.badges.size,
                     customize: allUnmappedOptions.customize.size,
-                    sizes: allUnmappedOptions.sizes.size,
-                    colors: allUnmappedOptions.colors.size
+                    sizes: allUnmappedOptions.sizes.size
                 }
             }
         };
@@ -501,8 +575,13 @@ async function analyzeAllProducts() {
         console.log(`Total productos procesados: ${processedProducts}/${totalProducts}`);
         console.log(`Nuevas categorías encontradas: ${newCategories.size}`);
         console.log(`Nuevos tags encontrados: ${newTags.size}`);
-        console.log(`Términos no reconocidos: ${allUnrecognizedTerms.size}`);
-        console.log('\nNuevas opciones encontradas:');
+        console.log('Nuevas opciones encontradas:');
+        Object.entries(newProductOptions).forEach(([type, options]) => {
+            console.log(`- ${type}: ${options.size}`);
+        });
+
+        console.log(`\nTérminos no reconocidos: ${allUnrecognizedTerms.size}`);
+        console.log('\nOpciones no reconocidas:');
         Object.entries(allUnmappedOptions).forEach(([type, options]) => {
             console.log(`- ${type}: ${options.size}`);
         });
@@ -527,18 +606,3 @@ async function init() {
 
 // Ejecutar el script
 init();
-
-// Revisar productOptions.
-// Revisar categorias.
-// Revisar tags.
-
-// Colors debe pasar a tags. 
-
-// Archivo para crear las categorias reales en base al categories.json
-// Archivo para crear las tags reales en base al tags.json
-// Archivo para crear las productOptions reales en base al productOptions.json
-
-
-
-// Una vez todo lo de arriba esta ok, vamos con los productos.
-// Que pasa con los repetidos o que ya no estan mas? 

@@ -1,0 +1,7 @@
+# Ignorar archivos del entorno de desarrollo
+node_modules/
+.env
+
+# Ignorar configuraciones locales
+*.log
+.DS_Store

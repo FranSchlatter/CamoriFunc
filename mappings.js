@@ -995,17 +995,8 @@ module.exports = {
                 type: "caracteristica",
                 categoryPath: ["Productos"]
             }
-        }        
-    },
-
-    // Detector de temporadas
-    seasonDetector: {
-        regex: /(\d{4})(?:-(\d{2,4})|\/(\d{2,4})|\s+(\d{2,4}))|(\d{4})/g,
-        type: "temporada",
-        categoryPath: ["Productos"]
-    },
-
-    productOptions: {
+        },
+        
         colors: {
             "Negro": {
                 matches: ['Black'],
@@ -1039,81 +1030,46 @@ module.exports = {
                 matches: ['Comma'],
                 type: "color"
             }
-        },
+        }
+    },
+
+    // Detector de temporadas
+    seasonDetector: {
+        regex: /(\d{4})(?:-(\d{2,4})|\/(\d{2,4})|\s+(\d{2,4}))|(\d{4})/g,
+        type: "temporada",
+        categoryPath: ["Productos"]
+    },
+
+    
+
+    productOptions: {
         sizes: {
-            // "S": {
-            //     matches: ["S", "Small"],
-            //     type: "size",
-            //     price: 0
-            // },
-            // "M": {
-            //     matches: ["M", "Medium"],
-            //     type: "size",
-            //     price: 0
-            // },
-            // "L": {
-            //     matches: ["L", "Large"],
-            //     type: "size",
-            //     price: 0
-            // },
-            // "XL": {
-            //     matches: ["XL", "Extra Large"],
-            //     type: "size",
-            //     price: 0
-            // },
-            // "XXL": {
-            //     matches: ["XXL", "2XL"],
-            //     type: "size",
-            //     price: 0
-            // }
+            "S": {
+                matches: ["S"],
+                type: "size",
+                price: 0
+            }
         },
         badges: {
-            // "Premier League": {
-            //     matches: ["Premier League Badge", "EPL Badge"],
-            //     type: "badge",
-            //     price: 2.00,
-            //     images: "/badges/premier-league.png"
-            // },
-            // "Champions League": {
-            //     matches: ["UCL", "Champions League Badge"],
-            //     type: "badge",
-            //     price: 3.00,
-            //     images: "/badges/champions-league.png"
-            // },
-            // "Bundesliga": {
-            //     matches: ["Bundesliga Badge", "德甲普章"],
-            //     type: "badge",
-            //     price: 1.00,
-            //     images: "/badges/bundesliga.png"
-            // },
-            // "No Badge": {
-            //     matches: ["No Badge", "Without Badge"],
-            //     type: "badge",
-            //     price: 0,
-            //     images: 'https://us03-imgcdn.ymcart.com/97006/2024/12/03/3/0/304d273aa38c52f7.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp'
-            // }
+            "No Badge": {
+                matches: ["No Badge"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/17/e/8/e80a811156ddf959.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Bundesliga": {
+                matches: ["Bundesliga (德普章)"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/17/1/c/1c8b2e3d86130fe3.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            }
         },
         customize: {
-            // "No Name": {
-            //     matches: ["No Name No Number"],
-            //     type: "customize",
-            //     price: 0
-            // },
-            // "Premier League Style": {
-            //     matches: ["Name / Number (Premier League Style)"],
-            //     type: "customize",
-            //     price: 3.00
-            // },
-            // "Champions League Style": {
-            //     matches: ["Name / Number (Champions League)"],
-            //     type: "customize",
-            //     price: 4.00
-            // }
+            "Sin dorsal": {
+                matches: ["No Name No Number"],
+                type: "customize",
+                price: 0
+            }
         }
     }
 };
-
-
-
-
-
