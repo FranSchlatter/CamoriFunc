@@ -1,7 +1,5 @@
-Analyzer
+Analyzer > node analyzer.js 1 50 5 > startPage maxProducts prodPorPage
 > Agregar mappings de productOptions
-> Facil de cambiar + prod o + pages
-> Se puede extraer el brand de alguna manera? 
 
 > dataCreator creo que esta OK. Testear bien todo.
 

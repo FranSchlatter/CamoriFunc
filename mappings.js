@@ -75,8 +75,8 @@ module.exports = {
                 },
                 
         // Otros deportes
-        "Basquet": {
-            matches: ['NBA', 'Basketball'],
+        "Básquet": {
+            matches: ['NBA', 'Basketball', 'Básquet'],
             description: "Deporte básquet",
             categoryPath: ["Deportes", "Básquet"]
         },

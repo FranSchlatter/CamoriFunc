@@ -2,18 +2,41 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const fs = require('fs').promises;
 const path = require('path');
-const crypto = require('crypto');
 const MAPPINGS = require('./mappings');
 const COMPOUND_PHRASES = require('./compoundPhrases');
+const args = process.argv.slice(2);
 
+// Configuración inicial con valores por defecto
 const CONFIG = {
     baseUrl: 'https://www.grkits3.com',
     headers: {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
     },
-    dataDir: './data'
+    dataDir: './data',
+    scraping: {
+        startPage: 1,          // default
+        maxProducts: 50,       // default
+        productsPerPage: 50    // default
+    }
 };
+
+// Procesar argumentos
+if (args.length > 0) {
+    if (args[0] === 'all') {
+        CONFIG.scraping = {
+            startPage: 1,
+            maxProducts: null,
+            productsPerPage: null
+        };
+    } else {
+        CONFIG.scraping = {
+            startPage: parseInt(args[0]) || 1,
+            maxProducts: parseInt(args[1]) || 50,
+            productsPerPage: parseInt(args[2]) || 50
+        };
+    }
+}
 
 // Archivos base actualizados
 const BASE_FILES = {
@@ -32,7 +55,6 @@ const BASE_FILES = {
 };
 
 // Funciones auxiliares
-const generateUUID = () => crypto.randomUUID();
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 // Helpers de verificación para categorías y productOptions (agregar al inicio del archivo)
@@ -368,12 +390,6 @@ function analyzeProductName(name) {
     };
 }
 
-async function getTotalProducts() {
-    const firstPage = await getProductsFromPage(1);
-    const totalPages = await getTotalPages();
-    return firstPage.length * totalPages;
-}
-
 async function getProductsFromPage(pageNum) {
     try {
         const url = `${CONFIG.baseUrl}/Products/list-r${pageNum}.html`;
@@ -381,24 +397,29 @@ async function getProductsFromPage(pageNum) {
         const $ = cheerio.load(response.data);
         
         const products = [];
-        $('li .pro_content').each((_, el) => {
-            const $el = $(el);
-            const $link = $el.find('a');
-            const name = $link.attr('title');
-            const detailUrl = $link.attr('href');
-            const price = $el.find('.price').text().trim();
-            const image = $el.find('img').attr('src');
-            
-            if (name) {
-                products.push({
-                    name,
-                    detailUrl: detailUrl ? `${CONFIG.baseUrl}${detailUrl}` : null,
-                    price,
-                    image,
-                    itemNo: $el.find('.itemNo').text().trim()
-                });
-            }
-        });
+        
+        // Verificar si la página existe
+        if ($('li .pro_content').length > 0) {
+            $('li .pro_content').each((_, el) => {
+                const $el = $(el);
+                const $link = $el.find('a');
+                const name = $link.attr('title');
+                const detailUrl = $link.attr('href');
+                const price = $el.find('.price').text().trim();
+                const image = $el.find('img').attr('src');
+                
+                if (name) {
+                    products.push({
+                        name,
+                        detailUrl: detailUrl ? `${CONFIG.baseUrl}${detailUrl}` : null,
+                        price,
+                        image,
+                        itemNo: $el.find('.itemNo').text().trim()
+                    });
+                }
+            });
+        }
+        
         return products;
     } catch (error) {
         console.error(`Error en página ${pageNum}:`, error.message);
@@ -406,12 +427,12 @@ async function getProductsFromPage(pageNum) {
     }
 }
 
-async function getTotalPages() {
+async function getTotalPages(startPage) {
     try {
-        const response = await axios.get(`${CONFIG.baseUrl}/Products/list-r1.html`, { headers: CONFIG.headers });
+        const response = await axios.get(`${CONFIG.baseUrl}/Products/list-r${startPage}.html`, { headers: CONFIG.headers });
         const $ = cheerio.load(response.data);
         
-        let maxPage = 1;
+        let maxPage = startPage;
         $('.pagination li').each((_, el) => {
             const pageText = $(el).text().trim();
             const pageNum = parseInt(pageText);
@@ -426,7 +447,7 @@ async function getTotalPages() {
         if (error.response) {
             console.error('Estado:', error.response.status);
         }
-        return 1;
+        return startPage;
     }
 }
 
@@ -610,6 +631,10 @@ function analyzeProductName(name) {
 async function analyzeAllProducts() {
     try {
         console.log('\n=== Iniciando análisis de productos ===\n');
+        console.log('Configuración:');
+        console.log(`- Página inicial: ${CONFIG.scraping.startPage}`);
+        console.log(`- Productos máximos: ${CONFIG.scraping.maxProducts || 'Sin límite'}`);
+        console.log(`- Productos por página: ${CONFIG.scraping.productsPerPage || 'Todos'}`);
         
         const { categories: existingCategories, tags: existingTags, productOptions: existingProductOptions } = await analyzeExistingData();
         const newCategories = new Map();
@@ -626,18 +651,40 @@ async function analyzeAllProducts() {
             sizes: new Set()
         };
         
-        const totalPages = await getTotalPages();
-        console.log(`Total de páginas detectadas: ${totalPages}`);
-        const totalProducts = await getTotalProducts();
-        console.log(`Total de productos detectados: ${totalProducts}`);
+        const totalPages = await getTotalPages(CONFIG.scraping.startPage);
+        const maxPages = Math.min(
+            CONFIG.scraping.maxProducts && CONFIG.scraping.productsPerPage ? Math.ceil(CONFIG.scraping.maxProducts / CONFIG.scraping.productsPerPage) : totalPages,
+            totalPages
+        );
         let processedProducts = 0;
+        let shouldStop = false;
 
-        for (let page = 1; page <= totalPages; page++) {
+        console.log(`Páginas a procesar: ${maxPages}`);
+
+        let page = CONFIG.scraping.startPage;
+        while (!shouldStop) {
             const products = await getProductsFromPage(page);
-            
-            for (const product of products) {
+            let pageProducts = products;
+            let productCount = 0
+
+            // Si hay límite de productos por página, aplicarlo
+            if (CONFIG.scraping.productsPerPage) {
+                pageProducts = products.slice(0, CONFIG.scraping.productsPerPage);
+            }
+
+            for (const product of pageProducts) {
                 processedProducts++;
-                console.log(`Procesando producto (${processedProducts}/${totalProducts}) - ${product.name}`);
+                productCount++;
+
+                // Verificar si alcanzamos el límite máximo de productos
+                if (CONFIG.scraping.maxProducts && processedProducts > CONFIG.scraping.maxProducts) {
+                    console.log(`\nAlcanzado límite máximo de productos (${CONFIG.scraping.maxProducts})`);
+                    shouldStop = true;
+                    break;
+                }
+
+                console.log(`\nProcesando Producto ${processedProducts}${CONFIG.scraping.maxProducts ? '/' + CONFIG.scraping.maxProducts : ''}`);
+                console.log(`Página ${page} - Producto ${productCount} : ${product.name}`);
 
                 const nameAnalysis = analyzeProductName(product.name);
                 nameAnalysis.unrecognized.forEach(term => allUnrecognizedTerms.add(term));
@@ -677,7 +724,7 @@ async function analyzeAllProducts() {
                     }
                     await delay(1000);
                 }
-                
+
                 nameAnalysis.tags.forEach(tag => {
                     const tagKey = `${tag.name}-${tag.type}`;
                     if (!existingTags.tags.find(t => t.name === tag.name && t.type === tag.type) && !newTags.has(tagKey)) {
@@ -685,9 +732,14 @@ async function analyzeAllProducts() {
                     }
                 });
             }
+
+            page++;
+            if (pageProducts.length === 0) {
+                shouldStop = true;
+            }
         }
 
-        // Generar reporte con el mismo formato que tenías antes...
+        // Generar reporte
         const report = {
             newCategories: Array.from(newCategories.values()),
             newTags: Array.from(newTags.values()),
@@ -703,9 +755,9 @@ async function analyzeAllProducts() {
                 sizes: Array.from(allUnmappedOptions.sizes).map(opt => JSON.parse(opt))
             },
             statistics: {
-                totalProducts,
-                processedProducts,
                 totalPages,
+                processedPages: maxPages,
+                processedProducts,
                 newCategoriesFound: newCategories.size,
                 newTagsFound: newTags.size,
                 newOptionsFound: {
@@ -726,10 +778,10 @@ async function analyzeAllProducts() {
         await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
 
         console.log('\n=== Análisis completado ===');
-        console.log(`Total productos procesados: ${processedProducts}/${totalProducts}`);
+        console.log(`Total productos procesados: ${processedProducts}`);
         console.log(`Nuevas categorías encontradas: ${newCategories.size}`);
         console.log(`Nuevos tags encontrados: ${newTags.size}`);
-        console.log('Nuevas opciones encontradas:');
+        console.log('\nNuevas opciones encontradas:');
         Object.entries(newProductOptions).forEach(([type, options]) => {
             console.log(`- ${type}: ${options.size}`);
         });

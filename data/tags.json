@@ -549,6 +549,240 @@
       "categoryPath": [
         "6aca3034-1786-4959-9ca1-7418aa487579"
       ]
+    },
+    {
+      "id": "1709b184-1b20-47ba-a889-179137491a54",
+      "name": "Feyenoord",
+      "type": "equipo",
+      "categoryPath": [
+        "3070274f-e86d-422e-b66c-d9a864f834d9",
+        "55437d8f-18dd-48ae-b81f-afb9c8eac444",
+        "eb8ac84a-0c1b-4939-a050-ef840fd14d98",
+        "6b92a02d-5165-41bf-9965-a43cbbb9ec7a"
+      ]
+    },
+    {
+      "id": "4bac613e-fa39-4789-b252-52f8bfb7ccbc",
+      "name": "2004-2005",
+      "type": "temporada",
+      "categoryPath": [
+        "809c88ae-a686-490f-a791-d1361baf94d6"
+      ]
+    },
+    {
+      "id": "6f791d35-e075-44da-b885-945113b2208a",
+      "name": "Atletico Madrid",
+      "type": "equipo",
+      "categoryPath": [
+        "3070274f-e86d-422e-b66c-d9a864f834d9",
+        "55437d8f-18dd-48ae-b81f-afb9c8eac444",
+        "eb8ac84a-0c1b-4939-a050-ef840fd14d98",
+        "63e0eae7-b22a-48b3-ac5a-560f22538a84"
+      ]
+    },
+    {
+      "id": "0206eef2-43cc-4eee-a5f4-190a7daa3bdd",
+      "name": "1998",
+      "type": "temporada",
+      "categoryPath": [
+        "809c88ae-a686-490f-a791-d1361baf94d6"
+      ]
+    },
+    {
+      "id": "02a499ab-29ec-4656-9ee7-3612e71f4043",
+      "name": "Manchester United",
+      "type": "equipo",
+      "categoryPath": [
+        "3070274f-e86d-422e-b66c-d9a864f834d9",
+        "55437d8f-18dd-48ae-b81f-afb9c8eac444",
+        "eb8ac84a-0c1b-4939-a050-ef840fd14d98"
+      ]
+    },
+    {
+      "id": "bf551440-d7be-4427-9fca-afc43084c6e6",
+      "name": "2002-2003",
+      "type": "temporada",
+      "categoryPath": [
+        "809c88ae-a686-490f-a791-d1361baf94d6"
+      ]
+    },
+    {
+      "id": "03c424e5-4dd6-42c7-9d61-9579e5585dad",
+      "name": "Flamengo",
+      "type": "equipo",
+      "categoryPath": [
+        "3070274f-e86d-422e-b66c-d9a864f834d9",
+        "55437d8f-18dd-48ae-b81f-afb9c8eac444",
+        "eb8ac84a-0c1b-4939-a050-ef840fd14d98",
+        "723b020f-090e-4902-8984-db9bd724baeb"
+      ]
+    },
+    {
+      "id": "7d229b21-7118-4ce0-a571-90ffdbb794d0",
+      "name": "Clippers",
+      "type": "equipo",
+      "categoryPath": [
+        "3070274f-e86d-422e-b66c-d9a864f834d9",
+        "dae70804-0fc9-4e8b-86b8-8f9e874e8b57",
+        "17402c4a-d77c-4657-9f3e-5e2bb5651ccc",
+        "3dfeff1f-5d42-4afa-94a9-835594e2daa7"
+      ]
+    },
+    {
+      "id": "54b91d26-df84-46d4-b625-1b1454ce78fc",
+      "name": "Philadelphia 76ers",
+      "type": "equipo",
+      "categoryPath": [
+        "3070274f-e86d-422e-b66c-d9a864f834d9",
+        "dae70804-0fc9-4e8b-86b8-8f9e874e8b57",
+        "17402c4a-d77c-4657-9f3e-5e2bb5651ccc",
+        "f11cb080-d612-4d4e-a4c6-ade074b884db"
+      ]
+    },
+    {
+      "id": "2c5f2511-8374-455d-af4f-1ea1b477dfb9",
+      "name": "2012-2013",
+      "type": "temporada",
+      "categoryPath": [
+        "809c88ae-a686-490f-a791-d1361baf94d6"
+      ]
+    },
+    {
+      "id": "5f6faae4-4887-464e-af42-d74dc3da7886",
+      "name": "1994-1995",
+      "type": "temporada",
+      "categoryPath": [
+        "809c88ae-a686-490f-a791-d1361baf94d6"
+      ]
+    },
+    {
+      "id": "ce05c38c-53ae-4165-b363-61bcdc745da5",
+      "name": "1997-1998",
+      "type": "temporada",
+      "categoryPath": [
+        "809c88ae-a686-490f-a791-d1361baf94d6"
+      ]
+    },
+    {
+      "id": "15299821-73fe-46ba-a932-b5924ed75c01",
+      "name": "2008-2009",
+      "type": "temporada",
+      "categoryPath": [
+        "809c88ae-a686-490f-a791-d1361baf94d6"
+      ]
+    },
+    {
+      "id": "3eec5ccc-b1cf-40b3-a731-334f1a90fae3",
+      "name": "Manchester City",
+      "type": "equipo",
+      "categoryPath": [
+        "3070274f-e86d-422e-b66c-d9a864f834d9",
+        "55437d8f-18dd-48ae-b81f-afb9c8eac444",
+        "eb8ac84a-0c1b-4939-a050-ef840fd14d98"
+      ]
+    },
+    {
+      "id": "3b9c4bab-32ad-4ddc-b7dd-65641ad560f3",
+      "name": "1998-1999",
+      "type": "temporada",
+      "categoryPath": [
+        "809c88ae-a686-490f-a791-d1361baf94d6"
+      ]
+    },
+    {
+      "id": "dc77f4c9-48a4-4dc2-a28b-9f0b72d4318f",
+      "name": "Inglaterra",
+      "type": "equipo",
+      "categoryPath": [
+        "3070274f-e86d-422e-b66c-d9a864f834d9",
+        "55437d8f-18dd-48ae-b81f-afb9c8eac444",
+        "43691be3-9eef-4cad-85fb-b293ed8f4c07",
+        "63e81799-4719-463c-ac73-0baaca7bf5e5"
+      ]
+    },
+    {
+      "id": "ddda00ff-7dca-47a2-b412-44010ecd4dee",
+      "name": "2010-2011",
+      "type": "temporada",
+      "categoryPath": [
+        "809c88ae-a686-490f-a791-d1361baf94d6"
+      ]
+    },
+    {
+      "id": "17c96fbe-f536-4558-ba0a-497c9b425a3e",
+      "name": "2013-2014",
+      "type": "temporada",
+      "categoryPath": [
+        "809c88ae-a686-490f-a791-d1361baf94d6"
+      ]
+    },
+    {
+      "id": "ffabebe3-1ee5-4f3a-90ab-412238629b11",
+      "name": "1985-1991",
+      "type": "temporada",
+      "categoryPath": [
+        "809c88ae-a686-490f-a791-d1361baf94d6"
+      ]
+    },
+    {
+      "id": "7d05fc17-d66d-4a6a-a996-334307eba39e",
+      "name": "1996-1997",
+      "type": "temporada",
+      "categoryPath": [
+        "809c88ae-a686-490f-a791-d1361baf94d6"
+      ]
+    },
+    {
+      "id": "8189a306-a43a-40e7-8d90-c36daeadc370",
+      "name": "RB Leipzig",
+      "type": "equipo",
+      "categoryPath": [
+        "3070274f-e86d-422e-b66c-d9a864f834d9",
+        "55437d8f-18dd-48ae-b81f-afb9c8eac444",
+        "eb8ac84a-0c1b-4939-a050-ef840fd14d98",
+        "8dc507d9-03bc-446d-aa39-593d6cd01aee"
+      ]
+    },
+    {
+      "id": "d08ed609-a6db-4604-9bd5-e4606cd7f46e",
+      "name": "1991",
+      "type": "temporada",
+      "categoryPath": [
+        "809c88ae-a686-490f-a791-d1361baf94d6"
+      ]
+    },
+    {
+      "id": "43a4e89f-b35c-4e9d-96f0-2a8bec71517b",
+      "name": "Lazio",
+      "type": "equipo",
+      "categoryPath": [
+        "3070274f-e86d-422e-b66c-d9a864f834d9",
+        "55437d8f-18dd-48ae-b81f-afb9c8eac444",
+        "eb8ac84a-0c1b-4939-a050-ef840fd14d98",
+        "d74aa8ca-e0c8-46a3-be42-fa74e42c537b"
+      ]
+    },
+    {
+      "id": "6080a9dd-3201-4885-b1c8-a5fd9caac494",
+      "name": "Lyon",
+      "type": "equipo",
+      "categoryPath": [
+        "3070274f-e86d-422e-b66c-d9a864f834d9",
+        "55437d8f-18dd-48ae-b81f-afb9c8eac444",
+        "eb8ac84a-0c1b-4939-a050-ef840fd14d98",
+        "d942fa96-07a0-4a5e-aaea-31ae80038074"
+      ]
+    },
+    {
+      "id": "a5de0c91-9f61-4d9e-b06a-ce0b1b9d5f33",
+      "name": "Celtics",
+      "type": "equipo",
+      "categoryPath": [
+        "3070274f-e86d-422e-b66c-d9a864f834d9",
+        "dae70804-0fc9-4e8b-86b8-8f9e874e8b57",
+        "17402c4a-d77c-4657-9f3e-5e2bb5651ccc",
+        "f11cb080-d612-4d4e-a4c6-ade074b884db"
+      ]
     }
   ]
 }

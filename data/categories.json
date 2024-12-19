@@ -1,3 +1,157 @@
 {
-  "categories": []
+  "categories": [
+    {
+      "id": "3070274f-e86d-422e-b66c-d9a864f834d9",
+      "name": "Deportes",
+      "description": "Categoría Deportes",
+      "subcategories": [
+        {
+          "id": "55437d8f-18dd-48ae-b81f-afb9c8eac444",
+          "name": "Fútbol",
+          "description": "Categoría Fútbol",
+          "subcategories": [
+            {
+              "id": "eb8ac84a-0c1b-4939-a050-ef840fd14d98",
+              "name": "Clubes",
+              "description": "Categoría Clubes",
+              "subcategories": [
+                {
+                  "id": "6b92a02d-5165-41bf-9965-a43cbbb9ec7a",
+                  "name": "Otros",
+                  "description": "Categoría Otros",
+                  "subcategories": []
+                },
+                {
+                  "id": "63e0eae7-b22a-48b3-ac5a-560f22538a84",
+                  "name": "La Liga",
+                  "description": "Categoría La Liga",
+                  "subcategories": []
+                },
+                {
+                  "id": "723b020f-090e-4902-8984-db9bd724baeb",
+                  "name": "Brasileiro Série A",
+                  "description": "Categoría Brasileiro Série A",
+                  "subcategories": []
+                },
+                {
+                  "id": "8dc507d9-03bc-446d-aa39-593d6cd01aee",
+                  "name": "Bundesliga",
+                  "description": "Categoría Bundesliga",
+                  "subcategories": []
+                },
+                {
+                  "id": "d74aa8ca-e0c8-46a3-be42-fa74e42c537b",
+                  "name": "Serie A",
+                  "description": "Categoría Serie A",
+                  "subcategories": []
+                },
+                {
+                  "id": "d942fa96-07a0-4a5e-aaea-31ae80038074",
+                  "name": "Ligue 1",
+                  "description": "Categoría Ligue 1",
+                  "subcategories": []
+                }
+              ]
+            },
+            {
+              "id": "43691be3-9eef-4cad-85fb-b293ed8f4c07",
+              "name": "Selecciones",
+              "description": "Categoría Selecciones",
+              "subcategories": [
+                {
+                  "id": "63e81799-4719-463c-ac73-0baaca7bf5e5",
+                  "name": "Euro",
+                  "description": "Categoría Euro",
+                  "subcategories": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dae70804-0fc9-4e8b-86b8-8f9e874e8b57",
+          "name": "Básquet",
+          "description": "Categoría Básquet",
+          "subcategories": [
+            {
+              "id": "17402c4a-d77c-4657-9f3e-5e2bb5651ccc",
+              "name": "NBA",
+              "description": "Categoría NBA",
+              "subcategories": [
+                {
+                  "id": "3dfeff1f-5d42-4afa-94a9-835594e2daa7",
+                  "name": "Conferencia Oeste",
+                  "description": "Categoría Conferencia Oeste",
+                  "subcategories": []
+                },
+                {
+                  "id": "f11cb080-d612-4d4e-a4c6-ade074b884db",
+                  "name": "Conferencia Este",
+                  "description": "Categoría Conferencia Este",
+                  "subcategories": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "809c88ae-a686-490f-a791-d1361baf94d6",
+      "name": "Productos",
+      "description": "Categoría Productos",
+      "subcategories": [
+        {
+          "id": "b90faae8-b1f9-4fb2-bf1d-95f82e2c581c",
+          "name": "Camisetas",
+          "description": "Indumentaria camisetas",
+          "subcategories": []
+        },
+        {
+          "id": "a69904b9-6994-4dcf-b29a-15ef49f37bb1",
+          "name": "Retro",
+          "description": "Indumentaria retro",
+          "subcategories": []
+        },
+        {
+          "id": "553c7d2d-9602-40c0-a97d-37b8f33524a8",
+          "name": "Entrenamiento",
+          "description": "Indumentaria entrenamiento",
+          "subcategories": []
+        },
+        {
+          "id": "770c91d8-730c-4e71-a1a0-da1be571a4ab",
+          "name": "Conjuntos",
+          "description": "Indumentaria conjuntos",
+          "subcategories": []
+        },
+        {
+          "id": "d5f4b9e2-8171-4df2-828d-5b67e60322db",
+          "name": "Casual",
+          "description": "Categoría Casual",
+          "subcategories": [
+            {
+              "id": "8a874587-2cd3-4a00-a157-8b9a22a7e8cb",
+              "name": "Remeras",
+              "description": "Indumentaria Remeras casual",
+              "subcategories": []
+            }
+          ]
+        },
+        {
+          "id": "80ef6e27-7ad9-4c75-bc2b-49c999ceca6e",
+          "name": "Abrigos",
+          "description": "Categoría Abrigos",
+          "subcategories": [
+            {
+              "id": "f46ebd6e-6be2-473a-9987-2b977f9536bc",
+              "name": "Rompevientos",
+              "description": "Indumentaria de abrigo rompeviento",
+              "subcategories": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
