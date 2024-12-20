@@ -1040,8 +1040,6 @@ module.exports = {
         categoryPath: ["Productos"]
     },
 
-    
-
     productOptions: {
         sizes: {
             // Adulto
@@ -1139,10 +1137,10 @@ module.exports = {
             }
         },
         badges: {
-            "No Badge": {
+            "Sin insignia": {
                 matches: ["No Badge"],
                 type: "badge",
-                price: 2,
+                price: 0,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/17/e/8/e80a811156ddf959.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "La Liga 23/24 (Roja +45) MD": {

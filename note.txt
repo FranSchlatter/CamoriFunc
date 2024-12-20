@@ -1,9 +1,4 @@
-Analyzer > node analyzer.js 1 50 5 > startPage maxProducts prodPorPage
-> Agregar mappings de productOptions
-
-> dataCreator creo que esta OK. Testear bien todo.
-
-> Arrancamos con products. Empezar x 5. Con todas sus variants. 
+Todo funcionando ok. Falta correr analyzer completo y mapear todo los q falte.
 
 En front ademas de las variants. Deberia mostrar, versiones (home away third) y abajo prod relacionados.
 Remake prods, tags, categories, prodOptions... prod brand img?  
