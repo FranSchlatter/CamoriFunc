@@ -98,7 +98,7 @@ const productOptionExists = (existingOptions, optionToCheck) => {
     );
 };
 
-async function analyzeProductDetail(url) {
+async function analyzeProductDetail(url, productName) {
     try {
         const response = await axios.get(url, { headers: CONFIG.headers });
         const $ = cheerio.load(response.data);
@@ -170,6 +170,7 @@ async function analyzeProductDetail(url) {
                     } else {
                         unmappedOptions.sizes.add(JSON.stringify({
                             matches: [name],
+                            itemName: productName,
                             type: "size",
                             price: extractPrice(priceStr)
                         }));
@@ -205,6 +206,7 @@ async function analyzeProductDetail(url) {
                     } else {
                         unmappedOptions.badges.add(JSON.stringify({
                             matches: [name],
+                            itemName: productName,
                             type: "badge",
                             price: extractPrice(priceStr),
                             images: image || null
@@ -239,6 +241,7 @@ async function analyzeProductDetail(url) {
                     } else {
                         unmappedOptions.customize.add(JSON.stringify({
                             matches: [name],
+                            itemName: productName,
                             type: "customize",
                             price: extractPrice(priceStr)
                         }));
@@ -702,7 +705,7 @@ async function analyzeAllProducts() {
                 });
 
                 if (product.detailUrl) {
-                    const detailAnalysis = await analyzeProductDetail(product.detailUrl);
+                    const detailAnalysis = await analyzeProductDetail(product.detailUrl, product.name);
                     if (detailAnalysis) {
                         product.options = detailAnalysis.productData;
                         

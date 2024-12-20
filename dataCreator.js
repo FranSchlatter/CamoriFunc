@@ -33,6 +33,67 @@ async function writeJsonFile(filePath, data) {
   await fs.writeFile(filePath, JSON.stringify(data, null, 2), 'utf8');
 }
 
+// Función auxiliar para encontrar una categoría por nombre en un árbol
+function findCategoryByPath(categories, pathParts) {
+  if (pathParts.length === 0) return null;
+  
+  const currentName = pathParts[0];
+  const category = categories.find(cat => cat.name === currentName);
+  
+  if (!category) return null;
+  if (pathParts.length === 1) return category;
+  
+  return findCategoryByPath(category.subcategories || [], pathParts.slice(1));
+}
+
+// Función para mergear categorías nuevas con existentes
+function mergeCategoryTrees(existing, newCategories) {
+  const merged = [...existing];
+  
+  function addCategory(category, parentPath = []) {
+    const currentPath = [...parentPath, category.name];
+    const existingCategory = findCategoryByPath(merged, currentPath);
+    
+    if (!existingCategory) {
+      // Si no existe la categoría en el nivel actual, la agregamos
+      const newCategory = {
+        id: crypto.randomUUID(),
+        name: category.name,
+        description: category.description || `Categoría ${category.name}`,
+        subcategories: []
+      };
+      
+      if (parentPath.length === 0) {
+        merged.push(newCategory);
+        logs.categories.created.push(category.name);
+      } else {
+        const parent = findCategoryByPath(merged, parentPath);
+        if (parent) {
+          parent.subcategories = parent.subcategories || [];
+          parent.subcategories.push(newCategory);
+          logs.categories.created.push(category.name);
+        }
+      }
+      
+      // Procesar subcategorías si existen
+      if (category.subcategories && category.subcategories.length > 0) {
+        category.subcategories.forEach(subcat => addCategory(subcat, currentPath));
+      }
+    } else {
+      logs.categories.skipped.push(category.name);
+      // Si la categoría existe, procesamos sus subcategorías
+      if (category.subcategories && category.subcategories.length > 0) {
+        category.subcategories.forEach(subcat => addCategory(subcat, currentPath));
+      }
+    }
+  }
+  
+  // Procesar las nuevas categorías
+  newCategories.forEach(category => addCategory(category));
+  
+  return merged;
+}
+
 // Build hierarchical category structure
 function buildCategoryTree(categories) {
   const categoryMap = new Map();
@@ -41,12 +102,14 @@ function buildCategoryTree(categories) {
   // Crear Map con todas las categorías
   categories.forEach(cat => {
     const pathString = cat.path.join('/');
-    categoryMap.set(pathString, {
-      id: crypto.randomUUID(),
-      name: cat.name,
-      description: cat.description,
-      subcategories: []
-    });
+    if (!categoryMap.has(pathString)) {
+      categoryMap.set(pathString, {
+        id: crypto.randomUUID(),
+        name: cat.name,
+        description: cat.description,
+        subcategories: []
+      });
+    }
   });
 
   // Procesar cada nivel de path y crear si no existe
@@ -115,22 +178,12 @@ async function processCategories(analysisReport) {
   ];
 
   try {
-    const categoryTree = buildCategoryTree(allCategories);
-    existingData.categories = categoryTree;
-    
-    // Log creations
-    function logCategories(categories) {
-      categories.forEach(cat => {
-        logs.categories.created.push(cat.name);
-        if (cat.subcategories) {
-          logCategories(cat.subcategories);
-        }
-      });
-    }
-    logCategories(categoryTree);
+    const newCategoryTree = buildCategoryTree(allCategories);
+    // Aquí está el cambio principal: usamos mergeCategoryTrees en lugar de asignación directa
+    existingData.categories = mergeCategoryTrees(existingData.categories, newCategoryTree);
     
     await writeJsonFile(CATEGORIES_PATH, existingData);
-    return { tree: existingData.categories, map: buildCategoryMap(categoryTree) };
+    return { tree: existingData.categories, map: buildCategoryMap(existingData.categories) };
   } catch (error) {
     logs.categories.errors.push(`Error procesando categorías: ${error.message}`);
     return { tree: existingData.categories, map: new Map() };
@@ -213,7 +266,7 @@ async function processProductOptions(analysisReport) {
           id: crypto.randomUUID(),
           name: option.name,
           type: option.type,
-          price: option.price.toString(),
+          price: option.price * 3000,
           image: option.images || null
         };
 

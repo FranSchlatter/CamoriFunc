@@ -1044,8 +1044,96 @@ module.exports = {
 
     productOptions: {
         sizes: {
+            // Adulto
             "S": {
-                matches: ["S"],
+                matches: ["S", "Adult Size S"],
+                type: "size",
+                price: 0
+            },
+            "M": {
+                matches: ["M", "Adult Size M"],
+                type: "size",
+                price: 0
+            },
+            "L": {
+                matches: ["L", "Adult Size L"],
+                type: "size",
+                price: 0
+            },
+            "XL": {
+                matches: ["XL", "Adult Size XL"],
+                type: "size",
+                price: 1
+            },
+            "2XL": {
+                matches: ["2XL", "XXL", "Adult Size XXL"],
+                type: "size",
+                price: 2
+            },
+            "3XL": {
+                matches: ["3XL", "XXXL"],
+                type: "size",
+                price: 2
+            },
+            "4XL": {
+                matches: ["4XL", "XXXXL"],
+                type: "size",
+                price: 2
+            },
+            "5XL": {
+                matches: ["5XL", "XXXXXL"],
+                type: "size",
+                price: 2
+            },
+
+            // Niños
+            "10": {
+                matches: ["10"],
+                type: "size",
+                price: 0
+            },
+            "12": {
+                matches: ["12"],
+                type: "size",
+                price: 0
+            },
+            "14": {
+                matches: ["14"],
+                type: "size",
+                price: 0
+            },
+            "16": {
+                matches: ["16"],
+                type: "size",
+                price: 0
+            },
+            "18": {
+                matches: ["18"],
+                type: "size",
+                price: 0
+            },
+            "20": {
+                matches: ["20"],
+                type: "size",
+                price: 0
+            },
+            "22": {
+                matches: ["22"],
+                type: "size",
+                price: 0
+            },
+            "24": {
+                matches: ["24"],
+                type: "size",
+                price: 0
+            },
+            "26": {
+                matches: ["26"],
+                type: "size",
+                price: 0
+            },
+            "28": {
+                matches: ["28"],
                 type: "size",
                 price: 0
             }
@@ -1057,19 +1145,187 @@ module.exports = {
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/17/e/8/e80a811156ddf959.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "Bundesliga": {
+            "La Liga 23/24 (Roja +45) MD": {
+                matches: ["La Liga +23/24C (红冠军+45西甲)右袖"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/6/8/686e84c18c0004f3.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "UCL (15) MD": {
+                matches: ["UCL (新平条/大耳杯15) 右袖"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/8/3/8371526d80c58eaf.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Serie A": {
+                matches: ["Serie A (意甲45)", "Serie A(意甲45)"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/4/6/462e2dd4ce4860bd.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "UCL": {
+                matches: ["UCL (欧冠新章)右袖"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/a/0/a0acf265b53042a0.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Escudo 20": {
+                matches: ["Shield (冠军盾20)"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/6/5/65db16ccbf52eaba.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Seria A + Escudo 20": {
+                matches: ["Serie A +Shield (意甲45+冠军盾20)"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/2/9/29276c6c26b0554b.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "UCL + Escudo 20": {
+                matches: ["UCL +Shield (欧冠+冠军盾20)"],
+                type: "badge",
+                price: 3,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/f/1/f13917a931afeee8.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Sonepar": {
+                matches: ["Sonepar (左袖广告)"],
+                type: "badge",
+                price: 0,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/8/1/8120ece630f938df.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Sonepar + Bundesliga": {
+                matches: ["Bundesliga +Sonepar (德普章+左袖广告)"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/2/7/273bb0d84fe23ed3.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "2026 FWC clasificatorias": {
+                matches: ["2026 World Cup Qualifying (世预选)", "2026 World Cup Qualifying (世预选)", "2026FWC Qualifying (世预赛)"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/13/9/8/982c73c16f531bb7.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "UECL (45) MD": {
+                matches: ["UECL(欧会杯45)右袖"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/13/3/1/3140ee6e9762ab4e.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "UCL (7) MD": {
+                matches: ["UCL (新平条 7)右袖"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/09/1/d/1d787a4c6498230d.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "CUL (12-17-2016)": {
+                matches: ["CUL(平条/12杯/17大耳杯/世俱2016ad上)"],
+                type: "badge",
+                price: 4,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/02/3/2/3253dfdcb97870ea.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "CUL (12-17-2017)": {
+                matches: ["CUL(平条/12杯/17大耳杯/世俱2017ad上)"],
+                type: "badge",
+                price: 4,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/02/b/4/b4d7face98e9f357.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Copa America 2024": {
+                matches: ["Copa America 2024(美洲杯o)"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/11/17/2/4/249ceb188fa977c5.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "2022 FWC champion": {
+                matches: ["World Champions 2022世界杯胸前金盾"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/11/13/a/9/a9c3924ea3344430.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+
+            },
+            "2022FWCC + 2026FWC": {
+                matches: ["FWCC2022 +2026FWC Qualifying (世预赛+胸前冠)"],
+                type: "badge",
+                price: 3,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/11/13/9/7/970597847c7c97e9.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Liga MX": {
+                matches: ["LIGA MX(墨西超)右袖"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/11/10/e/6/e6999f9820771981.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Bundesliga": { // TODO
                 matches: ["Bundesliga (德普章)"],
                 type: "badge",
                 price: 1,
-                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/17/1/c/1c8b2e3d86130fe3.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            }
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/10/31/8/b/8bdf7dd2865f6383.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Ligue1 (45)": {
+                matches: ["Ligue1 (45法甲黑)"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/10/29/9/5/953477b403a87710.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "RSL (45) MI": {
+                matches: ["RSL(45沙特金新月)左袖"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/10/23/6/b/6b9a830df95230ae.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            // "XXXXXXXX": {
+            //     matches: ["XXXXXXXX"],
+            //     type: "badge",
+            //     price: 2,
+            //     images: "XXXXXXXX"
+            // },
         },
         customize: {
             "Sin dorsal": {
-                matches: ["No Name No Number"],
+                matches: ["No Name No Number", "No Name Number"],
                 type: "customize",
                 price: 0
-            }
+            },
+            "Con dorsal": {
+                matches: ["Name / Number", "Name / Numbe", "Name/ Number (名在号下)", "Name / Number (24/25ad黑)只印后面", "Name / Number (专用周年标)", "Name / Number (只印后面)", "Name / Number (24/25ad红)", "Name / Number (名在号下)", "Name / Number (名在号上)", "Name / Number (FC Augsburg) (上带广告-名在号下)", "Name / Number (Mainz 05) (上带广告-名在号下)"],
+                type: "customize",
+                price: 3
+            },
+            "Con dorsal anime": {
+                matches: ["Name / Anime Number (24/25ad红色名-动漫号)"],
+                type: "customize",
+                price: 4
+            },
+            "Con dorsal Ligue1 fonts": {
+                matches: ["Name / Number ( Ligue1 Fonts )联赛字体"],
+                type: "customize",
+                price: 3
+            },
+            "Con dorsal EFL fonts": {
+                matches: ["Name / Number (EFL Fonts)英冠字体"],
+                type: "customize",
+                price: 3
+            },
+            "Con dorsal CUP fonts": {
+                matches: ["Name / Number (CUP Fonts) 杯赛字体-名在号下"],
+                type: "customize",
+                price: 3
+            },
+            "Con dorsal RSL fonts": {
+                matches: ["Name / Number (RSL League Fonts)联赛字体-名在号下"],
+                type: "customize",
+                price: 4
+            },
+            "XXXXXXXX": {
+                matches: ["XXXXXXXXXXX"],
+                type: "customize",
+                price: 3
+            },
+            "XXXXXXXX": {
+                matches: ["XXXXXXXXXXX"],
+                type: "customize",
+                price: 3
+            },
+            
         }
     }
 };
