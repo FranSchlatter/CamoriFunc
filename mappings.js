@@ -1069,17 +1069,17 @@ module.exports = {
                 price: 2
             },
             "3XL": {
-                matches: ["3XL", "XXXL"],
+                matches: ["3XL", "Adult Size 3XL"],
                 type: "size",
                 price: 2
             },
             "4XL": {
-                matches: ["4XL", "XXXXL"],
+                matches: ["4XL", "Adult Size 4XL", "4xL"],
                 type: "size",
                 price: 2
             },
             "5XL": {
-                matches: ["5XL", "XXXXXL"],
+                matches: ["5XL", "Adult Size 5XL"],
                 type: "size",
                 price: 2
             },
@@ -1138,76 +1138,30 @@ module.exports = {
         },
         badges: {
             "Sin insignia": {
-                matches: ["No Badge"],
+                matches: ["No Badge", "MSC (左袖广告)"],
                 type: "badge",
                 price: 0,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/17/e/8/e80a811156ddf959.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "La Liga 23/24 (Roja +45) MD": {
-                matches: ["La Liga +23/24C (红冠军+45西甲)右袖"],
-                type: "badge",
-                price: 2,
-                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/6/8/686e84c18c0004f3.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "UCL (15) MD": {
-                matches: ["UCL (新平条/大耳杯15) 右袖"],
-                type: "badge",
-                price: 2,
-                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/8/3/8371526d80c58eaf.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "Serie A": {
-                matches: ["Serie A (意甲45)", "Serie A(意甲45)"],
-                type: "badge",
-                price: 1,
-                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/4/6/462e2dd4ce4860bd.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
+
+            // UCL
             "UCL": {
                 matches: ["UCL (欧冠新章)右袖"],
                 type: "badge",
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/a/0/a0acf265b53042a0.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "Escudo 20": {
-                matches: ["Shield (冠军盾20)"],
-                type: "badge",
-                price: 1,
-                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/6/5/65db16ccbf52eaba.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "Seria A + Escudo 20": {
-                matches: ["Serie A +Shield (意甲45+冠军盾20)"],
+            "UCL (5) MD": {
+                matches: ["UCL (新平条 5)右袖"],
                 type: "badge",
                 price: 2,
-                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/2/9/29276c6c26b0554b.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/0/0/006f62eb3aa1909c.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "UCL + Escudo 20": {
-                matches: ["UCL +Shield (欧冠+冠军盾20)"],
-                type: "badge",
-                price: 3,
-                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/f/1/f13917a931afeee8.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "Sonepar": {
-                matches: ["Sonepar (左袖广告)"],
-                type: "badge",
-                price: 0,
-                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/8/1/8120ece630f938df.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "Sonepar + Bundesliga": {
-                matches: ["Bundesliga +Sonepar (德普章+左袖广告)"],
-                type: "badge",
-                price: 1,
-                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/2/7/273bb0d84fe23ed3.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "2026 FWC clasificatorias": {
-                matches: ["2026 World Cup Qualifying (世预选)", "2026 World Cup Qualifying (世预选)", "2026FWC Qualifying (世预赛)"],
+            "UCL(6) MD": {
+                matches: ["UCL(新平条 6)右袖", "UCL(新平条 6)右袖"],
                 type: "badge",
                 price: 2,
-                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/13/9/8/982c73c16f531bb7.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "UECL (45) MD": {
-                matches: ["UECL(欧会杯45)右袖"],
-                type: "badge",
-                price: 2,
-                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/13/3/1/3140ee6e9762ab4e.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/17/b/a/ba8fd6939ccc0bf8.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "UCL (7) MD": {
                 matches: ["UCL (新平条 7)右袖"],
@@ -1215,18 +1169,58 @@ module.exports = {
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/09/1/d/1d787a4c6498230d.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "CUL (12-17-2016)": {
-                matches: ["CUL(平条/12杯/17大耳杯/世俱2016ad上)"],
+            "UCL (15) MD": {
+                matches: ["UCL (新平条/大耳杯15) 右袖"],
                 type: "badge",
-                price: 4,
-                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/02/3/2/3253dfdcb97870ea.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/8/3/8371526d80c58eaf.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "CUL (12-17-2017)": {
-                matches: ["CUL(平条/12杯/17大耳杯/世俱2017ad上)"],
+            "UCL + Escudo 20": {
+                matches: ["UCL +Shield (欧冠+冠军盾20)"],
                 type: "badge",
-                price: 4,
-                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/02/b/4/b4d7face98e9f357.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+                price: 3,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/f/1/f13917a931afeee8.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
+            "UCL + Escudo + U-Power": {
+                matches: ["UCL +Shield +U-Power (欧冠+冠军盾20+背下广告)"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/5/1/51b680b2baff6df2.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "UCL + Escudo + Gate.io + U-Power": {
+                matches: ["UCL +Shield +Gate.io +U-Power (欧冠+冠军盾20+左袖/背下广告)"],
+                type: "badge",
+                price: 3,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/6/6/66ff7726150b1ce5.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "UCL + MSC": {
+                matches: ["UCL +MSC (新平条 7+左袖广告)"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/d/2/d291e29f2f69deec.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "UCL + MSC + MILAN": {
+                matches: ["UCL +MSC+ MILAN(新平条 7+左袖广告+背下广告)"],
+                type: "badge",
+                price: 3,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/b/e/be0acd6c9997be72.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            
+            // UECL
+            "UECL (45) MD": {
+                matches: ["UECL(欧会杯45)右袖"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/13/3/1/3140ee6e9762ab4e.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "UECL + Fever": {
+                matches: ["UECL +fever(欧会杯+左袖广告)"],
+                type: "badge",
+                price: 3,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/f/8/f8f11ec5a0892ae3.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            
+            // COPAS
             "Copa America 2024": {
                 matches: ["Copa America 2024(美洲杯o)"],
                 type: "badge",
@@ -1246,30 +1240,221 @@ module.exports = {
                 price: 3,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/11/13/9/7/970597847c7c97e9.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "Liga MX": {
-                matches: ["LIGA MX(墨西超)右袖"],
+            "2026 FWC clasificatorias": {
+                matches: ["2026 World Cup Qualifying (世预选)", "2026 World Cup Qualifying (世预选)", "2026FWC Qualifying (世预赛)"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/13/9/8/982c73c16f531bb7.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+
+            // Europa Leagues
+            // > LaLiga
+            "La Liga 23/24 (Roja +45) MD": {
+                matches: ["La Liga +23/24C (红冠军+45西甲)右袖"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/6/8/686e84c18c0004f3.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "La Liga (45)": {
+                matches: ["La Liga (45西甲章)"],
                 type: "badge",
                 price: 1,
-                images: "https://us03-imgcdn.ymcart.com/97006/2024/11/10/e/6/e6999f9820771981.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/6/f/6fcf280ecb88c188.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "Bundesliga": { // TODO
+
+            // > Bundersliga
+            "Bundesliga": {
                 matches: ["Bundesliga (德普章)"],
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/10/31/8/b/8bdf7dd2865f6383.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
+            "Sonepar + Bundesliga": {
+                matches: ["Bundesliga +Sonepar (德普章+左袖广告)"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/2/7/273bb0d84fe23ed3.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+
+            // > Premier
+            "Premier League (34)": {
+                matches: ["Premier League (34英超普)", "Pre L +NO.or (34英超/章下字)"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/6/b/6b8aa0557f64e822.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Premier League + No rac": {
+                matches: ["Pre L + NO..for (34英超普+章下字)"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/2/8/2849daa0df6783ca.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Premier League + No rac + Fever": {
+                matches: ["Pre L +NO..for +fever (英超普/章下字+左袖广告)"],
+                type: "badge",
+                price: 3,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/2/1/21432e05db504c25.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Premier League + No rac + Fever + Flor": {
+                matches: ["Pre L +NO.or+ fever +Flower (英超/章下字+左袖广告+红花)"],
+                type: "badge",
+                price: 4,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/0/7/0723db2ac74426ed.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Premier League + No rac + Flor": {
+                matches: ["Pre L +NO.or+ Flower (英超/章下字+红花)"],
+                type: "badge",
+                price: 3,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/2/f/2f8a92a783fee35e.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Premier League + Flor": {
+                matches: ["Pre L +NO.or+ Flower( 英超/章下字+红花)"],
+                type: "badge",
+                price: 3,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/f/b/fbfb66b45a8eb819.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+
+            // > SerieA
+            "Serie A": {
+                matches: ["Serie A (意甲45)", "Serie A(意甲45)"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/4/6/462e2dd4ce4860bd.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Escudo 20": {
+                matches: ["Shield (冠军盾20)"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/6/5/65db16ccbf52eaba.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Seria A + Escudo 20": {
+                matches: ["Serie A +Shield (意甲45+冠军盾20)"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/2/9/29276c6c26b0554b.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Escudo + U-Power": {
+                matches: ["Shield +U-Power (冠军盾20+背下广告)"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/9/0/902088b48030de6b.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Serie A + Escudo + U-Power": {
+                matches: ["Serie A +Shield +U-Power (意甲45+冠军盾20+背下广告)"],
+                type: "badge",
+                price: 2,
+                "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/20/7/1/71d09e0910805b3e.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Serie A + Escudo + Gate.io + U-Power": {
+                matches: ["Serie A +Shield +Gate.io +U-Power (意甲+冠军盾20+左袖/背下广告)"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/e/6/e6d5c7f35d86233d.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Serie A + MSC": {
+                matches: ["Serie A +MSC (意甲45+左袖广告)"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/9/e/9e16d1aec42615d8.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Serie A + MSC + MILAN": {
+                matches: ["Serie A +MSC+ MILAN(意甲45+左袖广告+背下广告)"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/b/a/baa55b61af4ca93c.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+
+            // > Ligue1
             "Ligue1 (45)": {
                 matches: ["Ligue1 (45法甲黑)"],
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/10/29/9/5/953477b403a87710.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "RSL (45) MI": {
+
+            // Carabao Cup
+            "Carabao Cup": {
+                matches: ["Carabao Cup (英联赛杯)右袖"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/8/0/802bde86a7dfd67c.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+
+            // Otros
+            "Sonepar": {
+                matches: ["Sonepar (左袖广告)"],
+                type: "badge",
+                price: 0,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/8/1/8120ece630f938df.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "CUL (12-17-2016)": {
+                matches: ["CUL(平条/12杯/17大耳杯/世俱2016ad上)"],
+                type: "badge",
+                price: 4,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/02/3/2/3253dfdcb97870ea.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "CUL (12-17-2017)": {
+                matches: ["CUL(平条/12杯/17大耳杯/世俱2017ad上)"],
+                type: "badge",
+                price: 4,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/02/b/4/b4d7face98e9f357.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Liga MX": {
+                matches: ["LIGA MX(墨西超)右袖"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/11/10/e/6/e6999f9820771981.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "RSL (45 dorado) MI": {
                 matches: ["RSL(45沙特金新月)左袖"],
                 type: "badge",
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/10/23/6/b/6b9a830df95230ae.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
+            "RSL (45) MI": {
+                matches: ["RSL(45沙特联)左袖"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/10/07/2/4/24dfbe74f6e5ff61.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+
+            // NEWS
+            "EFL Champion MD": {
+                matches: ["EFL Championship (英冠章)右"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/11/17/b/e/be98e294be07cf85.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            }
+            // "XXXXXXXX": {
+            //     matches: ["XXXXXXXX"],
+            //     type: "badge",
+            //     price: 2,
+            //     images: "XXXXXXXX"
+            // },
+            // "XXXXXXXX": {
+            //     matches: ["XXXXXXXX"],
+            //     type: "badge",
+            //     price: 2,
+            //     images: "XXXXXXXX"
+            // },
+            // "XXXXXXXX": {
+            //     matches: ["XXXXXXXX"],
+            //     type: "badge",
+            //     price: 2,
+            //     images: "XXXXXXXX"
+            // },
+            // "XXXXXXXX": {
+            //     matches: ["XXXXXXXX"],
+            //     type: "badge",
+            //     price: 2,
+            //     images: "XXXXXXXX"
+            // },
+            // "XXXXXXXX": {
+            //     matches: ["XXXXXXXX"],
+            //     type: "badge",
+            //     price: 2,
+            //     images: "XXXXXXXX"
+            // },
             // "XXXXXXXX": {
             //     matches: ["XXXXXXXX"],
             //     type: "badge",
@@ -1279,22 +1464,47 @@ module.exports = {
         },
         customize: {
             "Sin dorsal": {
-                matches: ["No Name No Number", "No Name Number"],
+                matches: ["No Name No Number", "No Name Number", "No Name No Nubmer"],
                 type: "customize",
                 price: 0
             },
             "Con dorsal": {
-                matches: ["Name / Number", "Name / Numbe", "Name/ Number (名在号下)", "Name / Number (24/25ad黑)只印后面", "Name / Number (专用周年标)", "Name / Number (只印后面)", "Name / Number (24/25ad红)", "Name / Number (名在号下)", "Name / Number (名在号上)", "Name / Number (FC Augsburg) (上带广告-名在号下)", "Name / Number (Mainz 05) (上带广告-名在号下)"],
+                matches: ["Name / Number", "Name/ Number", "Name / Numbe", "Name/ Number (名在号下)", "Name / Number (24/25ad黑)只印后面", "Name / Number (专用周年标)", "Name / Number (只印后面)", "Name / Number (24/25ad红)", "Name / Number (名在号下)", "Name / Number (名在号上)", "Name / Number (FC Augsburg) (上带广告-名在号下)", "Name / Number (Mainz 05) (上带广告-名在号下)", "Name / Number (专用字体)", "Name / Number (只印后台)", "Name / Number (24/25黑ad)", "Name / Number (没广告-名在号上)", "Name / Number (24/25蓝ad)", "Name / Number (24/25白ad)", "Name / Number (没广告-名在号下)", "Name / Number (FC BAY.. MUN..)(带广告-名在号下)", "Name / Number (WERDER) (上带广告-名在号下)", "Name / Number (24/25ad蓝) 只印后面", "Name / Number (专用字体)前小号在PM下", "Name/ Number (RB Leipzig)(上带广告-名在号下)"],
                 type: "customize",
                 price: 3
             },
-            "Con dorsal anime": {
-                matches: ["Name / Anime Number (24/25ad红色名-动漫号)"],
+            "Con dorsal (solo numero)": {
+                matches: ["Number (No Name)"],
+                type: "customize",
+                price: 3
+            },
+            "Con dorsal v2": {
+                matches: ["Name / Number (Bochum)(上带广告-名在号下)", "Name / Number (1.FC Köln)(名在号上-广告在下)", "Name/ Number (Stuttgart) (上带广告-名在号下)", "Name / Number (SAFI CiMENTO) (上带广告-名在号下)", "Name/ Number (Hamburger SV)(上带广告-名在号下)", "Name / Number (Hertha BSC)(上带广告-名在号下)"],
                 type: "customize",
                 price: 4
             },
+            
+
+            // Champions fonts
+            "Con dorsal UCL fonts": {
+                matches: ["Name / Number (UCL Fonts) 欧冠字体", "Name / Number (UCL Fonts)欧冠字体", "Name / Number (UCL Fonts)(名在号上)杯赛字体"],
+                type: "customize",
+                price: 4
+            },
+
+            // Europa Liga fonts
+            "Con dorsal LaLiga fonts": {
+                matches: ["Name / Number (La Liga Fonts) 联赛带吼", "Name / Number (La Liga Fonts)联赛字体", "Name / Number (La Liga Fonts) 联赛字体"],
+                type: "customize",
+                price: 3
+            },
+            "Con dorsal SerieA fonts": {
+                matches: ["Name / Number (Serie A Fonts)联赛字体"],
+                type: "customize",
+                price: 3
+            },
             "Con dorsal Ligue1 fonts": {
-                matches: ["Name / Number ( Ligue1 Fonts )联赛字体"],
+                matches: ["Name / Number ( Ligue1 Fonts )联赛字体", "Name / Number ( Ligue1 Fonts ) 联赛字体"],
                 type: "customize",
                 price: 3
             },
@@ -1303,27 +1513,65 @@ module.exports = {
                 type: "customize",
                 price: 3
             },
-            "Con dorsal CUP fonts": {
-                matches: ["Name / Number (CUP Fonts) 杯赛字体-名在号下"],
-                type: "customize",
-                price: 3
-            },
-            "Con dorsal RSL fonts": {
-                matches: ["Name / Number (RSL League Fonts)联赛字体-名在号下"],
+            "Con dorsal Liga fonts": {
+                matches: ["Name / Number (Schalke04)(联赛号-名在号下)"],
                 type: "customize",
                 price: 4
             },
-            "XXXXXXXX": {
-                matches: ["XXXXXXXXXXX"],
+
+            // Copas fonts
+            "Con dorsal CUP fonts": {
+                matches: ["Name / Number (CUP Fonts) 杯赛字体-名在号下", "Name / Number (CUP Fonts) 杯赛字体"],
                 type: "customize",
                 price: 3
             },
-            "XXXXXXXX": {
-                matches: ["XXXXXXXXXXX"],
+            "Con dorsal Copa fonts": {
+                matches: ["Name / Number (Cup match Fonts)杯赛字体"],
+                type: "customize",
+                price: 4
+            },
+            "Con dorsal Liga fonts": {
+                matches: ["Name / Number (League Fonts )联赛字体"],
                 type: "customize",
                 price: 3
             },
-            
+
+            // Otros
+            "Con dorsal RSL fonts": {
+                matches: ["Name / Number (RSL League Fonts)联赛字体-名在号下", "Name / Number (RSL League Fonts)联赛字体"],
+                type: "customize",
+                price: 4
+            },
+            "Con dorsal PreLeague fonts": {
+                matches: ["Name / Number (Pre League Fonts)联赛字体"],
+                type: "customize",
+                price: 3
+            },
+            "Con dorsal LigaP fonts": {
+                matches: ["Name / Number (Liga-P Fonts)联赛字体"],
+                type: "customize",
+                price: 3
+            },
+            "Con dorsal SuperLigi": {
+                matches: ["Name / Number (Super Ligi)(名在号下)联赛字体"],
+                type: "customize",
+                price: 3
+            },
+            "Con dorsal Bronce fonts": {
+                matches: ["Name / Number (没广告-名在号上)铜色字"],
+                type: "customize",
+                price: 3
+            },
+            "Con dorsal anime": {
+                matches: ["Name / Anime Number (24/25ad红色名-动漫号)"],
+                type: "customize",
+                price: 4
+            },
+            // "XXXXXXXX": {
+            //     matches: ["XXXXXXXXXXX"],
+            //     type: "customize",
+            //     price: 3
+            // }
         }
     }
 };
