@@ -45,6 +45,12 @@
               "name": "Pantalones cortos",
               "description": "Indumentaria Pantalones cortos casual",
               "subcategories": []
+            },
+            {
+              "id": "2970bd83-d08f-44f2-9817-97e0dc1522f3",
+              "name": "Chombas",
+              "description": "Indumentaria Chombas casual",
+              "subcategories": []
             }
           ]
         },
@@ -57,6 +63,19 @@
               "id": "6459d476-9592-4a9d-b204-62b2a1b3a46a",
               "name": "Rompevientos",
               "description": "Indumentaria de abrigo rompeviento",
+              "subcategories": []
+            }
+          ]
+        },
+        {
+          "id": "1970faaa-2599-420a-8b2f-136a9cd1b455",
+          "name": "Accesorios",
+          "description": "Categoría Accesorios",
+          "subcategories": [
+            {
+              "id": "070436e9-ddec-4a76-9f4b-7aae5de88d77",
+              "name": "Medias",
+              "description": "Accesorios medias deportivas",
               "subcategories": []
             }
           ]
@@ -118,6 +137,12 @@
                   "id": "5dacd40e-1a0b-4799-846f-0875ead010c3",
                   "name": "Primera División",
                   "description": "Categoría Primera División",
+                  "subcategories": []
+                },
+                {
+                  "id": "38b50a35-6f1a-4d95-97df-4a5443a9034c",
+                  "name": "Brasileiro Série A",
+                  "description": "Categoría Brasileiro Série A",
                   "subcategories": []
                 }
               ]

@@ -15,9 +15,10 @@ const CONFIG = {
     },
     dataDir: './data',
     scraping: {
-        startPage: 1,          // default
-        maxProducts: 50,       // default
-        productsPerPage: 50    // default
+        // Default no args
+        startPage: 1, 
+        maxProducts: 50,
+        productsPerPage: 50
     }
 };
 
@@ -57,7 +58,28 @@ const BASE_FILES = {
 // Funciones auxiliares
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-// Función para generar descripción
+// Helper de verificación: Existe el directorio de datos
+async function ensureDataDirectory() {
+    try {
+        await fs.access(CONFIG.dataDir);
+    } catch {
+        await fs.mkdir(CONFIG.dataDir);
+    }
+}
+
+// Helper de verificación: Crear archivos base si no existen
+async function ensureBaseFiles() {
+    for (const [filename, content] of Object.entries(BASE_FILES)) {
+        const filePath = path.join(CONFIG.dataDir, filename);
+        try {
+            await fs.access(filePath);
+        } catch {
+            await fs.writeFile(filePath, JSON.stringify(content, null, 2));
+        }
+    }
+}
+
+// Función para generar: Descripción // TODO
 function generateDescription(nameAnalysis) {
     const version = nameAnalysis.tags.find(t => t.type === "version")?.name || "Version Fanatico";
     const team = nameAnalysis.tags.find(t => t.type === "equipo")?.name || "";
@@ -68,22 +90,11 @@ function generateDescription(nameAnalysis) {
     return `${edition} ${version} ${team} ${season} ${sleeve}. Producto de alta calidad con tecnología de secado rápido y materiales premium.`.trim();
 }
 
-// Función para generar descripción
-function generateDescription(nameAnalysis) {
-    const version = nameAnalysis.tags.find(t => t.type === "version")?.name || "Version Fanatico";
-    const team = nameAnalysis.tags.find(t => t.type === "equipo")?.name || "";
-    const season = nameAnalysis.tags.find(t => t.type === "temporada")?.name || "";
-    const edition = nameAnalysis.tags.find(t => t.type === "edicion")?.name || "Local";
-    const sleeve = nameAnalysis.tags.find(t => t.type === "caracteristica")?.name || "Manga Corta";
-
-    return `${edition} ${version} ${team} ${season} ${sleeve}. Producto de alta calidad con tecnología de secado rápido y materiales premium.`.trim();
-}
-
-// Función para extraer imágenes
-function extractImages($) {
+// Función para extraer: Imágenes producto
+function extractImages($) { // $ Es el return del api get 
     const images = new Set();
     
-    // Obtener imágenes de alta calidad del listado
+    // Busca en el HTML array img con: id #goodsimagelist > li > a > data_img
     $('#goodsimagelist li a').each((_, el) => {
         const imgUrl = $(el).attr('data_img');
         if (imgUrl && !imgUrl.includes('nophoto')) {
@@ -112,7 +123,7 @@ function extractImages($) {
     return Array.from(images);
 }
 
-// Función para extraer precio base
+// Función para extraer: Precio producto
 function extractBasePrice($) {
     // Buscar el precio en el elemento específico con class 'goods_price'
     const priceElement = $('.goods_price').text().trim();
@@ -126,7 +137,7 @@ function extractBasePrice($) {
     return price;
 }
 
-// Helpers de verificación para categorías y productOptions (agregar al inicio del archivo)
+// Helper de verificación: Categoria ya existe en categories.json
 const categoryExists = (existingCategories, categoryToCheck) => {
     // Función auxiliar recursiva para buscar en subcategorías
     const checkSubcategories = (categories) => {
@@ -160,6 +171,7 @@ const categoryExists = (existingCategories, categoryToCheck) => {
     return checkSubcategories(existingCategories.categories);
 };
 
+// Helper de verificación: Options ya existe en productOptions.json
 const productOptionExists = (existingOptions, optionToCheck) => {
     return existingOptions.productOptions.some(option => 
         option.name === optionToCheck.name && 
@@ -167,8 +179,419 @@ const productOptionExists = (existingOptions, optionToCheck) => {
     );
 };
 
+// Helper de extracción: Retorna array de productos con url para detail.
+async function getProductsFromPage(pageNum) {
+    try {
+        const url = `${CONFIG.baseUrl}/Products/list-r${pageNum}.html`;
+        const response = await axios.get(url, { headers: CONFIG.headers });
+        const $ = cheerio.load(response.data);
+        
+        const products = [];
+        
+        // Verificar si la página existe
+        if ($('li .pro_content').length > 0) {
+            $('li .pro_content').each((_, el) => {
+                const $el = $(el);
+                const $link = $el.find('a');
+                const name = $link.attr('title');
+                const detailUrl = $link.attr('href');
+                const price = $el.find('.price').text().trim();
+                const image = $el.find('img').attr('src');
+                
+                if (name) {
+                    products.push({
+                        name,
+                        detailUrl: detailUrl ? `${CONFIG.baseUrl}${detailUrl}` : null,
+                        price,
+                        image
+                    });
+                }
+            });
+        }
+        
+        return products;
+    } catch (error) {
+        console.error(`Error en página ${pageNum}:`, error.message);
+        return [];
+    }
+}
+
+// Helper de verificación de datos ? products?
+async function analyzeExistingData() {
+    try {
+        const categoriesPath = path.join(CONFIG.dataDir, 'categories.json');
+        const tagsPath = path.join(CONFIG.dataDir, 'tags.json');
+        const productOptionsPath = path.join(CONFIG.dataDir, 'productOptions.json');
+
+        const [categoriesData, tagsData, productOptionsData] = await Promise.all([
+            fs.readFile(categoriesPath, 'utf8'),
+            fs.readFile(tagsPath, 'utf8'),
+            fs.readFile(productOptionsPath, 'utf8')
+        ]);
+
+        return {
+            categories: JSON.parse(categoriesData),
+            tags: JSON.parse(tagsData),
+            productOptions: JSON.parse(productOptionsData)
+        };
+    } catch (error) {
+        console.log('Error leyendo archivos existentes:', error.message);
+        return {
+            categories: BASE_FILES['categories.json'],
+            tags: BASE_FILES['tags.json'],
+            productOptions: BASE_FILES['productOptions.json'],
+            products: BASE_FILES['products.json']
+        };
+    }
+}
+
+// Funcion para analizar el nombre de los productos para extraer tags, categories y palabras faltantes en mappings.js
+function analyzeProductName(name) {
+    const foundCategories = new Set();
+    const foundTagsMap = new Map();
+    const unrecognizedTerms = new Set();
+    const recognizedWords = new Set();
+
+    let normalizedName = name.toUpperCase();
+    let processedName = name;
+    let hasLongSleeve = false;
+
+    // Definir mappingTypes al inicio
+    const mappingTypes = {
+        categories: MAPPINGS.categories,
+        teams: MAPPINGS.tags.teams,
+        versions: MAPPINGS.tags.versions,
+        editions: MAPPINGS.tags.editions,
+        features: MAPPINGS.tags.features,
+        colors: MAPPINGS.tags.colors
+    };
+
+    // Helper para agregar tags sin duplicados
+    const addTag = (tag) => {
+        const key = `${tag.type}-${tag.name}`;
+        foundTagsMap.set(key, tag);
+    };
+
+    // Procesar temporadas
+    const temporadaRegex = /(\d{4})(?:-(\d{2,4})|\/(\d{2,4})|\s+(\d{2,4}))|(\d{4})/g;
+    const temporadaMatches = name.matchAll(temporadaRegex);
+    
+    for (const match of temporadaMatches) {
+        const temporada = match[0];
+        recognizedWords.add(temporada);
+        addTag({
+            name: temporada,
+            type: "temporada",
+            categoryPath: ["Productos"]
+        });
+        
+        temporada.split(/[-\/\s]/).forEach(num => {
+            recognizedWords.add(num.toLowerCase());
+        });
+    }
+
+    // Procesar frases compuestas
+    COMPOUND_PHRASES.phrases.forEach(({ phrase, normalized, type }) => {
+        if (normalizedName.includes(phrase.toUpperCase())) {
+            if (normalized === 'Manga Larga') {
+                hasLongSleeve = true;
+            }
+            phrase.split(' ').forEach(word => recognizedWords.add(word.toLowerCase()));
+            processedName = processedName.replace(phrase, `__${normalized}__`);
+            
+            let categoryPath = ["Productos"];
+            if (type === "equipo") {
+                categoryPath = ["Deportes", "Fútbol", "Clubes"];
+            }
+            
+            addTag({
+                name: normalized,
+                type: type,
+                categoryPath: categoryPath
+            });
+        }
+    });
+
+    // Procesar cada tipo de mapping > Primero itera sobre mappingTypes (categories: data), luego itera sobre categories del archivo mappings (Futbol: data) y analiza el key "matches"
+    Object.entries(mappingTypes).forEach(([mappingType, mappingData]) => {
+        Object.entries(mappingData).forEach(([itemName, data]) => {
+            if (data.matches) {
+                // Match más estricto usando regex
+                const found = data.matches.some(match => {
+                    const regex = new RegExp(`(^|\\s|[^a-zA-Z])${match}($|\\s|[^a-zA-Z])`, 'i');
+                    if (regex.test(normalizedName)) {
+                        match.split(' ').forEach(word => recognizedWords.add(word.toLowerCase())); // Agrega a array de palabras reconocidas
+                        return true;
+                    }
+                    return false;
+                });
+
+                if (found) { // Si lo q encotro es una category... 
+                    if (mappingType === 'categories') {
+                        foundCategories.add({
+                            path: data.categoryPath,
+                            name: itemName,
+                            description: data.description
+                        });
+                    } else { // Si lo q encotro es un tag... 
+                        addTag({
+                            name: itemName,
+                            type: data.type,
+                            categoryPath: data.categoryPath
+                        });
+                    }
+                }
+            }
+        });
+    });
+
+    // Agregar manga corta/larga (una sola vez)
+    if (hasLongSleeve) {
+        addTag({
+            name: "Manga Larga",
+            type: "caracteristica",
+            categoryPath: ["Productos"]
+        });
+    } else {
+        addTag({
+            name: "Manga Corta",
+            type: "caracteristica",
+            categoryPath: ["Productos"]
+        });
+    }
+
+    // Identificar todas las palabras que no matchearon con nada.
+    processedName.split(/[\s-]+/).forEach(word => {
+        if (!recognizedWords.has(word.toLowerCase()) && 
+            word.length > 2 && 
+            !word.startsWith('__') && 
+            !word.endsWith('__') &&
+            !Object.values(mappingTypes).some(mappingData => 
+                Object.values(mappingData).some(data => 
+                    data.matches?.some(match => 
+                        match.toLowerCase().includes(word.toLowerCase())
+                    )
+                )
+            )) {
+            unrecognizedTerms.add(word);
+        }
+    });
+
+    return {
+        categories: Array.from(foundCategories),
+        tags: Array.from(foundTagsMap.values()), // Convertir el Map a Array
+        unrecognized: Array.from(unrecognizedTerms)
+    };
+}
+
+// Funcion para analizar todos los productos
+async function analyzeAllProducts() {
+    try {
+        console.log('\n=== Iniciando análisis de productos ===\n');
+        console.log('Configuración:');
+        console.log(`- Página inicial: ${CONFIG.scraping.startPage}`);
+        console.log(`- Productos máximos: ${CONFIG.scraping.maxProducts || 'Sin límite'}`);
+        console.log(`- Productos por página: ${CONFIG.scraping.productsPerPage || 'Todos'}`);
+        
+        const { categories: existingCategories, tags: existingTags, productOptions: existingProductOptions } = await analyzeExistingData();
+
+        const productsPath = path.join(CONFIG.dataDir, 'products.json'); // pasar a analyzeExistingData
+        let existingProducts = [];
+        try {
+            const productsData = await fs.readFile(productsPath, 'utf8');
+            existingProducts = JSON.parse(productsData).products;
+        } catch (error) {
+            console.log('No hay productos previos');
+        } // pasar a analyzeExistingData
+
+        const existingProductNames = new Set(existingProducts.map(p => p.name));
+        const newProducts = [];
+        const newCategories = new Map();
+        const newTags = new Map();
+        const newProductOptions = {
+            badges: new Map(),
+            customize: new Map(),
+            sizes: new Map()
+        };
+        const allUnrecognizedTerms = new Set();
+        const allUnmappedOptions = {
+            badges: new Set(),
+            customize: new Set(),
+            sizes: new Set()
+        };
+        
+        const maxPages = Math.min(CONFIG.scraping.maxProducts && CONFIG.scraping.productsPerPage ? Math.ceil(CONFIG.scraping.maxProducts / CONFIG.scraping.productsPerPage) : "Error");
+        let processedProducts = 0;
+        let shouldStop = false;
+
+        let page = CONFIG.scraping.startPage;
+        while (!shouldStop) {
+            const products = await getProductsFromPage(page);
+            let pageProducts = products;
+            let productCount = 0
+
+            // Si hay límite de productos por página, aplicarlo
+            if (CONFIG.scraping.productsPerPage) {
+                pageProducts = products.slice(0, CONFIG.scraping.productsPerPage);
+            }
+
+            for (const product of pageProducts) {
+                processedProducts++;
+                productCount++;
+            
+                // Verificar límite y stopear for
+                if (CONFIG.scraping.maxProducts && processedProducts > CONFIG.scraping.maxProducts) {
+                    console.log(`\nAlcanzado límite máximo de productos (${CONFIG.scraping.maxProducts})`);
+                    shouldStop = true;
+                    break;
+                }
+            
+                // Verificar si ya existe y saltear product
+                if (existingProductNames.has(product.name)) {
+                    console.log(`\nProducto ya existente: ${product.name}`);
+                    continue;
+                }
+            
+                console.log(`\nProcesando Producto ${processedProducts}${CONFIG.scraping.maxProducts ? '/' + CONFIG.scraping.maxProducts : ''}`);
+                console.log(`Página ${page} - Producto ${productCount} : ${product.name}`);
+
+                const nameAnalysis = analyzeProductName(product.name);
+                nameAnalysis.unrecognized.forEach(term => allUnrecognizedTerms.add(term));
+
+                // Solo agregar categorías que no existen en categories.json
+                nameAnalysis.categories.forEach(category => {
+                    const categoryKey = `${category.path.join('/')}/${category.name}`;
+                    if (!categoryExists(existingCategories, category) && !newCategories.has(categoryKey)) {
+                        newCategories.set(categoryKey, {
+                            path: category.path,
+                            name: category.name,
+                            description: category.description
+                        });
+                    }
+                });
+
+                if (product.detailUrl) {
+                    const detailAnalysis = await analyzeProductDetail(product.detailUrl, product.name);
+                    if (detailAnalysis) {
+                        product.options = detailAnalysis.productData;
+                        
+                        // Procesar opciones no mapeadas
+                        Object.entries(detailAnalysis.unmappedOptions).forEach(([type, options]) => {
+                            options.forEach(option => {
+                                allUnmappedOptions[type].add(JSON.stringify(option));
+                            });
+                        });
+
+                        // Procesar opciones mapeadas que no existen en productOptions.json
+                        Object.entries(detailAnalysis.matchedOptions).forEach(([type, options]) => {
+                            options.forEach(option => {
+                                if (!productOptionExists(existingProductOptions, option) && !newProductOptions[type].has(option.name)) {
+                                    newProductOptions[type].set(option.name, option);
+                                }
+                            });
+                        });
+
+                        const productData = {
+                            name: product.name,
+                            description: generateDescription(nameAnalysis),
+                            price: detailAnalysis.productData.price,
+                            images: detailAnalysis.productData.images,
+                            status: 'active',
+                            categoryIds: nameAnalysis.categories.map(c => c.path.join('/')),
+                            tagIds: nameAnalysis.tags.map(t => ({type: t.type, name: t.name})),
+                            options: {
+                                sizes: detailAnalysis.matchedOptions.sizes,
+                                badges: detailAnalysis.matchedOptions.badges,
+                                customize: detailAnalysis.matchedOptions.customize
+                            }
+                        };
+                        newProducts.push(productData);
+
+                    }
+                    await delay(1000);
+                }
+
+                nameAnalysis.tags.forEach(tag => {
+                    const tagKey = `${tag.name}-${tag.type}`;
+                    if (!existingTags.tags.find(t => t.name === tag.name && t.type === tag.type) && !newTags.has(tagKey)) {
+                        newTags.set(tagKey, tag);
+                    }
+                });
+            }
+
+            page++;
+            if (pageProducts.length === 0) {
+                shouldStop = true;
+            }
+        }
+
+        processedProducts = processedProducts - 1
+
+        // Generar reporte
+        const report = {
+            newProducts,
+            newCategories: Array.from(newCategories.values()),
+            newTags: Array.from(newTags.values()),
+            newProductOptions: {
+                badges: Array.from(newProductOptions.badges.values()),
+                customize: Array.from(newProductOptions.customize.values()),
+                sizes: Array.from(newProductOptions.sizes.values())
+            },
+            unrecognizedTerms: Array.from(allUnrecognizedTerms),
+            unmappedOptions: {
+                badges: Array.from(allUnmappedOptions.badges).map(opt => JSON.parse(opt)),
+                customize: Array.from(allUnmappedOptions.customize).map(opt => JSON.parse(opt)),
+                sizes: Array.from(allUnmappedOptions.sizes).map(opt => JSON.parse(opt))
+            },
+            statistics: {
+                processedPages: maxPages,
+                processedProducts,
+                newProductsFound: newProducts.length,
+                newCategoriesFound: newCategories.size,
+                newTagsFound: newTags.size,
+                newOptionsFound: {
+                    badges: newProductOptions.badges.size,
+                    customize: newProductOptions.customize.size,
+                    sizes: newProductOptions.sizes.size
+                },
+                unrecognizedTermsFound: allUnrecognizedTerms.size,
+                unmappedOptionsFound: {
+                    badges: allUnmappedOptions.badges.size,
+                    customize: allUnmappedOptions.customize.size,
+                    sizes: allUnmappedOptions.sizes.size
+                }
+            }
+        };
+
+        const reportPath = path.join(CONFIG.dataDir, 'analysis_report.json');
+        await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
+
+        console.log('\n=== Análisis completado ===');
+        console.log(`Total productos procesados: ${processedProducts}`);
+        console.log(`Nuevos productos encontrados: ${newProducts.length}`);
+        console.log(`Nuevas categorías encontradas: ${newCategories.size}`);
+        console.log(`Nuevos tags encontrados: ${newTags.size}`);
+        console.log('\nNuevas opciones encontradas:');
+        Object.entries(newProductOptions).forEach(([type, options]) => {
+            console.log(`- ${type}: ${options.size}`);
+        });
+
+        console.log(`\nTérminos no reconocidos: ${allUnrecognizedTerms.size}`);
+        console.log('\nOpciones no reconocidas:');
+        Object.entries(allUnmappedOptions).forEach(([type, options]) => {
+            console.log(`- ${type}: ${options.size}`);
+        });
+
+        return report;
+    } catch (error) {
+        console.error('Error en el análisis:', error);
+    }
+}
+
+// Funcion para analizar el detalle del producto
 async function analyzeProductDetail(url, productName) {
     try {
+        // Api get de detail product, almacena en $
         const response = await axios.get(url, { headers: CONFIG.headers });
         const $ = cheerio.load(response.data);
         
@@ -193,7 +616,7 @@ async function analyzeProductDetail(url, productName) {
             customize: []
         };
 
-        // Helper para extraer precio
+        // Helper para extraer precio para options
         const extractPrice = (priceStr) => {
             if (!priceStr) return 0;
             const match = priceStr.match(/\+US\$\s*(\d+\.?\d*)/);
@@ -338,463 +761,6 @@ async function analyzeProductDetail(url, productName) {
     } catch (error) {
         console.error(`Error analizando detalle del producto: ${error.message}`);
         return null;
-    }
-}
-
-function analyzeProductName(name) {
-    const foundCategories = new Set();
-    // Usamos un Map para los tags para evitar duplicados
-    const foundTagsMap = new Map();
-    const unrecognizedTerms = new Set();
-    const recognizedWords = new Set();
-
-    let normalizedName = name.toUpperCase();
-    let processedName = name;
-    let hasLongSleeve = false;
-
-    // Helper para agregar tags sin duplicados
-    const addTag = (tag) => {
-        const key = `${tag.type}-${tag.name}`;
-        foundTagsMap.set(key, tag);
-    };
-
-    // Definir mappingTypes al inicio
-    const mappingTypes = {
-        categories: MAPPINGS.categories,
-        teams: MAPPINGS.tags.teams,
-        versions: MAPPINGS.tags.versions,
-        editions: MAPPINGS.tags.editions,
-        features: MAPPINGS.tags.features,
-        colors: MAPPINGS.tags.colors
-    };
-
-    // Procesar temporadas
-    const temporadaRegex = /(\d{4})(?:-(\d{2,4})|\/(\d{2,4})|\s+(\d{2,4}))|(\d{4})/g;
-    const temporadaMatches = name.matchAll(temporadaRegex);
-    
-    for (const match of temporadaMatches) {
-        const temporada = match[0];
-        recognizedWords.add(temporada);
-        addTag({
-            name: temporada,
-            type: "temporada",
-            categoryPath: ["Productos"]
-        });
-        
-        temporada.split(/[-\/\s]/).forEach(num => {
-            recognizedWords.add(num.toLowerCase());
-        });
-    }
-
-    // Procesar frases compuestas
-    COMPOUND_PHRASES.phrases.forEach(({ phrase, normalized, type }) => {
-        if (normalizedName.includes(phrase.toUpperCase())) {
-            if (normalized === 'Manga Larga') {
-                hasLongSleeve = true;
-            }
-            phrase.split(' ').forEach(word => recognizedWords.add(word.toLowerCase()));
-            processedName = processedName.replace(phrase, `__${normalized}__`);
-            
-            let categoryPath = ["Productos"];
-            if (type === "equipo") {
-                categoryPath = ["Deportes", "Fútbol", "Clubes"];
-            }
-            
-            addTag({
-                name: normalized,
-                type: type,
-                categoryPath: categoryPath
-            });
-        }
-    });
-
-    // Procesar cada tipo de mapping
-    Object.entries(mappingTypes).forEach(([mappingType, mappingData]) => {
-        Object.entries(mappingData).forEach(([itemName, data]) => {
-            if (data.matches) {
-                // Match más estricto usando regex
-                const found = data.matches.some(match => {
-                    const regex = new RegExp(`(^|\\s|[^a-zA-Z])${match}($|\\s|[^a-zA-Z])`, 'i');
-                    if (regex.test(normalizedName)) {
-                        match.split(' ').forEach(word => recognizedWords.add(word.toLowerCase()));
-                        return true;
-                    }
-                    return false;
-                });
-
-                if (found) {
-                    if (mappingType === 'categories') {
-                        foundCategories.add({
-                            path: data.categoryPath,
-                            name: itemName,
-                            description: data.description
-                        });
-                    } else {
-                        addTag({
-                            name: itemName,
-                            type: data.type,
-                            categoryPath: data.categoryPath
-                        });
-                    }
-                }
-            }
-        });
-    });
-
-    // Agregar manga corta/larga (una sola vez)
-    if (hasLongSleeve) {
-        addTag({
-            name: "Manga Larga",
-            type: "caracteristica",
-            categoryPath: ["Productos"]
-        });
-    } else {
-        addTag({
-            name: "Manga Corta",
-            type: "caracteristica",
-            categoryPath: ["Productos"]
-        });
-    }
-
-    // Identificar términos no reconocidos
-    processedName.split(/[\s-]+/).forEach(word => {
-        if (!recognizedWords.has(word.toLowerCase()) && 
-            word.length > 2 && 
-            !word.startsWith('__') && 
-            !word.endsWith('__') &&
-            !Object.values(mappingTypes).some(mappingData => 
-                Object.values(mappingData).some(data => 
-                    data.matches?.some(match => 
-                        match.toLowerCase().includes(word.toLowerCase())
-                    )
-                )
-            )) {
-            unrecognizedTerms.add(word);
-        }
-    });
-
-    return {
-        categories: Array.from(foundCategories),
-        tags: Array.from(foundTagsMap.values()), // Convertir el Map a Array
-        unrecognized: Array.from(unrecognizedTerms)
-    };
-}
-
-async function getProductsFromPage(pageNum) {
-    try {
-        const url = `${CONFIG.baseUrl}/Products/list-r${pageNum}.html`;
-        const response = await axios.get(url, { headers: CONFIG.headers });
-        const $ = cheerio.load(response.data);
-        
-        const products = [];
-        
-        // Verificar si la página existe
-        if ($('li .pro_content').length > 0) {
-            $('li .pro_content').each((_, el) => {
-                const $el = $(el);
-                const $link = $el.find('a');
-                const name = $link.attr('title');
-                const detailUrl = $link.attr('href');
-                const price = $el.find('.price').text().trim();
-                const image = $el.find('img').attr('src');
-                
-                if (name) {
-                    products.push({
-                        name,
-                        detailUrl: detailUrl ? `${CONFIG.baseUrl}${detailUrl}` : null,
-                        price,
-                        image,
-                        itemNo: $el.find('.itemNo').text().trim()
-                    });
-                }
-            });
-        }
-        
-        return products;
-    } catch (error) {
-        console.error(`Error en página ${pageNum}:`, error.message);
-        return [];
-    }
-}
-
-async function getTotalPages(startPage) {
-    try {
-        const response = await axios.get(`${CONFIG.baseUrl}/Products/list-r${startPage}.html`, { headers: CONFIG.headers });
-        const $ = cheerio.load(response.data);
-        
-        let maxPage = startPage;
-        $('.pagination li').each((_, el) => {
-            const pageText = $(el).text().trim();
-            const pageNum = parseInt(pageText);
-            if (!isNaN(pageNum) && pageNum > maxPage) {
-                maxPage = pageNum;
-            }
-        });
-
-        return maxPage;
-    } catch (error) {
-        console.error('Error obteniendo total de páginas:', error.message);
-        if (error.response) {
-            console.error('Estado:', error.response.status);
-        }
-        return startPage;
-    }
-}
-
-async function analyzeExistingData() {
-    try {
-        const categoriesPath = path.join(CONFIG.dataDir, 'categories.json');
-        const tagsPath = path.join(CONFIG.dataDir, 'tags.json');
-        const productOptionsPath = path.join(CONFIG.dataDir, 'productOptions.json');
-
-        const [categoriesData, tagsData, productOptionsData] = await Promise.all([
-            fs.readFile(categoriesPath, 'utf8'),
-            fs.readFile(tagsPath, 'utf8'),
-            fs.readFile(productOptionsPath, 'utf8')
-        ]);
-
-        return {
-            categories: JSON.parse(categoriesData),
-            tags: JSON.parse(tagsData),
-            productOptions: JSON.parse(productOptionsData)
-        };
-    } catch (error) {
-        console.log('Error leyendo archivos existentes:', error.message);
-        return {
-            categories: BASE_FILES['categories.json'],
-            tags: BASE_FILES['tags.json'],
-            productOptions: BASE_FILES['productOptions.json'],
-            products: BASE_FILES['products.json']
-        };
-    }
-}
-
-// Función para asegurar que existe el directorio de datos
-async function ensureDataDirectory() {
-    try {
-        await fs.access(CONFIG.dataDir);
-    } catch {
-        await fs.mkdir(CONFIG.dataDir);
-    }
-}
-
-// Función para crear archivos base si no existen
-async function ensureBaseFiles() {
-    for (const [filename, content] of Object.entries(BASE_FILES)) {
-        const filePath = path.join(CONFIG.dataDir, filename);
-        try {
-            await fs.access(filePath);
-        } catch {
-            await fs.writeFile(filePath, JSON.stringify(content, null, 2));
-        }
-    }
-}
-
-async function analyzeAllProducts() {
-    try {
-        console.log('\n=== Iniciando análisis de productos ===\n');
-        console.log('Configuración:');
-        console.log(`- Página inicial: ${CONFIG.scraping.startPage}`);
-        console.log(`- Productos máximos: ${CONFIG.scraping.maxProducts || 'Sin límite'}`);
-        console.log(`- Productos por página: ${CONFIG.scraping.productsPerPage || 'Todos'}`);
-        
-        const { categories: existingCategories, tags: existingTags, productOptions: existingProductOptions } = await analyzeExistingData();
-
-        const productsPath = path.join(CONFIG.dataDir, 'products.json');
-        let existingProducts = [];
-        try {
-            const productsData = await fs.readFile(productsPath, 'utf8');
-            existingProducts = JSON.parse(productsData).products;
-        } catch (error) {
-            console.log('No hay productos previos');
-        }
-
-        const existingProductNames = new Set(existingProducts.map(p => p.name));
-        const newProducts = [];
-        const newCategories = new Map();
-        const newTags = new Map();
-        const newProductOptions = {
-            badges: new Map(),
-            customize: new Map(),
-            sizes: new Map()
-        };
-        const allUnrecognizedTerms = new Set();
-        const allUnmappedOptions = {
-            badges: new Set(),
-            customize: new Set(),
-            sizes: new Set()
-        };
-        
-        const totalPages = await getTotalPages(CONFIG.scraping.startPage);
-        const maxPages = Math.min(
-            CONFIG.scraping.maxProducts && CONFIG.scraping.productsPerPage ? Math.ceil(CONFIG.scraping.maxProducts / CONFIG.scraping.productsPerPage) : totalPages,
-            totalPages
-        );
-        let processedProducts = 0;
-        let shouldStop = false;
-
-        let page = CONFIG.scraping.startPage;
-        while (!shouldStop) {
-            const products = await getProductsFromPage(page);
-            let pageProducts = products;
-            let productCount = 0
-
-            // Si hay límite de productos por página, aplicarlo
-            if (CONFIG.scraping.productsPerPage) {
-                pageProducts = products.slice(0, CONFIG.scraping.productsPerPage);
-            }
-
-            for (const product of pageProducts) {
-                processedProducts++;
-                productCount++;
-            
-                // Verificar límite
-                if (CONFIG.scraping.maxProducts && processedProducts > CONFIG.scraping.maxProducts) {
-                    console.log(`\nAlcanzado límite máximo de productos (${CONFIG.scraping.maxProducts})`);
-                    shouldStop = true;
-                    break;
-                }
-            
-                // Verificar si ya existe
-                if (existingProductNames.has(product.name)) {
-                    console.log(`\nProducto ya existente: ${product.name}`);
-                    continue;
-                }
-            
-                console.log(`\nProcesando Producto ${processedProducts}${CONFIG.scraping.maxProducts ? '/' + CONFIG.scraping.maxProducts : ''}`);
-                console.log(`Página ${page} - Producto ${productCount} : ${product.name}`);
-
-                const nameAnalysis = analyzeProductName(product.name);
-                nameAnalysis.unrecognized.forEach(term => allUnrecognizedTerms.add(term));
-
-                // Solo agregar categorías que no existen en categories.json
-                nameAnalysis.categories.forEach(category => {
-                    const categoryKey = `${category.path.join('/')}/${category.name}`;
-                    if (!categoryExists(existingCategories, category) && !newCategories.has(categoryKey)) {
-                        newCategories.set(categoryKey, {
-                            path: category.path,
-                            name: category.name,
-                            description: category.description
-                        });
-                    }
-                });
-
-                if (product.detailUrl) {
-                    const detailAnalysis = await analyzeProductDetail(product.detailUrl, product.name);
-                    if (detailAnalysis) {
-                        product.options = detailAnalysis.productData;
-                        
-                        // Procesar opciones no mapeadas
-                        Object.entries(detailAnalysis.unmappedOptions).forEach(([type, options]) => {
-                            options.forEach(option => {
-                                allUnmappedOptions[type].add(JSON.stringify(option));
-                            });
-                        });
-
-                        // Procesar opciones mapeadas que no existen en productOptions.json
-                        Object.entries(detailAnalysis.matchedOptions).forEach(([type, options]) => {
-                            options.forEach(option => {
-                                if (!productOptionExists(existingProductOptions, option) && !newProductOptions[type].has(option.name)) {
-                                    newProductOptions[type].set(option.name, option);
-                                }
-                            });
-                        });
-
-                        const productData = {
-                            name: product.name,
-                            description: generateDescription(nameAnalysis),
-                            price: detailAnalysis.productData.price,
-                            images: detailAnalysis.productData.images,
-                            status: 'active',
-                            categoryIds: nameAnalysis.categories.map(c => c.path.join('/')),
-                            tagIds: nameAnalysis.tags.map(t => ({type: t.type, name: t.name})),
-                            options: {
-                                sizes: detailAnalysis.matchedOptions.sizes,
-                                badges: detailAnalysis.matchedOptions.badges,
-                                customize: detailAnalysis.matchedOptions.customize
-                            }
-                        };
-                        newProducts.push(productData);
-
-                    }
-                    await delay(1000);
-                }
-
-                nameAnalysis.tags.forEach(tag => {
-                    const tagKey = `${tag.name}-${tag.type}`;
-                    if (!existingTags.tags.find(t => t.name === tag.name && t.type === tag.type) && !newTags.has(tagKey)) {
-                        newTags.set(tagKey, tag);
-                    }
-                });
-            }
-
-            page++;
-            if (pageProducts.length === 0) {
-                shouldStop = true;
-            }
-        }
-
-        processedProducts = processedProducts - 1
-
-        // Generar reporte
-        const report = {
-            newProducts,
-            newCategories: Array.from(newCategories.values()),
-            newTags: Array.from(newTags.values()),
-            newProductOptions: {
-                badges: Array.from(newProductOptions.badges.values()),
-                customize: Array.from(newProductOptions.customize.values()),
-                sizes: Array.from(newProductOptions.sizes.values())
-            },
-            unrecognizedTerms: Array.from(allUnrecognizedTerms),
-            unmappedOptions: {
-                badges: Array.from(allUnmappedOptions.badges).map(opt => JSON.parse(opt)),
-                customize: Array.from(allUnmappedOptions.customize).map(opt => JSON.parse(opt)),
-                sizes: Array.from(allUnmappedOptions.sizes).map(opt => JSON.parse(opt))
-            },
-            statistics: {
-                totalPages,
-                processedPages: maxPages,
-                processedProducts,
-                newProductsFound: newProducts.length,
-                newCategoriesFound: newCategories.size,
-                newTagsFound: newTags.size,
-                newOptionsFound: {
-                    badges: newProductOptions.badges.size,
-                    customize: newProductOptions.customize.size,
-                    sizes: newProductOptions.sizes.size
-                },
-                unrecognizedTermsFound: allUnrecognizedTerms.size,
-                unmappedOptionsFound: {
-                    badges: allUnmappedOptions.badges.size,
-                    customize: allUnmappedOptions.customize.size,
-                    sizes: allUnmappedOptions.sizes.size
-                }
-            }
-        };
-
-        const reportPath = path.join(CONFIG.dataDir, 'analysis_report.json');
-        await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
-
-        console.log('\n=== Análisis completado ===');
-        console.log(`Total productos procesados: ${processedProducts}`);
-        console.log(`Nuevos productos encontrados: ${newProducts.length}`);
-        console.log(`Nuevas categorías encontradas: ${newCategories.size}`);
-        console.log(`Nuevos tags encontrados: ${newTags.size}`);
-        console.log('\nNuevas opciones encontradas:');
-        Object.entries(newProductOptions).forEach(([type, options]) => {
-            console.log(`- ${type}: ${options.size}`);
-        });
-
-        console.log(`\nTérminos no reconocidos: ${allUnrecognizedTerms.size}`);
-        console.log('\nOpciones no reconocidas:');
-        Object.entries(allUnmappedOptions).forEach(([type, options]) => {
-            console.log(`- ${type}: ${options.size}`);
-        });
-
-        return report;
-    } catch (error) {
-        console.error('Error en el análisis:', error);
     }
 }
 

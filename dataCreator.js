@@ -35,7 +35,7 @@ async function writeJsonFile(filePath, data) {
   await fs.writeFile(filePath, JSON.stringify(data, null, 2), 'utf8');
 }
 
-// Función auxiliar para encontrar una categoría por nombre en un árbol
+// Función auxiliar para encontrar una categoría por nombre en un árbol > Recordar q obtiene un arbol (pathParts: ["Deporte", "Futbol", "Clubes"]). Analiza si encuentra deporte, si no existe, retorna null. Si existe, revisa si hay algo dsp, si no hay nada, retorna categoria. Si hay algo mas, se vuelve a llamar con recursividad. Recortando el pathParts con un slice. Asi hasta encontrar el path completo o lo que falta crear.
 function findCategoryByPath(categories, pathParts) {
   if (pathParts.length === 0) return null;
   
@@ -48,55 +48,7 @@ function findCategoryByPath(categories, pathParts) {
   return findCategoryByPath(category.subcategories || [], pathParts.slice(1));
 }
 
-// Función para mergear categorías nuevas con existentes
-function mergeCategoryTrees(existing, newCategories) {
-  const merged = [...existing];
-  
-  function addCategory(category, parentPath = []) {
-    const currentPath = [...parentPath, category.name];
-    const existingCategory = findCategoryByPath(merged, currentPath);
-    
-    if (!existingCategory) {
-      // Si no existe la categoría en el nivel actual, la agregamos
-      const newCategory = {
-        id: crypto.randomUUID(),
-        name: category.name,
-        description: category.description || `Categoría ${category.name}`,
-        subcategories: []
-      };
-      
-      if (parentPath.length === 0) {
-        merged.push(newCategory);
-        logs.categories.created.push(category.name);
-      } else {
-        const parent = findCategoryByPath(merged, parentPath);
-        if (parent) {
-          parent.subcategories = parent.subcategories || [];
-          parent.subcategories.push(newCategory);
-          logs.categories.created.push(category.name);
-        }
-      }
-      
-      // Procesar subcategorías si existen
-      if (category.subcategories && category.subcategories.length > 0) {
-        category.subcategories.forEach(subcat => addCategory(subcat, currentPath));
-      }
-    } else {
-      logs.categories.skipped.push(category.name);
-      // Si la categoría existe, procesamos sus subcategorías
-      if (category.subcategories && category.subcategories.length > 0) {
-        category.subcategories.forEach(subcat => addCategory(subcat, currentPath));
-      }
-    }
-  }
-  
-  // Procesar las nuevas categorías
-  newCategories.forEach(category => addCategory(category));
-  
-  return merged;
-}
-
-// Build hierarchical category structure
+// Función para crear arbol de category de todo lo q hay
 function buildCategoryTree(categories) {
   const categoryMap = new Map();
   const rootCategories = [];
@@ -150,7 +102,56 @@ function buildCategoryTree(categories) {
   return rootCategories;
 }
 
-// Categories processing
+// Función para mergear categorías de buildCategoryTree con existentes
+function mergeCategoryTrees(existing, newCategories) {
+  const merged = [...existing];
+  
+  function addCategory(category, parentPath = []) {
+    const currentPath = [...parentPath, category.name];
+    const existingCategory = findCategoryByPath(merged, currentPath);
+    
+    if (!existingCategory) {
+      // Si no existe la categoría en el nivel actual, la agregamos
+      const newCategory = {
+        id: crypto.randomUUID(),
+        name: category.name,
+        description: category.description || `Categoría ${category.name}`,
+        subcategories: []
+      };
+      
+      // Busca el path para agregar la cat
+      if (parentPath.length === 0) {
+        merged.push(newCategory);
+        logs.categories.created.push(category.name);
+      } else {
+        const parent = findCategoryByPath(merged, parentPath);
+        if (parent) {
+          parent.subcategories = parent.subcategories || [];
+          parent.subcategories.push(newCategory);
+          logs.categories.created.push(category.name);
+        }
+      }
+      
+      // Procesar subcategorías si existen
+      if (category.subcategories && category.subcategories.length > 0) {
+        category.subcategories.forEach(subcat => addCategory(subcat, currentPath));
+      }
+    } else {
+      logs.categories.skipped.push(category.name);
+      // Si la categoría existe, procesamos sus subcategorías
+      if (category.subcategories && category.subcategories.length > 0) {
+        category.subcategories.forEach(subcat => addCategory(subcat, currentPath));
+      }
+    }
+  }
+  
+  // Procesar las nuevas categorías
+  newCategories.forEach(category => addCategory(category));
+  
+  return merged;
+}
+
+// Recolecta los paths de categories de lo tags
 async function processCategories(analysisReport) {
   const existingData = await readJsonFile(CATEGORIES_PATH) || { categories: [] };
   const allCategoryPaths = new Set();

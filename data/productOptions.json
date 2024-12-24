@@ -328,6 +328,76 @@
       "type": "size",
       "price": 3000,
       "image": null
+    },
+    {
+      "id": "88f231cc-66be-4740-b7c5-c308c8696d4d",
+      "name": "La Liga (45)",
+      "type": "badge",
+      "price": 3000,
+      "image": "https://us03-imgcdn.ymcart.com/97006/2024/08/05/b/7/b755b510a4b73eee.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+    },
+    {
+      "id": "e3834e1d-638c-4e31-b253-3309504d1b5c",
+      "name": "Premier League + No rac",
+      "type": "badge",
+      "price": 6000,
+      "image": "https://us03-imgcdn.ymcart.com/97006/2024/08/19/3/5/356189421801613d.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+    },
+    {
+      "id": "3b751ee4-f8ae-4547-bcce-764f384693c1",
+      "name": "Premier League + No rac + Fever",
+      "type": "badge",
+      "price": 9000,
+      "image": "https://us03-imgcdn.ymcart.com/97006/2024/08/29/c/7/c7ddfc25fc108f5e.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+    },
+    {
+      "id": "45339042-7f43-46b6-87f2-0b385f9be18c",
+      "name": "UECL + Fever",
+      "type": "badge",
+      "price": 9000,
+      "image": "https://us03-imgcdn.ymcart.com/97006/2024/08/29/3/7/37cd5f4b07861655.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+    },
+    {
+      "id": "c4139180-c15c-470c-9d6c-27c7dd3b7cca",
+      "name": "Premier League + No rac + Fever + Flor",
+      "type": "badge",
+      "price": 12000,
+      "image": "https://us03-imgcdn.ymcart.com/97006/2024/08/29/f/b/fb94ac29f8e682e5.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+    },
+    {
+      "id": "ae40fed5-be4f-4089-b106-9548ffa766f2",
+      "name": "Premier League + No rac + Flor",
+      "type": "badge",
+      "price": 9000,
+      "image": "https://us03-imgcdn.ymcart.com/97006/2024/08/19/0/0/00d878b54fb01785.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+    },
+    {
+      "id": "acc2c39e-4305-4d00-a7c6-936fafe01ec0",
+      "name": "Carabao Cup",
+      "type": "badge",
+      "price": 3000,
+      "image": "https://us03-imgcdn.ymcart.com/97006/2024/08/20/f/1/f113e0722ce5a674.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+    },
+    {
+      "id": "b3117a75-18ed-4b39-b593-e38bef50d31b",
+      "name": "Con dorsal UCL fonts",
+      "type": "customize",
+      "price": 9000,
+      "image": null
+    },
+    {
+      "id": "057eb8fe-313f-4d9c-81ec-6674880037f1",
+      "name": "Con dorsal PreLeague fonts",
+      "type": "customize",
+      "price": 9000,
+      "image": null
+    },
+    {
+      "id": "ab1c6ae1-1369-41c1-9c4b-5a8cd71fa945",
+      "name": "Con dorsal Copa fonts",
+      "type": "customize",
+      "price": 12000,
+      "image": null
     }
   ]
 }

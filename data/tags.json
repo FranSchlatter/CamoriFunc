@@ -671,6 +671,22 @@
       "categoryPath": [
         "400d7362-d624-43a2-97cc-77235f7a7e1d"
       ]
+    },
+    {
+      "id": "5f014c23-7fc3-4a25-85dc-89a5787d5891",
+      "name": "Lyon",
+      "type": "equipo",
+      "categoryPath": [
+        "18e26f18-bbd5-40fe-bb2e-371f75eecbd7"
+      ]
+    },
+    {
+      "id": "eb04abf8-e5e4-477f-8bb8-213238dbbeef",
+      "name": "Cruzeiro",
+      "type": "equipo",
+      "categoryPath": [
+        "38b50a35-6f1a-4d95-97df-4a5443a9034c"
+      ]
     }
   ]
 }
