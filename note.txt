@@ -1,4 +1,8 @@
 Todo funcionando ok. Falta correr analyzer completo y mapear todo los q falte.
 
+Pque;o error en prod categories, deberia solo asignar el id del hijo mas peque;o 
+
+Tags deberia asignar todas las id de sus categorias padres tmb? Si estoy en clubes sin estar en premier no vere nada... O no? Quizas mostraria los tags suyos + todos los de los hijos
+
 En front ademas de las variants. Deberia mostrar, versiones (home away third) y abajo prod relacionados.
 Remake prods, tags, categories, prodOptions... prod brand img?  

@@ -79,24 +79,89 @@ async function ensureBaseFiles() {
     }
 }
 
-// Función para generar: Descripción // TODO
+function generateNormalizedName(nameAnalysis) {
+    const parts = {
+        team: nameAnalysis.tags.find(t => t.type === "equipo")?.name || "",
+        season: nameAnalysis.tags.find(t => t.type === "temporada")?.name || "",
+        edition: nameAnalysis.tags.find(t => t.type === "edicion")?.name || "",
+        version: nameAnalysis.tags.find(t => t.type === "version")?.name || "",
+        color: nameAnalysis.tags.find(t => t.type === "color")?.name || "",
+        category: nameAnalysis.categories[0]?.name || "Camiseta",
+        feature: nameAnalysis.tags.find(t => t.type === "caracteristica")?.name || "",
+        unrecognized: nameAnalysis.unrecognized || []
+    };
+
+    // Construir el nombre en el orden específico solicitado
+    const mainParts = [];
+    const secondaryParts = [];
+    
+    // Primera parte: Temporada y Equipo
+    if (parts.season) mainParts.push(parts.season);
+    if (parts.team) mainParts.push(parts.team);
+    
+    // Segunda parte: Edición y Versión
+    if (parts.edition) secondaryParts.push(parts.edition);
+    if (parts.version) secondaryParts.push(`Version ${parts.version}`);
+    
+    // Tercera parte: Categoría y Característica
+    const productParts = [];
+    if (parts.category) productParts.push(parts.category);
+    if (parts.feature) productParts.push(parts.feature);
+    
+    // Construir el nombre final
+    let finalName = mainParts.join(" ");
+    
+    if (secondaryParts.length > 0) {
+        finalName += `, ${secondaryParts.join(", ")}`;
+    }
+    
+    if (productParts.length > 0) {
+        finalName += `, ${productParts.join(" ")}`;
+    }
+    
+    // Agregar términos no reconocidos al final
+    if (parts.unrecognized.length > 0) {
+        finalName += ` (${parts.unrecognized.join(" ")})`;
+    }
+
+    return finalName;
+}
+
+// Actualizar la función generateDescription para mantener consistencia
 function generateDescription(nameAnalysis) {
-    const version = nameAnalysis.tags.find(t => t.type === "version")?.name || "Version Fanatico";
     const team = nameAnalysis.tags.find(t => t.type === "equipo")?.name || "";
     const season = nameAnalysis.tags.find(t => t.type === "temporada")?.name || "";
-    const edition = nameAnalysis.tags.find(t => t.type === "edicion")?.name || "Local";
-    const sleeve = nameAnalysis.tags.find(t => t.type === "caracteristica")?.name || "Manga Corta";
+    const edition = nameAnalysis.tags.find(t => t.type === "edicion")?.name || "";
+    const version = nameAnalysis.tags.find(t => t.type === "version")?.name || "";
+    const feature = nameAnalysis.tags.find(t => t.type === "caracteristica")?.name || "";
+    
+    const parts = [];
+    
+    // Mantener el mismo orden que en el nombre
+    if (season && team) parts.push(`${season} ${team}`);
+    if (edition) parts.push(edition);
+    if (version) parts.push(`Version ${version}`);
+    if (feature) parts.push(feature);
 
-    return `${edition} ${version} ${team} ${season} ${sleeve}. Producto de alta calidad con tecnología de secado rápido y materiales premium.`.trim();
+    return `${parts.join(", ")}. Producto de alta calidad con tecnología de secado rápido y materiales premium.`;
 }
 
 // Función para extraer: Imágenes producto
-function extractImages($) { // $ Es el return del api get 
+function extractImages($) {
     const images = new Set();
-    
+
     // Busca en el HTML array img con: id #goodsimagelist > li > a > data_img
-    $('#goodsimagelist li a').each((_, el) => {
-        const imgUrl = $(el).attr('data_img');
+    $('#goodsimagelist li').each((_, li) => {
+        const style = $(li).attr('style');
+        
+        // Ignorar elementos con style="display:none;"
+        if (style && style.includes('display:none')) {
+            return;
+        }
+
+        // Procesar solo si no tiene el estilo display:none
+        const anchor = $(li).find('a');
+        const imgUrl = anchor.attr('data_img');
         if (imgUrl && !imgUrl.includes('nophoto')) {
             images.add(imgUrl);
         }
@@ -122,6 +187,7 @@ function extractImages($) { // $ Es el return del api get
 
     return Array.from(images);
 }
+
 
 // Función para extraer: Precio producto
 function extractBasePrice($) {
@@ -492,7 +558,7 @@ async function analyzeAllProducts() {
                         });
 
                         const productData = {
-                            name: product.name,
+                            name: generateNormalizedName(nameAnalysis),
                             description: generateDescription(nameAnalysis),
                             price: detailAnalysis.productData.price,
                             images: detailAnalysis.productData.images,

@@ -895,6 +895,11 @@ module.exports = {
                 type: "equipo",
                 categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
             },
+            "Senegal": {
+                matches: ['Senegal'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
+            },
 
             // Otros clubes
             "Toluca": {

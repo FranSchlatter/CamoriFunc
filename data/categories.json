@@ -1,81 +1,62 @@
 {
   "categories": [
     {
-      "id": "dd91ae26-3556-43e4-aedf-d877552ce06c",
+      "id": "aeabb437-c96a-4658-841a-6da6b35f5d60",
       "name": "Productos",
       "description": "Categoría Productos",
       "subcategories": [
         {
-          "id": "4ec34e8a-ba4d-47ad-bb48-2088a5ac2fd9",
-          "name": "Camisetas",
-          "description": "Indumentaria camisetas",
-          "subcategories": []
-        },
-        {
-          "id": "cd1e2e1c-f0e5-4515-bab6-5f907ae40482",
-          "name": "Retro",
-          "description": "Indumentaria retro",
-          "subcategories": []
-        },
-        {
-          "id": "40eb81c1-1bb2-47d8-8cc7-34ddfb693936",
-          "name": "Entrenamiento",
-          "description": "Indumentaria entrenamiento",
-          "subcategories": []
-        },
-        {
-          "id": "1f45fa20-39a2-45c2-b672-5d489073426c",
+          "id": "5e08929d-3c49-46df-954e-83aa2154f6de",
           "name": "Conjuntos",
           "description": "Indumentaria conjuntos",
           "subcategories": []
         },
         {
-          "id": "fabd34f7-2451-40e3-bfd4-557b8ca269a8",
-          "name": "Casual",
-          "description": "Indumentaria casual",
-          "subcategories": [
-            {
-              "id": "6509be77-ef15-46a9-a460-6282071135f7",
-              "name": "Remeras",
-              "description": "Indumentaria Remeras casual",
-              "subcategories": []
-            },
-            {
-              "id": "f13c4494-ed83-47bc-80cd-f1727f49a8cb",
-              "name": "Pantalones cortos",
-              "description": "Indumentaria Pantalones cortos casual",
-              "subcategories": []
-            },
-            {
-              "id": "2970bd83-d08f-44f2-9817-97e0dc1522f3",
-              "name": "Chombas",
-              "description": "Indumentaria Chombas casual",
-              "subcategories": []
-            }
-          ]
+          "id": "efdad483-c78e-4cd2-9a1b-a1a8fd923a18",
+          "name": "Camisetas",
+          "description": "Indumentaria camisetas",
+          "subcategories": []
         },
         {
-          "id": "91cea6df-fe3b-4d55-a95c-13a3d4d88104",
+          "id": "ebdafae4-8102-455c-95e5-abac6074ba26",
+          "name": "Entrenamiento",
+          "description": "Indumentaria entrenamiento",
+          "subcategories": []
+        },
+        {
+          "id": "989e2efe-d8d4-4862-8249-ad51e0d571bb",
+          "name": "Retro",
+          "description": "Indumentaria retro",
+          "subcategories": []
+        },
+        {
+          "id": "198d0db2-889d-47fb-96d0-bbb06dd21cdb",
           "name": "Abrigos",
           "description": "Categoría Abrigos",
           "subcategories": [
             {
-              "id": "6459d476-9592-4a9d-b204-62b2a1b3a46a",
+              "id": "9074d4ac-51ec-438a-8e2a-58c654b6985d",
               "name": "Rompevientos",
               "description": "Indumentaria de abrigo rompeviento",
+              "subcategories": []
+            },
+            {
+              "id": "99148abc-1ea4-44a7-9db5-d8961712ed2c",
+              "name": "Camperon",
+              "description": "Indumentaria de abrigo camperon",
               "subcategories": []
             }
           ]
         },
         {
-          "id": "1970faaa-2599-420a-8b2f-136a9cd1b455",
-          "name": "Accesorios",
-          "description": "Categoría Accesorios",
+          "id": "1e3472ca-f436-4490-9fa2-822278d1691b",
+          "name": "Casual",
+          "description": "Categoría Casual",
           "subcategories": [
             {
-              "id": "070436e9-ddec-4a76-9f4b-7aae5de88d77",
-              "name": "Medias",
-              "description": "Accesorios medias deportivas",
+              "id": "8d1f2b4f-1018-4b20-80d4-c95da6271e96",
+              "name": "Remeras",
+              "description": "Indumentaria Remeras casual",
               "subcategories": []
             }
           ]
@@ -83,134 +64,72 @@
       ]
     },
     {
-      "id": "d54f442f-8a87-4438-a101-d39346bd715f",
+      "id": "1b9d760e-95e1-4a84-b781-3bf7f0b41aaa",
       "name": "Deportes",
       "description": "Categoría Deportes",
       "subcategories": [
         {
-          "id": "91480da7-f7d2-4597-91ad-36cc5e656c52",
+          "id": "0c538d7d-3ae3-4ea7-a8e5-fec2ef6b9333",
           "name": "Fútbol",
           "description": "Deporte fútbol",
           "subcategories": [
             {
-              "id": "f64a1d46-810b-40cf-98cd-44070621bca8",
+              "id": "248be16e-870d-45b7-a60e-2194a49d0293",
               "name": "Clubes",
               "description": "Categoría Clubes",
               "subcategories": [
                 {
-                  "id": "3206e772-5ef3-4bcd-9d0c-bcb605287a1b",
-                  "name": "Premier League",
-                  "description": "Categoría Premier League",
-                  "subcategories": []
-                },
-                {
-                  "id": "18e26f18-bbd5-40fe-bb2e-371f75eecbd7",
-                  "name": "Ligue 1",
-                  "description": "Categoría Ligue 1",
-                  "subcategories": []
-                },
-                {
-                  "id": "e4554067-a4c5-46f8-b41c-8d4ab7318fab",
+                  "id": "59728048-ccba-4dec-84d9-989f023472c7",
                   "name": "Serie A",
                   "description": "Categoría Serie A",
                   "subcategories": []
                 },
                 {
-                  "id": "1cbd9b95-716a-4b12-81ef-2e25b9732d34",
+                  "id": "e1ebd2dd-db3b-4391-99b3-bfa458c09b3e",
+                  "name": "Premier League",
+                  "description": "Categoría Premier League",
+                  "subcategories": []
+                },
+                {
+                  "id": "60600b46-a4a6-4e5f-8612-b287f8e2a19c",
+                  "name": "Brasileiro Série A",
+                  "description": "Categoría Brasileiro Série A",
+                  "subcategories": []
+                },
+                {
+                  "id": "c67cc991-0e85-4be0-a712-75c3bff309e0",
                   "name": "La Liga",
                   "description": "Categoría La Liga",
                   "subcategories": []
                 },
                 {
-                  "id": "ddb2654a-5f1e-4764-b50a-b21896d84e96",
-                  "name": "Bundesliga",
-                  "description": "Categoría Bundesliga",
+                  "id": "5d305a79-7bb0-483b-adcf-7ae6ef5ffdd1",
+                  "name": "Ligue 1",
+                  "description": "Categoría Ligue 1",
                   "subcategories": []
                 },
                 {
-                  "id": "30865dab-5eb7-46d1-aecd-d520041c0465",
+                  "id": "1d030b13-c49a-4f2e-81ba-7aa0ec72f77b",
                   "name": "Otros",
                   "description": "Categoría Otros",
-                  "subcategories": []
-                },
-                {
-                  "id": "5dacd40e-1a0b-4799-846f-0875ead010c3",
-                  "name": "Primera División",
-                  "description": "Categoría Primera División",
-                  "subcategories": []
-                },
-                {
-                  "id": "38b50a35-6f1a-4d95-97df-4a5443a9034c",
-                  "name": "Brasileiro Série A",
-                  "description": "Categoría Brasileiro Série A",
                   "subcategories": []
                 }
               ]
             },
             {
-              "id": "10888cc5-0810-4a5f-9be2-dc9b9940df22",
+              "id": "d4651b31-893d-4030-aee6-57ae4c0664b2",
               "name": "Selecciones",
               "description": "Categoría Selecciones",
               "subcategories": [
                 {
-                  "id": "80329245-042a-4185-a978-30ca71e42aea",
+                  "id": "7217009f-6183-477b-ae64-e33b30de121d",
                   "name": "Otros",
                   "description": "Categoría Otros",
                   "subcategories": []
-                },
-                {
-                  "id": "c9e97259-22aa-46e0-8362-905fc557ccaf",
-                  "name": "Euro",
-                  "description": "Categoría Euro",
-                  "subcategories": []
-                },
-                {
-                  "id": "a445119d-142a-440a-837d-925852a74870",
-                  "name": "Copa America",
-                  "description": "Categoría Copa America",
-                  "subcategories": []
                 }
               ]
             }
           ]
-        },
-        {
-          "id": "e5c31d2a-2f1f-432a-a1ca-b91cf22227b5",
-          "name": "Básquet",
-          "description": "Deporte básquet",
-          "subcategories": [
-            {
-              "id": "0ee1b137-36db-456b-9682-331e329b3df3",
-              "name": "NBA",
-              "description": "Liga de básquet americana",
-              "subcategories": [
-                {
-                  "id": "400d7362-d624-43a2-97cc-77235f7a7e1d",
-                  "name": "Conferencia Oeste",
-                  "description": "Categoría Conferencia Oeste",
-                  "subcategories": []
-                },
-                {
-                  "id": "7f16974e-18c1-4a53-9d8b-491b948d42bd",
-                  "name": "Conferencia Este",
-                  "description": "Categoría Conferencia Este",
-                  "subcategories": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "9ffea3fd-088e-441e-9252-5aa8d9ce0cd7",
-          "name": "Formula 1",
-          "description": "Deporte automovilismo",
-          "subcategories": []
-        },
-        {
-          "id": "0b582bd3-06c4-4a9e-9b8d-999040edba45",
-          "name": "Rugby",
-          "description": "Deporte rugby",
-          "subcategories": []
         }
       ]
     }

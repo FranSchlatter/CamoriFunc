@@ -1,4 +1,601 @@
 {
+  "categories": [
+    {
+      "id": "aeabb437-c96a-4658-841a-6da6b35f5d60",
+      "name": "Productos",
+      "description": "Categoría Productos",
+      "subcategories": [
+        {
+          "id": "5e08929d-3c49-46df-954e-83aa2154f6de",
+          "name": "Conjuntos",
+          "description": "Indumentaria conjuntos",
+          "subcategories": []
+        },
+        {
+          "id": "efdad483-c78e-4cd2-9a1b-a1a8fd923a18",
+          "name": "Camisetas",
+          "description": "Indumentaria camisetas",
+          "subcategories": []
+        },
+        {
+          "id": "ebdafae4-8102-455c-95e5-abac6074ba26",
+          "name": "Entrenamiento",
+          "description": "Indumentaria entrenamiento",
+          "subcategories": []
+        },
+        {
+          "id": "989e2efe-d8d4-4862-8249-ad51e0d571bb",
+          "name": "Retro",
+          "description": "Indumentaria retro",
+          "subcategories": []
+        },
+        {
+          "id": "198d0db2-889d-47fb-96d0-bbb06dd21cdb",
+          "name": "Abrigos",
+          "description": "Categoría Abrigos",
+          "subcategories": [
+            {
+              "id": "9074d4ac-51ec-438a-8e2a-58c654b6985d",
+              "name": "Rompevientos",
+              "description": "Indumentaria de abrigo rompeviento",
+              "subcategories": []
+            },
+            {
+              "id": "99148abc-1ea4-44a7-9db5-d8961712ed2c",
+              "name": "Camperon",
+              "description": "Indumentaria de abrigo camperon",
+              "subcategories": []
+            }
+          ]
+        },
+        {
+          "id": "1e3472ca-f436-4490-9fa2-822278d1691b",
+          "name": "Casual",
+          "description": "Categoría Casual",
+          "subcategories": [
+            {
+              "id": "8d1f2b4f-1018-4b20-80d4-c95da6271e96",
+              "name": "Remeras",
+              "description": "Indumentaria Remeras casual",
+              "subcategories": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1b9d760e-95e1-4a84-b781-3bf7f0b41aaa",
+      "name": "Deportes",
+      "description": "Categoría Deportes",
+      "subcategories": [
+        {
+          "id": "0c538d7d-3ae3-4ea7-a8e5-fec2ef6b9333",
+          "name": "Fútbol",
+          "description": "Deporte fútbol",
+          "subcategories": [
+            {
+              "id": "248be16e-870d-45b7-a60e-2194a49d0293",
+              "name": "Clubes",
+              "description": "Categoría Clubes",
+              "subcategories": [
+                {
+                  "id": "59728048-ccba-4dec-84d9-989f023472c7",
+                  "name": "Serie A",
+                  "description": "Categoría Serie A",
+                  "subcategories": []
+                },
+                {
+                  "id": "e1ebd2dd-db3b-4391-99b3-bfa458c09b3e",
+                  "name": "Premier League",
+                  "description": "Categoría Premier League",
+                  "subcategories": []
+                },
+                {
+                  "id": "60600b46-a4a6-4e5f-8612-b287f8e2a19c",
+                  "name": "Brasileiro Série A",
+                  "description": "Categoría Brasileiro Série A",
+                  "subcategories": []
+                },
+                {
+                  "id": "c67cc991-0e85-4be0-a712-75c3bff309e0",
+                  "name": "La Liga",
+                  "description": "Categoría La Liga",
+                  "subcategories": []
+                },
+                {
+                  "id": "5d305a79-7bb0-483b-adcf-7ae6ef5ffdd1",
+                  "name": "Ligue 1",
+                  "description": "Categoría Ligue 1",
+                  "subcategories": []
+                },
+                {
+                  "id": "1d030b13-c49a-4f2e-81ba-7aa0ec72f77b",
+                  "name": "Otros",
+                  "description": "Categoría Otros",
+                  "subcategories": []
+                }
+              ]
+            },
+            {
+              "id": "d4651b31-893d-4030-aee6-57ae4c0664b2",
+              "name": "Selecciones",
+              "description": "Categoría Selecciones",
+              "subcategories": [
+                {
+                  "id": "7217009f-6183-477b-ae64-e33b30de121d",
+                  "name": "Otros",
+                  "description": "Categoría Otros",
+                  "subcategories": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tags": [
+    {
+      "id": "be88f790-482a-469d-b12c-6c74a1fcde18",
+      "name": "2024-25",
+      "type": "temporada",
+      "categoryPath": [
+        "aeabb437-c96a-4658-841a-6da6b35f5d60"
+      ]
+    },
+    {
+      "id": "9646ceee-e1d4-4e4d-985a-e8d8176387d4",
+      "name": "Inter de Milan",
+      "type": "equipo",
+      "categoryPath": [
+        "59728048-ccba-4dec-84d9-989f023472c7"
+      ]
+    },
+    {
+      "id": "27087ec4-6569-451e-b925-0f09bc613138",
+      "name": "Azul",
+      "type": "color",
+      "categoryPath": []
+    },
+    {
+      "id": "1013444e-182e-4943-99fd-6fa155208400",
+      "name": "Manga Corta",
+      "type": "caracteristica",
+      "categoryPath": [
+        "aeabb437-c96a-4658-841a-6da6b35f5d60"
+      ]
+    },
+    {
+      "id": "84bc5adc-482f-4103-b495-808382881f0d",
+      "name": "AC Milan",
+      "type": "equipo",
+      "categoryPath": [
+        "59728048-ccba-4dec-84d9-989f023472c7"
+      ]
+    },
+    {
+      "id": "7287a743-63f1-4336-be74-95164ebb0a5d",
+      "name": "Negro",
+      "type": "color",
+      "categoryPath": []
+    },
+    {
+      "id": "747d79d2-7a71-4d42-84e1-e2aa64b9ef16",
+      "name": "Arsenal",
+      "type": "equipo",
+      "categoryPath": [
+        "e1ebd2dd-db3b-4391-99b3-bfa458c09b3e"
+      ]
+    },
+    {
+      "id": "b9615d6a-b84d-4567-8890-73b36d87fd4c",
+      "name": "Manchester United",
+      "type": "equipo",
+      "categoryPath": [
+        "e1ebd2dd-db3b-4391-99b3-bfa458c09b3e"
+      ]
+    },
+    {
+      "id": "e3e998fa-3616-4444-8bf3-bff3e8f88915",
+      "name": "Palmeiras",
+      "type": "equipo",
+      "categoryPath": [
+        "60600b46-a4a6-4e5f-8612-b287f8e2a19c"
+      ]
+    },
+    {
+      "id": "43a83cbb-07e1-4eb5-8175-dbcaefc2f01f",
+      "name": "Version Jugador",
+      "type": "version",
+      "categoryPath": [
+        "aeabb437-c96a-4658-841a-6da6b35f5d60"
+      ]
+    },
+    {
+      "id": "d55339d3-8416-4c62-b4fe-6a9c17947183",
+      "name": "Edicion Especial",
+      "type": "edicion",
+      "categoryPath": [
+        "aeabb437-c96a-4658-841a-6da6b35f5d60"
+      ]
+    },
+    {
+      "id": "586d0de5-c88a-47aa-ab5a-918d96f9b712",
+      "name": "Barcelona",
+      "type": "equipo",
+      "categoryPath": [
+        "c67cc991-0e85-4be0-a712-75c3bff309e0"
+      ]
+    },
+    {
+      "id": "4f159452-68b1-4060-9be7-0ad75714c4fd",
+      "name": "Amarillo",
+      "type": "color",
+      "categoryPath": []
+    },
+    {
+      "id": "00eac8db-0cf2-49b7-bbbf-8e2d90f50291",
+      "name": "Senegal",
+      "type": "equipo",
+      "categoryPath": [
+        "7217009f-6183-477b-ae64-e33b30de121d"
+      ]
+    },
+    {
+      "id": "1bce8469-9039-4bd3-a70c-66cca060fff0",
+      "name": "Rojo",
+      "type": "color",
+      "categoryPath": []
+    },
+    {
+      "id": "e96a00e8-509f-4820-9db0-7d130e2a59f7",
+      "name": "Verde",
+      "type": "color",
+      "categoryPath": []
+    },
+    {
+      "id": "8b6eda0f-cd9a-4e94-995d-a1b62423d571",
+      "name": "Tottenham",
+      "type": "equipo",
+      "categoryPath": [
+        "e1ebd2dd-db3b-4391-99b3-bfa458c09b3e"
+      ]
+    },
+    {
+      "id": "397d3ead-69a6-411c-bd45-43ee5be9b4d9",
+      "name": "Gris",
+      "type": "color",
+      "categoryPath": []
+    },
+    {
+      "id": "49198941-c00c-4860-8b95-0846ca005ac2",
+      "name": "Real Madrid",
+      "type": "equipo",
+      "categoryPath": [
+        "c67cc991-0e85-4be0-a712-75c3bff309e0"
+      ]
+    },
+    {
+      "id": "6ac682cf-a72c-430a-b560-753d88112841",
+      "name": "Visitante",
+      "type": "edicion",
+      "categoryPath": [
+        "aeabb437-c96a-4658-841a-6da6b35f5d60"
+      ]
+    },
+    {
+      "id": "dce13b8f-2588-4f89-8f6b-eadd2d58351e",
+      "name": "2011-2012",
+      "type": "temporada",
+      "categoryPath": [
+        "aeabb437-c96a-4658-841a-6da6b35f5d60"
+      ]
+    },
+    {
+      "id": "cf5a4762-01c8-43d2-b8f9-0996746c1276",
+      "name": "Manga Larga",
+      "type": "caracteristica",
+      "categoryPath": [
+        "aeabb437-c96a-4658-841a-6da6b35f5d60"
+      ]
+    },
+    {
+      "id": "1f663e5e-4236-4867-a433-14d1c9c49eec",
+      "name": "1995-1996",
+      "type": "temporada",
+      "categoryPath": [
+        "aeabb437-c96a-4658-841a-6da6b35f5d60"
+      ]
+    },
+    {
+      "id": "690ef589-91c1-4fb7-8ed4-3754742207c1",
+      "name": "Local",
+      "type": "edicion",
+      "categoryPath": [
+        "aeabb437-c96a-4658-841a-6da6b35f5d60"
+      ]
+    },
+    {
+      "id": "55fe6d5c-9aff-4369-9d59-af8384b0f0fc",
+      "name": "Real Betis",
+      "type": "equipo",
+      "categoryPath": [
+        "c67cc991-0e85-4be0-a712-75c3bff309e0"
+      ]
+    },
+    {
+      "id": "4a1ea62e-7734-434c-b84c-b6e9d648d937",
+      "name": "Niños",
+      "type": "version",
+      "categoryPath": [
+        "aeabb437-c96a-4658-841a-6da6b35f5d60"
+      ]
+    },
+    {
+      "id": "2b682510-46a2-42a4-be2d-0c4612f442b8",
+      "name": "Arquero",
+      "type": "edicion",
+      "categoryPath": [
+        "aeabb437-c96a-4658-841a-6da6b35f5d60"
+      ]
+    },
+    {
+      "id": "40dad33b-1d9c-47b5-a626-7844af7b00a8",
+      "name": "Stade Rennais",
+      "type": "equipo",
+      "categoryPath": [
+        "5d305a79-7bb0-483b-adcf-7ae6ef5ffdd1"
+      ]
+    },
+    {
+      "id": "e318ecfc-597a-4b54-a47f-ca7325e9c4fb",
+      "name": "Toluca",
+      "type": "equipo",
+      "categoryPath": [
+        "1d030b13-c49a-4f2e-81ba-7aa0ec72f77b"
+      ]
+    },
+    {
+      "id": "ed16567b-fa0a-465c-927e-89483af9024a",
+      "name": "Alternativa",
+      "type": "edicion",
+      "categoryPath": [
+        "aeabb437-c96a-4658-841a-6da6b35f5d60"
+      ]
+    },
+    {
+      "id": "2dee15aa-a43c-4a9d-a802-6f81a66b7470",
+      "name": "Blanco",
+      "type": "color",
+      "categoryPath": []
+    }
+  ],
+  "productOptions": [
+    {
+      "id": "da8ac70c-e256-438f-8807-c3fffae38c57",
+      "name": "Talle Único",
+      "type": "size",
+      "price": 0,
+      "image_url": null
+    },
+    {
+      "id": "8977278a-fd1c-4226-b08c-6d97a049d39f",
+      "name": "Sin insignia",
+      "type": "badge",
+      "price": 0,
+      "image_url": null
+    },
+    {
+      "id": "7866b950-70d8-4626-8b22-1e3fef65d137",
+      "name": "Sin dorsal",
+      "type": "customize",
+      "price": 0,
+      "image_url": null
+    },
+    {
+      "id": "83cf2417-4c56-43fb-a62c-d7c197ed70a9",
+      "name": "Sin insignia",
+      "type": "badge",
+      "price": 0,
+      "image_url": "https://us03-imgcdn.ymcart.com/97006/2024/11/25/a/4/a4de43b5b8c7b472.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+    },
+    {
+      "id": "267acb38-cfb2-4938-92b6-22d2cb9822db",
+      "name": "La Liga (45)",
+      "type": "badge",
+      "price": 3000,
+      "image_url": "https://us03-imgcdn.ymcart.com/97006/2024/11/25/e/5/e51dee2fe33f9399.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+    },
+    {
+      "id": "c6c4426c-cad1-4bf5-9971-cc3c8a072f89",
+      "name": "UCL (5) MD",
+      "type": "badge",
+      "price": 6000,
+      "image_url": "https://us03-imgcdn.ymcart.com/97006/2024/11/25/9/5/95d15a93869b741a.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+    },
+    {
+      "id": "b1f0c4a3-f6b2-4274-ba41-004e312c64a7",
+      "name": "2026 FWC clasificatorias",
+      "type": "badge",
+      "price": 6000,
+      "image_url": "https://us03-imgcdn.ymcart.com/97006/2024/11/25/9/9/99f3d5d18fcdd5e4.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+    },
+    {
+      "id": "520678e1-2b96-4ff3-84c1-690720b18cec",
+      "name": "Premier League + No rac",
+      "type": "badge",
+      "price": 6000,
+      "image_url": "https://us03-imgcdn.ymcart.com/97006/2024/11/25/7/f/7fed51f886c1742b.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+    },
+    {
+      "id": "5b6c5851-d06a-4f48-9377-bb0b7f7b5d06",
+      "name": "La Liga 23/24 (Roja +45) MD",
+      "type": "badge",
+      "price": 6000,
+      "image_url": "https://us03-imgcdn.ymcart.com/97006/2024/11/25/2/2/227ba032d08ac473.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+    },
+    {
+      "id": "d324f873-eef5-42d6-a535-2a4aea0be053",
+      "name": "UCL (15) MD",
+      "type": "badge",
+      "price": 6000,
+      "image_url": "https://us03-imgcdn.ymcart.com/97006/2024/11/25/a/8/a8e5f7a90856f5ad.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+    },
+    {
+      "id": "e6a546f2-fe9a-4cb4-b3db-e30b4bb36391",
+      "name": "Ligue1 (45)",
+      "type": "badge",
+      "price": 3000,
+      "image_url": "https://us03-imgcdn.ymcart.com/97006/2024/11/20/2/4/246758a4e4dce223.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+    },
+    {
+      "id": "70258b2c-b5da-40b1-b947-08306b39a8eb",
+      "name": "Premier League (34)",
+      "type": "badge",
+      "price": 3000,
+      "image_url": "https://us03-imgcdn.ymcart.com/97006/2024/11/18/5/0/501dd1e851f92020.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+    },
+    {
+      "id": "cd1772ec-262a-40db-a681-551164b7469a",
+      "name": "UCL",
+      "type": "badge",
+      "price": 6000,
+      "image_url": "https://us03-imgcdn.ymcart.com/97006/2024/11/18/a/6/a682ce2ecf9063e7.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+    },
+    {
+      "id": "e4a9c45c-0973-4b5e-b2c0-de4edb2437be",
+      "name": "Sin dorsal",
+      "type": "customize",
+      "price": 0,
+      "image_url": null
+    },
+    {
+      "id": "859599d7-d879-4e2b-8566-59d25e419105",
+      "name": "Con dorsal LaLiga fonts",
+      "type": "customize",
+      "price": 9000,
+      "image_url": null
+    },
+    {
+      "id": "e9a725d7-d05b-44e7-83c6-c2ea46ba68a0",
+      "name": "Con dorsal UCL fonts",
+      "type": "customize",
+      "price": 12000,
+      "image_url": null
+    },
+    {
+      "id": "8196b6f5-23fb-4d82-89c2-6b781ad83629",
+      "name": "Con dorsal PreLeague fonts",
+      "type": "customize",
+      "price": 9000,
+      "image_url": null
+    },
+    {
+      "id": "e356d694-3ea1-4769-9315-6b375c4f87d6",
+      "name": "Con dorsal Copa fonts",
+      "type": "customize",
+      "price": 12000,
+      "image_url": null
+    },
+    {
+      "id": "a52a15b6-22bb-4b1f-b264-dc99d6e5c455",
+      "name": "Con dorsal",
+      "type": "customize",
+      "price": 9000,
+      "image_url": null
+    },
+    {
+      "id": "bab6ebc7-0bd1-4ac5-a552-608daec7d95e",
+      "name": "Con dorsal Ligue1 fonts",
+      "type": "customize",
+      "price": 9000,
+      "image_url": null
+    },
+    {
+      "id": "ff7b92c5-189d-4042-b3e0-27ea1fcfd8c4",
+      "name": "M",
+      "type": "size",
+      "price": 0,
+      "image_url": null
+    },
+    {
+      "id": "99656afa-64c7-4898-8bc5-536e50861d2a",
+      "name": "L",
+      "type": "size",
+      "price": 0,
+      "image_url": null
+    },
+    {
+      "id": "11de048f-d36d-4f1d-8371-b45a8cb984fc",
+      "name": "XL",
+      "type": "size",
+      "price": 0,
+      "image_url": null
+    },
+    {
+      "id": "3d1d0c26-db3b-4477-abaf-3cfed6d501df",
+      "name": "2XL",
+      "type": "size",
+      "price": 0,
+      "image_url": null
+    },
+    {
+      "id": "d19b9d02-43bb-472e-9e9e-45d1581ed6d8",
+      "name": "S",
+      "type": "size",
+      "price": 0,
+      "image_url": null
+    },
+    {
+      "id": "46b70a7c-3193-4104-97ba-36c7961a9b0d",
+      "name": "16",
+      "type": "size",
+      "price": 0,
+      "image_url": null
+    },
+    {
+      "id": "6ff1d9fa-de3f-40a6-85d7-31bd954ebc50",
+      "name": "18",
+      "type": "size",
+      "price": 0,
+      "image_url": null
+    },
+    {
+      "id": "bbe0a39b-3b9e-45f9-8e5e-ba6a9dfd98b6",
+      "name": "20",
+      "type": "size",
+      "price": 0,
+      "image_url": null
+    },
+    {
+      "id": "e2bef8da-0484-4258-b9be-42d3c2330182",
+      "name": "22",
+      "type": "size",
+      "price": 0,
+      "image_url": null
+    },
+    {
+      "id": "9bdab32d-c62d-4764-9d0b-de038f3a80bd",
+      "name": "24",
+      "type": "size",
+      "price": 0,
+      "image_url": null
+    },
+    {
+      "id": "678f9bb9-d641-4fc0-ba6b-469572a7fadf",
+      "name": "26",
+      "type": "size",
+      "price": 0,
+      "image_url": null
+    },
+    {
+      "id": "6d78e969-369c-453f-a5e6-4f2f4bbfff56",
+      "name": "28",
+      "type": "size",
+      "price": 0,
+      "image_url": null
+    }
+  ],
   "products": [
     {
       "id": "149a78ac-499b-4848-b2b9-b133c3e396dc",
