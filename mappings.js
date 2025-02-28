@@ -127,11 +127,6 @@ module.exports = {
             description: "Indumentaria entrenamiento",
             categoryPath: ["Productos", "Entrenamiento"]
         },
-        "Retro": {
-            matches: ['Retro'],
-            description: "Indumentaria retro",
-            categoryPath: ["Productos", "Retro"]
-        },
         "Mujer": {
             matches: ['Women'],
             description: "Indumentaria Mujer",
@@ -198,6 +193,132 @@ module.exports = {
                 categoryPath: ["Productos", "Abrigos", "Rompevientos"]
             }
     },
+
+    // categories_actualizado: {
+    //     // Deportes y sus subcategorías
+    //     "Fútbol": {
+    //         matches: ['Soccer'],
+    //         description: "Deporte fútbol",
+    //         categoryPath: ["Fútbol"]
+    //     },
+    //         "Camisetas": {
+    //             matches: ['Jersey', 'Shirt'],
+    //             description: "Indumentaria camisetas",
+    //             categoryPath: ["Fútbol", "Camisetas"]
+    //         },
+    //         "Shorts": {
+    //             matches: ['Shorts'],
+    //             description: "Indumentaria shorts",
+    //             categoryPath: ["Fútbol", "Shorts"]
+    //         },
+    //         "Medias": {
+    //             matches: ['Socks'],
+    //             description: "Indumentaria medias",
+    //             categoryPath: ["Fútbol", "Medias"]
+    //         },
+    //         "Conjuntos": {
+    //             matches: ['Tracksuit', 'Hoodie', 'Half Pull', 'Training Short', 'Tank top and shorts suit', '(卫衣套装)'],
+    //             description: "Indumentaria conjuntos",
+    //             categoryPath: ["Fútbol", "Conjuntos"]
+    //         },
+            
+    //         "Mujer": {
+    //             matches: ['Women'],
+    //             description: "Indumentaria Mujer",
+    //             categoryPath: ["Fútbol", "Mujer"]
+    //         },
+    //         "Niños": {
+    //             matches: ['Kids'],
+    //             description: "Indumentaria Niños",
+    //             categoryPath: ["Fútbol", "Niños"]
+    //         },
+    //         "Bebes": {
+    //             matches: ['Baby Infant Crawl Suit'],
+    //             description: "Indumentaria Bebes",
+    //             categoryPath: ["Fútbol", "Bebes"]
+    //         },
+                
+    //     "Básquet": {
+    //         matches: ['NBA', 'Basketball', 'Básquet'],
+    //         description: "Deporte básquet",
+    //         categoryPath: ["Básquet"]
+    //     },
+    //         "Camisetas": {
+    //             matches: ['Jersey', 'Shirt'],
+    //             description: "Indumentaria camisetas",
+    //             categoryPath: ["Básquet", "Camisetas"]
+    //         },
+    //         "Shorts": {
+    //             matches: ['Shorts'],
+    //             description: "Indumentaria shorts",
+    //             categoryPath: ["Básquet", "Shorts"]
+    //         },
+        
+    //     "Rugby": {
+    //         matches: ['Rugby'],
+    //         description: "Deporte rugby",
+    //         categoryPath: ["Rugby"]
+    //     },
+    //         "Camisetas": {
+    //             matches: ['Jersey', 'Shirt'],
+    //             description: "Indumentaria camisetas",
+    //             categoryPath: ["Rugby", "Camisetas"]
+    //         },
+
+    //     "Formula 1": {
+    //         matches: ['Racing', 'F1'],
+    //         description: "Deporte automovilismo",
+    //         categoryPath: ["Fórmula 1"]
+    //     },
+    //         "Camisetas": {
+    //             matches: ['Jersey', 'Shirt'],
+    //             description: "Indumentaria camisetas",
+    //             categoryPath: ["Fórmula 1", "Camisetas"]
+    //         },
+
+        
+    //     "Casual": {
+    //         matches: ['Casual', 'Lifestyle'],
+    //         description: "Indumentaria casual",
+    //         categoryPath: ["Casual"],
+    //     },  
+    //         "Entrenamiento": {
+    //             matches: ['Training short suit'],
+    //             description: "Indumentaria entrenamiento",
+    //             categoryPath: ["Casual", "Entrenamiento"]
+    //         },
+    //         "Remeras": {
+    //             matches: ['T-Shirt', 'shirts', 'Champion'],
+    //             description: "Indumentaria Remeras casual",
+    //             categoryPath: ["Casual", "Remeras"]
+    //         },
+    //         "Pantalones cortos": {
+    //             matches: ['Casual Short'],
+    //             description: "Indumentaria Pantalones cortos casual",
+    //             categoryPath: ["Casual", "Pantalones cortos"]
+    //         },
+    //         "Pantalones largos": {
+    //             matches: ['Sweatpants'],
+    //             description: "Indumentaria Pantalones largos casual",
+    //             categoryPath: ["Casual", "Pantalones largos"]
+    //         },
+    //         "Chombas": {
+    //             matches: ['Polo'],
+    //             description: "Indumentaria Chombas casual",
+    //             categoryPath: ["Casual", "Casual", "Chombas"]
+    //         },
+    //         "Camperon": {
+    //             matches: ['Cotton Coat'],
+    //             description: "Indumentaria de abrigo camperon",
+    //             categoryPath: ["Casual", "Camperon"]
+    //         },
+    //         "Rompevientos": {
+    //             matches: ['Windbreaker', 'Double Sided', '(双面风衣)'],
+    //             description: "Indumentaria de abrigo rompeviento",
+    //             categoryPath: ["Casual", "Rompevientos"]
+    //         }
+    // },
+
 
     // Tags para filtrado
     tags: {
@@ -1059,21 +1180,6 @@ module.exports = {
                 matches: ['Retro'],
                 type: "version",
                 categoryPath: ["Productos"]
-            },
-            "Mujer": {
-                matches: ['Women'],
-                type: "version",
-                categoryPath: ["Productos"]
-            },
-            "Niños": {
-                matches: ['Kids'],
-                type: "version",
-                categoryPath: ["Productos"]
-            },
-            "Bebes": {
-                matches: ['Baby Infant Crawl Suit'],
-                type: "version",
-                categoryPath: ["Productos"]
             }
         },
 
@@ -1105,6 +1211,11 @@ module.exports = {
                 categoryPath: ["Productos"]
             },
             "Edicion Especial": {
+                matches: ['Special Edition'],
+                type: "edicion",
+                categoryPath: ["Productos"]
+            },
+            "Edicion Aniversario": {
                 matches: ['Special Edition', 'Anniversary'],
                 type: "edicion",
                 categoryPath: ["Productos"]

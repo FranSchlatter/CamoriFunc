@@ -131,7 +131,7 @@ function generateDescription(nameAnalysis) {
     const version = nameAnalysis.tags.find(t => t.type === "version")?.name || "";
     const feature = nameAnalysis.tags.find(t => t.type === "caracteristica")?.name || "";
     
-    return `Indumentaria importada de calidad original.\nModelo ${team} ${season}, edición ${edition} en versión ${version}.`;
+    return `Indumentaria importada de calidad original.\nFabricada con materiales premium de primera calidad, diseñada para brindar máxima comodidad y durabilidad.`;
     // return `Camiseta importada de calidad original.\nModelo ${team} ${season}, edición ${edition} en versión ${version}. Disponible en ${feature}.\n\nFabricada con materiales de primera calidad, diseñada para brindar máxima comodidad y durabilidad.\nIncorpora tecnologías oficiales como AeroCool, DryFit y otras, garantizando una excelente transpirabilidad.\nDetalles premium con escudo bordado o termosellado (según versión) y costuras reforzadas para mayor resistencia.`;
 }
 
