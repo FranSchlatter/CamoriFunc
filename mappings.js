@@ -132,6 +132,21 @@ module.exports = {
             description: "Indumentaria retro",
             categoryPath: ["Productos", "Retro"]
         },
+        "Mujer": {
+            matches: ['Women'],
+            description: "Indumentaria Mujer",
+            categoryPath: ["Productos", "Mujer"]
+        },
+        "Niños": {
+            matches: ['Kids'],
+            description: "Indumentaria Niños",
+            categoryPath: ["Productos", "Niños"]
+        },
+        "Bebes": {
+            matches: ['Baby Infant Crawl Suit'],
+            description: "Indumentaria Bebes",
+            categoryPath: ["Productos", "Bebes"]
+        },
         "Casual": {
             matches: ['Casual', 'Lifestyle'],
             description: "Indumentaria casual",
@@ -264,6 +279,17 @@ module.exports = {
                 type: "equipo",
                 categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
             },
+            "Sheffield United": {
+                matches: ['Sheffield United'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
+            },
+            "Sunderland AFC": {
+                matches: ['Sunderland'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
+            },
+
 
             // La Liga
             "Real Madrid": {
@@ -440,6 +466,11 @@ module.exports = {
                 type: "equipo",
                 categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
             },
+            "RB Salzburg": {
+                matches: ['Salzburg'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+            },
 
             // Serie A
             "Juventus": {
@@ -591,9 +622,265 @@ module.exports = {
                 type: "equipo",
                 categoryPath: ["Deportes", "Fútbol", "Clubes", "Primera División"]
             },
+            "Independiente": {
+                matches: ['Independiente'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Primera División"]
+            },
+            "Estudiantes": {
+                matches: ['La Plata'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Primera División"]
+            },
+            "San Lorenzo": {
+                matches: ['San Lorenzo'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Primera División"]
+            },
 
-            // NBA
-            "2024 Olympic Games": {
+        
+            // Primera División Chile
+            "Universidad Catolica": {
+                matches: ['Universidad Catolica'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Chile Primera División"]
+            },
+            "Colo-Colo": {
+                matches: ['Colo'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Chile Primera División"]
+            },
+
+
+            // Liga MX 
+            "Pachuca": {
+                matches: ['Pachuca'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Liga MX"]
+            },
+            "Necaxa": {
+                matches: ['Necaxa'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Liga MX"]
+            },
+            "Mazatlan": {
+                matches: ['Mazatlan'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Liga MX"]
+            },
+            "Juarez": {
+                matches: ['Juarez'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Liga MX"]
+            },
+            "Leon": {
+                matches: ['Leon'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Liga MX"]
+            },
+            "Tigres": {
+                matches: ['Tigres UANL'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Liga MX"]
+            },
+
+
+            // Otros clubes
+            "Toluca": {
+                matches: ['Toluca'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "Copenhagen": {
+                matches: ['Copenhagen'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "Feyenoord": {
+                matches: ['Feyenoord'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            
+            "Auxerre": {
+                matches: ['Auxerre'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "Brugge": {
+                matches: ['Brugge'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "Crvena Zvezda": {
+                matches: ['Crvena Zvezda'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "Inter Miami": {
+                matches: ['Inter Miami'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "PSV": {
+                matches: ['PSV'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+
+           
+
+            // Selecciones
+            // Europa
+            "Francia": {
+                matches: ['France'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
+            },
+            "Inglaterra": {
+                matches: ['England'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
+            },
+            "Alemania": {
+                matches: ['Germany'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
+            },
+            "Portugal": {
+                matches: ['Portugal'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
+            },
+            "España": {
+                matches: ['Spain'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
+            },
+            "Italia": {
+                matches: ['Italy'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
+            },
+            "Paises Bajos": {
+                matches: ['Netherlands'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
+            },
+            "Gales": {
+                matches: ['Wales'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
+            },
+            "Escocia": {
+                matches: ['Scotland'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
+            },
+            "Dinamarca": {
+                matches: ['Denmark'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
+            },
+            "Irlanda": {
+                matches: ['Ireland'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
+            },
+            "Belgica": {
+                matches: ['Belgium'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
+            },
+            "Croacia": {
+                matches: ['Croatia'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
+            },
+
+            // América
+            "Argentina": {
+                matches: ['Argentina'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Copa America"]
+            },
+            "Brasil": {
+                matches: ['Brazil'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Copa America"]
+            },
+            "Chile": {
+                matches: ['Chile'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Copa America"]
+            },
+            "Uruguay": {
+                matches: ['Uruguay'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Copa America"]
+            },
+            "Mexico": {
+                matches: ['Mexico'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Copa America"]
+            },
+            "Canada": {
+                matches: ['Canada'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Copa America"]
+            },
+
+            // Otras Selecciones
+            "Nigeria": {
+                matches: ['Nigeria'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
+            },
+            "Morocco": {
+                matches: ['Morocco'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
+            },
+            "Cameroon": {
+                matches: ['Cameroon'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
+            },
+            "Japan": {
+                matches: ['Japan'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
+            },
+            "Korea": {
+                matches: ['Korea'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
+            },
+            "Palestina": {
+                matches: ['Palestina'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
+            },
+            "Ghana": {
+                matches: ['Ghana'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
+            },
+            "Egypt": {
+                matches: ['Egypt'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
+            },
+            "Senegal": {
+                matches: ['Senegal'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
+            },
+
+            
+
+             // NBA
+             "2024 Olympic Games": {
                 matches: ['2024 Olympic Games'],
                 type: "equipo",
                 categoryPath: ["Deportes", "Básquet", "NBA", "Especiales"]
@@ -753,192 +1040,23 @@ module.exports = {
                 type: "equipo",
                 categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Este"]
             },
-
-            // Selecciones
-            // Europa
-            "Francia": {
-                matches: ['France'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
-            },
-            "Inglaterra": {
-                matches: ['England'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
-            },
-            "Alemania": {
-                matches: ['Germany'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
-            },
-            "Portugal": {
-                matches: ['Portugal'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
-            },
-            "España": {
-                matches: ['Spain'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
-            },
-            "Italia": {
-                matches: ['Italy'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
-            },
-            "Paises Bajos": {
-                matches: ['Netherlands'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
-            },
-            "Gales": {
-                matches: ['Wales'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
-            },
-            "Escocia": {
-                matches: ['Scotland'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
-            },
-            "Dinamarca": {
-                matches: ['Denmark'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
-            },
-            "Irlanda": {
-                matches: ['Ireland'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
-            },
-            "Belgica": {
-                matches: ['Belgium'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
-            },
-            "Croacia": {
-                matches: ['Croatia'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
-            },
-
-            // América
-            "Argentina": {
-                matches: ['Argentina'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Copa America"]
-            },
-            "Brasil": {
-                matches: ['Brazil'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Copa America"]
-            },
-            "Chile": {
-                matches: ['Chile'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Copa America"]
-            },
-            "Uruguay": {
-                matches: ['Uruguay'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Copa America"]
-            },
-            "Mexico": {
-                matches: ['Mexico'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Copa America"]
-            },
-            "Canada": {
-                matches: ['Canada'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Copa America"]
-            },
-
-            // Otras Selecciones
-            "Nigeria": {
-                matches: ['Nigeria'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
-            },
-            "Morocco": {
-                matches: ['Morocco'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
-            },
-            "Cameroon": {
-                matches: ['Cameroon'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
-            },
-            "Japan": {
-                matches: ['Japan'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
-            },
-            "Korea": {
-                matches: ['Korea'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
-            },
-            "Palestina": {
-                matches: ['Palestina'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
-            },
-            "Ghana": {
-                matches: ['Ghana'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
-            },
-            "Egypt": {
-                matches: ['Egypt'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
-            },
-            "Senegal": {
-                matches: ['Senegal'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
-            },
-
-            // Otros clubes
-            "Toluca": {
-                matches: ['Toluca'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
-            },
-            "Copenhagen": {
-                matches: ['Copenhagen'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
-            },
-            "Feyenoord": {
-                matches: ['Feyenoord'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
-            },
             
-            "Auxerre": {
-                matches: ['Auxerre'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
-            },
-            "Brugge": {
-                matches: ['Brugge'],
-                type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
-            }
         },
 
         // Versiones
         versions: {
-            "Version Jugador": {
+            "Jugador": {
                 matches: ['Player Version'],
                 type: "version",
                 categoryPath: ["Productos"]
             },
-            "Version Fanatico": {
+            "Fanatico": {
                 matches: ['Fans'],
+                type: "version",
+                categoryPath: ["Productos"]
+            },
+            "Retro": {
+                matches: ['Retro'],
                 type: "version",
                 categoryPath: ["Productos"]
             },
@@ -972,7 +1090,12 @@ module.exports = {
                 categoryPath: ["Productos"]
             },
             "Alternativa": {
-                matches: ['Third', 'Fourth'],
+                matches: ['Third'],
+                type: "edicion",
+                categoryPath: ["Productos"]
+            },
+            "Alternativa 2": {
+                matches: ['Fourth'],
                 type: "edicion",
                 categoryPath: ["Productos"]
             },
@@ -1031,10 +1154,26 @@ module.exports = {
                 matches: ['Grey'],
                 type: "color"
             },
+            "Caqui": {
+                matches: ['khaki'],
+                type: "color"
+            },
+            "Violeta": {
+                matches: ['Purple'],
+                type: "color"
+            },
             "Estampado": {
                 matches: ['Comma'],
                 type: "color"
             }
+        },
+
+        // Saltear, no add nada.
+        nothings:{
+            "": {
+                matches: ['Royal', '*圣斗士金色', '广岛三箭', '*狐狸', '(童装)(半拉链)', '*蓝黑', '*新广告', '*有领', '*气功悟空', '浦和红钻', '*海贼鸣人眼神', '#绿标', '*红袖边', '*蓝龙', '*耶稣', '(童装)', '字母印', '*柯南D', '#刺绣', '*草帽', '*眼镜帽子', '*蓝袖边多图', '(加绒)', '(女)*PM', 'Jersey(V领)', 'Jersey(圆领)', '(Trapeze Edition)', '(V领)', '飞人版', '*贝吉塔红', '*贝吉塔蓝', '*咒术回战', '*龙珠黑悟空', '*橙白赛亚人', '*MonK', '(Print Sponsor)', '(球员童装)', '*PM(球员童装)', '长袖球员', '横滨水手', '*金广告', '*紫色标', '*金双狮', '*赛亚人黑色', '*富士山与塔', '*浪客剑心', '*犬夜叉白色', '(女)', '(长袖球员)', '(长袖球员)*PM', 'Concept', '半拉链', '萨尔斯堡红牛', '*红星队', '*PM', 'Milky', '(High Quality)', '*忍者系黑衣', '*忍者系绿', '*忍者系蓝', '*忍者系紫', ],
+                type: "nothing"
+            },
         }
     },
 
@@ -1090,6 +1229,11 @@ module.exports = {
             },
 
             // Niños
+            "9": {
+                matches: ["9"],
+                type: "size",
+                price: 0
+            },
             "10": {
                 matches: ["10"],
                 type: "size",
@@ -1150,61 +1294,61 @@ module.exports = {
             },
 
             // UCL
-            "UCL": {
+            "UCL + Fundation": {
                 matches: ["UCL (欧冠新章)右袖"],
                 type: "badge",
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/a/0/a0acf265b53042a0.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "UCL (5) MD": {
+            "UCL 5 + Fundation": {
                 matches: ["UCL (新平条 5)右袖"],
                 type: "badge",
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/0/0/006f62eb3aa1909c.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "UCL(6) MD": {
+            "UCL 6 + Fundation": {
                 matches: ["UCL(新平条 6)右袖", "UCL(新平条 6)右袖"],
                 type: "badge",
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/17/b/a/ba8fd6939ccc0bf8.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "UCL (7) MD": {
-                matches: ["UCL (新平条 7)右袖"],
+            "UCL 7 + Fundation": {
+                matches: ["UCL (新平条 7)右袖", "UCL +MSC (新平条 7+左袖广告)"],
                 type: "badge",
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/09/1/d/1d787a4c6498230d.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "UCL (15) MD": {
+            "UCL + Champions 9": {
+                matches: ["UCL(欧冠球+小9杯)"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/27/5/6/5637203255247a52.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Champions 9 + Fundation": {
                 matches: ["UCL (新平条/大耳杯15) 右袖"],
                 type: "badge",
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/8/3/8371526d80c58eaf.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "UCL + Escudo 20": {
+            "UCL + Fundation + Escudo 20": {
                 matches: ["UCL +Shield (欧冠+冠军盾20)"],
                 type: "badge",
                 price: 3,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/f/1/f13917a931afeee8.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "UCL + Escudo + U-Power": {
+            "UCL + Fundation + Escudo 20 + U-Power": {
                 matches: ["UCL +Shield +U-Power (欧冠+冠军盾20+背下广告)"],
                 type: "badge",
-                price: 2,
+                price: 3,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/5/1/51b680b2baff6df2.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "UCL + Escudo + Gate.io + U-Power": {
+            "UCL + Fundation + Escudo + Gate.io + U-Power": {
                 matches: ["UCL +Shield +Gate.io +U-Power (欧冠+冠军盾20+左袖/背下广告)"],
                 type: "badge",
                 price: 3,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/6/6/66ff7726150b1ce5.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "UCL + MSC": {
-                matches: ["UCL +MSC (新平条 7+左袖广告)"],
-                type: "badge",
-                price: 2,
-                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/d/2/d291e29f2f69deec.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "UCL + MSC + MILAN": {
+            "UCL 7 + Fundation + Milan": {
                 matches: ["UCL +MSC+ MILAN(新平条 7+左袖广告+背下广告)"],
                 type: "badge",
                 price: 3,
@@ -1212,13 +1356,13 @@ module.exports = {
             },
             
             // UECL
-            "UECL (45) MD": {
+            "UECL + Fundation": {
                 matches: ["UECL(欧会杯45)右袖"],
                 type: "badge",
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/13/3/1/3140ee6e9762ab4e.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "UECL + Fever": {
+            "UECL + Fundation + Fever": {
                 matches: ["UECL +fever(欧会杯+左袖广告)"],
                 type: "badge",
                 price: 3,
@@ -1226,7 +1370,7 @@ module.exports = {
             },
             
             // COPAS
-            "Copa America 2024": {
+            "Copa America 2024 + Vibra": {
                 matches: ["Copa America 2024(美洲杯o)"],
                 type: "badge",
                 price: 2,
@@ -1239,28 +1383,41 @@ module.exports = {
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/11/13/a/9/a9c3924ea3344430.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
 
             },
-            "2022FWCC + 2026FWC": {
+            "2022FWCC + 2026FWC clasificatorias + FUnited": {
                 matches: ["FWCC2022 +2026FWC Qualifying (世预赛+胸前冠)"],
                 type: "badge",
                 price: 3,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/11/13/9/7/970597847c7c97e9.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "2026 FWC clasificatorias": {
+            "2026FWC clasificatorias + FUnited": {
                 matches: ["2026 World Cup Qualifying (世预选)", "2026 World Cup Qualifying (世预选)", "2026FWC Qualifying (世预赛)"],
                 type: "badge",
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/13/9/8/982c73c16f531bb7.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
+            "UEFA Nations League + Fundation": {
+                matches: ["UEFA NATIONS LEAGUE(欧国联章)"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/27/d/0/d0ea0f5dbb710229.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "UEFA Europa League + Fundation": {
+                matches: ["UEFA E L (欧联45)"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/27/1/f/1fd6025fc863d5c9.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+
 
             // Europa Leagues
             // > LaLiga
-            "La Liga 23/24 (Roja +45) MD": {
+            "La Liga 45 + 2023/24": {
                 matches: ["La Liga +23/24C (红冠军+45西甲)右袖"],
                 type: "badge",
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/6/8/686e84c18c0004f3.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "La Liga (45)": {
+            "La Liga 45": {
                 matches: ["La Liga (45西甲章)"],
                 type: "badge",
                 price: 1,
@@ -1274,7 +1431,7 @@ module.exports = {
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/10/31/8/b/8bdf7dd2865f6383.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "Sonepar + Bundesliga": {
+            "Bundesliga + Sonepar": {
                 matches: ["Bundesliga +Sonepar (德普章+左袖广告)"],
                 type: "badge",
                 price: 1,
@@ -1282,7 +1439,7 @@ module.exports = {
             },
 
             // > Premier
-            "Premier League (34)": {
+            "Premier League": {
                 matches: ["Premier League (34英超普)", "Pre L +NO.or (34英超/章下字)"],
                 type: "badge",
                 price: 1,
@@ -1338,19 +1495,19 @@ module.exports = {
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/2/9/29276c6c26b0554b.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "Escudo + U-Power": {
+            "Escudo 20 + U-Power": {
                 matches: ["Shield +U-Power (冠军盾20+背下广告)"],
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/9/0/902088b48030de6b.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "Serie A + Escudo + U-Power": {
+            "Serie A + Escudo 20 + U-Power": {
                 matches: ["Serie A +Shield +U-Power (意甲45+冠军盾20+背下广告)"],
                 type: "badge",
                 price: 2,
                 "images": "https://us03-imgcdn.ymcart.com/97006/2024/12/20/7/1/71d09e0910805b3e.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "Serie A + Escudo + Gate.io + U-Power": {
+            "Serie A + Escudo 20 + Gate.io + U-Power": {
                 matches: ["Serie A +Shield +Gate.io +U-Power (意甲+冠军盾20+左袖/背下广告)"],
                 type: "badge",
                 price: 2,
@@ -1370,20 +1527,45 @@ module.exports = {
             },
 
             // > Ligue1
-            "Ligue1 (45)": {
+            "Ligue1 45": {
                 matches: ["Ligue1 (45法甲黑)"],
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/10/29/9/5/953477b403a87710.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
 
-            // Carabao Cup
+            // Sudamerica
             "Carabao Cup": {
                 matches: ["Carabao Cup (英联赛杯)右袖"],
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/8/0/802bde86a7dfd67c.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
+            "Brasileirao A 2025": {
+                matches: ["Brasileirao A2025(巴甲)"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/27/d/c/dc756284effb6b9e.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Libertadores 3": {
+                matches: ["libertadores 3(解放者/新3次)", "libertadores 3 (解放者/新3次)"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/27/8/f/8f61a8c94426d8ec.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "LPF": {
+                matches: ["LPF(阿甲普章)"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/27/f/c/fc7e015592193618.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Itau": {
+                matches: ["itau.No.pel(25智联)右袖"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/27/8/8/88a5cd45fcad50ff.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            
 
             // Otros
             "Sonepar": {
@@ -1392,31 +1574,31 @@ module.exports = {
                 price: 0,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/8/1/8120ece630f938df.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "CUL (12-17-2016)": {
+            "Fifa 2016 + Champions 12 + Champions 2017": {
                 matches: ["CUL(平条/12杯/17大耳杯/世俱2016ad上)"],
                 type: "badge",
                 price: 4,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/02/3/2/3253dfdcb97870ea.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "CUL (12-17-2017)": {
+            "Fifa 2017 + Champions 12 + Champions 2017": {
                 matches: ["CUL(平条/12杯/17大耳杯/世俱2017ad上)"],
                 type: "badge",
                 price: 4,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/02/b/4/b4d7face98e9f357.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "Liga MX": {
+            "Liga BBVA MX": {
                 matches: ["LIGA MX(墨西超)右袖"],
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/11/10/e/6/e6999f9820771981.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "RSL (45 dorado) MI": {
+            "RSL 45 dorado MI": {
                 matches: ["RSL(45沙特金新月)左袖"],
                 type: "badge",
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/10/23/6/b/6b9a830df95230ae.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "RSL (45) MI": {
+            "RSL 45 MI": {
                 matches: ["RSL(45沙特联)左袖"],
                 type: "badge",
                 price: 1,
@@ -1424,7 +1606,7 @@ module.exports = {
             },
 
             // NEWS
-            "EFL Champion MD": {
+            "EFL": {
                 matches: ["EFL Championship (英冠章)右"],
                 type: "badge",
                 price: 1,
@@ -1474,7 +1656,7 @@ module.exports = {
                 price: 0
             },
             "Con dorsal": {
-                matches: ["Name / Number", "Name/ Number", "Name / Numbe", "Name/ Number (名在号下)", "Name / Number (24/25ad黑)只印后面", "Name / Number (专用周年标)", "Name / Number (只印后面)", "Name / Number (24/25ad红)", "Name / Number (名在号下)", "Name / Number (名在号上)", "Name / Number (FC Augsburg) (上带广告-名在号下)", "Name / Number (Mainz 05) (上带广告-名在号下)", "Name / Number (专用字体)", "Name / Number (只印后台)", "Name / Number (24/25黑ad)", "Name / Number (没广告-名在号上)", "Name / Number (24/25蓝ad)", "Name / Number (24/25白ad)", "Name / Number (没广告-名在号下)", "Name / Number (FC BAY.. MUN..)(带广告-名在号下)", "Name / Number (WERDER) (上带广告-名在号下)", "Name / Number (24/25ad蓝) 只印后面", "Name / Number (专用字体)前小号在PM下", "Name/ Number (RB Leipzig)(上带广告-名在号下)"],
+                matches: ["Name / Number", "Name/ Number", "Name / Numbe", "Name/ Number (名在号下)", "Name / Number (24/25ad黑)只印后面", "Name / Number (专用周年标)", "Name / Number (只印后面)", "Name / Number (24/25ad红)", "Name / Number (名在号下)", "Name / Number (名在号上)", "Name / Number (FC Augsburg) (上带广告-名在号下)", "Name / Number (Mainz 05) (上带广告-名在号下)", "Name / Number (专用字体)", "Name / Number (只印后台)", "Name / Number (24/25黑ad)", "Name / Number (没广告-名在号上)", "Name / Number (24/25蓝ad)", "Name / Number (24/25白ad)", "Name / Number (没广告-名在号下)", "Name / Number (FC BAY.. MUN..)(带广告-名在号下)", "Name / Number (WERDER) (上带广告-名在号下)", "Name / Number (24/25ad蓝) 只印后面", "Name / Number (专用字体)前小号在PM下", "Name/ Number (RB Leipzig)(上带广告-名在号下)", "Name / Number (24/25ad白)"],
                 type: "customize",
                 price: 3
             },

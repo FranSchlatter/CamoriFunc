@@ -367,7 +367,7 @@ async function processProductOptions(analysisReport) {
           id: crypto.randomUUID(),
           name: option.name,
           type: option.type,
-          price: option.price * 3000,
+          price: option.price * 2000,
           image_url: option.images || null
         };
 
@@ -422,7 +422,7 @@ async function processProducts(analysisReport) {
           id: crypto.randomUUID(),
           name: newProduct.name,
           description: newProduct.description,
-          price: (newProduct.price || 0) * 3000,
+          price: (newProduct.price || 0) * 2600 + 35000,
           image_url: newProduct.images,
           status: 'active',
           categoryIds,

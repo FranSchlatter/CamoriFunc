@@ -88,35 +88,31 @@ function generateNormalizedName(nameAnalysis) {
         color: nameAnalysis.tags.find(t => t.type === "color")?.name || "",
         category: nameAnalysis.categories[0]?.name || "Camiseta",
         feature: nameAnalysis.tags.find(t => t.type === "caracteristica")?.name || "",
+        nothing: nameAnalysis.tags.find(t => t.type === "nothing")?.name || "",
         unrecognized: nameAnalysis.unrecognized || []
     };
 
     // Construir el nombre en el orden específico solicitado
     const mainParts = [];
-    const secondaryParts = [];
     
     // Primera parte: Temporada y Equipo
-    if (parts.season) mainParts.push(parts.season);
     if (parts.team) mainParts.push(parts.team);
+    if (parts.season) mainParts.push(parts.season);
     
-    // Segunda parte: Edición y Versión
-    if (parts.edition) secondaryParts.push(parts.edition);
-    if (parts.version) secondaryParts.push(`Version ${parts.version}`);
+    // Segunda parte: Edición, color y Versión
+    if (parts.edition) mainParts.push(parts.edition);
+    if (parts.color) mainParts.push(parts.color);
+    if (parts.version) mainParts.push(parts.version);
     
     // Tercera parte: Categoría y Característica
     const productParts = [];
     if (parts.category) productParts.push(parts.category);
-    if (parts.feature) productParts.push(parts.feature);
     
     // Construir el nombre final
     let finalName = mainParts.join(" ");
     
-    if (secondaryParts.length > 0) {
-        finalName += `, ${secondaryParts.join(", ")}`;
-    }
-    
     if (productParts.length > 0) {
-        finalName += `, ${productParts.join(" ")}`;
+        finalName += ` - ${productParts.join(" ")}`;
     }
     
     // Agregar términos no reconocidos al final
@@ -135,15 +131,8 @@ function generateDescription(nameAnalysis) {
     const version = nameAnalysis.tags.find(t => t.type === "version")?.name || "";
     const feature = nameAnalysis.tags.find(t => t.type === "caracteristica")?.name || "";
     
-    const parts = [];
-    
-    // Mantener el mismo orden que en el nombre
-    if (season && team) parts.push(`${season} ${team}`);
-    if (edition) parts.push(edition);
-    if (version) parts.push(`Version ${version}`);
-    if (feature) parts.push(feature);
-
-    return `${parts.join(", ")}. Producto de alta calidad con tecnología de secado rápido y materiales premium.`;
+    return `Indumentaria importada de calidad original.\nModelo ${team} ${season}, edición ${edition} en versión ${version}.`;
+    // return `Camiseta importada de calidad original.\nModelo ${team} ${season}, edición ${edition} en versión ${version}. Disponible en ${feature}.\n\nFabricada con materiales de primera calidad, diseñada para brindar máxima comodidad y durabilidad.\nIncorpora tecnologías oficiales como AeroCool, DryFit y otras, garantizando una excelente transpirabilidad.\nDetalles premium con escudo bordado o termosellado (según versión) y costuras reforzadas para mayor resistencia.`;
 }
 
 // Función para extraer: Imágenes producto
@@ -329,7 +318,8 @@ function analyzeProductName(name) {
         versions: MAPPINGS.tags.versions,
         editions: MAPPINGS.tags.editions,
         features: MAPPINGS.tags.features,
-        colors: MAPPINGS.tags.colors
+        colors: MAPPINGS.tags.colors,
+        nothings: MAPPINGS.tags.nothings
     };
 
     // Helper para agregar tags sin duplicados
