@@ -779,6 +779,11 @@ module.exports = {
                 type: "equipo",
                 categoryPath: ["Deportes", "Fútbol", "Clubes", "Liga MX"]
             },
+            "Chivas": {
+                matches: ['Chivas'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Liga MX"]
+            },
             "Necaxa": {
                 matches: ['Necaxa'],
                 type: "equipo",
@@ -955,47 +960,47 @@ module.exports = {
             "Nigeria": {
                 matches: ['Nigeria'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
             },
             "Morocco": {
                 matches: ['Morocco'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
             },
             "Cameroon": {
                 matches: ['Cameroon'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
             },
             "Japan": {
                 matches: ['Japan'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
             },
             "Korea": {
                 matches: ['Korea'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
             },
             "Palestina": {
                 matches: ['Palestina'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
             },
             "Ghana": {
                 matches: ['Ghana'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
             },
             "Egypt": {
                 matches: ['Egypt'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
             },
             "Senegal": {
                 matches: ['Senegal'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
             },
 
             
@@ -1210,6 +1215,11 @@ module.exports = {
                 type: "edicion",
                 categoryPath: ["Productos"]
             },
+            "Entrenamiento": {
+                matches: ['Training'],
+                type: "edicion",
+                categoryPath: ["Productos"]
+            },
             "Edicion Especial": {
                 matches: ['Special Edition'],
                 type: "edicion",
@@ -1220,6 +1230,7 @@ module.exports = {
                 type: "edicion",
                 categoryPath: ["Productos"]
             }
+           
         },
 
         // Características
@@ -1279,10 +1290,17 @@ module.exports = {
             }
         },
 
+        marcas: {
+            "Puma": {
+                matches: ['*PM', '(女)*PM', '*PM(球员童装)', '(长袖球员)*PM'],
+                type: "marca"
+            },
+        },
+
         // Saltear, no add nada.
         nothings:{
             "": {
-                matches: ['Royal', '*圣斗士金色', '广岛三箭', '*狐狸', '(童装)(半拉链)', '*蓝黑', '*新广告', '*有领', '*气功悟空', '浦和红钻', '*海贼鸣人眼神', '#绿标', '*红袖边', '*蓝龙', '*耶稣', '(童装)', '字母印', '*柯南D', '#刺绣', '*草帽', '*眼镜帽子', '*蓝袖边多图', '(加绒)', '(女)*PM', 'Jersey(V领)', 'Jersey(圆领)', '(Trapeze Edition)', '(V领)', '飞人版', '*贝吉塔红', '*贝吉塔蓝', '*咒术回战', '*龙珠黑悟空', '*橙白赛亚人', '*MonK', '(Print Sponsor)', '(球员童装)', '*PM(球员童装)', '长袖球员', '横滨水手', '*金广告', '*紫色标', '*金双狮', '*赛亚人黑色', '*富士山与塔', '*浪客剑心', '*犬夜叉白色', '(女)', '(长袖球员)', '(长袖球员)*PM', 'Concept', '半拉链', '萨尔斯堡红牛', '*红星队', '*PM', 'Milky', '(High Quality)', '*忍者系黑衣', '*忍者系绿', '*忍者系蓝', '*忍者系紫', ],
+                matches: ['*圣斗士金色', '广岛三箭', '*狐狸', '(童装)(半拉链)', '*蓝黑', '*新广告', '*有领', '*气功悟空', '浦和红钻', '*海贼鸣人眼神', '#绿标', '*红袖边', '*蓝龙', '*耶稣', '(童装)', '字母印', '*柯南D', '#刺绣', '*草帽', '*眼镜帽子', '*蓝袖边多图', '(加绒)', 'Jersey(V领)', 'Jersey(圆领)', '(Trapeze Edition)', '(V领)', '飞人版', '*贝吉塔红', '*贝吉塔蓝', '*咒术回战', '*龙珠黑悟空', '*橙白赛亚人', '*MonK', '(Print Sponsor)', '(球员童装)', '长袖球员', '横滨水手', '*金广告', '*紫色标', '*金双狮', '*赛亚人黑色', '*富士山与塔', '*浪客剑心', '*犬夜叉白色', '(女)', '(长袖球员)', 'Concept', '半拉链', '萨尔斯堡红牛', '*红星队', 'Milky', '(High Quality)', '*忍者系黑衣', '*忍者系绿', '*忍者系蓝', '*忍者系紫', ],
                 type: "nothing"
             },
         }

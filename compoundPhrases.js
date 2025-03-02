@@ -1,13 +1,7 @@
 // compoundPhrases.js
 module.exports = {
     phrases: [
-        // Deportivas
-        { 
-            phrase: 'Player Version', 
-            normalized: 'Version Jugador', 
-            type: 'version',
-            categoryPath: ['Productos', 'Camisetas']
-        },
+        // Categoria
         { 
             phrase: 'Long Sleeve', 
             normalized: 'Manga Larga', 
@@ -26,6 +20,19 @@ module.exports = {
             type: 'product_type',
             categoryPath: ['Productos', 'Conjuntos']
         },
+        { 
+            phrase: 'Baby Infant Crawl Suit', 
+            normalized: 'Bebes', 
+            type: 'product_type',
+            categoryPath: ['Productos', 'Bebes']
+        },
+        { 
+            phrase: 'Double Sided', 
+            normalized: 'Rompevientos', 
+            type: 'product_type',
+            categoryPath: ['Productos', 'Abrigos', 'Rompevientos']
+        },
+       
         
         // Ediciones especiales
         { 
@@ -41,15 +48,7 @@ module.exports = {
             categoryPath: ['Productos']
         },
         
-        // Características específicas
-        { 
-            phrase: 'Double Sided', 
-            normalized: 'Rompevientos', 
-            type: 'caracteristica',
-            categoryPath: ['Productos', 'Abrigos', 'Rompevientos']
-        },
-        
-        // Equipos compuestos
+        // Equipos
         { 
             phrase: 'Man Utd', 
             normalized: 'Manchester United', 
@@ -68,14 +67,14 @@ module.exports = {
             type: 'equipo',
             categoryPath: ['Deportes', 'Fútbol', 'Clubes', 'Primera División']
         },
-        
-        // Versiones especiales
-        { 
-            phrase: 'Baby Infant Crawl Suit', 
-            normalized: 'Bebes', 
-            type: 'version',
-            categoryPath: ['Productos']
-        }
+        // { 
+        //     phrase: 'Template', 
+        //     normalized: 'Template', 
+        //     type: 'equipo',
+        //     categoryPath: ['Deportes', 'Fútbol', 'Clubes', 'Template']
+        // },
+
+        // Color
     ],
 
     defaults: [
