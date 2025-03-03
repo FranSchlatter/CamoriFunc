@@ -319,6 +319,8 @@ function analyzeProductName(name) {
         features: MAPPINGS.tags.features,
         colors: MAPPINGS.tags.colors,
         marcas: MAPPINGS.tags.marcas,
+        numbers: MAPPINGS.tags.numbers,
+        players: MAPPINGS.tags.players,
         nothings: MAPPINGS.tags.nothings
     };
 
