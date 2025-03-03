@@ -88,7 +88,6 @@ function generateNormalizedName(nameAnalysis) {
         color: nameAnalysis.tags.find(t => t.type === "color")?.name || "",
         category: nameAnalysis.categories[0]?.name || "Camiseta",
         feature: nameAnalysis.tags.find(t => t.type === "caracteristica")?.name || "",
-        nothing: nameAnalysis.tags.find(t => t.type === "nothing")?.name || "",
         unrecognized: nameAnalysis.unrecognized || []
     };
 
@@ -319,6 +318,7 @@ function analyzeProductName(name) {
         editions: MAPPINGS.tags.editions,
         features: MAPPINGS.tags.features,
         colors: MAPPINGS.tags.colors,
+        marcas: MAPPINGS.tags.marcas,
         nothings: MAPPINGS.tags.nothings
     };
 

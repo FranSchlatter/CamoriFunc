@@ -49,24 +49,24 @@ module.exports = {
         },
         
         // Equipos
-        { 
-            phrase: 'Man Utd', 
-            normalized: 'Manchester United', 
-            type: 'equipo',
-            categoryPath: ['Deportes', 'Fútbol', 'Clubes', 'Premier League']
-        },
-        { 
-            phrase: 'Man City', 
-            normalized: 'Manchester City', 
-            type: 'equipo',
-            categoryPath: ['Deportes', 'Fútbol', 'Clubes', 'Premier League']
-        },
-        { 
-            phrase: 'River Plate', 
-            normalized: 'River Plate', 
-            type: 'equipo',
-            categoryPath: ['Deportes', 'Fútbol', 'Clubes', 'Primera División']
-        },
+        // { 
+        //     phrase: 'Man Utd', 
+        //     normalized: 'Manchester United', 
+        //     type: 'equipo',
+        //     categoryPath: ['Deportes', 'Fútbol', 'Clubes', 'Premier League']
+        // },
+        // { 
+        //     phrase: 'Man City', 
+        //     normalized: 'Manchester City', 
+        //     type: 'equipo',
+        //     categoryPath: ['Deportes', 'Fútbol', 'Clubes', 'Premier League']
+        // },
+        // { 
+        //     phrase: 'River Plate', 
+        //     normalized: 'River Plate', 
+        //     type: 'equipo',
+        //     categoryPath: ['Deportes', 'Fútbol', 'Clubes', 'Primera División']
+        // },
         // { 
         //     phrase: 'Template', 
         //     normalized: 'Template', 
