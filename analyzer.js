@@ -84,10 +84,13 @@ function generateNormalizedName(nameAnalysis) {
         team: nameAnalysis.tags.find(t => t.type === "equipo")?.name || "",
         season: nameAnalysis.tags.find(t => t.type === "temporada")?.name || "",
         edition: nameAnalysis.tags.find(t => t.type === "edicion")?.name || "",
-        version: nameAnalysis.tags.find(t => t.type === "version")?.name || "",
         color: nameAnalysis.tags.find(t => t.type === "color")?.name || "",
-        category: nameAnalysis.categories[0]?.name || "Camiseta",
+        version: nameAnalysis.tags.find(t => t.type === "version")?.name || "",
+        category: nameAnalysis.categories?.map(cat => cat.name).join(" ") || "Otros",
         feature: nameAnalysis.tags.find(t => t.type === "caracteristica")?.name || "",
+        marca: nameAnalysis.tags.find(t => t.type === "marca")?.name || "",
+        number: nameAnalysis.tags.find(t => t.type === "number")?.name || "",
+        player: nameAnalysis.tags.find(t => t.type === "player")?.name || "",
         unrecognized: nameAnalysis.unrecognized || []
     };
 
@@ -106,6 +109,10 @@ function generateNormalizedName(nameAnalysis) {
     // Tercera parte: Categoría y Característica
     const productParts = [];
     if (parts.category) productParts.push(parts.category);
+    if (parts.feature) productParts.push(parts.feature);
+    if (parts.marca) productParts.push(parts.marca);
+    if (parts.number) productParts.push(parts.number);
+    if (parts.player) productParts.push(parts.player);
     
     // Construir el nombre final
     let finalName = mainParts.join(" ");

@@ -113,9 +113,19 @@ module.exports = {
 
         // Productos y sus tipos
         "Camisetas": {
-            matches: ['Jersey', 'Shirt'],
+            matches: ['Jersey', 'Shirts'],
             description: "Indumentaria camisetas",
             categoryPath: ["Productos", "Camisetas"]
+        },
+        "Shorts": {
+            matches: ['Shorts Pants'],
+            description: "Indumentaria shorts",
+            categoryPath: ["Productos", "Shorts"]
+        },
+        "Medias": {
+            matches: ['Socks'],
+            description: "Accesorios medias deportivas",
+            categoryPath: ["Productos", "Medias"]
         },
         "Conjuntos Largos": {
             matches: ['Tracksuit', 'Hoodie', 'Half Pull', '(卫衣套装)'],
@@ -148,7 +158,7 @@ module.exports = {
             categoryPath: ["Productos", "Casual"],
         },
             "Remeras": {
-                matches: ['T-Shirt', 'shirts', 'Champion'],
+                matches: ['T-Shirt', 'Champion'],
                 description: "Indumentaria Remeras casual",
                 categoryPath: ["Productos", "Casual", "Remeras"]
             },
@@ -172,30 +182,20 @@ module.exports = {
                 description: "Indumentaria Chombas casual",
                 categoryPath: ["Productos", "Casual", "Buzos"]
             },
-        "Accesorios": {
-            matches: ['Accessories'],
-            description: "Accesorios deportivos",
-            categoryPath: ["Productos", "Accesorios"],
-        },
-            "Medias": {
-                matches: ['Socks'],
-                description: "Accesorios medias deportivas",
-                categoryPath: ["Productos", "Accesorios", "Medias"]
+            "Chaleco": {
+                matches: ['Vest'],
+                type: "edicion",
+                categoryPath: ["Productos", "Casual", "Chalecos"]
             },
-        "Abrigos": {
-            matches: ['Coats', 'Jackets'],
-            description: "Indumentaria de abrigo",
-            categoryPath: ["Productos", "Abrigos"],
-        },
             "Camperon": {
                 matches: ['Cotton Coat'],
                 description: "Indumentaria de abrigo camperon",
-                categoryPath: ["Productos", "Abrigos", "Camperon"]
+                categoryPath: ["Productos", "Casual", "Camperon"]
             },
             "Rompevientos": {
-                matches: ['Windbreaker', 'Double Sided', '(双面风衣)'],
+                matches: ['Windbreaker'],
                 description: "Indumentaria de abrigo rompeviento",
-                categoryPath: ["Productos", "Abrigos", "Rompevientos"]
+                categoryPath: ["Productos", "Casual", "Rompevientos"]
             }
     },
 
@@ -1479,11 +1479,7 @@ module.exports = {
                 type: "edicion",
                 categoryPath: ["Productos"]
             },
-            "Chaleco": {
-                matches: ['Vest'],
-                type: "edicion",
-                categoryPath: ["Productos"]
-            }
+            
         },
 
         // Características
@@ -1497,7 +1493,13 @@ module.exports = {
                 matches: ['Long Sleeve', '长袖', '(长袖)'],
                 type: "caracteristica",
                 categoryPath: ["Productos"]
+            },
+            "Reversible": {
+                matches: ['Double Sided', '(双面风衣)'],
+                type: "caracteristica",
+                categoryPath: ["Productos"]
             }
+
         },
         
         colors: {
@@ -1622,23 +1624,27 @@ module.exports = {
         players: {
             "#00 CHRISTIE": {
                 matches: ['#00 CHRISTIE'],
-                type: "number"
+                type: "player"
             },
             "#10 BUTLERIII": {
                 matches: ['#10 BUTLERIII'],
-                type: "number"
+                type: "player"
             },
             "#77 DONCIC": {
                 matches: ['#77 DONCIC'],
-                type: "number"
+                type: "player"
             },
             "#11 JR. JAQUEZ": {
                 matches: ['#11 JR. JAQUEZ'],
-                type: "number"
+                type: "player"
             },
             "#3 DAVIS": {
                 matches: ['#3 DAVIS'],
-                type: "number"
+                type: "player"
+            },
+            "O.Dembélé": {
+                matches: ['O.Dembélé 登贝莱'],
+                type: "player"
             },
             
         },
@@ -1674,7 +1680,7 @@ module.exports = {
         // Saltear, no add nada.
         nothings:{
             "": {
-                matches: ['1:1', '#2311', 'HALO', '#812', '#715', 'Edition)飞人版', '(圆领）', 'Broyal', 'BFC', 'Vesion', '(黄边)', 'Hot', 'Pressing', '*带章', '*玫瑰蛇', '*火龙', '*Gear5', '神户胜利船', '*圣斗士金色', '广岛三箭', '*狐狸', '(童装)(半拉链)', '*蓝黑', '*新广告', '*有领', '*气功悟空', '浦和红钻', '*海贼鸣人眼神', '#绿标', '*红袖边', '*蓝龙', '*耶稣', '(童装)', '字母印', '*柯南D', '#刺绣', '*草帽', '*眼镜帽子', '*蓝袖边多图', '(加绒)', 'Jersey(V领)', 'Jersey(圆领)', '(Trapeze Edition)', '(V领)', '飞人版', '*贝吉塔红', '*贝吉塔蓝', '*咒术回战', '*龙珠黑悟空', '*橙白赛亚人', '*MonK', '(Print Sponsor)', '(球员童装)', '长袖球员', '横滨水手', '*金广告', '*紫色标', '*金双狮', '*赛亚人黑色', '*富士山与塔', '*浪客剑心', '*犬夜叉白色', '(女)', '(长袖球员)', 'Concept', '半拉链', '萨尔斯堡红牛', '*红星队', 'Milky', '(High Quality)', '*忍者系黑衣', '*忍者系绿', '*忍者系蓝', '*忍者系紫', ],
+                matches: ['(圆领）Edition)飞人版', '(Chinese Year)', '1:1', '#2311', 'HALO', '#812', '#715', 'Broyal', 'BFC', 'Vesion', '(黄边)', 'Hot', 'Pressing', '*带章', '*玫瑰蛇', '*火龙', '*Gear5', '神户胜利船', '*圣斗士金色', '广岛三箭', '*狐狸', '(童装)(半拉链)', '*蓝黑', '*新广告', '*有领', '*气功悟空', '浦和红钻', '*海贼鸣人眼神', '#绿标', '*红袖边', '*蓝龙', '*耶稣', '(童装)', '字母印', '*柯南D', '#刺绣', '*草帽', '*眼镜帽子', '*蓝袖边多图', '(加绒)', 'Jersey(V领)', 'Jersey(圆领)', '(Trapeze Edition)', '(V领)', '飞人版', '*贝吉塔红', '*贝吉塔蓝', '*咒术回战', '*龙珠黑悟空', '*橙白赛亚人', '*MonK', '(Print Sponsor)', '(球员童装)', '长袖球员', '横滨水手', '*金广告', '*紫色标', '*金双狮', '*赛亚人黑色', '*富士山与塔', '*浪客剑心', '*犬夜叉白色', '(女)', '(长袖球员)', 'Concept', '半拉链', '萨尔斯堡红牛', '*红星队', 'Milky', '(High Quality)', '*忍者系黑衣', '*忍者系绿', '*忍者系蓝', '*忍者系紫', ],
                 type: "nothing"
             },
         }
@@ -1858,7 +1864,7 @@ module.exports = {
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/13/e/4/e44773915c2ccea3.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "Champions 13 + Campeon 2018 + Fifa Campeon 2018 + Respect": {
-                matches: ["UCL(2018大耳杯/13杯/世俱2017ad上)"],
+                matches: ["UCL(2018大耳杯/13杯/世俱2018ad上)"],
                 type: "badge",
                 price: 4,
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/13/7/d/7dff0f4f519b3f7f.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
@@ -2552,7 +2558,7 @@ module.exports = {
 
             // Champions fonts
             "Con dorsal UCL fonts": {
-                matches: ['Name / Number (UCL Fonts) 欧冠客场字', "Name / Number (UCL Fonts) 欧冠字体", "Name / Number (UCL Fonts)欧冠字体", "Name / Number (UCL Fonts)(名在号上)杯赛字体"],
+                matches: ['Name / Number (UCL Fonts) 欧冠', 'Name / Number (UCL Fonts) 欧冠客场字', "Name / Number (UCL Fonts) 欧冠字体", "Name / Number (UCL Fonts)欧冠字体", "Name / Number (UCL Fonts)(名在号上)杯赛字体"],
                 type: "customize",
                 price: 4
             },
@@ -2641,6 +2647,11 @@ module.exports = {
                 matches: ["Name / Number (周年字体)(没广告-名在号上)"],
                 type: "customize",
                 price: 3
+            },
+            "Con dorsal especial": {
+                matches: ["登贝莱 #10 (印球星号-蛇年字体)"],
+                type: "customize",
+                price: 0
             },
 
 
