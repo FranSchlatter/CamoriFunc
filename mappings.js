@@ -1192,6 +1192,11 @@ module.exports = {
                 type: "equipo",
                 categoryPath: ["Deportes", "Fútbol", "Clubes", "MLS"]
             },
+            "Columbus Crew": {
+                matches: ['Columbus Crew'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "MLS"]
+            },
 
 
             // Eredivise
@@ -2203,7 +2208,8 @@ module.exports = {
             "CQ01": { matches: ["CQ01"], type: "number" },
             "CN01": { matches: ["CN01"], type: "number" },
             "NJ12": { matches: ["NJ12"], type: "number" },
-            "ND08": { matches: ["ND08"], type: "number" },
+            "ND08": { matches: ["ND08", '#ND08'], type: "number" },
+            "#NM07": { matches: ["#NM07"], type: "number" },
             "#AB08": { matches: ["#AB08"], type: "number" },
             "#AM05": { matches: ["#AM05"], type: "number" },
             "#A33": { matches: ["#A33"], type: "number" },
@@ -2268,6 +2274,26 @@ module.exports = {
             "#G262": { matches: ["#G262光板"], type: "number" },
             "#G263": { matches: ["#G263光板"], type: "number" },
             "#G264": { matches: ["#G264光板"], type: "number" },
+            "C2441": { matches: ["C2441"], type: "number" },
+            "C2440": { matches: ["C2440"], type: "number" },
+            "C2444": { matches: ["C2444"], type: "number" },
+            "A2437": { matches: ["A2437"], type: "number" },
+            "C2439": { matches: ["C2439"], type: "number" },
+            "C2443": { matches: ["C2443"], type: "number" },
+            "C2446": { matches: ["C2446"], type: "number" },
+            "C2450": { matches: ["C2450"], type: "number" },
+            "A2438": { matches: ["A2438"], type: "number" },
+            "A2439": { matches: ["A2439"], type: "number" },
+            "A2441": { matches: ["A2441"], type: "number" },
+            "A2401": { matches: ["A2401"], type: "number" },
+            "A2421": { matches: ["A2421"], type: "number" },
+            "A2433": { matches: ["A2433"], type: "number" },
+            "A2436": { matches: ["A2436"], type: "number" },
+            "A2435": { matches: ["A2435"], type: "number" },
+            "A2434": { matches: ["A2434"], type: "number" },
+            "D701": { matches: ["D701"], type: "number" },
+            "D700": { matches: ["D700"], type: "number" },
+
         },
 
         players: {
@@ -2490,7 +2516,7 @@ module.exports = {
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/17/e/8/e80a811156ddf959.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
 
-            // WINLeague
+            // Campions League
             "UCL": {
                 matches: ['UCL (欧冠球)'],
                 type: "badge",
@@ -2522,7 +2548,7 @@ module.exports = {
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/15/2/c/2c3c0abc8226976c.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "UCL/Foundation": {
-                matches: ['UCL(欧冠新章)右袖', 'UCL (欧冠新章) 右袖', 'UCL +OKX (欧冠新章+左袖广告)', "UCL (欧冠新章)右袖", 'UCL/TR..ON(欧冠新章+左袖广告)'],
+                matches: ['UCL + TR..ON(欧冠新章+左袖广告)', 'UCL(欧冠新章)右袖', 'UCL (欧冠新章) 右袖', 'UCL +OKX (欧冠新章+左袖广告)', "UCL (欧冠新章)右袖", 'UCL/TR..ON(欧冠新章+左袖广告)'],
                 type: "badge",
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/a/0/a0acf265b53042a0.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
@@ -2635,6 +2661,54 @@ module.exports = {
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/30/b/2/b292e85f960db126.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
+            "UCL/COPAITA/ITA/Respect": {
+                matches: ["UCL +co.pa italia +Shield(欧冠+圆圈ad上+三色盾)", 'UCL+Shield+co.pa italia(欧冠+三色圈+三色盾)'],
+                type: "badge",
+                price: 4,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/13/9/9/9926f6b658a2e980.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "UCL 2011/FIFA11/Respect": {
+                matches: ["UCL Champion2011(平条+卫冕2011+世俱2011)"],
+                type: "badge",
+                price: 3,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/25/b/2/b2d4f49a8bedebc0.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "UCL/Champs 5": {
+                matches: ["UCL(欧冠球+5杯)"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/13/d/f/df203a85b36b4e76.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "UCL/Respect/Champ 10": {
+                matches: ["2015/16 UCL(欧冠/大耳杯10)"],
+                type: "badge",
+                price: 3,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/11/c/e/ce762892ce4cd430.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "UCL/Respect/Champ 10/FIFA14": {
+                matches: ["2015/16 UCL(欧冠/大耳杯10)", '2015/16 UCL(欧冠/大耳杯10/世俱2014中间)'],
+                type: "badge",
+                price: 4,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/11/2/7/2721c192e33ede32.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "UCL 2010/11/Respect/WIN9": {
+                matches: ["2010/11 UCL(欧冠/小9杯)"],
+                type: "badge",
+                price: 3,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/25/0/6/06e0d7351fecd92f.jpg?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "UCL/Respect/WIN9": {
+                matches: ["2012/13 UCL(欧冠/大耳9杯)"],
+                type: "badge",
+                price: 3,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/11/15/f/0/f0182e0f46da147c.jpg?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "UCL/Foundation/FIFA23": {
+                matches: ["UCL +OKX+ FCWC 2023 (欧冠+左袖广告+胸前世俱盾)"],
+                type: "badge",
+                price: 3,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/4/8/481145696b74e40a.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
             
             // UECL
             "UECL/Foundation": {
@@ -2657,6 +2731,25 @@ module.exports = {
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/11/17/2/4/249ceb188fa977c5.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
+            "CA24/Rocking": {
+                matches: ["Copa America 2024(美洲杯THE)"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/03/05/6/8/68ae920f5e3ee341.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "FIFA11": {
+                matches: ["FF World Champions2011(胸前世俱盾)"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/25/2/7/27253eff1d02a719.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "FIFA12": {
+                matches: ["FF World Champions2012(胸前世俱盾)"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/03/04/8/1/81ee2f4cd4f552b3.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            
             "FWC2014 WIN": {
                 matches: ["FFWCC2014 (世界杯胸前冠)"],
                 type: "badge",
@@ -2676,7 +2769,7 @@ module.exports = {
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/28/0/5/05cda534c1f2a420.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "FWC2022 WIN": {
-                matches: ["World WIN2022世界杯胸前金盾", 'World WIN2022世界杯胸前盾'],
+                matches: ["World WIN2022世界杯胸前金盾", 'World WIN2022世界杯胸前盾', 'World Champions 2022世界杯胸前金盾', 'World Champions 2022世界杯胸前盾'],
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/11/13/a/9/a9c3924ea3344430.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
@@ -2705,6 +2798,30 @@ module.exports = {
                 type: "badge",
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/27/1/f/1fd6025fc863d5c9.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "UELW24/Foundation": {
+                matches: ["UEL 2024 Winners (欧冠-亚特兰大)右袖"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/8/d/8d4a09dbabbd4f43.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "EURO24/Foundation": {
+                matches: ["Euro 2024(欧洲杯)"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/25/c/2/c2691dd7c0551a82.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "EUROW24 ": {
+                matches: ["Euro Champions2024(欧洲杯胸前冠)"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/03/04/d/1/d1802a431d5ef363.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "EUROW24/UENL23/Foundation": {
+                matches: ["UEFA NL Winner2023+Euro Champions2024(欧国联班牙组合)"],
+                type: "badge",
+                price: 3,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/03/04/7/8/788aa785f9d8da15.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
 
 
@@ -2737,6 +2854,18 @@ module.exports = {
                 price: 0,
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/13/8/a/8ad19d0b18bace89.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
+            "La liga/3": {
+                matches: ["LFP+3(西甲+左袖3)"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/25/7/5/75cc3bec73642a1e.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "La liga/3/FIFA11": {
+                matches: ["LFP+3+FFWC2011 (西甲+左袖3+世俱盾2011)"],
+                type: "badge",
+                price: 3,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/25/2/2/224e9e3fb5cb2a33.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
 
 
             // > Bundersliga
@@ -2752,11 +2881,17 @@ module.exports = {
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/15/b/c/bcf2185dc3e1e4e1.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
+            "BUN 2": {
+                matches: ["Bundesliga2(德乙)"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/28/f/1/f177882237d3e2a6.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
 
 
             // > Premier
             "Premier": {
-                matches: ['Pre L/Expedia (34英超+左袖广告)', 'Pre L +De..LT (34英超+左袖广告)', 'Pre L +TR..ON (34英超+左袖广告)', 'Pre L +noon (34英超+左袖广告)', "Premier League (34英超普)", "Pre L +NO.or (34英超/章下字)", "Premier league (34英超普)"],
+                matches: ['Pre L + Expedia (34英超+左袖广告)', 'Pre L/Expedia (34英超+左袖广告)', 'Pre L +De..LT (34英超+左袖广告)', 'Pre L +TR..ON (34英超+左袖广告)', 'Pre L +noon (34英超+左袖广告)', "Premier League (34英超普)", "Pre L +NO.or (34英超/章下字)", "Premier league (34英超普)"],
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/6/b/6b8aa0557f64e822.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
@@ -2768,7 +2903,7 @@ module.exports = {
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/13/5/5/5569bf90f755f025.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "Premier/NoRac": {
-                matches: ['Pre L +NO.or+ Expedia (34英超/章下字+左袖广告)', 'Pre L +NO.or+ De..LT (34英超/章下字+左袖广告)', 'Pre L +NO.or+ TR..ON (34英超/章下字+左袖广告)', "Pre L/NO..for (34英超普+章下字)", 'Pre L +NO.or+ noon ( 34英超/章下字+左袖广告)'],
+                matches: ['Pre L + NO..for (34英超普+章下字)', 'Pre L +NO.or+ Expedia (34英超/章下字+左袖广告)', 'Pre L +NO.or+ De..LT (34英超/章下字+左袖广告)', 'Pre L +NO.or+ TR..ON (34英超/章下字+左袖广告)', "Pre L/NO..for (34英超普+章下字)", 'Pre L +NO.or+ noon ( 34英超/章下字+左袖广告)'],
                 type: "badge",
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/2/8/2849daa0df6783ca.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
@@ -2786,7 +2921,7 @@ module.exports = {
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/0/7/0723db2ac74426ed.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "Premier/NoRac/Flor": {
-                matches: ['Pre L +NO.or+ Expedia+ Flower (34英超/章下字+左袖广告)+红花', 'Pre L +NO.or+ De..LT/Flower (英超/章下字+左袖广告+红花)', "Pre L +NO.or+ Flower (英超/章下字+红花)", 'Pre L +NO.or+ Flower (英超/章下字+左袖广告+红花)', 'Pre L +NO.or+ noon+ Flower (英超/章下字+左袖广告+红花)'],
+                matches: ['Pre L +NO.or+ De..LT + Flower (英超/章下字+左袖广告+红花)', 'Pre L +NO.or+ Expedia+ Flower (34英超/章下字+左袖广告)+红花', 'Pre L +NO.or+ De..LT/Flower (英超/章下字+左袖广告+红花)', "Pre L +NO.or+ Flower (英超/章下字+红花)", 'Pre L +NO.or+ Flower (英超/章下字+左袖广告+红花)', 'Pre L +NO.or+ noon+ Flower (英超/章下字+左袖广告+红花)'],
                 type: "badge",
                 price: 3,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/2/f/2f8a92a783fee35e.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
@@ -2810,7 +2945,7 @@ module.exports = {
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/03/02/3/4/34df7ab224c753df.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "Premier Gold/FIFA23 WIN": {
-                matches: ["Pre L C +NO.or. (英金章/章下字)"],
+                matches: ["Pre L C +NO.or. (英金章/章下字)", 'Pre L C+OKX+ FCWC 2023(胸前世俱盾+34英金章+左袖广告)'],
                 type: "badge",
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/2/a/2ac6481315eaaec0.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
@@ -2827,6 +2962,19 @@ module.exports = {
                 price: 3,
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/13/0/8/083b0795a0b2323a.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
+            "Premier/NoRac/Flor Gold": {
+                matches: ["Pre L C +NO.or. +OKX (英金章/章下字+左袖广告+胸前红花)"],
+                type: "badge",
+                price: 3,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/3/9/3968a0e6aea6269b.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Premier 12/13": {
+                matches: ["CHAMPIONS 12/13(双袖联赛金章)"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/28/0/e/0e9f366d1d159d1d.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            
 
 
             // > SerieA
@@ -2878,13 +3026,32 @@ module.exports = {
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/b/a/baa55b61af4ca93c.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
+            "COPAITA/ITA": {
+                matches: ["co.pa italia+Shield (圆圈ad上+三色盾)", 'Shield+co.pa italia(三色圈+三色盾)'],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/13/d/6/d6c282da513bf5fb.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+
 
             // > Ligue1
-            "Ligue1 45": {
+            "Ligue1": {
                 matches: ["Ligue1 (45法甲黑)"],
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/10/29/9/5/953477b403a87710.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Ligue1 WIN24": {
+                matches: ["L1 CHAMPION 2024(法甲冠)右袖"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/25/d/6/d6c1bf9be9eca317.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Ligue1 WIN24/Snipes": {
+                matches: ["L1 CHAMPION 2024 +Snipes' (法甲冠+背下广告)"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/25/d/d/dd1304d9890c7177.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
 
             // Sudamerica
@@ -2894,11 +3061,41 @@ module.exports = {
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/18/f/9/f91c3d62453bfd01.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "BRA25": {
+            "Brasileirao": {
                 matches: ["Brasileirao A2025(巴甲)"],
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/27/d/c/dc756284effb6b9e.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "BRA25": {
+                matches: ["CAMPEAO2025 (巴西杯冠)胸前"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/25/9/d/9d05c468ddd25283.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "BRA25/Brasileirao": {
+                matches: ["Brasileirao A2025 +CAMPEAO2025 (巴甲+巴西杯冠)"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/25/e/b/eb7e84186e180567.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "LIB": {
+                matches: ["LIBERTADORES (解放者)右袖"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/11/20/b/1/b142f6193b2c79e1.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "LIB/LIBW1": {
+                matches: ["libertadores 1(解放者/新1次)", 'libertadores 1 (解放者/新1次)'],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/17/e/f/ef98a46bd6909c49.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "LIB/LIBW2": {
+                matches: ["libertadores 2 (解放者/新2次)"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/13/2/9/29155d2ee7683eca.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "LIB/LIBW3": {
                 matches: ["libertadores 3(解放者/新3次)", "libertadores 3 (解放者/新3次)"],
@@ -2919,10 +3116,22 @@ module.exports = {
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/27/8/8/88a5cd45fcad50ff.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "ITAU C": {
-                matches: ["WINato itau (24智联赛)", 'WINato itau (24智联赛右章)'],
+                matches: ['Campeonato itau (24智联赛右章)', 'Campeonato itau (24智联赛)', "WINato itau (24智联赛)", 'WINato itau (24智联赛右章)'],
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/03/5/b/5bea83efb8193caf.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "ChilePD FIFA24": {
+                matches: ["2024WIN (冠军ad上)"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/24/e/8/e8ce1ddff407555d.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "ChilePD FIFA24/Liga/NSP": {
+                matches: ["itau.No.pel+2024WIN(25智联+冠军ad上)", 'itau.No.pel+2024CAMPEON(25智联+冠军ad上)'],
+                type: "badge",
+                price: 3,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/24/f/c/fc4ee08b7bc907e6.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             
 
@@ -2933,67 +3142,29 @@ module.exports = {
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/11/10/e/6/e6999f9820771981.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "RSL 45 Gold MI": {
+            "RSL45 Gold": {
                 matches: ["RSL(45沙特金新月)左袖"],
                 type: "badge",
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/10/23/6/b/6b9a830df95230ae.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "RSL 45 MI": {
+            "RSL45": {
                 matches: ["RSL(45沙特联)左袖"],
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/10/07/2/4/24dfbe74f6e5ff61.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-
-            // NEWS FALTA ACOMODAR
             "EFL": {
                 matches: ["EFL Championship (英冠章)右"],
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/11/17/b/e/be98e294be07cf85.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "Bundesliga 2": {
-                matches: ["Bundesliga2(德乙)"],
-                type: "badge",
-                price: 1,
-                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/28/f/1/f177882237d3e2a6.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "Euro 2024/Foundation": {
-                matches: ["Euro 2024(欧洲杯)"],
-                type: "badge",
-                price: 2,
-                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/25/c/2/c2691dd7c0551a82.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "Ligue1 2024 WIN": {
-                matches: ["L1 CHAMPION 2024(法甲冠)右袖"],
-                type: "badge",
-                price: 2,
-                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/25/d/6/d6c1bf9be9eca317.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "Ligue1 2024 WIN/Snipes": {
-                matches: ["L1 CHAMPION 2024 +Snipes' (法甲冠+背下广告)"],
-                type: "badge",
-                price: 1,
-                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/25/d/d/dd1304d9890c7177.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
             "BetPlay/Dimayor": {
                 matches: ["Bet play+Prod..CIAL(哥伦甲联赛)"],
                 type: "badge",
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/25/3/d/3de2eb837daed8da.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "FIFA25": {
-                matches: ["CAMPEAO2025 (巴西杯冠)胸前"],
-                type: "badge",
-                price: 1,
-                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/25/9/d/9d05c468ddd25283.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "FIFA25/Brasileirao 2025": {
-                matches: ["Brasileirao A2025 +CAMPEAO2025 (巴甲+巴西杯冠)"],
-                type: "badge",
-                price: 2,
-                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/25/e/b/eb7e84186e180567.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "Aniversario 125": {
                 matches: ["125th (周年纪念章)右袖"],
@@ -3013,6 +3184,18 @@ module.exports = {
                 price: 3,
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/21/9/8/9813d47da9abdd86.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
+            "MLS/Apple TV Rosa": {
+                matches: ["MLS /TV (25专用色/粉TV)印左袖"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/01/11/a/f/afb1af7c83ce00bd.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "MLS/Apple TV/Fracht Rosa": {
+                matches: ["MLS /TV +Fra. GR. (25专用色/粉TV+右袖广告)"],
+                type: "badge",
+                price: 3,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/01/11/6/6/6651eeb05fd2e963.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
             "Con Sponsor": {
                 matches: ["Print Sponsor (印9处广告)"],
                 type: "badge",
@@ -3025,47 +3208,11 @@ module.exports = {
                 price: 0,
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/20/d/f/dfe0e1402f4419b5.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "Libertadores/Libertadores 1": {
-                matches: ["libertadores 1(解放者/新1次)", 'libertadores 1 (解放者/新1次)'],
-                type: "badge",
-                price: 2,
-                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/17/e/f/ef98a46bd6909c49.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "Libertadores/Libertadores 2": {
-                matches: ["libertadores 2 (解放者/新2次)"],
-                type: "badge",
-                price: 2,
-                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/13/2/9/29155d2ee7683eca.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "Copa Italia/ITA": {
-                matches: ["co.pa italia+Shield (圆圈ad上+三色盾)", 'Shield+co.pa italia(三色圈+三色盾)'],
-                type: "badge",
-                price: 2,
-                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/13/d/6/d6c282da513bf5fb.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "UCL/Copa Italia/ITA/Respect": {
-                matches: ["UCL +co.pa italia +Shield(欧冠+圆圈ad上+三色盾)", 'UCL+Shield+co.pa italia(欧冠+三色圈+三色盾)'],
-                type: "badge",
-                price: 4,
-                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/13/9/9/9926f6b658a2e980.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "Euro FIFA24 ": {
-                matches: ["Euro Champions2024(欧洲杯胸前冠)"],
+            "2024 Campeon": {
+                matches: ["2024CAMPEON (冠军ad上)"],
                 type: "badge",
                 price: 1,
-                images: "https://us03-imgcdn.ymcart.com/97006/2025/03/04/d/1/d1802a431d5ef363.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "Euro 2024/Nations 2023/Foundation": {
-                matches: ["UEFA NL Winner2023+Euro Champions2024(欧国联班牙组合)"],
-                type: "badge",
-                price: 3,
-                images: "https://us03-imgcdn.ymcart.com/97006/2025/03/04/7/8/788aa785f9d8da15.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "Fifa mundial FIFA12": {
-                matches: ["FF World Champions2012(胸前世俱盾)"],
-                type: "badge",
-                price: 1,
-                images: "https://us03-imgcdn.ymcart.com/97006/2025/03/04/8/1/81ee2f4cd4f552b3.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/24/e/8/e8ce1ddff407555d.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "Emirates Fa Cup": {
                 matches: ["FA CUP (英足总杯7次)"],
@@ -3073,107 +3220,11 @@ module.exports = {
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/01/20/0/d/0dace85815f57c22.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "MLS TV Rosa": {
-                matches: ["MLS /TV (25专用色/粉TV)印左袖"],
-                type: "badge",
-                price: 2,
-                images: "https://us03-imgcdn.ymcart.com/97006/2025/01/11/a/f/afb1af7c83ce00bd.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "MLS TV Rosa/Fracht": {
-                matches: ["MLS /TV +Fra. GR. (25专用色/粉TV+右袖广告)"],
-                type: "badge",
-                price: 3,
-                images: "https://us03-imgcdn.ymcart.com/97006/2025/01/11/6/6/6651eeb05fd2e963.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "ChilePD FIFA24": {
-                matches: ["2024WIN (冠军ad上)"],
-                type: "badge",
-                price: 1,
-                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/24/e/8/e8ce1ddff407555d.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "ChilePD FIFA24/Liga/No se peleen": {
-                matches: ["itau.No.pel+2024WIN(25智联+冠军ad上)"],
-                type: "badge",
-                price: 3,
-                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/24/f/c/fc4ee08b7bc907e6.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "WIN2012/13": {
-                matches: ["WIN12/13(双袖联赛金章)"],
-                type: "badge",
-                price: 2,
-                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/28/0/e/0e9f366d1d159d1d.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "Fifa FIFA11": {
-                matches: ["FF World Champions2011(胸前世俱盾)"],
-                type: "badge",
-                price: 1,
-                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/25/2/7/27253eff1d02a719.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "La liga/3": {
-                matches: ["LFP+3(西甲+左袖3)"],
-                type: "badge",
-                price: 2,
-                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/25/7/5/75cc3bec73642a1e.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "La liga/3/FIFA11": {
-                matches: ["LFP+3+FFWC2011 (西甲+左袖3+世俱盾2011)"],
-                type: "badge",
-                price: 3,
-                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/25/2/2/224e9e3fb5cb2a33.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "UCL 2010/11/Respect/WIN9": {
-                matches: ["2010/11 UCL(欧冠/小9杯)"],
-                type: "badge",
-                price: 3,
-                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/25/0/6/06e0d7351fecd92f.jpg?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "UCL/Foundation/FIFA23": {
-                matches: ["UCL +OKX+ FCWC 2023 (欧冠+左袖广告+胸前世俱盾)"],
-                type: "badge",
-                price: 3,
-                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/4/8/481145696b74e40a.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "Premier/NoRac/Flor Gold": {
-                matches: ["Pre L C +NO.or. +OKX (英金章/章下字+左袖广告+胸前红花)"],
-                type: "badge",
-                price: 3,
-                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/3/9/3968a0e6aea6269b.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "UEL FIFA24/Foundation": {
-                matches: ["UEL 2024 Winners (欧冠-亚特兰大)右袖"],
-                type: "badge",
-                price: 2,
-                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/8/d/8d4a09dbabbd4f43.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
             "Eredivisie": {
                 matches: ["Eredivisie (荷甲普章)", 'Eredivisie(荷甲普章)'],
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/13/0/2/02d9847da5883f81.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "UCL 2011/FIFA11/Respect": {
-                matches: ["UCL Champion2011(平条+卫冕2011+世俱2011)"],
-                type: "badge",
-                price: 3,
-                images: "https://us03-imgcdn.ymcart.com/97006/2025/02/25/b/2/b2d4f49a8bedebc0.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "UCL/Champs 5": {
-                matches: ["UCL(欧冠球+5杯)"],
-                type: "badge",
-                price: 2,
-                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/13/d/f/df203a85b36b4e76.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "UCL/Respect/Champ 10": {
-                matches: ["2015/16 UCL(欧冠/大耳杯10)"],
-                type: "badge",
-                price: 3,
-                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/11/c/e/ce762892ce4cd430.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "UCL/Respect/Champ 10/FIFA14": {
-                matches: ["2015/16 UCL(欧冠/大耳杯10)"],
-                type: "badge",
-                price: 4,
-                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/11/2/7/2721c192e33ede32.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "Liga Portugal": {
                 matches: ["Lg Portugal (34葡超)"],
@@ -3181,29 +3232,17 @@ module.exports = {
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/11/1/4/142e19810e013ddd.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "BIWINES/C24": {
-                matches: ["BIWINES +C24(右联赛冠+左连冠纪念)"],
-                type: "badge",
-                price: 2,
-                images: "https://us03-imgcdn.ymcart.com/97006/2024/11/29/7/a/7a24aa7a2a4f1942.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "Libertadores": {
-                matches: ["LIBERTADORES (解放者)右袖"],
-                type: "badge",
-                price: 1,
-                images: "https://us03-imgcdn.ymcart.com/97006/2024/11/20/b/1/b142f6193b2c79e1.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "UCL/Respect/WIN9": {
-                matches: ["2012/13 UCL(欧冠/大耳9杯)"],
-                type: "badge",
-                price: 3,
-                images: "https://us03-imgcdn.ymcart.com/97006/2024/11/15/f/0/f0182e0f46da147c.jpg?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
             "Vega Fibra": {
                 matches: ["VeGa FIBRa (胸前广告)"],
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/11/13/d/5/d52bfc966c56a814.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "BIWINES/C24": {
+                matches: ["BIWINES +C24(右联赛冠+左连冠纪念)", 'BICAMPEONES +C24(右联赛冠+左连冠纪念)'],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/11/29/7/a/7a24aa7a2a4f1942.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "La Liga/Vega Fibra": {
                 matches: ["La Liga+VeGa FIBRa (45西甲章+胸前广告)"],
@@ -3212,7 +3251,7 @@ module.exports = {
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/11/13/b/6/b6a48ebedb9f8cab.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "Campeao": {
-                matches: ["Lg Portugal +CAMPEAO (34葡超+胸前冠)"],
+                matches: ["Lg Portugal +CAMPEAO (34葡超+胸前冠)", 'CAMPEAO(葡超胸前冠军)'],
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/11/12/4/4/4453dc67998a1626.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
@@ -3223,44 +3262,21 @@ module.exports = {
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/11/12/a/2/a2a9ec89318361b6.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "Template": {
-                matches: ["Template"],
+            "WIN2012/13": {
+                matches: ["WIN12/13(双袖联赛金章)"],
                 type: "badge",
-                price: 1,
-                images: "Template"
-            },
-            "Template": {
-                matches: ["Template"],
-                type: "badge",
-                price: 1,
-                images: "Template"
-            },
-            "Template": {
-                matches: ["Template"],
-                type: "badge",
-                price: 1,
-                images: "Template"
-            },
-            "Template": {
-                matches: ["Template"],
-                type: "badge",
-                price: 1,
-                images: "Template"
-            },
-            "Template": {
-                matches: ["Template"],
-                type: "badge",
-                price: 1,
-                images: "Template"
-            },
-            "Template": {
-                matches: ["Template"],
-                type: "badge",
-                price: 1,
-                images: "Template"
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/28/0/e/0e9f366d1d159d1d.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             
-            
+
+            // NEWS FALTA ACOMODAR
+            // "Template": {
+            //     matches: ["Template"],
+            //     type: "badge",
+            //     price: 1,
+            //     images: "Template"
+            // },
         },
         customize: {
             "Sin dorsal": {
@@ -3369,7 +3385,7 @@ module.exports = {
                 price: 4
             },
             "Con dorsal Aniversario": {
-                matches: ["Name / Number (周年字体)(没广告-名在号上)"],
+                matches: ["Name / Number (周年字体)(没广告-名在号上)", 'Name / Number (周年字体)(没广告-名在号上)'],
                 type: "customize",
                 price: 3
             },
