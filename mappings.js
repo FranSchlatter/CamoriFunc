@@ -68,10 +68,10 @@ module.exports = {
                     description: "Euro",
                     categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
                 },
-                "Otros": {
-                    matches: ['Otros'],
-                    description: "Otros",
-                    categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otros"]
+                "Otras": {
+                    matches: ['Otras'],
+                    description: "Otras",
+                    categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
                 },
                 
         // Otros deportes
@@ -182,15 +182,15 @@ module.exports = {
                 description: "Indumentaria Chombas casual",
                 categoryPath: ["Productos", "Casual", "Buzos"]
             },
-            "Chaleco": {
+            "Chalecos": {
                 matches: ['Vest'],
                 type: "edicion",
-                categoryPath: ["Productos", "Casual", "Chaleco"]
+                categoryPath: ["Productos", "Casual", "Chalecos"]
             },
-            "Camperon": {
+            "Camperones": {
                 matches: ['Cotton Coat'],
                 description: "Indumentaria de abrigo camperon",
-                categoryPath: ["Productos", "Casual", "Camperon"]
+                categoryPath: ["Productos", "Casual", "Camperones"]
             },
             "Rompevientos": {
                 matches: ['Windbreaker', 'Outdoor Jackets'],
