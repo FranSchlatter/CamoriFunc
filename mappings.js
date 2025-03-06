@@ -185,7 +185,7 @@ module.exports = {
             "Chaleco": {
                 matches: ['Vest'],
                 type: "edicion",
-                categoryPath: ["Productos", "Casual", "Chalecos"]
+                categoryPath: ["Productos", "Casual", "Chaleco"]
             },
             "Camperon": {
                 matches: ['Cotton Coat'],
@@ -1596,8 +1596,8 @@ module.exports = {
                 type: "equipo",
                 categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
             },
-            "Derby Country": {
-                matches: ['Derby Country'],
+            "Derby County": {
+                matches: ['Derby County'],
                 type: "equipo",
                 categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
             },
