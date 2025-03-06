@@ -263,7 +263,7 @@ function getDefaultOptionName(type) {
     case 'size':
       return 'Talle Único';
     case 'badge':
-      return 'Sin insignia';
+      return 'Sin parches';
     case 'customize':
       return 'Sin dorsal';
     default:
@@ -327,7 +327,7 @@ async function processProductOptions(analysisReport) {
     },
     {
       id: crypto.randomUUID(),
-      name: 'Sin insignia',
+      name: 'Sin parches',
       type: 'badge',
       price: 0,
       image_url: null
