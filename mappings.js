@@ -111,91 +111,86 @@ module.exports = {
             categoryPath: ["Deportes", "Formula 1"]
         },
 
-        // Productos y sus tipos
+        // Indumentarias
         "Camisetas": {
             matches: ['Jersey', 'Shirts'],
             description: "Indumentaria camisetas",
-            categoryPath: ["Productos", "Camisetas"]
+            categoryPath: ["Indumentarias", "Camisetas"]
         },
         "Shorts": {
             matches: ['Shorts Pants'],
             description: "Indumentaria shorts",
-            categoryPath: ["Productos", "Shorts"]
+            categoryPath: ["Indumentarias", "Shorts"]
         },
         "Medias": {
             matches: ['Socks'],
             description: "Accesorios medias deportivas",
-            categoryPath: ["Productos", "Medias"]
+            categoryPath: ["Indumentarias", "Medias"]
         },
         "Conjuntos Largos": {
             matches: ['Tracksuit', 'Tracksuit Jacket', 'Hoodie', 'Half Pull', '(卫衣套装)'],
             description: "Indumentaria conjuntos",
-            categoryPath: ["Productos", "Conjuntos Largos"]
+            categoryPath: ["Indumentarias", "Conjuntos Largos"]
         },
         "Conjuntos Cortos": {
             matches: ['Training Short', 'Tank top and shorts suit'],
             description: "Indumentaria conjuntos",
-            categoryPath: ["Productos", "Conjuntos Cortos"]
+            categoryPath: ["Indumentarias", "Conjuntos Cortos"]
         },
         "Mujer": {
             matches: ['Women'],
             description: "Indumentaria Mujer",
-            categoryPath: ["Productos", "Mujer"]
+            categoryPath: ["Indumentarias", "Mujer"]
         },
         "Niños": {
             matches: ['Kids'],
             description: "Indumentaria Niños",
-            categoryPath: ["Productos", "Niños"]
+            categoryPath: ["Indumentarias", "Niños"]
         },
         "Bebes": {
             matches: ['Baby Infant Crawl Suit'],
             description: "Indumentaria Bebes",
-            categoryPath: ["Productos", "Bebes"]
-        },
-        "Casual": {
-            matches: ['Casual', 'Lifestyle'],
-            description: "Indumentaria casual",
-            categoryPath: ["Productos", "Casual"],
+            categoryPath: ["Indumentarias", "Bebes"]
         },
             "Remeras": {
                 matches: ['T-Shirt', 'Champion'],
                 description: "Indumentaria Remeras casual",
-                categoryPath: ["Productos", "Casual", "Remeras"]
+                categoryPath: ["Casual", "Remeras"]
             },
             "Pantalones cortos": {
                 matches: ['Casual Short'],
                 description: "Indumentaria Pantalones cortos casual",
-                categoryPath: ["Productos", "Casual", "Pantalones cortos"]
+                categoryPath: ["Casual", "Pantalones cortos"]
             },
             "Pantalones largos": {
                 matches: ['Sweatpants'],
                 description: "Indumentaria Pantalones largos casual",
-                categoryPath: ["Productos", "Casual", "Pantalones largos"]
+                categoryPath: ["Casual", "Pantalones largos"]
             },
             "Chombas": {
                 matches: ['Polo'],
                 description: "Indumentaria Chombas casual",
-                categoryPath: ["Productos", "Casual", "Chombas"]
+                categoryPath: ["Casual", "Chombas"]
             },
             "Buzos": {
                 matches: ['Hoody'],
                 description: "Indumentaria Chombas casual",
-                categoryPath: ["Productos", "Casual", "Buzos"]
+                categoryPath: ["Casual", "Buzos"]
             },
             "Chalecos": {
                 matches: ['Vest'],
                 type: "edicion",
-                categoryPath: ["Productos", "Casual", "Chalecos"]
+                categoryPath: ["Casual", "Chalecos"]
             },
             "Camperones": {
                 matches: ['Cotton Coat'],
                 description: "Indumentaria de abrigo camperon",
-                categoryPath: ["Productos", "Casual", "Camperones"]
+                categoryPath: ["Casual", "Camperones"]
             },
             "Rompevientos": {
                 matches: ['Windbreaker', 'Outdoor Jackets'],
                 description: "Indumentaria de abrigo rompeviento",
-                categoryPath: ["Productos", "Casual", "Rompevientos"]
+                categoryPath: ["Casual", "Rompevientos"]
             }
     },
 
@@ -2083,17 +2078,17 @@ module.exports = {
             "Jugador": {
                 matches: ['Player Version', 'Playr'],
                 type: "version",
-                categoryPath: ["Productos"]
+                categoryPath: ["Deportes"]
             },
             "Fanatico": {
                 matches: ['Fans'],
                 type: "version",
-                categoryPath: ["Productos"]
+                categoryPath: ["Deportes"]
             },
             "Retro": {
                 matches: ['Retro'],
                 type: "version",
-                categoryPath: ["Productos"]
+                categoryPath: ["Deportes"]
             }
         },
 
@@ -2101,47 +2096,47 @@ module.exports = {
             "Local": {
                 matches: ['Home'],
                 type: "edicion",
-                categoryPath: ["Productos"]
+                categoryPath: ["Deportes"]
             },
             "Visitante": {
                 matches: ['Away'],
                 type: "edicion",
-                categoryPath: ["Productos"]
+                categoryPath: ["Deportes"]
             },
             "Alternativa": {
                 matches: ['Third'],
                 type: "edicion",
-                categoryPath: ["Productos"]
+                categoryPath: ["Deportes"]
             },
             "Alternativa 2": {
                 matches: ['Fourth'],
                 type: "edicion",
-                categoryPath: ["Productos"]
+                categoryPath: ["Deportes"]
             },
             "Arquero": {
                 matches: ['Goalkeeper'],
                 type: "edicion",
-                categoryPath: ["Productos"]
+                categoryPath: ["Deportes"]
             },
             "Entrenamiento": {
                 matches: ['Training'],
                 type: "edicion",
-                categoryPath: ["Productos"]
+                categoryPath: ["Deportes"]
             },
             "Edicion Especial": {
                 matches: ['Special Edition'],
                 type: "edicion",
-                categoryPath: ["Productos"]
+                categoryPath: ["Deportes"]
             },
             "Edicion Aniversario": {
                 matches: ['Anniversary'],
                 type: "edicion",
-                categoryPath: ["Productos"]
+                categoryPath: ["Deportes"]
             },
             "Edicion Conmemorativa": {
                 matches: ['Commemorative Edition'],
                 type: "edicion",
-                categoryPath: ["Productos"]
+                categoryPath: ["Deportes"]
             },
             
         },
@@ -2150,22 +2145,22 @@ module.exports = {
             "Manga Corta": {
                 matches: [],
                 type: "caracteristica",
-                categoryPath: ["Productos"]
+                categoryPath: ["Deportes"]
             },
             "Manga Larga": {
                 matches: ['Long Sleeve', '长袖', '(长袖)'],
                 type: "caracteristica",
-                categoryPath: ["Productos"]
+                categoryPath: ["Deportes"]
             },
             "Reversible": {
                 matches: ['Double Sided', '(双面风衣)'],
                 type: "caracteristica",
-                categoryPath: ["Productos"]
+                categoryPath: ["Deportes"]
             },
             "Terciopelo": {
                 matches: ['Velvet Thickened', "卡其色(加绒)蓝标", "红色(加绒)蓝标", "灰色(加绒)蓝标", "宝蓝色(加绒)蓝标", "白色(加绒)蓝标", "黑色(加绒)蓝标", "红色(加绒)绿标", "宝蓝色(加绒)绿标", "灰色(加绒)绿标", "白色(加绒)绿标", "卡其色(加绒)绿标", "黑色(加绒)绿标","卡其色(加绒)", "红色(加绒)", "白色(加绒)", "宝蓝色(加绒)", "灰色(加绒)", "黑色(加绒)"],
                 type: "caracteristica",
-                categoryPath: ["Productos"]
+                categoryPath: ["Deportes"]
             }
         },
         
@@ -2694,7 +2689,7 @@ module.exports = {
     seasonDetector: {
         regex: /(\d{4})(?:-(\d{2,4})|\/(\d{2,4})|\s+(\d{2,4}))|(\d{4})/g,
         type: "temporada",
-        categoryPath: ["Productos"]
+        categoryPath: ["Deportes"]
     },
 
     productOptions: {

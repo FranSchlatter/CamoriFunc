@@ -347,7 +347,7 @@ function analyzeProductName(name) {
         addTag({
             name: temporada,
             type: "temporada",
-            categoryPath: ["Productos"]
+            categoryPath: ["Deportes"]
         });
         
         temporada.split(/[-\/\s]/).forEach(num => {
@@ -364,7 +364,7 @@ function analyzeProductName(name) {
             phrase.split(' ').forEach(word => recognizedWords.add(word.toLowerCase()));
             processedName = processedName.replace(phrase, `__${normalized}__`);
             
-            let categoryPath = ["Productos"];
+            let categoryPath = ["Deportes"];
             if (type === "equipo") {
                 categoryPath = ["Deportes", "Fútbol", "Clubes"];
             }
@@ -415,13 +415,13 @@ function analyzeProductName(name) {
         addTag({
             name: "Manga Larga",
             type: "caracteristica",
-            categoryPath: ["Productos"]
+            categoryPath: ["Deportes"]
         });
     } else {
         addTag({
             name: "Manga Corta",
             type: "caracteristica",
-            categoryPath: ["Productos"]
+            categoryPath: ["Deportes"]
         });
     }
 
