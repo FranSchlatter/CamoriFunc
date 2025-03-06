@@ -108,7 +108,7 @@ module.exports = {
         "Formula 1": {
             matches: ['Racing', 'F1'],
             description: "Deporte automovilismo",
-            categoryPath: ["Deportes", "Fórmula 1"]
+            categoryPath: ["Deportes", "Formula 1"]
         },
 
         // Productos y sus tipos
@@ -273,12 +273,12 @@ module.exports = {
     //     "Formula 1": {
     //         matches: ['Racing', 'F1'],
     //         description: "Deporte automovilismo",
-    //         categoryPath: ["Fórmula 1"]
+    //         categoryPath: ["Formula 1"]
     //     },
     //         "Camisetas": {
     //             matches: ['Jersey', 'Shirt'],
     //             description: "Indumentaria camisetas",
-    //             categoryPath: ["Fórmula 1", "Camisetas"]
+    //             categoryPath: ["Formula 1", "Camisetas"]
     //         },
 
         
@@ -450,6 +450,11 @@ module.exports = {
                 type: "equipo",
                 categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
             },
+            "Ipswich Town": {
+                matches: ['Ipswich'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
+            },
 
 
             // La Liga
@@ -518,8 +523,8 @@ module.exports = {
                 type: "equipo",
                 categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
             },
-            "Espanyol": {
-                matches: ['Espanyol'],
+            "RCD Espanyol": {
+                matches: ['RCD Espanyol'],
                 type: "equipo",
                 categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
             },
@@ -603,6 +608,11 @@ module.exports = {
                 type: "equipo",
                 categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
             },
+            "Club Deportivo Leganes": {
+                matches: ['Leganes'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+            },
 
 
             // Ligue 1
@@ -641,8 +651,8 @@ module.exports = {
                 type: "equipo",
                 categoryPath: ["Deportes", "Fútbol", "Clubes", "Ligue 1"]
             },
-            "Nice": {
-                matches: ['Nice'],
+            "OGC Nice": {
+                matches: ['OGC Nice'],
                 type: "equipo",
                 categoryPath: ["Deportes", "Fútbol", "Clubes", "Ligue 1"]
             },
@@ -678,6 +688,11 @@ module.exports = {
             },
             "Toulouse": {
                 matches: ['Toulouse'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Ligue 1"]
+            },
+            "Nantes": {
+                matches: ['Nantes'],
                 type: "equipo",
                 categoryPath: ["Deportes", "Fútbol", "Clubes", "Ligue 1"]
             },
@@ -799,6 +814,11 @@ module.exports = {
                 type: "equipo",
                 categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
             },
+            "SC Freiburg": {
+                matches: ['Freiburg'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+            },
 
 
             // Serie A
@@ -904,6 +924,11 @@ module.exports = {
             },
             "Empoli": {
                 matches: ['Empoli'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Serie A"]
+            },
+            "Udinese Calcio": {
+                matches: ['Udinese'],
                 type: "equipo",
                 categoryPath: ["Deportes", "Fútbol", "Clubes", "Serie A"]
             },
@@ -1521,6 +1546,76 @@ module.exports = {
                 type: "equipo",
                 categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
             },
+            "Portsmouth": {
+                matches: ['Portsmouth'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "Plymouth": {
+                matches: ['Plymouth'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "Real Murcia": {
+                matches: ['Real Murcia'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "Wrexham": {
+                matches: ['Wrexham'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "Kabylie": {
+                matches: ['Kabylie'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "USM Alger": {
+                matches: ['USM Alger'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "Bari": {
+                matches: ['Bari'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "Burgos": {
+                matches: ['Burgos'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "Blackburn": {
+                matches: ['Blackburn'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "Preston North": {
+                matches: ['Preston North'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "Derby Country": {
+                matches: ['Derby Country'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "Albacete": {
+                matches: ['Albacete'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "Mamelodi Sundowns": {
+                matches: ['Mamelodi Sundowns'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "Recife Sports": {
+                matches: ['Recife Sports'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
 
             // NEWS FALTA CLASIFICAR
             // "Template": {
@@ -1528,7 +1623,7 @@ module.exports = {
             //     type: "equipo",
             //     categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
             // },
-
+            
             
             // Selecciones
             // Europa
@@ -1748,8 +1843,8 @@ module.exports = {
                 type: "equipo",
                 categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
             },
-            "Fi-Ji": {
-                matches: ['Jian'],
+            "Qatar": {
+                matches: ['Qatar'],
                 type: "equipo",
                 categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
             },
@@ -1931,37 +2026,55 @@ module.exports = {
             "Ducati": {
                 matches: ['DUCATI'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fórmula 1"]
+                categoryPath: ["Deportes", "Formula 1"]
             },
             "Yamaha": {
                 matches: ['YAMaHA'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fórmula 1"]
+                categoryPath: ["Deportes", "Formula 1"]
             },
             "Toyota": {
                 matches: ['Toyota'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fórmula 1"]
+                categoryPath: ["Deportes", "Formula 1"]
             },
             "Mercedes": {
                 matches: ['Mercedes'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fórmula 1"]
+                categoryPath: ["Deportes", "Formula 1"]
             },
             "Aston Martin": {
                 matches: ['Aston Martin'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fórmula 1"]
+                categoryPath: ["Deportes", "Formula 1"]
             },
             "Ferrari": {
                 matches: ['Ferrari'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fórmula 1"]
+                categoryPath: ["Deportes", "Formula 1"]
             },
             "McLaren": {
                 matches: ['McLaren'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fórmula 1"]
+                categoryPath: ["Deportes", "Formula 1"]
+            },
+
+
+            // Rugby
+            "Fi-Ji": {
+                matches: ['Jian'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Rugby"]
+            },
+            "Nueva Zelanda": {
+                matches: ['New Zealand'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Rugby"]
+            },
+            "All Blacks": {
+                matches: ['All Blacks'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Rugby"]
             },
             
         },
@@ -2214,9 +2327,6 @@ module.exports = {
             "#AM05": { matches: ["#AM05"], type: "number" },
             "#A33": { matches: ["#A33"], type: "number" },
             "NM07": { matches: ["NM07"], type: "number" },
-            "Mamba": { matches: ['Mamba'], type: "number" },
-            "SWISH": { matches: ['SWISH'], type: "number" },
-            "Justdon": { matches: ['Justdon'], type: "number" },
             "T107": { matches: ["T107"], type: "number" },
             "T110": { matches: ["T110"], type: "number" },
             "T111": { matches: ["T111"], type: "number" },
@@ -2242,6 +2352,139 @@ module.exports = {
             "T131": { matches: ["T131"], type: "number" },
             "T132": { matches: ["T132"], type: "number" },
             "T133": { matches: ["T133"], type: "number" },
+            "T135": { matches: ["T135"], type: "number" },
+            "T136": { matches: ["T136"], type: "number" },
+            "T137": { matches: ["T137满分"], type: "number" },
+            "T138": { matches: ["T138"], type: "number" },
+            "T139": { matches: ["T139"], type: "number" },
+            "T140": { matches: ["T140"], type: "number" },
+            "T141": { matches: ["T141"], type: "number" },
+            "T142": { matches: ["T142"], type: "number" },
+            "T143": { matches: ["T143"], type: "number" },
+            "T144": { matches: ["T144"], type: "number" },
+            "T145": { matches: ["T145"], type: "number" },
+            "T146": { matches: ["T146"], type: "number" },
+            "T147": { matches: ["T147"], type: "number" },
+            "T148": { matches: ["T148"], type: "number" },
+            "T149": { matches: ["T149"], type: "number" },
+            "T150": { matches: ["T150"], type: "number" },
+            "T152": { matches: ["T152"], type: "number" },
+            "T153": { matches: ["T153"], type: "number" },
+            "T156": { matches: ["T156"], type: "number" },
+            "T157": { matches: ["T157"], type: "number" },
+            "T158": { matches: ["T158"], type: "number" },
+            "T160": { matches: ["T160"], type: "number" },
+            "T161": { matches: ["T161"], type: "number" },
+            "T162": { matches: ["T162"], type: "number" },
+            "T163": { matches: ["T163"], type: "number" },
+            "T165": { matches: ["T165"], type: "number" },
+            "T166": { matches: ["T166"], type: "number" },
+            "T167": { matches: ["T167"], type: "number" },
+            "T169": { matches: ["T169"], type: "number" },
+            "T170": { matches: ["T170"], type: "number" },
+            "T171": { matches: ["T171"], type: "number" },
+            "T172": { matches: ["T172"], type: "number" },
+            "T173": { matches: ["T173"], type: "number" },
+            "T174": { matches: ["T174"], type: "number" },
+            "T175": { matches: ["T175"], type: "number" },
+            "T176": { matches: ["T176"], type: "number" },
+            "T177": { matches: ["T177"], type: "number" },
+            "T178": { matches: ["T178"], type: "number" },
+            "T179": { matches: ["T179"], type: "number" },
+            "T180": { matches: ["T180"], type: "number" },
+            "T181": { matches: ["T181"], type: "number" },
+            "T182": { matches: ["T182"], type: "number" },
+            "T183": { matches: ["T183"], type: "number" },
+            "T184": { matches: ["T184"], type: "number" },
+            "T185": { matches: ["T185"], type: "number" },
+            "T186": { matches: ["T186"], type: "number" },
+            "T187": { matches: ["T187"], type: "number" },
+            "T188": { matches: ["T188"], type: "number" },
+            "T189": { matches: ["T189"], type: "number" },
+            "T190": { matches: ["T190"], type: "number" },
+            "T191": { matches: ["T191"], type: "number" },
+            "T192": { matches: ["T192"], type: "number" },
+            "T193": { matches: ["T193"], type: "number" },
+            "T194": { matches: ["T194"], type: "number" },
+            "T195": { matches: ["T195"], type: "number" },
+            "T196": { matches: ["T196"], type: "number" },
+            "T197": { matches: ["T197"], type: "number" },
+            "T198": { matches: ["T198"], type: "number" },
+            "T199": { matches: ["T199"], type: "number" },
+            "T200": { matches: ["T200"], type: "number" },
+            "T201": { matches: ["T201"], type: "number" },
+            "T202": { matches: ["T202"], type: "number" },
+            "T203": { matches: ["T203"], type: "number" },
+            "T204": { matches: ["T204"], type: "number" },
+            "T205": { matches: ["T205"], type: "number" },
+            "T206": { matches: ["T206"], type: "number" },
+            "T207": { matches: ["T207"], type: "number" },
+            "T208": { matches: ["T208"], type: "number" },
+            "T209": { matches: ["T209"], type: "number" },
+            "T210": { matches: ["T210"], type: "number" },
+            "T211": { matches: ["T211"], type: "number" },
+            "T212": { matches: ["T212"], type: "number" },
+            "T213": { matches: ["T213"], type: "number" },
+            "T214": { matches: ["T214"], type: "number" },
+            "T215": { matches: ["T215"], type: "number" },
+            "T216": { matches: ["T216"], type: "number" },
+            "T217": { matches: ["T217"], type: "number" },
+            "T219": { matches: ["T219"], type: "number" },
+            "T220": { matches: ["T220"], type: "number" },
+            "T221": { matches: ["T221"], type: "number" },
+            "T222": { matches: ["T222"], type: "number" },
+            "T223": { matches: ["T223"], type: "number" },
+            "T224": { matches: ["T224"], type: "number" },
+            "T225": { matches: ["T225"], type: "number" },
+            "T226": { matches: ["T226"], type: "number" },
+            "T227": { matches: ["T227"], type: "number" },
+            "T228": { matches: ["T228"], type: "number" },
+            "T229": { matches: ["T229"], type: "number" },
+            "T230": { matches: ["T230"], type: "number" },
+            "T231": { matches: ["T231"], type: "number" },
+            "T232": { matches: ["T232"], type: "number" },
+            "T234": { matches: ["T234"], type: "number" },
+            "T235": { matches: ["T235"], type: "number" },
+            "T236": { matches: ["T236"], type: "number" },
+            "T237": { matches: ["T237"], type: "number" },
+            "T238": { matches: ["T238"], type: "number" },
+            "T239": { matches: ["T239"], type: "number" },
+            "T240": { matches: ["T240"], type: "number" },
+            "T241": { matches: ["T241"], type: "number" },
+            "T242": { matches: ["T242"], type: "number" },
+            "T244": { matches: ["T244"], type: "number" },
+            "T246": { matches: ["T246"], type: "number" },
+            "T247": { matches: ["T247"], type: "number" },
+            "T248": { matches: ["T248"], type: "number" },
+            "T249": { matches: ["T249"], type: "number" },
+            "T250": { matches: ["T250"], type: "number" },
+            "T251": { matches: ["T251"], type: "number" },
+            "T252": { matches: ["T252"], type: "number" },
+            "T254": { matches: ["T254"], type: "number" },
+            "T255": { matches: ["T255"], type: "number" },
+            "T256": { matches: ["T256"], type: "number" },
+            "T257": { matches: ["T257"], type: "number" },
+            "T258": { matches: ["T258"], type: "number" },
+            "T259": { matches: ["T259"], type: "number" },
+            "T260": { matches: ["T260"], type: "number" },
+            "T261": { matches: ["T261"], type: "number" },
+            "T262": { matches: ["T262"], type: "number" },
+            "T263": { matches: ["T263"], type: "number" },
+            "T264": { matches: ["T264"], type: "number" },
+            "T265": { matches: ["T265"], type: "number" },
+            "T266": { matches: ["T266"], type: "number" },
+            "T272": { matches: ["T272"], type: "number" },
+            "T273": { matches: ["T273"], type: "number" },
+            "T280": { matches: ["T280"], type: "number" },
+            "T281": { matches: ["T281"], type: "number" },
+            "T282": { matches: ["T282"], type: "number" },
+            "T888": { matches: ["T888"], type: "number" },
+            "#F701冲锋衣": { matches: ["#F701冲锋衣"], type: "text" },
+            "#F706冲锋衣": { matches: ["#F706冲锋衣"], type: "text" },
+            "#F700冲锋衣": { matches: ["#F700冲锋衣"], type: "text" },
+            "#F705冲锋衣": { matches: ["#F705冲锋衣"], type: "text" },
+            "#F703冲锋衣": { matches: ["#F703冲锋衣"], type: "text" },
+            "#F707冲锋衣": { matches: ["#F707冲锋衣"], type: "text" },
             "#G234": { matches: ["#G234"], type: "number" },
             "#G234": { matches: ["#G234"], type: "number" },
             "#G235": { matches: ["#G235"], type: "number" },
@@ -2293,7 +2536,27 @@ module.exports = {
             "A2434": { matches: ["A2434"], type: "number" },
             "D701": { matches: ["D701"], type: "number" },
             "D700": { matches: ["D700"], type: "number" },
-
+            "Mamba": { matches: ['Mamba'], type: "number" },
+            "SWISH": { matches: ['SWISH'], type: "number" },
+            "Justdon": { matches: ['Justdon'], type: "number" },
+            "Supersonic": { matches: ['Supersonic'], type: "number" },
+            "Rams": { matches: ['Rams'], type: "number" },
+            "NFL": { matches: ['NFL'], type: "number" },
+            "49ERS": { matches: ['49ERS'], type: "number" },
+            "Heart": { matches: ['Heart'], type: "number" },
+            "Justdon": { matches: ['Justdon'], type: "number" },
+            "Justdon": { matches: ['Justdon'], type: "number" },
+            "Justdon": { matches: ['Justdon'], type: "number" },
+            "Justdon": { matches: ['Justdon'], type: "number" },
+            "Justdon": { matches: ['Justdon'], type: "number" },
+            "Justdon": { matches: ['Justdon'], type: "number" },
+            "Justdon": { matches: ['Justdon'], type: "number" },
+            "Justdon": { matches: ['Justdon'], type: "number" },
+            "Justdon": { matches: ['Justdon'], type: "number" },
+            "Justdon": { matches: ['Justdon'], type: "number" },
+            "Justdon": { matches: ['Justdon'], type: "number" },
+            "Justdon": { matches: ['Justdon'], type: "number" },
+            "Justdon": { matches: ['Justdon'], type: "number" },
         },
 
         players: {
@@ -2360,6 +2623,8 @@ module.exports = {
             "WADE": { matches: ['WADE'], type: "player" },
             "KUZMA": { matches: ['KUZMA'], type: "player" },
             "POOLE": { matches: ['POOLE'], type: "player" },
+            "CUI": { matches: ['CUI'], type: "player" },
+            "PAYTON": { matches: ['PAYTON'], type: "player" },
             // "Template": { matches: ['Template'], type: "player" },
         },
 
@@ -2388,12 +2653,37 @@ module.exports = {
                 matches: ['Jordan'],
                 type: "marca"
             },
+            "Descente": {
+                matches: ['DST'],
+                type: "marca"
+            },
+            "ARC-TERYX": {
+                matches: ['ARC TERYX'],
+                type: "marca"
+            },
+            "Camel": {
+                matches: ['Camel'],
+                type: "marca"
+            },
+            "Template": {
+                matches: ['Template'],
+                type: "marca"
+            },
+            "Template": {
+                matches: ['Template'],
+                type: "marca"
+            },
+            "Template": {
+                matches: ['Template'],
+                type: "marca"
+            },
+            
         },
 
         // Saltear, no add nada.
         nothings:{
             "": {
-                matches: ['Hooded', 'Fabric', "大阪樱花", "*多彩", "布拉甘红牛", "(V领) ", "*全黑", "*七人制", "Jersey(V领) ", "#B600冲锋衣", 'UCL', 'Greem', 'SDD', "UTA", "PHX", "BOS", "GSW", "MLB", "WAS", "NOP", "*AGUILA", "Motorcycle", "Formula", 'NEO', 'warm', '(圆领）Edition)飞人版', '(Chinese Year)', '1:1', '#2311', 'HALO', '#812', '#715', 'Broyal', 'BFC', 'Vesion', '(黄边)', 'Hot', 'Pressing', '*带章', '*玫瑰蛇', '*火龙', '*Gear5', '神户胜利船', '*圣斗士金色', '广岛三箭', '*狐狸', '(童装)(半拉链)', '*蓝黑', '*新广告', '*有领', '*气功悟空', '浦和红钻', '*海贼鸣人眼神', '#绿标', '*红袖边', '*蓝龙', '*耶稣', '(童装)', '字母印', '*柯南D', '#刺绣', '*草帽', '*眼镜帽子', '*蓝袖边多图', '(加绒)', 'Jersey(V领)', 'Jersey(圆领)', '(Trapeze Edition)', '(V领)', '飞人版', '*贝吉塔红', '*贝吉塔蓝', '*咒术回战', '*龙珠黑悟空', '*橙白赛亚人', '*MonK', '(Print Sponsor)', '(球员童装)', '长袖球员', '横滨水手', '*金广告', '*紫色标', '*金双狮', '*赛亚人黑色', '*富士山与塔', '*浪客剑心', '*犬夜叉白色', '(女)', '(长袖球员)', 'Concept', '半拉链', '萨尔斯堡红牛', '*红星队', 'Milky', '(High Quality)', '*忍者系黑衣', '*忍者系绿', '*忍者系蓝', '*忍者系紫', "*云腾", "*金边赛亚", "*火拳路飞", "*Y3黑刀客", "*黄袖", "*数字", "*红标翻领", "灰色(哆啦A梦)", "鸟栖砂岩", "*背心套装", "*悟空黄", "*双面长袖", "*双面", "*黑色", "(童装长袖)", "*Midea广告", "*长刀武士", "(双面刺绣)(双面风衣)", "*背后没图案", "*七彩赛亚人", "*黄金圣斗士", "(半拉链)(匹印)", "*网格", "*酷玩", "*翻领", "(长袖)欧冠决赛版", "*全广告", "(女)黑色", "*鬼武者", "*彩虹神奇宝贝", "*猫头鹰", "万圣节版", "(背后WALES)", "(背后ARGENTINA)", "#2492(半拉链)", "#三星", "#AJ20(童装)", "*周年1889", "*龙珠赛亚", "*忍者波风", "*刀流索隆", "*右袖广告", "*剑士", "*红发香克斯", "*龙樱花", "*黄袖边", "*虎头", "*前带广告", "(双面风衣)(刺绣)", "*布加勒斯特星", "蔚山现代", "*三叶草", "*绿龙", "*彩带", "*红Y3", "*武士刀", "*樱花龙", "*水墨塔", "*太阳武士", "*金标", "#102冲锋衣", "#103加绒冲锋衣", "*三叶草翻领", "*海贼王布鲁克", "*火焰悟空", "*数码宝贝", "*草帽路飞", "*蓝武士", "*三叶草红黑", "*梅花与桥", "*赛亚贝吉塔", "*三叶草粉黑", "*三叶草蓝红", "*三叶草蓝", "*梅花武士", "*枫叶刀客", "*三叶草金标", "*三叶草黑标", "*三叶草白标", "*千变超人", "#花蛇", "*花蛇", "(欧冠版)", "*前横条", "*粉色", "*鬼脸", "(女)圆领", "(有领)", "(Pants Have Pocket)",
+                matches: ['Champions', 'Yellowish', 'Stars', "(冲锋衣)", "#彩标", "*带二星", "*路飞", "*李洛克", "洪都拉奥林", "*日落", "*红雁塔", "*欧冠版", "*自来也", "*炭治郎", "#笑脸", "#爱心", "#C库里", "#飞人", "#字母", "#独角兽", "#蓝标", "#红标", "*金木研", "*卡卡西", "*九尾鸣人", "#小标", "#风景", "#大标", "#夏日风", "#汉堡", "#三角山", "#鼠标", "#苹果", "*日月星辰", "*独塔", "*Y3武士", "*红太阳", "*黑红龙珠", 'Hooded', 'Fabric', "大阪樱花", "*多彩", "布拉甘红牛", "(V领) ", "*全黑", "*七人制", "Jersey(V领) ", "#B600冲锋衣", 'UCL', 'Greem', 'SDD', "UTA", "PHX", "BOS", "GSW", "MLB", "WAS", "NOP", "*AGUILA", "Motorcycle", "Formula", 'NEO', 'warm', '(圆领）Edition)飞人版', '(Chinese Year)', '1:1', '#2311', 'HALO', '#812', '#715', 'Broyal', 'BFC', 'Vesion', '(黄边)', 'Hot', 'Pressing', '*带章', '*玫瑰蛇', '*火龙', '*Gear5', '神户胜利船', '*圣斗士金色', '广岛三箭', '*狐狸', '(童装)(半拉链)', '*蓝黑', '*新广告', '*有领', '*气功悟空', '浦和红钻', '*海贼鸣人眼神', '#绿标', '*红袖边', '*蓝龙', '*耶稣', '(童装)', '字母印', '*柯南D', '#刺绣', '*草帽', '*眼镜帽子', '*蓝袖边多图', '(加绒)', 'Jersey(V领)', 'Jersey(圆领)', '(Trapeze Edition)', '(V领)', '飞人版', '*贝吉塔红', '*贝吉塔蓝', '*咒术回战', '*龙珠黑悟空', '*橙白赛亚人', '*MonK', '(Print Sponsor)', '(球员童装)', '长袖球员', '横滨水手', '*金广告', '*紫色标', '*金双狮', '*赛亚人黑色', '*富士山与塔', '*浪客剑心', '*犬夜叉白色', '(女)', '(长袖球员)', 'Concept', '半拉链', '萨尔斯堡红牛', '*红星队', 'Milky', '(High Quality)', '*忍者系黑衣', '*忍者系绿', '*忍者系蓝', '*忍者系紫', "*云腾", "*金边赛亚", "*火拳路飞", "*Y3黑刀客", "*黄袖", "*数字", "*红标翻领", "灰色(哆啦A梦)", "鸟栖砂岩", "*背心套装", "*悟空黄", "*双面长袖", "*双面", "*黑色", "(童装长袖)", "*Midea广告", "*长刀武士", "(双面刺绣)(双面风衣)", "*背后没图案", "*七彩赛亚人", "*黄金圣斗士", "(半拉链)(匹印)", "*网格", "*酷玩", "*翻领", "(长袖)欧冠决赛版", "*全广告", "(女)黑色", "*鬼武者", "*彩虹神奇宝贝", "*猫头鹰", "万圣节版", "(背后WALES)", "(背后ARGENTINA)", "#2492(半拉链)", "#三星", "#AJ20(童装)", "*周年1889", "*龙珠赛亚", "*忍者波风", "*刀流索隆", "*右袖广告", "*剑士", "*红发香克斯", "*龙樱花", "*黄袖边", "*虎头", "*前带广告", "(双面风衣)(刺绣)", "*布加勒斯特星", "蔚山现代", "*三叶草", "*绿龙", "*彩带", "*红Y3", "*武士刀", "*樱花龙", "*水墨塔", "*太阳武士", "*金标", "#102冲锋衣", "#103加绒冲锋衣", "*三叶草翻领", "*海贼王布鲁克", "*火焰悟空", "*数码宝贝", "*草帽路飞", "*蓝武士", "*三叶草红黑", "*梅花与桥", "*赛亚贝吉塔", "*三叶草粉黑", "*三叶草蓝红", "*三叶草蓝", "*梅花武士", "*枫叶刀客", "*三叶草金标", "*三叶草黑标", "*三叶草白标", "*千变超人", "#花蛇", "*花蛇", "(欧冠版)", "*前横条", "*粉色", "*鬼脸", "(女)圆领", "(有领)", "(Pants Have Pocket)",
                 "(Pants Have Pocket)(半拉链)", "#洛杉矶道奇队", "#快船队", "#洋基队", "#篮网队", "*爵士雪山", "#绝杀", "#起飞", "*詹姆斯高中", "*湖人曼巴", "*湖人队", "*科比", "*热火彩虹版", "*雄鹿队", "*北卡", "太阳队", "火箭队中文版", "#森林狼", "#76人队", "#国王队", "#灰熊队", "#尼克斯队", "#全明星", "密歇根", "湖人拼凯尔特人", "#公牛拼爵士", "奇才队", "#海绵宝宝", "#篮球男孩", "*火箭拼尼克斯", "#凯尔特人", "#步行者队", "#活塞队", "#黄蜂队", "#公牛", "#公牛条纹", "*爵士队", "*勇士队", "76人队", "#公牛C连体", "*派大星", "杜兰特", "75th", "火箭队", "*猛龙", "#魔术队", "*超音速", "*湖人", "*公羊", "*49人队", "*猛龙涂鸦", "*湖人涂鸦", "#灰熊涂鸦", "#公牛涂鸦"],
                 type: "nothing"
             },
@@ -2510,7 +2800,7 @@ module.exports = {
         },
         badges: {
             "Sin parches": {
-                matches: ["Sonepar (左袖广告)", 'IN.gia (左袖广告)', 'AMB..tv (左袖广告)', 'Expedia (左袖广告)', 'De..LT (左袖广告)', 'TR..ON (左袖广告)', 'MGS.os (左袖广告)', "No Badge", "MSC (左袖广告)", 'NO Badge', 'noon (左袖广告)'],
+                matches: ['ld..en (左袖广告)', 'We..ds (左袖广告)', 'GC.S (左袖广告)', 'ca..va (左袖广告)', 'SA..ON(左袖广告)', 'JD (左袖广告)', "Sonepar (左袖广告)", 'IN.gia (左袖广告)', 'AMB..tv (左袖广告)', 'Expedia (左袖广告)', 'De..LT (左袖广告)', 'TR..ON (左袖广告)', 'MGS.os (左袖广告)', "No Badge", "MSC (左袖广告)", 'NO Badge', 'noon (左袖广告)'],
                 type: "badge",
                 price: 0,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/17/e/8/e80a811156ddf959.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
@@ -2548,7 +2838,7 @@ module.exports = {
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/15/2/c/2c3c0abc8226976c.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "UCL/Foundation": {
-                matches: ['UCL + TR..ON(欧冠新章+左袖广告)', 'UCL(欧冠新章)右袖', 'UCL (欧冠新章) 右袖', 'UCL +OKX (欧冠新章+左袖广告)', "UCL (欧冠新章)右袖", 'UCL/TR..ON(欧冠新章+左袖广告)'],
+                matches: ['UCL +ih..ar (欧冠新章+左袖广告)', 'UCL + TR..ON(欧冠新章+左袖广告)', 'UCL(欧冠新章)右袖', 'UCL (欧冠新章) 右袖', 'UCL +OKX (欧冠新章+左袖广告)', "UCL (欧冠新章)右袖", 'UCL/TR..ON(欧冠新章+左袖广告)'],
                 type: "badge",
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/a/0/a0acf265b53042a0.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
@@ -2794,7 +3084,7 @@ module.exports = {
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/27/d/0/d0ea0f5dbb710229.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "UEEL/Foundation": {
-                matches: ["UEFA E L (欧联45)", 'UEFA E L(欧联45)右袖', 'UEFA E L (欧联45)右袖'],
+                matches: ["UEFA E L (欧联45)", 'UEFA E L(欧联45)右袖', 'UEFA E L (欧联45)右袖', 'UEFA E L+JD(欧联+左袖广告)'],
                 type: "badge",
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/27/1/f/1fd6025fc863d5c9.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
@@ -2827,7 +3117,7 @@ module.exports = {
 
             // COPAS EQUIPOS
             "Carabao Cup": {
-                matches: ['Carabao Cup +Expedia (英联赛杯+左袖广告)', 'Carabao Cup +OKX (英联赛杯+左袖广告)', "Carabao Cup (英联赛杯)右袖", 'Carabao Cup +noon (英联赛杯+左袖广告)'],
+                matches: ['Carabao Cup +ld..en (英联赛杯+左袖广告)', 'Carabao Cup +We..ds (英联赛杯+左袖广告)', 'Carabao Cup +SA..ON (英联赛杯+左袖广告)', 'Carabao Cup +Expedia (英联赛杯+左袖广告)', 'Carabao Cup +OKX (英联赛杯+左袖广告)', "Carabao Cup (英联赛杯)右袖", 'Carabao Cup +noon (英联赛杯+左袖广告)'],
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/8/0/802bde86a7dfd67c.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
@@ -2836,29 +3126,29 @@ module.exports = {
 
             // Europa Leagues
             // > LaLiga
-            "LALIGA 23/24": {
-                matches: ["La Liga +23/24C (红冠军+45西甲)右袖"],
-                type: "badge",
-                price: 2,
-                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/6/8/686e84c18c0004f3.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "LALIGA 45": {
-                matches: ['La Liga +IN.gia(45西甲章+左袖广告)', 'La Liga +OK.ty (45西甲章+左袖广告)', 'La Liga +B2.NPA (45西甲章+左袖广告)', 'La Liga +AMB..tv (45西甲章+左袖广告)', 'La Liga +MGS.. (45西甲章+左袖广告)', 'La Liga +CA..DA (45西甲章+左袖广告)', "La Liga (45西甲章)", 'La Liga +MGS.os(45西甲章+左袖广告)','La Liga +JD (45西甲章+左袖广告)',  'La Liga +Kalise (45西甲章+左袖广告)'],
-                type: "badge",
-                price: 1,
-                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/6/f/6fcf280ecb88c188.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
             "LALIGA": {
                 matches: ["La Liga (西甲章)"],
                 type: "badge",
                 price: 0,
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/13/8/a/8ad19d0b18bace89.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
+            "LALIGA 45": {
+                matches: ['La Liga +GC.S(45西甲章+左袖广告)', 'La Liga +ca..va (45西甲章+左袖广告)', 'La Liga +IN.gia(45西甲章+左袖广告)', 'La Liga +OK.ty (45西甲章+左袖广告)', 'La Liga +B2.NPA (45西甲章+左袖广告)', 'La Liga +AMB..tv (45西甲章+左袖广告)', 'La Liga +MGS.. (45西甲章+左袖广告)', 'La Liga +CA..DA (45西甲章+左袖广告)', "La Liga (45西甲章)", 'La Liga +MGS.os(45西甲章+左袖广告)','La Liga +JD (45西甲章+左袖广告)',  'La Liga +Kalise (45西甲章+左袖广告)'],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/6/f/6fcf280ecb88c188.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
             "La liga/3": {
                 matches: ["LFP+3(西甲+左袖3)"],
                 type: "badge",
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/25/7/5/75cc3bec73642a1e.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "LALIGA 23/24": {
+                matches: ["La Liga +23/24C (红冠军+45西甲)右袖"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/6/8/686e84c18c0004f3.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "La liga/3/FIFA11": {
                 matches: ["LFP+3+FFWC2011 (西甲+左袖3+世俱盾2011)"],
@@ -2870,13 +3160,13 @@ module.exports = {
 
             // > Bundersliga
             "BUN": {
-                matches: ["Bundesliga (德普章)", 'Bundesliga (德甲普章)', 'Bundesliga(普章)', 'Bundesliga +Sonepar (德普章+左袖广告)'],
+                matches: ['Bundesliga +ih..ar (德普章+左袖广告)', "Bundesliga (德普章)", 'Bundesliga (德甲普章)', 'Bundesliga(普章)', 'Bundesliga +Sonepar (德普章+左袖广告)'],
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/10/31/8/b/8bdf7dd2865f6383.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "BUN WIN23/24 ": {
-                matches: ["Bundesliga WIN23/24(德甲金章)", 'Bundesliga Champ23/24 (德金章)'],
+                matches: ['Bundesliga Champ23/24 (德金章)', 'Bundesliga Champions 23/24(德甲金章)'],
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/15/b/c/bcf2185dc3e1e4e1.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
@@ -2891,7 +3181,7 @@ module.exports = {
 
             // > Premier
             "Premier": {
-                matches: ['Pre L + Expedia (34英超+左袖广告)', 'Pre L/Expedia (34英超+左袖广告)', 'Pre L +De..LT (34英超+左袖广告)', 'Pre L +TR..ON (34英超+左袖广告)', 'Pre L +noon (34英超+左袖广告)', "Premier League (34英超普)", "Pre L +NO.or (34英超/章下字)", "Premier league (34英超普)"],
+                matches: ['Pre L +ld..en (34英超+左袖广告)', 'Pre L + We..ds (34英超+左袖广告)', 'Pre L +SA..ON (34英超+左袖广告)', 'Pre L + Expedia (34英超+左袖广告)', 'Pre L/Expedia (34英超+左袖广告)', 'Pre L +De..LT (34英超+左袖广告)', 'Pre L +TR..ON (34英超+左袖广告)', 'Pre L +noon (34英超+左袖广告)', "Premier League (34英超普)", "Pre L +NO.or (34英超/章下字)", "Premier league (34英超普)"],
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/6/b/6b8aa0557f64e822.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
@@ -2903,7 +3193,7 @@ module.exports = {
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/13/5/5/5569bf90f755f025.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "Premier/NoRac": {
-                matches: ['Pre L + NO..for (34英超普+章下字)', 'Pre L +NO.or+ Expedia (34英超/章下字+左袖广告)', 'Pre L +NO.or+ De..LT (34英超/章下字+左袖广告)', 'Pre L +NO.or+ TR..ON (34英超/章下字+左袖广告)', "Pre L/NO..for (34英超普+章下字)", 'Pre L +NO.or+ noon ( 34英超/章下字+左袖广告)'],
+                matches: ['Pre L +NO.or+ ld..en (34英超/章下字+左袖广告)', 'Pre L +NO.or+ We..ds (34英超/章下字+左袖广告)', 'Pre L +NO.or+ SA..ON ( 34英超/章下字+左袖广告)', 'Pre L + NO..for (34英超普+章下字)', 'Pre L +NO.or+ Expedia (34英超/章下字+左袖广告)', 'Pre L +NO.or+ De..LT (34英超/章下字+左袖广告)', 'Pre L +NO.or+ TR..ON (34英超/章下字+左袖广告)', "Pre L/NO..for (34英超普+章下字)", 'Pre L +NO.or+ noon ( 34英超/章下字+左袖广告)'],
                 type: "badge",
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/2/8/2849daa0df6783ca.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
@@ -2921,7 +3211,7 @@ module.exports = {
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/0/7/0723db2ac74426ed.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "Premier/NoRac/Flor": {
-                matches: ['Pre L +NO.or+ De..LT + Flower (英超/章下字+左袖广告+红花)', 'Pre L +NO.or+ Expedia+ Flower (34英超/章下字+左袖广告)+红花', 'Pre L +NO.or+ De..LT/Flower (英超/章下字+左袖广告+红花)', "Pre L +NO.or+ Flower (英超/章下字+红花)", 'Pre L +NO.or+ Flower (英超/章下字+左袖广告+红花)', 'Pre L +NO.or+ noon+ Flower (英超/章下字+左袖广告+红花)'],
+                matches: ['Pre L +NO.or+ ld..en+ Flower (英超/章下字+左袖广告+红花)', 'Pre L +NO.or+ We..ds+ Flower (英超/章下字+左袖广告+红花)', 'Pre L +NO.or+ SA..ON+ Flower (英超/章下字+左袖广告+红花)', 'Pre L +NO.or+ De..LT + Flower (英超/章下字+左袖广告+红花)', 'Pre L +NO.or+ Expedia+ Flower (34英超/章下字+左袖广告)+红花', 'Pre L +NO.or+ De..LT/Flower (英超/章下字+左袖广告+红花)', "Pre L +NO.or+ Flower (英超/章下字+红花)", 'Pre L +NO.or+ Flower (英超/章下字+左袖广告+红花)', 'Pre L +NO.or+ noon+ Flower (英超/章下字+左袖广告+红花)'],
                 type: "badge",
                 price: 3,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/2/f/2f8a92a783fee35e.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
@@ -2961,6 +3251,18 @@ module.exports = {
                 type: "badge",
                 price: 3,
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/13/0/8/083b0795a0b2323a.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Premier 2": {
+                matches: ["Premier league (Double)(英超)左右印"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/09/19/d/f/dff13bc9845a4518.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Premier/NoRac 2": {
+                matches: ["Pre L + NO..for(Double)(英超+章下字)左右印"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/09/19/2/e/2e6d76ee7c50fe9a.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "Premier/NoRac/Flor Gold": {
                 matches: ["Pre L C +NO.or. +OKX (英金章/章下字+左袖广告+胸前红花)"],
@@ -3036,7 +3338,7 @@ module.exports = {
 
             // > Ligue1
             "Ligue1": {
-                matches: ["Ligue1 (45法甲黑)"],
+                matches: ["Ligue1 (45法甲黑)", 'Ligue1+JD(45法甲黑+左袖广告)'],
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/10/29/9/5/953477b403a87710.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
@@ -3271,12 +3573,36 @@ module.exports = {
             
 
             // NEWS FALTA ACOMODAR
-            // "Template": {
-            //     matches: ["Template"],
-            //     type: "badge",
-            //     price: 1,
-            //     images: "Template"
-            // },
+            "Template 1": {
+                matches: ["UEL 2024 Winners +Zondacrypto(欧冠-亚特兰大+左袖广告)"],
+                type: "badge",
+                price: 3,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/10/16/4/0/40ce6bfaade85e08.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Template": {
+                matches: ["Template"],
+                type: "badge",
+                price: 1,
+                images: "Template"
+            },
+            "Template": {
+                matches: ["Template"],
+                type: "badge",
+                price: 1,
+                images: "Template"
+            },
+            "Template": {
+                matches: ["Template"],
+                type: "badge",
+                price: 1,
+                images: "Template"
+            },
+            "Template": {
+                matches: ["Template"],
+                type: "badge",
+                price: 1,
+                images: "Template"
+            },
         },
         customize: {
             "Sin dorsal": {
@@ -3285,7 +3611,7 @@ module.exports = {
                 price: 0
             },
             "Con dorsal": {
-                matches: ['Name / Number (周年蓝色字)', 'Name / Number (ad白字)', 'Name / Number (Holstein Kiel) (上带广告-名在号下)', 'Name / Number (只印后面ad红)', "Name / Number (24/25白ad)只印后面", "Name / Number (名与号在框内)", "Name / Number (24/25黑ad)只印后面", "Name / Number (名在号上-没广告)", "Name / Number (周年蓝色字)", 'Name /Number', "Name / Number (24/25ad白)只印后面", "Name / Number (24/25ad粉)", "Name / Number (24/25ad黑字)只印后面", "Name / Number (24/25ad)", 'Name / Number (24/25ad金)', 'Name / Number (名在a广告底下)', 'Name / Number (1.FC Magdeburg)(上带广告-名在号下)', 'Name / Number (24/25ad黑)', 'Name / Number (周年字体)', 'Name / Number (Frankfurt) (上带广告-名在号下)', 'Name / Number (24/25白色ad)', 'Name / Number (前小号NK下)', "Name / Number", "Name/ Number", "Name / Numbe", "Name/ Number (名在号下)", "Name / Number (24/25ad黑)只印后面", "Name / Number (专用周年标)", "Name / Number (只印后面)", "Name / Number (24/25ad红)", "Name / Number (名在号下)", "Name / Number (名在号上)", "Name / Number (FC Augsburg) (上带广告-名在号下)", "Name / Number (Mainz 05) (上带广告-名在号下)", "Name / Number (专用字体)", "Name / Number (只印后台)", "Name / Number (24/25黑ad)", "Name / Number (没广告-名在号上)", "Name / Number (24/25蓝ad)", "Name / Number (24/25白ad)", "Name / Number (没广告-名在号下)", "Name / Number (FC BAY.. MUN..)(带广告-名在号下)", "Name / Number (WERDER) (上带广告-名在号下)", "Name / Number (24/25ad蓝) 只印后面", "Name / Number (专用字体)前小号在PM下", "Name/ Number (RB Leipzig)(上带广告-名在号下)", "Name / Number (24/25ad白)", 'Name/Number'],
+                matches: ['Name / Number (24/25绿ad)', 'Name / Number (周年蓝色字)', 'Name / Number (ad白字)', 'Name / Number (Holstein Kiel) (上带广告-名在号下)', 'Name / Number (只印后面ad红)', "Name / Number (24/25白ad)只印后面", "Name / Number (名与号在框内)", "Name / Number (24/25黑ad)只印后面", "Name / Number (名在号上-没广告)", "Name / Number (周年蓝色字)", 'Name /Number', "Name / Number (24/25ad白)只印后面", "Name / Number (24/25ad粉)", "Name / Number (24/25ad黑字)只印后面", "Name / Number (24/25ad)", 'Name / Number (24/25ad金)', 'Name / Number (名在a广告底下)', 'Name / Number (1.FC Magdeburg)(上带广告-名在号下)', 'Name / Number (24/25ad黑)', 'Name / Number (周年字体)', 'Name / Number (Frankfurt) (上带广告-名在号下)', 'Name / Number (24/25白色ad)', 'Name / Number (前小号NK下)', "Name / Number", "Name/ Number", "Name / Numbe", "Name/ Number (名在号下)", "Name / Number (24/25ad黑)只印后面", "Name / Number (专用周年标)", "Name / Number (只印后面)", "Name / Number (24/25ad红)", "Name / Number (名在号下)", "Name / Number (名在号上)", "Name / Number (FC Augsburg) (上带广告-名在号下)", "Name / Number (Mainz 05) (上带广告-名在号下)", "Name / Number (专用字体)", "Name / Number (只印后台)", "Name / Number (24/25黑ad)", "Name / Number (没广告-名在号上)", "Name / Number (24/25蓝ad)", "Name / Number (24/25白ad)", "Name / Number (没广告-名在号下)", "Name / Number (FC BAY.. MUN..)(带广告-名在号下)", "Name / Number (WERDER) (上带广告-名在号下)", "Name / Number (24/25ad蓝) 只印后面", "Name / Number (专用字体)前小号在PM下", "Name/ Number (RB Leipzig)(上带广告-名在号下)", "Name / Number (24/25ad白)", 'Name/Number'],
                 type: "customize",
                 price: 3
             },
@@ -3295,7 +3621,7 @@ module.exports = {
                 price: 3
             },
             "Con dorsal 2": {
-                matches: ['Name / Number (Schalke04)(联赛号-名在号下)', 'Name / Number (1.FC Köln)(名在号上-广告在下)专用字体', 'Name / Number (Kaiserslautern) (名在号上-下带广告)', 'Name / Number (BAYER 04)(上带广告-名在号下)', "Name / Number (Bochum)(上带广告-名在号下)", "Name / Number (1.FC Köln)(名在号上-广告在下)", "Name/ Number (Stuttgart) (上带广告-名在号下)", "Name / Number (SAFI CiMENTO) (上带广告-名在号下)", "Name/ Number (Hamburger SV)(上带广告-名在号下)", "Name / Number (Hertha BSC)(上带广告-名在号下)"],
+                matches: ['Name / Number (Schalke04)(上带广告-名在号下)', 'Name / Number (SC Freiburg) (上带广告-名在号下)', 'Name / Number (Schalke04)(联赛号-名在号下)', 'Name / Number (1.FC Köln)(名在号上-广告在下)专用字体', 'Name / Number (Kaiserslautern) (名在号上-下带广告)', 'Name / Number (BAYER 04)(上带广告-名在号下)', "Name / Number (Bochum)(上带广告-名在号下)", "Name / Number (1.FC Köln)(名在号上-广告在下)", "Name/ Number (Stuttgart) (上带广告-名在号下)", "Name / Number (SAFI CiMENTO) (上带广告-名在号下)", "Name/ Number (Hamburger SV)(上带广告-名在号下)", "Name / Number (Hertha BSC)(上带广告-名在号下)"],
                 type: "customize",
                 price: 4
             },
@@ -3385,11 +3711,11 @@ module.exports = {
                 price: 4
             },
             "Con dorsal Aniversario": {
-                matches: ["Name / Number (周年字体)(没广告-名在号上)", 'Name / Number (周年字体)(没广告-名在号上)'],
+                matches: ["Name / Number (周年字体)(没广告-名在号上)"],
                 type: "customize",
                 price: 3
             },
-            "Con dorsal Aniversario": {
+            "Con dorsal Aniversario 2": {
                 matches: ["Name / Number (Anniversary Fonts) 专用字体"],
                 type: "customize",
                 price: 4
