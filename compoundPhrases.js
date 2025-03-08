@@ -5,7 +5,7 @@ module.exports = {
         { 
             phrase: 'Long Sleeve', 
             normalized: 'Manga Larga', 
-            type: 'caracteristica',
+            type: 'feature',
             categoryPath: ['Productos']
         },
         { 
@@ -79,7 +79,7 @@ module.exports = {
 
     defaults: [
         { 
-            type: 'caracteristica', 
+            type: 'feature', 
             value: 'Manga Corta',
             categoryPath: ['Productos']
         }

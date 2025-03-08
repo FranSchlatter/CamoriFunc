@@ -85,10 +85,12 @@ function generateNormalizedName(nameAnalysis) {
         season: nameAnalysis.tags.find(t => t.type === "temporada")?.name || "",
         edition: nameAnalysis.tags.find(t => t.type === "edicion")?.name || "",
         color: nameAnalysis.tags.find(t => t.type === "color")?.name || "",
+        caracteristica: nameAnalysis.tags.find(t => t.type === "caracteristica")?.name || "",
         version: nameAnalysis.tags.find(t => t.type === "version")?.name || "",
         category: nameAnalysis.categories?.map(cat => cat.name).join(" ") || "Otros",
-        feature: nameAnalysis.tags.find(t => t.type === "caracteristica")?.name || "",
+        feature: nameAnalysis.tags.find(t => t.type === "feature")?.name || "",
         marca: nameAnalysis.tags.find(t => t.type === "marca")?.name || "",
+        modelo: nameAnalysis.tags.find(t => t.type === "modelo")?.name || "",
         number: nameAnalysis.tags.find(t => t.type === "number")?.name || "",
         player: nameAnalysis.tags.find(t => t.type === "player")?.name || "",
         unrecognized: nameAnalysis.unrecognized || []
@@ -98,21 +100,24 @@ function generateNormalizedName(nameAnalysis) {
     const mainParts = [];
     
     // Primera parte: Temporada y Equipo
-    if (parts.team) mainParts.push(parts.team);
-    if (parts.season) mainParts.push(parts.season);
+    if (parts.team) mainParts.push(parts.team); // Argentina
+    if (parts.season) mainParts.push(parts.season); // 1984
     
     // Segunda parte: Edición, color y Versión
-    if (parts.edition) mainParts.push(parts.edition);
-    if (parts.color) mainParts.push(parts.color);
-    if (parts.version) mainParts.push(parts.version);
+    if (parts.edition) mainParts.push(parts.edition); // Local
+    if (parts.color) mainParts.push(parts.color); // Rojo
     
     // Tercera parte: Categoría y Característica
     const productParts = [];
-    if (parts.category) productParts.push(parts.category);
-    if (parts.feature) productParts.push(parts.feature);
-    if (parts.marca) productParts.push(parts.marca);
-    if (parts.number) productParts.push(parts.number);
-    if (parts.player) productParts.push(parts.player);
+    if (parts.category) productParts.push(parts.category); // Camiseta, futbol
+    if (parts.version) mainParts.push(parts.version); // Retro
+    if (parts.feature) productParts.push(parts.feature); // Manga Corta
+    if (parts.marca) productParts.push(parts.marca); // Nike
+    if (parts.number) productParts.push(parts.number); // #10
+    if (parts.player) productParts.push(parts.player); // Maradona
+    if (parts.caracteristica) productParts.push(parts.caracteristica); // Terciopelo
+    if (parts.modelo) productParts.push(parts.modelo); // T142
+
     
     // Construir el nombre final
     let finalName = mainParts.join(" ");
@@ -135,7 +140,7 @@ function generateDescription(nameAnalysis) {
     const season = nameAnalysis.tags.find(t => t.type === "temporada")?.name || "";
     const edition = nameAnalysis.tags.find(t => t.type === "edicion")?.name || "";
     const version = nameAnalysis.tags.find(t => t.type === "version")?.name || "";
-    const feature = nameAnalysis.tags.find(t => t.type === "caracteristica")?.name || "";
+    const feature = nameAnalysis.tags.find(t => t.type === "feature")?.name || "";
     
     return `Indumentaria fabricada con materiales premium de primera calidad, diseñada para brindar máxima comodidad y durabilidad.`;
     // return `Camiseta importada de calidad original.\nModelo ${team} ${season}, edición ${edition} en versión ${version}. Disponible en ${feature}.\n\nFabricada con materiales de primera calidad, diseñada para brindar máxima comodidad y durabilidad.\nIncorpora tecnologías oficiales como AeroCool, DryFit y otras, garantizando una excelente transpirabilidad.\nDetalles premium con escudo bordado o termosellado (según versión) y costuras reforzadas para mayor resistencia.`;
@@ -325,7 +330,9 @@ function analyzeProductName(name) {
         editions: MAPPINGS.tags.editions,
         features: MAPPINGS.tags.features,
         colors: MAPPINGS.tags.colors,
+        caracteristicas: MAPPINGS.tags.caracteristicas,
         marcas: MAPPINGS.tags.marcas,
+        modelos: MAPPINGS.tags.modelos,
         numbers: MAPPINGS.tags.numbers,
         players: MAPPINGS.tags.players,
         nothings: MAPPINGS.tags.nothings
@@ -414,13 +421,13 @@ function analyzeProductName(name) {
     if (hasLongSleeve) {
         addTag({
             name: "Manga Larga",
-            type: "caracteristica",
+            type: "feature",
             categoryPath: ["Deportes"]
         });
     } else {
         addTag({
             name: "Manga Corta",
-            type: "caracteristica",
+            type: "feature",
             categoryPath: ["Deportes"]
         });
     }

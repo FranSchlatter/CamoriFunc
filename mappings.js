@@ -194,131 +194,6 @@ module.exports = {
             }
     },
 
-    // categories_actualizado: {
-    //     // Deportes y sus subcategorías
-    //     "Fútbol": {
-    //         matches: ['Soccer'],
-    //         description: "Deporte fútbol",
-    //         categoryPath: ["Fútbol"]
-    //     },
-    //         "Camisetas": {
-    //             matches: ['Jersey', 'Shirt'],
-    //             description: "Indumentaria camisetas",
-    //             categoryPath: ["Fútbol", "Camisetas"]
-    //         },
-    //         "Shorts": {
-    //             matches: ['Shorts'],
-    //             description: "Indumentaria shorts",
-    //             categoryPath: ["Fútbol", "Shorts"]
-    //         },
-    //         "Medias": {
-    //             matches: ['Socks'],
-    //             description: "Indumentaria medias",
-    //             categoryPath: ["Fútbol", "Medias"]
-    //         },
-    //         "Conjuntos": {
-    //             matches: ['Tracksuit', 'Hoodie', 'Half Pull', 'Training Short', 'Tank top and shorts suit', '(卫衣套装)'],
-    //             description: "Indumentaria conjuntos",
-    //             categoryPath: ["Fútbol", "Conjuntos"]
-    //         },
-            
-    //         "Mujer": {
-    //             matches: ['Women'],
-    //             description: "Indumentaria Mujer",
-    //             categoryPath: ["Fútbol", "Mujer"]
-    //         },
-    //         "Niños": {
-    //             matches: ['Kids'],
-    //             description: "Indumentaria Niños",
-    //             categoryPath: ["Fútbol", "Niños"]
-    //         },
-    //         "Bebes": {
-    //             matches: ['Baby Infant Crawl Suit'],
-    //             description: "Indumentaria Bebes",
-    //             categoryPath: ["Fútbol", "Bebes"]
-    //         },
-                
-    //     "Básquet": {
-    //         matches: ['NBA', 'Basketball', 'Básquet'],
-    //         description: "Deporte básquet",
-    //         categoryPath: ["Básquet"]
-    //     },
-    //         "Camisetas": {
-    //             matches: ['Jersey', 'Shirt'],
-    //             description: "Indumentaria camisetas",
-    //             categoryPath: ["Básquet", "Camisetas"]
-    //         },
-    //         "Shorts": {
-    //             matches: ['Shorts'],
-    //             description: "Indumentaria shorts",
-    //             categoryPath: ["Básquet", "Shorts"]
-    //         },
-        
-    //     "Rugby": {
-    //         matches: ['Rugby'],
-    //         description: "Deporte rugby",
-    //         categoryPath: ["Rugby"]
-    //     },
-    //         "Camisetas": {
-    //             matches: ['Jersey', 'Shirt'],
-    //             description: "Indumentaria camisetas",
-    //             categoryPath: ["Rugby", "Camisetas"]
-    //         },
-
-    //     "Formula 1": {
-    //         matches: ['Racing', 'F1'],
-    //         description: "Deporte automovilismo",
-    //         categoryPath: ["Formula 1"]
-    //     },
-    //         "Camisetas": {
-    //             matches: ['Jersey', 'Shirt'],
-    //             description: "Indumentaria camisetas",
-    //             categoryPath: ["Formula 1", "Camisetas"]
-    //         },
-
-        
-    //     "Casual": {
-    //         matches: ['Casual', 'Lifestyle'],
-    //         description: "Indumentaria casual",
-    //         categoryPath: ["Casual"],
-    //     },  
-    //         "Entrenamiento": {
-    //             matches: ['Training short suit'],
-    //             description: "Indumentaria entrenamiento",
-    //             categoryPath: ["Casual", "Entrenamiento"]
-    //         },
-    //         "Remeras": {
-    //             matches: ['T-Shirt', 'shirts', 'Champion'],
-    //             description: "Indumentaria Remeras casual",
-    //             categoryPath: ["Casual", "Remeras"]
-    //         },
-    //         "Pantalones cortos": {
-    //             matches: ['Casual Short'],
-    //             description: "Indumentaria Pantalones cortos casual",
-    //             categoryPath: ["Casual", "Pantalones cortos"]
-    //         },
-    //         "Pantalones largos": {
-    //             matches: ['Sweatpants'],
-    //             description: "Indumentaria Pantalones largos casual",
-    //             categoryPath: ["Casual", "Pantalones largos"]
-    //         },
-    //         "Chombas": {
-    //             matches: ['Polo'],
-    //             description: "Indumentaria Chombas casual",
-    //             categoryPath: ["Casual", "Casual", "Chombas"]
-    //         },
-    //         "Camperon": {
-    //             matches: ['Cotton Coat'],
-    //             description: "Indumentaria de abrigo camperon",
-    //             categoryPath: ["Casual", "Camperon"]
-    //         },
-    //         "Rompevientos": {
-    //             matches: ['Windbreaker', 'Double Sided', '(双面风衣)'],
-    //             description: "Indumentaria de abrigo rompeviento",
-    //             categoryPath: ["Casual", "Rompevientos"]
-    //         }
-    // },
-
 
     // Tags para filtrado
     tags: {
@@ -608,6 +483,12 @@ module.exports = {
                 type: "equipo",
                 categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
             },
+            "Almeria": {
+                matches: ['Almeria'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+            },
+            
 
 
             // Ligue 1
@@ -688,6 +569,11 @@ module.exports = {
             },
             "Nantes": {
                 matches: ['Nantes'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Ligue 1"]
+            },
+            "Strasbourg": {
+                matches: ['Strasbourg'],
                 type: "equipo",
                 categoryPath: ["Deportes", "Fútbol", "Clubes", "Ligue 1"]
             },
@@ -811,6 +697,16 @@ module.exports = {
             },
             "SC Freiburg": {
                 matches: ['Freiburg'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+            },
+            "Hoffenheim": {
+                matches: ['Hoffenheim'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+            },
+            "Heidenheim": {
+                matches: ['Heidenheim'],
                 type: "equipo",
                 categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
             },
@@ -1611,6 +1507,66 @@ module.exports = {
                 type: "equipo",
                 categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
             },
+            "West Bromwich Albion": {
+                matches: ['Bromwich'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "Sheffield Wednesday": {
+                matches: ['Wednesday'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "FC Girondins de Burdeos": {
+                matches: ['Bordeaux'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "Palermo": {
+                matches: ['Palermo'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "Zenit": {
+                matches: ['Zenit'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "Hajduk Split": {
+                matches: ['Hajduk Split'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "Pirates": {
+                matches: ['Pirates'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "Recreativo de Huelva": {
+                matches: ['Recreativo de Huelva'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "Standard Liege": {
+                matches: ['Standard Liege'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "Middlesbrough": {
+                matches: ['Middlesbrough'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "Dinamo Zagreb": {
+                matches: ['Dinamo Zagreb'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
+            "Reading": {
+                matches: ['Reading'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            },
 
             // NEWS FALTA CLASIFICAR
             // "Template": {
@@ -1618,6 +1574,17 @@ module.exports = {
             //     type: "equipo",
             //     categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
             // },
+            // "Template": {
+            //     matches: ['Template'],
+            //     type: "equipo",
+            //     categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            // },
+            // "Template": {
+            //     matches: ['Template'],
+            //     type: "equipo",
+            //     categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+            // },
+            
             
             
             // Selecciones
@@ -1830,6 +1797,11 @@ module.exports = {
             },
             "Yugoslavia": {
                 matches: ['Yugoslavia'],
+                type: "equipo",
+                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+            },
+            "Grecia": {
+                matches: ['Greece'],
                 type: "equipo",
                 categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
             },
@@ -2144,14 +2116,17 @@ module.exports = {
         features: {
             "Manga Corta": {
                 matches: [],
-                type: "caracteristica",
+                type: "feature",
                 categoryPath: ["Deportes"]
             },
             "Manga Larga": {
                 matches: ['Long Sleeve', '长袖', '(长袖)'],
-                type: "caracteristica",
+                type: "feature",
                 categoryPath: ["Deportes"]
             },
+        },
+
+        caracteristicas: {
             "Reversible": {
                 matches: ['Double Sided', '(双面风衣)'],
                 type: "caracteristica",
@@ -2301,261 +2276,23 @@ module.exports = {
             "#97": { matches: ["#97"], type: "number" },
             "#98": { matches: ["#98"], type: "number" },
             "#99": { matches: ["#99"], type: "number" },
-            "#2308": { matches: ["#2308"], type: "number" },
-            "#2312": { matches: ["#2312"], type: "number" },
-            "#2310": { matches: ["#2310"], type: "number" },
-            "#AB07": { matches: ["#AB07"], type: "number" },
-            "#AJ18": { matches: ["#AJ18"], type: "number" },
-            "#A30": { matches: ["#A30"], type: "number" },
-            "#A31": { matches: ["#A31"], type: "number" },
-            "#A32": { matches: ["#A32"], type: "number" },
-            "#A781": { matches: ["#A781"], type: "number" },
-            "#A794": { matches: ["#A794"], type: "number" },
-            "#A805": { matches: ["#A805"], type: "number" },
-            "#A796": { matches: ["#A796"], type: "number" },
-            "CQ01": { matches: ["CQ01"], type: "number" },
-            "CN01": { matches: ["CN01"], type: "number" },
-            "NJ12": { matches: ["NJ12"], type: "number" },
-            "ND08": { matches: ["ND08", '#ND08'], type: "number" },
-            "#NM07": { matches: ["#NM07"], type: "number" },
-            "#AB08": { matches: ["#AB08"], type: "number" },
-            "#AM05": { matches: ["#AM05"], type: "number" },
-            "#A33": { matches: ["#A33"], type: "number" },
-            "NM07": { matches: ["NM07"], type: "number" },
-            "T107": { matches: ["T107"], type: "number" },
-            "T110": { matches: ["T110"], type: "number" },
-            "T111": { matches: ["T111"], type: "number" },
-            "T112": { matches: ["T112"], type: "number" },
-            "T113": { matches: ["T113"], type: "number" },
-            "T114": { matches: ["T114"], type: "number" },
-            "T115": { matches: ["T115"], type: "number" },
-            "T116": { matches: ["T116"], type: "number" },
-            "T117": { matches: ["T117"], type: "number" },
-            "T118": { matches: ["T118"], type: "number" },
-            "T119": { matches: ["T119"], type: "number" },
-            "T120": { matches: ["T120"], type: "number" },
-            "T121": { matches: ["T121"], type: "number" },
-            "T122": { matches: ["T122"], type: "number" },
-            "T123": { matches: ["T123"], type: "number" },
-            "T124": { matches: ["T124"], type: "number" },
-            "T125": { matches: ["T125"], type: "number" },
-            "T126": { matches: ["T126"], type: "number" },
-            "T127": { matches: ["T127"], type: "number" },
-            "T128": { matches: ["T128"], type: "number" },
-            "T129": { matches: ["T129"], type: "number" },
-            "T130": { matches: ["T130"], type: "number" },
-            "T131": { matches: ["T131"], type: "number" },
-            "T132": { matches: ["T132"], type: "number" },
-            "T133": { matches: ["T133"], type: "number" },
-            "T135": { matches: ["T135"], type: "number" },
-            "T136": { matches: ["T136"], type: "number" },
-            "T137": { matches: ["T137满分"], type: "number" },
-            "T138": { matches: ["T138"], type: "number" },
-            "T139": { matches: ["T139"], type: "number" },
-            "T140": { matches: ["T140"], type: "number" },
-            "T141": { matches: ["T141"], type: "number" },
-            "T142": { matches: ["T142"], type: "number" },
-            "T143": { matches: ["T143"], type: "number" },
-            "T144": { matches: ["T144"], type: "number" },
-            "T145": { matches: ["T145"], type: "number" },
-            "T146": { matches: ["T146"], type: "number" },
-            "T147": { matches: ["T147"], type: "number" },
-            "T148": { matches: ["T148"], type: "number" },
-            "T149": { matches: ["T149"], type: "number" },
-            "T150": { matches: ["T150"], type: "number" },
-            "T152": { matches: ["T152"], type: "number" },
-            "T153": { matches: ["T153"], type: "number" },
-            "T156": { matches: ["T156"], type: "number" },
-            "T157": { matches: ["T157"], type: "number" },
-            "T158": { matches: ["T158"], type: "number" },
-            "T160": { matches: ["T160"], type: "number" },
-            "T161": { matches: ["T161"], type: "number" },
-            "T162": { matches: ["T162"], type: "number" },
-            "T163": { matches: ["T163"], type: "number" },
-            "T165": { matches: ["T165"], type: "number" },
-            "T166": { matches: ["T166"], type: "number" },
-            "T167": { matches: ["T167"], type: "number" },
-            "T169": { matches: ["T169"], type: "number" },
-            "T170": { matches: ["T170"], type: "number" },
-            "T171": { matches: ["T171"], type: "number" },
-            "T172": { matches: ["T172"], type: "number" },
-            "T173": { matches: ["T173"], type: "number" },
-            "T174": { matches: ["T174"], type: "number" },
-            "T175": { matches: ["T175"], type: "number" },
-            "T176": { matches: ["T176"], type: "number" },
-            "T177": { matches: ["T177"], type: "number" },
-            "T178": { matches: ["T178"], type: "number" },
-            "T179": { matches: ["T179"], type: "number" },
-            "T180": { matches: ["T180"], type: "number" },
-            "T181": { matches: ["T181"], type: "number" },
-            "T182": { matches: ["T182"], type: "number" },
-            "T183": { matches: ["T183"], type: "number" },
-            "T184": { matches: ["T184"], type: "number" },
-            "T185": { matches: ["T185"], type: "number" },
-            "T186": { matches: ["T186"], type: "number" },
-            "T187": { matches: ["T187"], type: "number" },
-            "T188": { matches: ["T188"], type: "number" },
-            "T189": { matches: ["T189"], type: "number" },
-            "T190": { matches: ["T190"], type: "number" },
-            "T191": { matches: ["T191"], type: "number" },
-            "T192": { matches: ["T192"], type: "number" },
-            "T193": { matches: ["T193"], type: "number" },
-            "T194": { matches: ["T194"], type: "number" },
-            "T195": { matches: ["T195"], type: "number" },
-            "T196": { matches: ["T196"], type: "number" },
-            "T197": { matches: ["T197"], type: "number" },
-            "T198": { matches: ["T198"], type: "number" },
-            "T199": { matches: ["T199"], type: "number" },
-            "T200": { matches: ["T200"], type: "number" },
-            "T201": { matches: ["T201"], type: "number" },
-            "T202": { matches: ["T202"], type: "number" },
-            "T203": { matches: ["T203"], type: "number" },
-            "T204": { matches: ["T204"], type: "number" },
-            "T205": { matches: ["T205"], type: "number" },
-            "T206": { matches: ["T206"], type: "number" },
-            "T207": { matches: ["T207"], type: "number" },
-            "T208": { matches: ["T208"], type: "number" },
-            "T209": { matches: ["T209"], type: "number" },
-            "T210": { matches: ["T210"], type: "number" },
-            "T211": { matches: ["T211"], type: "number" },
-            "T212": { matches: ["T212"], type: "number" },
-            "T213": { matches: ["T213"], type: "number" },
-            "T214": { matches: ["T214"], type: "number" },
-            "T215": { matches: ["T215"], type: "number" },
-            "T216": { matches: ["T216"], type: "number" },
-            "T217": { matches: ["T217"], type: "number" },
-            "T219": { matches: ["T219"], type: "number" },
-            "T220": { matches: ["T220"], type: "number" },
-            "T221": { matches: ["T221"], type: "number" },
-            "T222": { matches: ["T222"], type: "number" },
-            "T223": { matches: ["T223"], type: "number" },
-            "T224": { matches: ["T224"], type: "number" },
-            "T225": { matches: ["T225"], type: "number" },
-            "T226": { matches: ["T226"], type: "number" },
-            "T227": { matches: ["T227"], type: "number" },
-            "T228": { matches: ["T228"], type: "number" },
-            "T229": { matches: ["T229"], type: "number" },
-            "T230": { matches: ["T230"], type: "number" },
-            "T231": { matches: ["T231"], type: "number" },
-            "T232": { matches: ["T232"], type: "number" },
-            "T234": { matches: ["T234"], type: "number" },
-            "T235": { matches: ["T235"], type: "number" },
-            "T236": { matches: ["T236"], type: "number" },
-            "T237": { matches: ["T237"], type: "number" },
-            "T238": { matches: ["T238"], type: "number" },
-            "T239": { matches: ["T239"], type: "number" },
-            "T240": { matches: ["T240"], type: "number" },
-            "T241": { matches: ["T241"], type: "number" },
-            "T242": { matches: ["T242"], type: "number" },
-            "T244": { matches: ["T244"], type: "number" },
-            "T246": { matches: ["T246"], type: "number" },
-            "T247": { matches: ["T247"], type: "number" },
-            "T248": { matches: ["T248"], type: "number" },
-            "T249": { matches: ["T249"], type: "number" },
-            "T250": { matches: ["T250"], type: "number" },
-            "T251": { matches: ["T251"], type: "number" },
-            "T252": { matches: ["T252"], type: "number" },
-            "T254": { matches: ["T254"], type: "number" },
-            "T255": { matches: ["T255"], type: "number" },
-            "T256": { matches: ["T256"], type: "number" },
-            "T257": { matches: ["T257"], type: "number" },
-            "T258": { matches: ["T258"], type: "number" },
-            "T259": { matches: ["T259"], type: "number" },
-            "T260": { matches: ["T260"], type: "number" },
-            "T261": { matches: ["T261"], type: "number" },
-            "T262": { matches: ["T262"], type: "number" },
-            "T263": { matches: ["T263"], type: "number" },
-            "T264": { matches: ["T264"], type: "number" },
-            "T265": { matches: ["T265"], type: "number" },
-            "T266": { matches: ["T266"], type: "number" },
-            "T272": { matches: ["T272"], type: "number" },
-            "T273": { matches: ["T273"], type: "number" },
-            "T280": { matches: ["T280"], type: "number" },
-            "T281": { matches: ["T281"], type: "number" },
-            "T282": { matches: ["T282"], type: "number" },
-            "T888": { matches: ["T888"], type: "number" },
-            "#F701冲锋衣": { matches: ["#F701冲锋衣"], type: "text" },
-            "#F706冲锋衣": { matches: ["#F706冲锋衣"], type: "text" },
-            "#F700冲锋衣": { matches: ["#F700冲锋衣"], type: "text" },
-            "#F705冲锋衣": { matches: ["#F705冲锋衣"], type: "text" },
-            "#F703冲锋衣": { matches: ["#F703冲锋衣"], type: "text" },
-            "#F707冲锋衣": { matches: ["#F707冲锋衣"], type: "text" },
-            "#G234": { matches: ["#G234"], type: "number" },
-            "#G234": { matches: ["#G234"], type: "number" },
-            "#G235": { matches: ["#G235"], type: "number" },
-            "#G236": { matches: ["#G236"], type: "number" },
-            "#G237": { matches: ["#G237"], type: "number" },
-            "#G238": { matches: ["#G238", "#G238(白绿标)"], type: "number" },
-            "#G239": { matches: ["#G239(白彪标)"], type: "number" },
-            "#G240": { matches: ["#G240(绿彪标)"], type: "number" },
-            "#G241": { matches: ["#G241(蓝彪标)"], type: "number" },
-            "#G242": { matches: ["#G242(绿彪标)"], type: "number" },
-            "#G243": { matches: ["#G243(白彪标)"], type: "number" },
-            "#G244": { matches: ["#G244(橙标)"], type: "number" },
-            "#G245": { matches: ["#G245(白标)"], type: "number" },
-            "#G246": { matches: ["#G246(橙标)"], type: "number" },
-            "#G247": { matches: ["#G247(黑标)"], type: "number" },
-            "#G248": { matches: ["#G248(橙标)"], type: "number" },
-            "#G249": { matches: ["#G249(白标)"], type: "number" },
-            "#G250": { matches: ["#G250"], type: "number" },
-            "#G251": { matches: ["#G251"], type: "number" },
-            "#G252": { matches: ["#G252"], type: "number" },
-            "#G253": { matches: ["#G253(黄标)"], type: "number" },
-            "#G254": { matches: ["#G254(红标)"], type: "number" },
-            "#G255": { matches: ["#G255(黄标)"], type: "number" },
-            "#G256": { matches: ["#G256(红标)"], type: "number" },
-            "#G257": { matches: ["#G257(黄标)"], type: "number" },
-            "#G258": { matches: ["#G258(红标)"], type: "number" },
-            "#G259": { matches: ["#G259"], type: "number" },
-            "#G260": { matches: ["#G260"], type: "number" },
-            "#G261": { matches: ["#G261"], type: "number" },
-            "#G262": { matches: ["#G262光板"], type: "number" },
-            "#G263": { matches: ["#G263光板"], type: "number" },
-            "#G264": { matches: ["#G264光板"], type: "number" },
-            "C2441": { matches: ["C2441"], type: "number" },
-            "C2440": { matches: ["C2440"], type: "number" },
-            "C2444": { matches: ["C2444"], type: "number" },
-            "A2437": { matches: ["A2437"], type: "number" },
-            "C2439": { matches: ["C2439"], type: "number" },
-            "C2443": { matches: ["C2443"], type: "number" },
-            "C2446": { matches: ["C2446"], type: "number" },
-            "C2450": { matches: ["C2450"], type: "number" },
-            "A2438": { matches: ["A2438"], type: "number" },
-            "A2439": { matches: ["A2439"], type: "number" },
-            "A2441": { matches: ["A2441"], type: "number" },
-            "A2401": { matches: ["A2401"], type: "number" },
-            "A2421": { matches: ["A2421"], type: "number" },
-            "A2433": { matches: ["A2433"], type: "number" },
-            "A2436": { matches: ["A2436"], type: "number" },
-            "A2435": { matches: ["A2435"], type: "number" },
-            "A2434": { matches: ["A2434"], type: "number" },
-            "D701": { matches: ["D701"], type: "number" },
-            "D700": { matches: ["D700"], type: "number" },
-            "Mamba": { matches: ['Mamba'], type: "number" },
-            "SWISH": { matches: ['SWISH'], type: "number" },
-            "Justdon": { matches: ['Justdon'], type: "number" },
-            "Supersonic": { matches: ['Supersonic'], type: "number" },
-            "Rams": { matches: ['Rams'], type: "number" },
-            "NFL": { matches: ['NFL'], type: "number" },
-            "49ERS": { matches: ['49ERS'], type: "number" },
-            "Heart": { matches: ['Heart'], type: "number" },
-            "Justdon": { matches: ['Justdon'], type: "number" },
-            "Justdon": { matches: ['Justdon'], type: "number" },
-            "Justdon": { matches: ['Justdon'], type: "number" },
-            "Justdon": { matches: ['Justdon'], type: "number" },
-            "Justdon": { matches: ['Justdon'], type: "number" },
-            "Justdon": { matches: ['Justdon'], type: "number" },
-            "Justdon": { matches: ['Justdon'], type: "number" },
-            "Justdon": { matches: ['Justdon'], type: "number" },
-            "Justdon": { matches: ['Justdon'], type: "number" },
-            "Justdon": { matches: ['Justdon'], type: "number" },
-            "Justdon": { matches: ['Justdon'], type: "number" },
-            "Justdon": { matches: ['Justdon'], type: "number" },
-            "Justdon": { matches: ['Justdon'], type: "number" },
         },
 
         players: {
             "CHRISTIE": { matches: ['CHRISTIE'], type: "player" },
+            "TOSCANO": { matches: ['TOSCANO'], type: "player" },
+            "ANDERSON": { matches: ['ANDERSON'], type: "player" },
+            "HOLMGREN": { matches: ['HOLMGREN'], type: "player" },
+            "ANTETOKOUNMPO": { matches: ['ANTETOKOUNMPO'], type: "player" },
+            "ONEPECE": { matches: ['ONEPECE'], type: "player" },
+            "NOWITZKI": { matches: ['NOWITZKI'], type: "player" },
+            "GARNETT": { matches: ['GARNETT'], type: "player" },
+            "AVDIJA": { matches: ['AVDIJA'], type: "player" },
+            "DUNCAN": { matches: ['DUNCAN'], type: "player" },
+            "GINOBILI": { matches: ['GINOBILI'], type: "player" },
+            "PARKER": { matches: ['PARKER'], type: "player" },
+            "ANTHONY": { matches: ['ANTHONY'], type: "player" },
+            "HENDERSON": { matches: ['HENDERSON'], type: "player" },
             "SABONIS": { matches: ['SABONIS'], type: "player" },
             "BUTLERIII": { matches: ['BUTLERIII'], type: "player" },
             "DONCIC": { matches: ['DONCIC'], type: "player" },
@@ -2675,15 +2412,267 @@ module.exports = {
             
         },
 
+        modelos:{
+            "#2308": { matches: ["#2308"], type: "modelo" },
+            "#2312": { matches: ["#2312"], type: "modelo" },
+            "#2310": { matches: ["#2310"], type: "modelo" },
+            "#AB07": { matches: ["#AB07"], type: "modelo" },
+            "#AJ18": { matches: ["#AJ18"], type: "modelo" },
+            "#A30": { matches: ["#A30"], type: "modelo" },
+            "#A31": { matches: ["#A31"], type: "modelo" },
+            "#A32": { matches: ["#A32"], type: "modelo" },
+            "#A781": { matches: ["#A781"], type: "modelo" },
+            "#A794": { matches: ["#A794"], type: "modelo" },
+            "#A805": { matches: ["#A805"], type: "modelo" },
+            "#A796": { matches: ["#A796"], type: "modelo" },
+            "CQ01": { matches: ["CQ01"], type: "modelo" },
+            "CN01": { matches: ["CN01"], type: "modelo" },
+            "NJ12": { matches: ["NJ12"], type: "modelo" },
+            "ND08": { matches: ["ND08", '#ND08'], type: "modelo" },
+            "#NM07": { matches: ["#NM07"], type: "modelo" },
+            "#AB08": { matches: ["#AB08"], type: "modelo" },
+            "#AM05": { matches: ["#AM05"], type: "modelo" },
+            "#A33": { matches: ["#A33"], type: "modelo" },
+            "NM07": { matches: ["NM07"], type: "modelo" },
+            "T107": { matches: ["T107"], type: "modelo" },
+            "T110": { matches: ["T110"], type: "modelo" },
+            "T111": { matches: ["T111"], type: "modelo" },
+            "T112": { matches: ["T112"], type: "modelo" },
+            "T113": { matches: ["T113"], type: "modelo" },
+            "T114": { matches: ["T114"], type: "modelo" },
+            "T115": { matches: ["T115"], type: "modelo" },
+            "T116": { matches: ["T116"], type: "modelo" },
+            "T117": { matches: ["T117"], type: "modelo" },
+            "T118": { matches: ["T118"], type: "modelo" },
+            "T119": { matches: ["T119"], type: "modelo" },
+            "T120": { matches: ["T120"], type: "modelo" },
+            "T121": { matches: ["T121"], type: "modelo" },
+            "T122": { matches: ["T122"], type: "modelo" },
+            "T123": { matches: ["T123"], type: "modelo" },
+            "T124": { matches: ["T124"], type: "modelo" },
+            "T125": { matches: ["T125"], type: "modelo" },
+            "T126": { matches: ["T126"], type: "modelo" },
+            "T127": { matches: ["T127"], type: "modelo" },
+            "T128": { matches: ["T128"], type: "modelo" },
+            "T129": { matches: ["T129"], type: "modelo" },
+            "T130": { matches: ["T130"], type: "modelo" },
+            "T131": { matches: ["T131"], type: "modelo" },
+            "T132": { matches: ["T132"], type: "modelo" },
+            "T133": { matches: ["T133"], type: "modelo" },
+            "T135": { matches: ["T135"], type: "modelo" },
+            "T136": { matches: ["T136"], type: "modelo" },
+            "T137": { matches: ["T137满分"], type: "modelo" },
+            "T138": { matches: ["T138"], type: "modelo" },
+            "T139": { matches: ["T139"], type: "modelo" },
+            "T140": { matches: ["T140"], type: "modelo" },
+            "T141": { matches: ["T141"], type: "modelo" },
+            "T142": { matches: ["T142"], type: "modelo" },
+            "T143": { matches: ["T143"], type: "modelo" },
+            "T144": { matches: ["T144"], type: "modelo" },
+            "T145": { matches: ["T145"], type: "modelo" },
+            "T146": { matches: ["T146"], type: "modelo" },
+            "T147": { matches: ["T147"], type: "modelo" },
+            "T148": { matches: ["T148"], type: "modelo" },
+            "T149": { matches: ["T149"], type: "modelo" },
+            "T150": { matches: ["T150"], type: "modelo" },
+            "T152": { matches: ["T152"], type: "modelo" },
+            "T153": { matches: ["T153"], type: "modelo" },
+            "T156": { matches: ["T156"], type: "modelo" },
+            "T157": { matches: ["T157"], type: "modelo" },
+            "T158": { matches: ["T158"], type: "modelo" },
+            "T160": { matches: ["T160"], type: "modelo" },
+            "T161": { matches: ["T161"], type: "modelo" },
+            "T162": { matches: ["T162"], type: "modelo" },
+            "T163": { matches: ["T163"], type: "modelo" },
+            "T165": { matches: ["T165"], type: "modelo" },
+            "T166": { matches: ["T166"], type: "modelo" },
+            "T167": { matches: ["T167"], type: "modelo" },
+            "T169": { matches: ["T169"], type: "modelo" },
+            "T170": { matches: ["T170"], type: "modelo" },
+            "T171": { matches: ["T171"], type: "modelo" },
+            "T172": { matches: ["T172"], type: "modelo" },
+            "T173": { matches: ["T173"], type: "modelo" },
+            "T174": { matches: ["T174"], type: "modelo" },
+            "T175": { matches: ["T175"], type: "modelo" },
+            "T176": { matches: ["T176"], type: "modelo" },
+            "T177": { matches: ["T177"], type: "modelo" },
+            "T178": { matches: ["T178"], type: "modelo" },
+            "T179": { matches: ["T179"], type: "modelo" },
+            "T180": { matches: ["T180"], type: "modelo" },
+            "T181": { matches: ["T181"], type: "modelo" },
+            "T182": { matches: ["T182"], type: "modelo" },
+            "T183": { matches: ["T183"], type: "modelo" },
+            "T184": { matches: ["T184"], type: "modelo" },
+            "T185": { matches: ["T185"], type: "modelo" },
+            "T186": { matches: ["T186"], type: "modelo" },
+            "T187": { matches: ["T187"], type: "modelo" },
+            "T188": { matches: ["T188"], type: "modelo" },
+            "T189": { matches: ["T189"], type: "modelo" },
+            "T190": { matches: ["T190"], type: "modelo" },
+            "T191": { matches: ["T191"], type: "modelo" },
+            "T192": { matches: ["T192"], type: "modelo" },
+            "T193": { matches: ["T193"], type: "modelo" },
+            "T194": { matches: ["T194"], type: "modelo" },
+            "T195": { matches: ["T195"], type: "modelo" },
+            "T196": { matches: ["T196"], type: "modelo" },
+            "T197": { matches: ["T197"], type: "modelo" },
+            "T198": { matches: ["T198"], type: "modelo" },
+            "T199": { matches: ["T199"], type: "modelo" },
+            "T200": { matches: ["T200"], type: "modelo" },
+            "T201": { matches: ["T201"], type: "modelo" },
+            "T202": { matches: ["T202"], type: "modelo" },
+            "T203": { matches: ["T203"], type: "modelo" },
+            "T204": { matches: ["T204"], type: "modelo" },
+            "T205": { matches: ["T205"], type: "modelo" },
+            "T206": { matches: ["T206"], type: "modelo" },
+            "T207": { matches: ["T207"], type: "modelo" },
+            "T208": { matches: ["T208"], type: "modelo" },
+            "T209": { matches: ["T209"], type: "modelo" },
+            "T210": { matches: ["T210"], type: "modelo" },
+            "T211": { matches: ["T211"], type: "modelo" },
+            "T212": { matches: ["T212"], type: "modelo" },
+            "T213": { matches: ["T213"], type: "modelo" },
+            "T214": { matches: ["T214"], type: "modelo" },
+            "T215": { matches: ["T215"], type: "modelo" },
+            "T216": { matches: ["T216"], type: "modelo" },
+            "T217": { matches: ["T217"], type: "modelo" },
+            "T219": { matches: ["T219"], type: "modelo" },
+            "T220": { matches: ["T220"], type: "modelo" },
+            "T221": { matches: ["T221"], type: "modelo" },
+            "T222": { matches: ["T222"], type: "modelo" },
+            "T223": { matches: ["T223"], type: "modelo" },
+            "T224": { matches: ["T224"], type: "modelo" },
+            "T225": { matches: ["T225"], type: "modelo" },
+            "T226": { matches: ["T226"], type: "modelo" },
+            "T227": { matches: ["T227"], type: "modelo" },
+            "T228": { matches: ["T228"], type: "modelo" },
+            "T229": { matches: ["T229"], type: "modelo" },
+            "T230": { matches: ["T230"], type: "modelo" },
+            "T231": { matches: ["T231"], type: "modelo" },
+            "T232": { matches: ["T232"], type: "modelo" },
+            "T234": { matches: ["T234"], type: "modelo" },
+            "T235": { matches: ["T235"], type: "modelo" },
+            "T236": { matches: ["T236"], type: "modelo" },
+            "T237": { matches: ["T237"], type: "modelo" },
+            "T238": { matches: ["T238"], type: "modelo" },
+            "T239": { matches: ["T239"], type: "modelo" },
+            "T240": { matches: ["T240"], type: "modelo" },
+            "T241": { matches: ["T241"], type: "modelo" },
+            "T242": { matches: ["T242"], type: "modelo" },
+            "T244": { matches: ["T244"], type: "modelo" },
+            "T246": { matches: ["T246"], type: "modelo" },
+            "T247": { matches: ["T247"], type: "modelo" },
+            "T248": { matches: ["T248"], type: "modelo" },
+            "T249": { matches: ["T249"], type: "modelo" },
+            "T250": { matches: ["T250"], type: "modelo" },
+            "T251": { matches: ["T251"], type: "modelo" },
+            "T252": { matches: ["T252"], type: "modelo" },
+            "T254": { matches: ["T254"], type: "modelo" },
+            "T255": { matches: ["T255"], type: "modelo" },
+            "T256": { matches: ["T256"], type: "modelo" },
+            "T257": { matches: ["T257"], type: "modelo" },
+            "T258": { matches: ["T258"], type: "modelo" },
+            "T259": { matches: ["T259"], type: "modelo" },
+            "T260": { matches: ["T260"], type: "modelo" },
+            "T261": { matches: ["T261"], type: "modelo" },
+            "T262": { matches: ["T262"], type: "modelo" },
+            "T263": { matches: ["T263"], type: "modelo" },
+            "T264": { matches: ["T264"], type: "modelo" },
+            "T265": { matches: ["T265"], type: "modelo" },
+            "T266": { matches: ["T266"], type: "modelo" },
+            "T272": { matches: ["T272"], type: "modelo" },
+            "T273": { matches: ["T273"], type: "modelo" },
+            "T280": { matches: ["T280"], type: "modelo" },
+            "T281": { matches: ["T281"], type: "modelo" },
+            "T282": { matches: ["T282"], type: "modelo" },
+            "T888": { matches: ["T888"], type: "modelo" },
+            "T277": { matches: ["T277"], type: "modelo" },
+            "T275": { matches: ["T275"], type: "modelo" },
+            "T279": { matches: ["T279"], type: "modelo" },
+            "T278": { matches: ["T278"], type: "modelo" },
+            "T274": { matches: ["T274"], type: "modelo" },
+            "T270": { matches: ["T270"], type: "modelo" },
+            "T276": { matches: ["T276"], type: "modelo" },
+            "T269": { matches: ["T269"], type: "modelo" },
+            "T268": { matches: ["T268"], type: "modelo" },
+            "T267": { matches: ["T267"], type: "modelo" },
+            "#F701冲锋衣": { matches: ["#F701冲锋衣"], type: "modelo" },
+            "#F706冲锋衣": { matches: ["#F706冲锋衣"], type: "modelo" },
+            "#F700冲锋衣": { matches: ["#F700冲锋衣"], type: "modelo" },
+            "#F705冲锋衣": { matches: ["#F705冲锋衣"], type: "modelo" },
+            "#F703冲锋衣": { matches: ["#F703冲锋衣"], type: "modelo" },
+            "#F707冲锋衣": { matches: ["#F707冲锋衣"], type: "modelo" },
+            "#G234": { matches: ["#G234"], type: "modelo" },
+            "#G234": { matches: ["#G234"], type: "modelo" },
+            "#G235": { matches: ["#G235"], type: "modelo" },
+            "#G236": { matches: ["#G236"], type: "modelo" },
+            "#G237": { matches: ["#G237"], type: "modelo" },
+            "#G238": { matches: ["#G238", "#G238(白绿标)"], type: "modelo" },
+            "#G239": { matches: ["#G239(白彪标)"], type: "modelo" },
+            "#G240": { matches: ["#G240(绿彪标)"], type: "modelo" },
+            "#G241": { matches: ["#G241(蓝彪标)"], type: "modelo" },
+            "#G242": { matches: ["#G242(绿彪标)"], type: "modelo" },
+            "#G243": { matches: ["#G243(白彪标)"], type: "modelo" },
+            "#G244": { matches: ["#G244(橙标)"], type: "modelo" },
+            "#G245": { matches: ["#G245(白标)"], type: "modelo" },
+            "#G246": { matches: ["#G246(橙标)"], type: "modelo" },
+            "#G247": { matches: ["#G247(黑标)"], type: "modelo" },
+            "#G248": { matches: ["#G248(橙标)"], type: "modelo" },
+            "#G249": { matches: ["#G249(白标)"], type: "modelo" },
+            "#G250": { matches: ["#G250"], type: "modelo" },
+            "#G251": { matches: ["#G251"], type: "modelo" },
+            "#G252": { matches: ["#G252"], type: "modelo" },
+            "#G253": { matches: ["#G253(黄标)"], type: "modelo" },
+            "#G254": { matches: ["#G254(红标)"], type: "modelo" },
+            "#G255": { matches: ["#G255(黄标)"], type: "modelo" },
+            "#G256": { matches: ["#G256(红标)"], type: "modelo" },
+            "#G257": { matches: ["#G257(黄标)"], type: "modelo" },
+            "#G258": { matches: ["#G258(红标)"], type: "modelo" },
+            "#G259": { matches: ["#G259"], type: "modelo" },
+            "#G260": { matches: ["#G260"], type: "modelo" },
+            "#G261": { matches: ["#G261"], type: "modelo" },
+            "#G262": { matches: ["#G262光板"], type: "modelo" },
+            "#G263": { matches: ["#G263光板"], type: "modelo" },
+            "#G264": { matches: ["#G264光板"], type: "modelo" },
+            "C2441": { matches: ["C2441"], type: "modelo" },
+            "C2440": { matches: ["C2440"], type: "modelo" },
+            "C2444": { matches: ["C2444"], type: "modelo" },
+            "A2437": { matches: ["A2437"], type: "modelo" },
+            "C2439": { matches: ["C2439"], type: "modelo" },
+            "C2443": { matches: ["C2443"], type: "modelo" },
+            "C2446": { matches: ["C2446"], type: "modelo" },
+            "C2450": { matches: ["C2450"], type: "modelo" },
+            "A2438": { matches: ["A2438"], type: "modelo" },
+            "A2439": { matches: ["A2439"], type: "modelo" },
+            "A2441": { matches: ["A2441"], type: "modelo" },
+            "A2401": { matches: ["A2401"], type: "modelo" },
+            "A2421": { matches: ["A2421"], type: "modelo" },
+            "A2433": { matches: ["A2433"], type: "modelo" },
+            "A2436": { matches: ["A2436"], type: "modelo" },
+            "A2435": { matches: ["A2435"], type: "modelo" },
+            "A2434": { matches: ["A2434"], type: "modelo" },
+            "D701": { matches: ["D701"], type: "modelo" },
+            "D700": { matches: ["D700"], type: "modelo" },
+            "Mamba": { matches: ['Mamba'], type: "modelo" },
+            "SWISH": { matches: ['SWISH'], type: "modelo" },
+            "Justdon": { matches: ['Justdon'], type: "modelo" },
+            "Supersonic": { matches: ['Supersonic'], type: "modelo" },
+            "Rams": { matches: ['Rams'], type: "modelo" },
+            "NFL": { matches: ['NFL'], type: "modelo" },
+            "49ERS": { matches: ['49ERS'], type: "modelo" },
+            "Heart": { matches: ['Heart'], type: "modelo" },
+        },
+
         // Saltear, no add nada.
         nothings:{
             "": {
-                matches: ['Champions', 'Yellowish', 'Stars', "(冲锋衣)", "#彩标", "*带二星", "*路飞", "*李洛克", "洪都拉奥林", "*日落", "*红雁塔", "*欧冠版", "*自来也", "*炭治郎", "#笑脸", "#爱心", "#C库里", "#飞人", "#字母", "#独角兽", "#蓝标", "#红标", "*金木研", "*卡卡西", "*九尾鸣人", "#小标", "#风景", "#大标", "#夏日风", "#汉堡", "#三角山", "#鼠标", "#苹果", "*日月星辰", "*独塔", "*Y3武士", "*红太阳", "*黑红龙珠", 'Hooded', 'Fabric', "大阪樱花", "*多彩", "布拉甘红牛", "(V领) ", "*全黑", "*七人制", "Jersey(V领) ", "#B600冲锋衣", 'UCL', 'Greem', 'SDD', "UTA", "PHX", "BOS", "GSW", "MLB", "WAS", "NOP", "*AGUILA", "Motorcycle", "Formula", 'NEO', 'warm', '(圆领）Edition)飞人版', '(Chinese Year)', '1:1', '#2311', 'HALO', '#812', '#715', 'Broyal', 'BFC', 'Vesion', '(黄边)', 'Hot', 'Pressing', '*带章', '*玫瑰蛇', '*火龙', '*Gear5', '神户胜利船', '*圣斗士金色', '广岛三箭', '*狐狸', '(童装)(半拉链)', '*蓝黑', '*新广告', '*有领', '*气功悟空', '浦和红钻', '*海贼鸣人眼神', '#绿标', '*红袖边', '*蓝龙', '*耶稣', '(童装)', '字母印', '*柯南D', '#刺绣', '*草帽', '*眼镜帽子', '*蓝袖边多图', '(加绒)', 'Jersey(V领)', 'Jersey(圆领)', '(Trapeze Edition)', '(V领)', '飞人版', '*贝吉塔红', '*贝吉塔蓝', '*咒术回战', '*龙珠黑悟空', '*橙白赛亚人', '*MonK', '(Print Sponsor)', '(球员童装)', '长袖球员', '横滨水手', '*金广告', '*紫色标', '*金双狮', '*赛亚人黑色', '*富士山与塔', '*浪客剑心', '*犬夜叉白色', '(女)', '(长袖球员)', 'Concept', '半拉链', '萨尔斯堡红牛', '*红星队', 'Milky', '(High Quality)', '*忍者系黑衣', '*忍者系绿', '*忍者系蓝', '*忍者系紫', "*云腾", "*金边赛亚", "*火拳路飞", "*Y3黑刀客", "*黄袖", "*数字", "*红标翻领", "灰色(哆啦A梦)", "鸟栖砂岩", "*背心套装", "*悟空黄", "*双面长袖", "*双面", "*黑色", "(童装长袖)", "*Midea广告", "*长刀武士", "(双面刺绣)(双面风衣)", "*背后没图案", "*七彩赛亚人", "*黄金圣斗士", "(半拉链)(匹印)", "*网格", "*酷玩", "*翻领", "(长袖)欧冠决赛版", "*全广告", "(女)黑色", "*鬼武者", "*彩虹神奇宝贝", "*猫头鹰", "万圣节版", "(背后WALES)", "(背后ARGENTINA)", "#2492(半拉链)", "#三星", "#AJ20(童装)", "*周年1889", "*龙珠赛亚", "*忍者波风", "*刀流索隆", "*右袖广告", "*剑士", "*红发香克斯", "*龙樱花", "*黄袖边", "*虎头", "*前带广告", "(双面风衣)(刺绣)", "*布加勒斯特星", "蔚山现代", "*三叶草", "*绿龙", "*彩带", "*红Y3", "*武士刀", "*樱花龙", "*水墨塔", "*太阳武士", "*金标", "#102冲锋衣", "#103加绒冲锋衣", "*三叶草翻领", "*海贼王布鲁克", "*火焰悟空", "*数码宝贝", "*草帽路飞", "*蓝武士", "*三叶草红黑", "*梅花与桥", "*赛亚贝吉塔", "*三叶草粉黑", "*三叶草蓝红", "*三叶草蓝", "*梅花武士", "*枫叶刀客", "*三叶草金标", "*三叶草黑标", "*三叶草白标", "*千变超人", "#花蛇", "*花蛇", "(欧冠版)", "*前横条", "*粉色", "*鬼脸", "(女)圆领", "(有领)", "(Pants Have Pocket)",
+                matches: ['Glory', 'Popule', 'Champions', 'Yellowish', 'Stars', "*布拉甘红牛", "#粉色樱花", "荣耀版", "#夕阳红", "*韦尔瓦", "#紫色动漫", "(圆领)银牛", "Suit(有领)", "*大彩悟空", "#粉红动漫", "*黑龙勇士", "*悟空太阳", "*忍者宇智波", "*日文与龙", "*Y3绿龙兽", "(球员短裤)", "霍芬海姆", "(荣耀版)", "Jersey(蛇纹)", "(冲锋衣)", "#彩标", "*带二星", "*路飞", "*李洛克", "洪都拉奥林", "*日落", "*红雁塔", "*欧冠版", "*自来也", "*炭治郎", "#笑脸", "#爱心", "#C库里", "#飞人", "#字母", "#独角兽", "#蓝标", "#红标", "*金木研", "*卡卡西", "*九尾鸣人", "#小标", "#风景", "#大标", "#夏日风", "#汉堡", "#三角山", "#鼠标", "#苹果", "*日月星辰", "*独塔", "*Y3武士", "*红太阳", "*黑红龙珠", 'Hooded', 'Fabric', "大阪樱花", "*多彩", "布拉甘红牛", "(V领) ", "*全黑", "*七人制", "Jersey(V领) ", "#B600冲锋衣", 'UCL', 'Greem', 'SDD', "UTA", "PHX", "BOS", "GSW", "MLB", "WAS", "NOP", "*AGUILA", "Motorcycle", "Formula", 'NEO', 'warm', '(圆领）Edition)飞人版', '(Chinese Year)', '1:1', '#2311', 'HALO', '#812', '#715', 'Broyal', 'BFC', 'Vesion', '(黄边)', 'Hot', 'Pressing', '*带章', '*玫瑰蛇', '*火龙', '*Gear5', '神户胜利船', '*圣斗士金色', '广岛三箭', '*狐狸', '(童装)(半拉链)', '*蓝黑', '*新广告', '*有领', '*气功悟空', '浦和红钻', '*海贼鸣人眼神', '#绿标', '*红袖边', '*蓝龙', '*耶稣', '(童装)', '字母印', '*柯南D', '#刺绣', '*草帽', '*眼镜帽子', '*蓝袖边多图', '(加绒)', 'Jersey(V领)', 'Jersey(圆领)', '(Trapeze Edition)', '(V领)', '飞人版', '*贝吉塔红', '*贝吉塔蓝', '*咒术回战', '*龙珠黑悟空', '*橙白赛亚人', '*MonK', '(Print Sponsor)', '(球员童装)', '长袖球员', '横滨水手', '*金广告', '*紫色标', '*金双狮', '*赛亚人黑色', '*富士山与塔', '*浪客剑心', '*犬夜叉白色', '(女)', '(长袖球员)', 'Concept', '半拉链', '萨尔斯堡红牛', '*红星队', 'Milky', '(High Quality)', '*忍者系黑衣', '*忍者系绿', '*忍者系蓝', '*忍者系紫', "*云腾", "*金边赛亚", "*火拳路飞", "*Y3黑刀客", "*黄袖", "*数字", "*红标翻领", "灰色(哆啦A梦)", "鸟栖砂岩", "*背心套装", "*悟空黄", "*双面长袖", "*双面", "*黑色", "(童装长袖)", "*Midea广告", "*长刀武士", "(双面刺绣)(双面风衣)", "*背后没图案", "*七彩赛亚人", "*黄金圣斗士", "(半拉链)(匹印)", "*网格", "*酷玩", "*翻领", "(长袖)欧冠决赛版", "*全广告", "(女)黑色", "*鬼武者", "*彩虹神奇宝贝", "*猫头鹰", "万圣节版", "(背后WALES)", "(背后ARGENTINA)", "#2492(半拉链)", "#三星", "#AJ20(童装)", "*周年1889", "*龙珠赛亚", "*忍者波风", "*刀流索隆", "*右袖广告", "*剑士", "*红发香克斯", "*龙樱花", "*黄袖边", "*虎头", "*前带广告", "(双面风衣)(刺绣)", "*布加勒斯特星", "蔚山现代", "*三叶草", "*绿龙", "*彩带", "*红Y3", "*武士刀", "*樱花龙", "*水墨塔", "*太阳武士", "*金标", "#102冲锋衣", "#103加绒冲锋衣", "*三叶草翻领", "*海贼王布鲁克", "*火焰悟空", "*数码宝贝", "*草帽路飞", "*蓝武士", "*三叶草红黑", "*梅花与桥", "*赛亚贝吉塔", "*三叶草粉黑", "*三叶草蓝红", "*三叶草蓝", "*梅花武士", "*枫叶刀客", "*三叶草金标", "*三叶草黑标", "*三叶草白标", "*千变超人", "#花蛇", "*花蛇", "(欧冠版)", "*前横条", "*粉色", "*鬼脸", "(女)圆领", "(有领)", "(Pants Have Pocket)",
                 "(Pants Have Pocket)(半拉链)", "#洛杉矶道奇队", "#快船队", "#洋基队", "#篮网队", "*爵士雪山", "#绝杀", "#起飞", "*詹姆斯高中", "*湖人曼巴", "*湖人队", "*科比", "*热火彩虹版", "*雄鹿队", "*北卡", "太阳队", "火箭队中文版", "#森林狼", "#76人队", "#国王队", "#灰熊队", "#尼克斯队", "#全明星", "密歇根", "湖人拼凯尔特人", "#公牛拼爵士", "奇才队", "#海绵宝宝", "#篮球男孩", "*火箭拼尼克斯", "#凯尔特人", "#步行者队", "#活塞队", "#黄蜂队", "#公牛", "#公牛条纹", "*爵士队", "*勇士队", "76人队", "#公牛C连体", "*派大星", "杜兰特", "75th", "火箭队", "*猛龙", "#魔术队", "*超音速", "*湖人", "*公羊", "*49人队", "*猛龙涂鸦", "*湖人涂鸦", "#灰熊涂鸦", "#公牛涂鸦"],
                 type: "nothing"
             },
         }
     },
+
 
     // Detector de temporadas
     seasonDetector: {
@@ -2691,6 +2680,7 @@ module.exports = {
         type: "temporada",
         categoryPath: ["Deportes"]
     },
+
 
     productOptions: {
         sizes: {
@@ -2795,7 +2785,7 @@ module.exports = {
         },
         badges: {
             "Sin parches": {
-                matches: ['ld..en (左袖广告)', 'We..ds (左袖广告)', 'GC.S (左袖广告)', 'ca..va (左袖广告)', 'SA..ON(左袖广告)', 'JD (左袖广告)', "Sonepar (左袖广告)", 'IN.gia (左袖广告)', 'AMB..tv (左袖广告)', 'Expedia (左袖广告)', 'De..LT (左袖广告)', 'TR..ON (左袖广告)', 'MGS.os (左袖广告)', "No Badge", "MSC (左袖广告)", 'NO Badge', 'noon (左袖广告)'],
+                matches: ['Hep..est (左袖广告)', 'ki..ee (左袖广告)', 'HA..M(左袖广告)', 'ME..ZA (左袖广告)', 'rel..NS (左袖广告)', 'qb (左袖广告)', 'ld..en (左袖广告)', 'We..ds (左袖广告)', 'GC.S (左袖广告)', 'ca..va (左袖广告)', 'SA..ON(左袖广告)', 'JD (左袖广告)', "Sonepar (左袖广告)", 'IN.gia (左袖广告)', 'AMB..tv (左袖广告)', 'Expedia (左袖广告)', 'De..LT (左袖广告)', 'TR..ON (左袖广告)', 'MGS.os (左袖广告)', "No Badge", "MSC (左袖广告)", 'NO Badge', 'noon (左袖广告)'],
                 type: "badge",
                 price: 0,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/17/e/8/e80a811156ddf959.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
@@ -3034,7 +3024,6 @@ module.exports = {
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/03/04/8/1/81ee2f4cd4f552b3.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            
             "FWC2014 WIN": {
                 matches: ["FFWCC2014 (世界杯胸前冠)"],
                 type: "badge",
@@ -3079,7 +3068,7 @@ module.exports = {
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/27/d/0/d0ea0f5dbb710229.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "UEEL/Foundation": {
-                matches: ["UEFA E L (欧联45)", 'UEFA E L(欧联45)右袖', 'UEFA E L (欧联45)右袖', 'UEFA E L+JD(欧联+左袖广告)'],
+                matches: ['UEFA E L +Hep..est (欧联45+左袖广告)', 'UEFA E L +rel..NS (欧联45+左袖广告)', "UEFA E L (欧联45)", 'UEFA E L(欧联45)右袖', 'UEFA E L (欧联45)右袖', 'UEFA E L+JD(欧联+左袖广告)'],
                 type: "badge",
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/27/1/f/1fd6025fc863d5c9.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
@@ -3112,7 +3101,7 @@ module.exports = {
 
             // COPAS EQUIPOS
             "Carabao Cup": {
-                matches: ['Carabao Cup +ld..en (英联赛杯+左袖广告)', 'Carabao Cup +We..ds (英联赛杯+左袖广告)', 'Carabao Cup +SA..ON (英联赛杯+左袖广告)', 'Carabao Cup +Expedia (英联赛杯+左袖广告)', 'Carabao Cup +OKX (英联赛杯+左袖广告)', "Carabao Cup (英联赛杯)右袖", 'Carabao Cup +noon (英联赛杯+左袖广告)'],
+                matches: ['Carabao Cup +ki..ee (英联赛杯+左袖广告)', 'Carabao Cup +HA..M (英联赛杯+左袖广告)', 'Carabao Cup +HA..M(英联赛杯+左袖广告)', 'Carabao Cup +We..ds  (英联赛杯+左袖广告)', 'Carabao Cup +qb (英联赛杯+左袖广告)', 'Carabao Cup +ld..en (英联赛杯+左袖广告)', 'Carabao Cup +We..ds (英联赛杯+左袖广告)', 'Carabao Cup +SA..ON (英联赛杯+左袖广告)', 'Carabao Cup +Expedia (英联赛杯+左袖广告)', 'Carabao Cup +OKX (英联赛杯+左袖广告)', "Carabao Cup (英联赛杯)右袖", 'Carabao Cup +noon (英联赛杯+左袖广告)'],
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/8/0/802bde86a7dfd67c.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
@@ -3128,7 +3117,7 @@ module.exports = {
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/13/8/a/8ad19d0b18bace89.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "LALIGA 45": {
-                matches: ['La Liga +GC.S(45西甲章+左袖广告)', 'La Liga +ca..va (45西甲章+左袖广告)', 'La Liga +IN.gia(45西甲章+左袖广告)', 'La Liga +OK.ty (45西甲章+左袖广告)', 'La Liga +B2.NPA (45西甲章+左袖广告)', 'La Liga +AMB..tv (45西甲章+左袖广告)', 'La Liga +MGS.. (45西甲章+左袖广告)', 'La Liga +CA..DA (45西甲章+左袖广告)', "La Liga (45西甲章)", 'La Liga +MGS.os(45西甲章+左袖广告)','La Liga +JD (45西甲章+左袖广告)',  'La Liga +Kalise (45西甲章+左袖广告)'],
+                matches: ['La Liga +EB..ay (45西甲章+左袖广告)', 'La Liga +RE..LE (45西甲章+左袖广告)', 'La Liga +ma..ga (45西甲章+左袖广告)', 'La Liga +ME..ZA (45西甲章+左袖广告)', 'La Liga +IN.gia (45西甲章+左袖广告)', 'La Liga +GC.S(45西甲章+左袖广告)', 'La Liga +ca..va (45西甲章+左袖广告)', 'La Liga +IN.gia(45西甲章+左袖广告)', 'La Liga +OK.ty (45西甲章+左袖广告)', 'La Liga +B2.NPA (45西甲章+左袖广告)', 'La Liga +AMB..tv (45西甲章+左袖广告)', 'La Liga +MGS.. (45西甲章+左袖广告)', 'La Liga +CA..DA (45西甲章+左袖广告)', "La Liga (45西甲章)", 'La Liga +MGS.os(45西甲章+左袖广告)','La Liga +JD (45西甲章+左袖广告)',  'La Liga +Kalise (45西甲章+左袖广告)'],
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/6/f/6fcf280ecb88c188.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
@@ -3155,7 +3144,7 @@ module.exports = {
 
             // > Bundersliga
             "BUN": {
-                matches: ['Bundesliga +ih..ar (德普章+左袖广告)', "Bundesliga (德普章)", 'Bundesliga (德甲普章)', 'Bundesliga(普章)', 'Bundesliga +Sonepar (德普章+左袖广告)'],
+                matches: ['Bundesliga +Hep..est (德普章+左袖广告)', 'Bundesliga +rel..NS (德普章+左袖广告)', 'Bundesliga +ih..ar (德普章+左袖广告)', "Bundesliga (德普章)", 'Bundesliga (德甲普章)', 'Bundesliga(普章)', 'Bundesliga +Sonepar (德普章+左袖广告)'],
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/10/31/8/b/8bdf7dd2865f6383.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
@@ -3176,7 +3165,7 @@ module.exports = {
 
             // > Premier
             "Premier": {
-                matches: ['Pre L +ld..en (34英超+左袖广告)', 'Pre L + We..ds (34英超+左袖广告)', 'Pre L +SA..ON (34英超+左袖广告)', 'Pre L + Expedia (34英超+左袖广告)', 'Pre L/Expedia (34英超+左袖广告)', 'Pre L +De..LT (34英超+左袖广告)', 'Pre L +TR..ON (34英超+左袖广告)', 'Pre L +noon (34英超+左袖广告)', "Premier League (34英超普)", "Pre L +NO.or (34英超/章下字)", "Premier league (34英超普)"],
+                matches: ['Pre L + ki..ee (34英超+左袖广告)', 'Pre L +HA..M (34英超+左袖广告)', 'Pre L + qb (34英超+左袖广告)', 'Pre L +ld..en (34英超+左袖广告)', 'Pre L + We..ds (34英超+左袖广告)', 'Pre L +SA..ON (34英超+左袖广告)', 'Pre L + Expedia (34英超+左袖广告)', 'Pre L/Expedia (34英超+左袖广告)', 'Pre L +De..LT (34英超+左袖广告)', 'Pre L +TR..ON (34英超+左袖广告)', 'Pre L +noon (34英超+左袖广告)', "Premier League (34英超普)", "Pre L +NO.or (34英超/章下字)", "Premier league (34英超普)"],
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/6/b/6b8aa0557f64e822.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
@@ -3188,10 +3177,16 @@ module.exports = {
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/13/5/5/5569bf90f755f025.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "Premier/NoRac": {
-                matches: ['Pre L +NO.or+ ld..en (34英超/章下字+左袖广告)', 'Pre L +NO.or+ We..ds (34英超/章下字+左袖广告)', 'Pre L +NO.or+ SA..ON ( 34英超/章下字+左袖广告)', 'Pre L + NO..for (34英超普+章下字)', 'Pre L +NO.or+ Expedia (34英超/章下字+左袖广告)', 'Pre L +NO.or+ De..LT (34英超/章下字+左袖广告)', 'Pre L +NO.or+ TR..ON (34英超/章下字+左袖广告)', "Pre L/NO..for (34英超普+章下字)", 'Pre L +NO.or+ noon ( 34英超/章下字+左袖广告)'],
+                matches: ['Pre L +NO.or+ ki..ee (34英超/章下字+左袖广告)', 'Pre L +NO.or+ HA..M ( 34英超/章下字+左袖广告)', 'Pre L +NO.or+ qb (34英超/章下字+左袖广告)', 'Pre L +NO.or+ ld..en (34英超/章下字+左袖广告)', 'Pre L +NO.or+ We..ds (34英超/章下字+左袖广告)', 'Pre L +NO.or+ SA..ON ( 34英超/章下字+左袖广告)', 'Pre L + NO..for (34英超普+章下字)', 'Pre L +NO.or+ Expedia (34英超/章下字+左袖广告)', 'Pre L +NO.or+ De..LT (34英超/章下字+左袖广告)', 'Pre L +NO.or+ TR..ON (34英超/章下字+左袖广告)', "Pre L/NO..for (34英超普+章下字)", 'Pre L +NO.or+ noon ( 34英超/章下字+左袖广告)'],
                 type: "badge",
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/2/8/2849daa0df6783ca.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Premier/NoRac/Flor": {
+                matches: ['Pre L +NO.or+ ki..ee+ Flower (英超/章下字+左袖广告+红花)', 'Pre L +NO.or+ HA..M+ Flower (英超/章下字+左袖广告+红花)', 'Pre L +NO.or+ qb+ Flower (英超/章下字+左袖广告+红花)', 'Pre L +NO.or+ ld..en+ Flower (英超/章下字+左袖广告+红花)', 'Pre L +NO.or+ We..ds+ Flower (英超/章下字+左袖广告+红花)', 'Pre L +NO.or+ SA..ON+ Flower (英超/章下字+左袖广告+红花)', 'Pre L +NO.or+ De..LT + Flower (英超/章下字+左袖广告+红花)', 'Pre L +NO.or+ Expedia+ Flower (34英超/章下字+左袖广告)+红花', 'Pre L +NO.or+ De..LT/Flower (英超/章下字+左袖广告+红花)', "Pre L +NO.or+ Flower (英超/章下字+红花)", 'Pre L +NO.or+ Flower (英超/章下字+左袖广告+红花)', 'Pre L +NO.or+ noon+ Flower (英超/章下字+左袖广告+红花)'],
+                type: "badge",
+                price: 3,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/2/f/2f8a92a783fee35e.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "Premier/NoRac/Fever": {
                 matches: ["Pre L +NO..for +fever (英超普/章下字+左袖广告)"],
@@ -3204,12 +3199,6 @@ module.exports = {
                 type: "badge",
                 price: 4,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/0/7/0723db2ac74426ed.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
-            },
-            "Premier/NoRac/Flor": {
-                matches: ['Pre L +NO.or+ ld..en+ Flower (英超/章下字+左袖广告+红花)', 'Pre L +NO.or+ We..ds+ Flower (英超/章下字+左袖广告+红花)', 'Pre L +NO.or+ SA..ON+ Flower (英超/章下字+左袖广告+红花)', 'Pre L +NO.or+ De..LT + Flower (英超/章下字+左袖广告+红花)', 'Pre L +NO.or+ Expedia+ Flower (34英超/章下字+左袖广告)+红花', 'Pre L +NO.or+ De..LT/Flower (英超/章下字+左袖广告+红花)', "Pre L +NO.or+ Flower (英超/章下字+红花)", 'Pre L +NO.or+ Flower (英超/章下字+左袖广告+红花)', 'Pre L +NO.or+ noon+ Flower (英超/章下字+左袖广告+红花)'],
-                type: "badge",
-                price: 3,
-                images: "https://us03-imgcdn.ymcart.com/97006/2024/12/20/2/f/2f8a92a783fee35e.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "Premier/Flor": {
                 matches: ["Pre L +NO.or+ Flower( 英超/章下字+红花)"],
@@ -3401,7 +3390,7 @@ module.exports = {
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/27/8/f/8f61a8c94426d8ec.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "LPF": {
-                matches: ["LPF(阿甲普章)"],
+                matches: ["LPF(阿甲普章)", 'LPF (阿甲普章)' ],
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/27/f/c/fc7e015592193618.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
@@ -3450,6 +3439,12 @@ module.exports = {
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/10/07/2/4/24dfbe74f6e5ff61.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "RSL45/NOUG": {
+                matches: ["RSL+NOUG(45沙特联+右袖蓝广告)"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/09/13/1/7/1722b2e21e688ff9.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "EFL": {
                 matches: ["EFL Championship (英冠章)右"],
@@ -3568,23 +3563,23 @@ module.exports = {
             
 
             // NEWS FALTA ACOMODAR
-            "Template 1": {
+            "UEL24/Foundation/ZondaC": {
                 matches: ["UEL 2024 Winners +Zondacrypto(欧冠-亚特兰大+左袖广告)"],
                 type: "badge",
                 price: 3,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/10/16/4/0/40ce6bfaade85e08.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "Template": {
-                matches: ["Template"],
+            "SerieA/ZondaC": {
+                matches: ["Serie A +Zondacrypto(意甲+左袖广告)"],
                 type: "badge",
-                price: 1,
-                images: "Template"
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/09/10/c/5/c5d4402a7db9ce28.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            "Template": {
-                matches: ["Template"],
+            "LaLiga45/Kalise/IslasC": {
+                matches: ["La Liga +Kalise +ISLas. (45西甲章+左袖广告+背下广告)"],
                 type: "badge",
-                price: 1,
-                images: "Template"
+                price: 3,
+                images: "https://us03-imgcdn.ymcart.com/97006/2024/08/11/f/7/f7b56708a8a072b2.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "Template": {
                 matches: ["Template"],
@@ -3606,7 +3601,7 @@ module.exports = {
                 price: 0
             },
             "Con dorsal": {
-                matches: ['Name / Number (24/25绿ad)', 'Name / Number (周年蓝色字)', 'Name / Number (ad白字)', 'Name / Number (Holstein Kiel) (上带广告-名在号下)', 'Name / Number (只印后面ad红)', "Name / Number (24/25白ad)只印后面", "Name / Number (名与号在框内)", "Name / Number (24/25黑ad)只印后面", "Name / Number (名在号上-没广告)", "Name / Number (周年蓝色字)", 'Name /Number', "Name / Number (24/25ad白)只印后面", "Name / Number (24/25ad粉)", "Name / Number (24/25ad黑字)只印后面", "Name / Number (24/25ad)", 'Name / Number (24/25ad金)', 'Name / Number (名在a广告底下)', 'Name / Number (1.FC Magdeburg)(上带广告-名在号下)', 'Name / Number (24/25ad黑)', 'Name / Number (周年字体)', 'Name / Number (Frankfurt) (上带广告-名在号下)', 'Name / Number (24/25白色ad)', 'Name / Number (前小号NK下)', "Name / Number", "Name/ Number", "Name / Numbe", "Name/ Number (名在号下)", "Name / Number (24/25ad黑)只印后面", "Name / Number (专用周年标)", "Name / Number (只印后面)", "Name / Number (24/25ad红)", "Name / Number (名在号下)", "Name / Number (名在号上)", "Name / Number (FC Augsburg) (上带广告-名在号下)", "Name / Number (Mainz 05) (上带广告-名在号下)", "Name / Number (专用字体)", "Name / Number (只印后台)", "Name / Number (24/25黑ad)", "Name / Number (没广告-名在号上)", "Name / Number (24/25蓝ad)", "Name / Number (24/25白ad)", "Name / Number (没广告-名在号下)", "Name / Number (FC BAY.. MUN..)(带广告-名在号下)", "Name / Number (WERDER) (上带广告-名在号下)", "Name / Number (24/25ad蓝) 只印后面", "Name / Number (专用字体)前小号在PM下", "Name/ Number (RB Leipzig)(上带广告-名在号下)", "Name / Number (24/25ad白)", 'Name/Number'],
+                matches: ['Name / Number (Name Under Number)名在号下面', 'Name / Number (24/25红ad)', 'Name / Number (24/25绿ad)', 'Name / Number (周年蓝色字)', 'Name / Number (ad白字)', 'Name / Number (Holstein Kiel) (上带广告-名在号下)', 'Name / Number (只印后面ad红)', "Name / Number (24/25白ad)只印后面", "Name / Number (名与号在框内)", "Name / Number (24/25黑ad)只印后面", "Name / Number (名在号上-没广告)", "Name / Number (周年蓝色字)", 'Name /Number', "Name / Number (24/25ad白)只印后面", "Name / Number (24/25ad粉)", "Name / Number (24/25ad黑字)只印后面", "Name / Number (24/25ad)", 'Name / Number (24/25ad金)', 'Name / Number (名在a广告底下)', 'Name / Number (1.FC Magdeburg)(上带广告-名在号下)', 'Name / Number (24/25ad黑)', 'Name / Number (周年字体)', 'Name / Number (Frankfurt) (上带广告-名在号下)', 'Name / Number (24/25白色ad)', 'Name / Number (前小号NK下)', "Name / Number", "Name/ Number", "Name / Numbe", "Name/ Number (名在号下)", "Name / Number (24/25ad黑)只印后面", "Name / Number (专用周年标)", "Name / Number (只印后面)", "Name / Number (24/25ad红)", "Name / Number (名在号下)", "Name / Number (名在号上)", "Name / Number (FC Augsburg) (上带广告-名在号下)", "Name / Number (Mainz 05) (上带广告-名在号下)", "Name / Number (专用字体)", "Name / Number (只印后台)", "Name / Number (24/25黑ad)", "Name / Number (没广告-名在号上)", "Name / Number (24/25蓝ad)", "Name / Number (24/25白ad)", "Name / Number (没广告-名在号下)", "Name / Number (FC BAY.. MUN..)(带广告-名在号下)", "Name / Number (WERDER) (上带广告-名在号下)", "Name / Number (24/25ad蓝) 只印后面", "Name / Number (专用字体)前小号在PM下", "Name/ Number (RB Leipzig)(上带广告-名在号下)", "Name / Number (24/25ad白)", 'Name/Number'],
                 type: "customize",
                 price: 3
             },
@@ -3616,7 +3611,7 @@ module.exports = {
                 price: 3
             },
             "Con dorsal 2": {
-                matches: ['Name / Number (Schalke04)(上带广告-名在号下)', 'Name / Number (SC Freiburg) (上带广告-名在号下)', 'Name / Number (Schalke04)(联赛号-名在号下)', 'Name / Number (1.FC Köln)(名在号上-广告在下)专用字体', 'Name / Number (Kaiserslautern) (名在号上-下带广告)', 'Name / Number (BAYER 04)(上带广告-名在号下)', "Name / Number (Bochum)(上带广告-名在号下)", "Name / Number (1.FC Köln)(名在号上-广告在下)", "Name/ Number (Stuttgart) (上带广告-名在号下)", "Name / Number (SAFI CiMENTO) (上带广告-名在号下)", "Name/ Number (Hamburger SV)(上带广告-名在号下)", "Name / Number (Hertha BSC)(上带广告-名在号下)"],
+                matches: ['Name/ Number (HOFFENHEIM)(下带广告-名在号上)', 'Name/ Number (Heidenheim)(上带广告-名在号下)', 'Name / Number (Wolfsburg) (上带广告-名在号下)', 'Name/ Number (Frankfurt)(上带广告-名在号下)', 'Name / Number (Schalke04)(上带广告-名在号下)', 'Name / Number (SC Freiburg) (上带广告-名在号下)', 'Name / Number (Schalke04)(联赛号-名在号下)', 'Name / Number (1.FC Köln)(名在号上-广告在下)专用字体', 'Name / Number (Kaiserslautern) (名在号上-下带广告)', 'Name / Number (BAYER 04)(上带广告-名在号下)', "Name / Number (Bochum)(上带广告-名在号下)", "Name / Number (1.FC Köln)(名在号上-广告在下)", "Name/ Number (Stuttgart) (上带广告-名在号下)", "Name / Number (SAFI CiMENTO) (上带广告-名在号下)", "Name/ Number (Hamburger SV)(上带广告-名在号下)", "Name / Number (Hertha BSC)(上带广告-名在号下)"],
                 type: "customize",
                 price: 4
             },
@@ -3644,7 +3639,7 @@ module.exports = {
                 price: 3
             },
             "Con dorsal Ligue1 fonts": {
-                matches: ['Name / Number ( Ligue1 Fonts ) 联赛主场', 'Name / Number ( Ligue1 Fonts ) 联赛三客字', 'Name / Number ( Ligue1 Fonts ) 联赛客场字', "Name / Number ( Ligue1 Fonts )联赛字体", "Name / Number ( Ligue1 Fonts ) 联赛字体"],
+                matches: ['Name / Number (Ligue1 Fonts)联赛字体', 'Name / Number ( Ligue1 Fonts ) 联赛主场', 'Name / Number ( Ligue1 Fonts ) 联赛三客字', 'Name / Number ( Ligue1 Fonts ) 联赛客场字', "Name / Number ( Ligue1 Fonts )联赛字体", "Name / Number ( Ligue1 Fonts ) 联赛字体"],
                 type: "customize",
                 price: 3
             },
