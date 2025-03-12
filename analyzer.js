@@ -480,6 +480,13 @@ async function analyzeAllProducts() {
         const newProducts = [];
         const newCategories = new Map();
         const newTags = new Map();
+
+        const seenOptionNames = {
+            badges: new Set(),
+            customize: new Set(),
+            sizes: new Set()
+        };
+
         const newProductOptions = {
             badges: new Map(),
             customize: new Map(),
@@ -546,11 +553,16 @@ async function analyzeAllProducts() {
                     const detailAnalysis = await analyzeProductDetail(product.detailUrl, product.name);
                     if (detailAnalysis) {
                         product.options = detailAnalysis.productData;
-                        
+    
                         // Procesar opciones no mapeadas
                         Object.entries(detailAnalysis.unmappedOptions).forEach(([type, options]) => {
                             options.forEach(option => {
-                                allUnmappedOptions[type].add(JSON.stringify(option));
+                                // Solo agregar si no hemos visto este nombre antes
+                                const optionName = option.matches[0]; // Asumiendo que siempre hay al menos un elemento
+                                if (!seenOptionNames[type].has(optionName)) {
+                                    seenOptionNames[type].add(optionName);
+                                    allUnmappedOptions[type].add(JSON.stringify(option));
+                                }
                             });
                         });
 
@@ -735,12 +747,14 @@ async function analyzeProductDetail(url, productName) {
                             price: extractPrice(priceStr)
                         }));
                     } else {
-                        unmappedOptions.sizes.add(JSON.stringify({
+                        const newEntry = JSON.stringify({
                             matches: [name],
                             itemName: productName,
                             type: "size",
                             price: extractPrice(priceStr)
-                        }));
+                        });
+                                      
+                        unmappedOptions.sizes.add(newEntry);
                     }
                 });
             }
@@ -761,7 +775,7 @@ async function analyzeProductDetail(url, productName) {
                     const isMatched = Object.values(mappings.badges).some(mapping => 
                         mapping.matches.includes(name)
                     );
-                    
+
                     if (isMatched) {
                         const mappedName = findMappingName(mappings.badges, name);
                         matchedOptions.badges.add(JSON.stringify({
@@ -771,13 +785,15 @@ async function analyzeProductDetail(url, productName) {
                             images: image || null
                         }));
                     } else {
-                        unmappedOptions.badges.add(JSON.stringify({
+                        const newEntry = JSON.stringify({
                             matches: [name],
                             itemName: productName,
                             type: "badge",
                             price: extractPrice(priceStr),
                             images: image || null
-                        }));
+                        });
+                        
+                        unmappedOptions.badges.add(newEntry);
                     }
                 });
             }
@@ -793,25 +809,27 @@ async function analyzeProductDetail(url, productName) {
                     const priceStr = $el.find('.addprice').text().trim();
                     
                     productData.customize.push({ name, price: priceStr });
-                    
+
                     const isMatched = Object.values(mappings.customize).some(mapping => 
                         mapping.matches.includes(name)
                     );
-                    
+
                     if (isMatched) {
                         const mappedName = findMappingName(mappings.customize, name);
                         matchedOptions.customize.add(JSON.stringify({
                             name: mappedName,
                             type: "customize",
-                            price: extractPrice(priceStr)
+                            price: extractPrice(priceStr),
                         }));
                     } else {
-                        unmappedOptions.customize.add(JSON.stringify({
+                        const newEntry = JSON.stringify({
                             matches: [name],
                             itemName: productName,
                             type: "customize",
-                            price: extractPrice(priceStr)
-                        }));
+                            price: extractPrice(priceStr),
+                        });
+                    
+                        unmappedOptions.customize.add(newEntry);
                     }
                 });
             }
