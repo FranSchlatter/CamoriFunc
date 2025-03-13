@@ -127,9 +127,9 @@ function generateNormalizedName(nameAnalysis) {
     }
     
     // Agregar términos no reconocidos al final
-    if (parts.unrecognized.length > 0) {
-        finalName += ` (${parts.unrecognized.join(" ")})`;
-    }
+    // if (parts.unrecognized.length > 0) {
+    //     finalName += ` (${parts.unrecognized.join(" ")})`;
+    // }
 
     return finalName;
 }
@@ -388,24 +388,34 @@ function analyzeProductName(name) {
     Object.entries(mappingTypes).forEach(([mappingType, mappingData]) => {
         Object.entries(mappingData).forEach(([itemName, data]) => {
             if (data.matches) {
-                // Match más estricto usando regex
+                // Verificar coincidencias exactas para frases completas
                 const found = data.matches.some(match => {
-                    const regex = new RegExp(`(^|\\s|[^a-zA-Z])${match}($|\\s|[^a-zA-Z])`, 'i');
-                    if (regex.test(normalizedName)) {
-                        match.split(' ').forEach(word => recognizedWords.add(word.toLowerCase())); // Agrega a array de palabras reconocidas
-                        return true;
+                    // Si es una frase compuesta (contiene espacios), hacemos una búsqueda directa
+                    if (match.includes(' ')) {
+                        if (normalizedName.includes(match.toUpperCase())) {
+                            match.split(' ').forEach(word => recognizedWords.add(word.toLowerCase()));
+                            return true;
+                        }
+                        return false;
+                    } else {
+                        // Para términos individuales, usamos la expresión regular que ya existía
+                        const regex = new RegExp(`(^|\\s|[^a-zA-Z])${match}($|\\s|[^a-zA-Z])`, 'i');
+                        if (regex.test(normalizedName)) {
+                            recognizedWords.add(match.toLowerCase());
+                            return true;
+                        }
+                        return false;
                     }
-                    return false;
                 });
-
-                if (found) { // Si lo q encotro es una category... 
+    
+                if (found) {
                     if (mappingType === 'categories') {
                         foundCategories.add({
                             path: data.categoryPath,
                             name: itemName,
                             description: data.description
                         });
-                    } else { // Si lo q encotro es un tag... 
+                    } else {
                         addTag({
                             name: itemName,
                             type: data.type,
