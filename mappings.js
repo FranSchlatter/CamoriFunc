@@ -118,7 +118,7 @@ module.exports = {
             categoryPath: ["Indumentarias", "Camisetas"]
         },
         "Shorts": {
-            matches: ['Shorts Pants'],
+            matches: ['Shorts Pants', 'Pants', 'Pocket Pants'],
             description: "Indumentaria shorts",
             categoryPath: ["Indumentarias", "Shorts"]
         },
@@ -157,12 +157,12 @@ module.exports = {
                 description: "Indumentaria Remeras casual",
                 categoryPath: ["Casual", "Remeras"]
             },
-            "Pantalones cortos": {
-                matches: ['Casual Short'],
+            "Pantalones Cortos": {
+                matches: ['Casual Short Pants'],
                 description: "Indumentaria Pantalones cortos casual",
                 categoryPath: ["Casual", "Pantalones cortos"]
             },
-            "Pantalones largos": {
+            "Pantalones Largos": {
                 matches: ['Sweatpants'],
                 description: "Indumentaria Pantalones largos casual",
                 categoryPath: ["Casual", "Pantalones largos"]
@@ -198,7 +198,7 @@ module.exports = {
     // Tags para filtrado
     tags: {
         // Teams
-        teams: {
+        equipos: {
             // Premier League 
             "Manchester City": {
                 matches: ['Man City'],
@@ -2246,97 +2246,112 @@ module.exports = {
             },
         },
 
+        temporadas: {
+            "1950/51": { matches: [ "1950", "1950/51", "1950-51" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1951/52": { matches: [ "1951", "1951/52", "1951-52" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1952/53": { matches: [ "1952", "1952/53", "1952-53" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1953/54": { matches: [ "1953", "1953/54", "1953-54" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1954/55": { matches: [ "1954", "1954/55", "1954-55" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1955/56": { matches: [ "1955", "1955/56", "1955-56" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1956/57": { matches: [ "1956", "1956/57", "1956-57" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1957/58": { matches: [ "1957", "1957/58", "1957-58" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1958/59": { matches: [ "1958", "1958/59", "1958-59" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1959/60": { matches: [ "1959", "1959/60", "1959-60" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1960/61": { matches: [ "1960", "1960/61", "1960-61" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1961/62": { matches: [ "1961", "1961/62", "1961-62" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1962/63": { matches: [ "1962", "1962/63", "1962-63" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1963/64": { matches: [ "1963", "1963/64", "1963-64" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1964/65": { matches: [ "1964", "1964/65", "1964-65" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1965/66": { matches: [ "1965", "1965/66", "1965-66" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1966/67": { matches: [ "1966", "1966/67", "1966-67" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1967/68": { matches: [ "1967", "1967/68", "1967-68" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1968/69": { matches: [ "1968", "1968/69", "1968-69" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1969/70": { matches: [ "1969", "1969/70", "1969-70" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1970/71": { matches: [ "1970", "1970/71", "1970-71" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1971/72": { matches: [ "1971", "1971/72", "1971-72" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1972/73": { matches: [ "1972", "1972/73", "1972-73" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1973/74": { matches: [ "1973", "1973/74", "1973-74" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1974/75": { matches: [ "1974", "1974/75", "1974-75" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1975/76": { matches: [ "1975", "1975/76", "1975-76" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1976/77": { matches: [ "1976", "1976/77", "1976-77" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1977/78": { matches: [ "1977", "1977/78", "1977-78" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1978/79": { matches: [ "1978", "1978/79", "1978-79" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1979/80": { matches: [ "1979", "1979/80", "1979-80" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1980/81": { matches: [ "1980", "1980/81", "1980-81" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1981/82": { matches: [ "1981", "1981/82", "1981-82" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1982/83": { matches: [ "1982", "1982/83", "1982-83" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1983/84": { matches: [ "1983", "1983/84", "1983-84" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1984/85": { matches: [ "1984", "1984/85", "1984-85" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1985/86": { matches: [ "1985", "1985/86", "1985-86" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1986/87": { matches: [ "1986", "1986/87", "1986-87" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1987/88": { matches: [ "1987", "1987/88", "1987-88" ], type: "temporada", categoryPath: [ "Deportes" ] }, 
+            "1988/89": { matches: [ "1988", "1988/89", "1988-89" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1989/90": { matches: [ "1989", "1989/90", "1989-90" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1990/91": { matches: [ "1990", "1990/91", "1990-91" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1991/92": { matches: [ "1991", "1991/92", "1991-92" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1992/93": { matches: [ "1992", "1992/93", "1992-93" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1993/94": { matches: [ "1993", "1993/94", "1993-94" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1994/95": { matches: [ "1994", "1994/95", "1994-95" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1995/96": { matches: [ "1995", "1995/96", "1995-96" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1996/97": { matches: [ "1996", "1996/97", "1996-97" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1997/98": { matches: [ "1997", "1997/98", "1997-98" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1998/99": { matches: [ "1998", "1998/99", "1998-99" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "1999/00": { matches: [ "1999", "1999/00", "1999-00" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "2000/01": { matches: [ "2000", "2000/01", "2000-01" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "2001/02": { matches: [ "2001", "2001/02", "2001-02" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "2002/03": { matches: [ "2002", "2002/03", "2002-03" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "2003/04": { matches: [ "2003", "2003/04", "2003-04" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "2004/05": { matches: [ "2004", "2004/05", "2004-05" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "2005/06": { matches: [ "2005", "2005/06", "2005-06" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "2006/07": { matches: [ "2006", "2006/07", "2006-07" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "2007/08": { matches: [ "2007", "2007/08", "2007-08" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "2008/09": { matches: [ "2008", "2008/09", "2008-09" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "2009/10": { matches: [ "2009", "2009/10", "2009-10" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "2010/11": { matches: [ "2010", "2010/11", "2010-11" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "2011/12": { matches: [ "2011", "2011/12", "2011-12" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "2012/13": { matches: [ "2012", "2012/13", "2012-13" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "2013/14": { matches: [ "2013", "2013/14", "2013-14" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "2014/15": { matches: [ "2014", "2014/15", "2014-15" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "2015/16": { matches: [ "2015", "2015/16", "2015-16" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "2016/17": { matches: [ "2016", "2016/17", "2016-17" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "2017/18": { matches: [ "2017", "2017/18", "2017-18" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "2018/19": { matches: [ "2018", "2018/19", "2018-19" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "2019/20": { matches: [ "2019", "2019/20", "2019-20" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "2020/21": { matches: [ "2020", "2020/21", "2020-21" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "2021/22": { matches: [ "2021", "2021/22", "2021-22" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "2022/23": { matches: [ "2022", "2022/23", "2022-23" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "2023/24": { matches: [ "2023", "2023/24", "2023-24" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "2024/25": { matches: [ "2024", "2024/25", "2024-25" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "2025/26": { matches: [ "2025", "2025/26", "2025-26" ], type: "temporada", categoryPath: [ "Deportes" ] },
+            "2026/27": { matches: [ "2026", "2026/27", "2026-27" ], type: "temporada", categoryPath: [ "Deportes" ] }
+        },
+
         versions: {
-            "Jugador": {
-                matches: ['Player Version', 'Playr'],
-                type: "version",
-                categoryPath: ["Deportes"]
-            },
-            "Fanatico": {
-                matches: ['Fans'],
-                type: "version",
-                categoryPath: ["Deportes"]
-            },
-            "Retro": {
-                matches: ['Retro'],
-                type: "version",
-                categoryPath: ["Deportes"]
-            }
+            "Jugador": { matches: ['Player Version', 'Playr'], type: "version",categoryPath: ["Deportes"] },
+            "Fanatico": { matches: ['Fans'], type: "version", categoryPath: ["Deportes"] },
+            "Retro": { matches: ['Retro'], type: "version", categoryPath: ["Deportes"] }
         },
 
         editions: {
-            "Local": {
-                matches: ['Home'],
-                type: "edicion",
-                categoryPath: ["Deportes"]
-            },
-            "Visitante": {
-                matches: ['Away'],
-                type: "edicion",
-                categoryPath: ["Deportes"]
-            },
-            "Alternativa": {
-                matches: ['Third'],
-                type: "edicion",
-                categoryPath: ["Deportes"]
-            },
-            "Alternativa 2": {
-                matches: ['Fourth'],
-                type: "edicion",
-                categoryPath: ["Deportes"]
-            },
-            "Arquero": {
-                matches: ['Goalkeeper'],
-                type: "edicion",
-                categoryPath: ["Deportes"]
-            },
-            "Entrenamiento": {
-                matches: ['Training'],
-                type: "edicion",
-                categoryPath: ["Deportes"]
-            },
-            "Edicion Especial": {
-                matches: ['Special Edition'],
-                type: "edicion",
-                categoryPath: ["Deportes"]
-            },
-            "Edicion Aniversario": {
-                matches: ['Anniversary'],
-                type: "edicion",
-                categoryPath: ["Deportes"]
-            },
-            "Edicion Conmemorativa": {
-                matches: ['Commemorative Edition'],
-                type: "edicion",
-                categoryPath: ["Deportes"]
-            },
-            
+            "Local": { matches: ['Home'], type: "edicion", categoryPath: ["Deportes"] },
+            "Visitante": { matches: ['Away'], type: "edicion", categoryPath: ["Deportes"] },
+            "Alternativa": { matches: ['Third'], type: "edicion", categoryPath: ["Deportes"] },
+            "Cuarta Equipacion": { matches: ['Fourth'], type: "edicion", categoryPath: ["Deportes"] },
+            "Arquero": { matches: ['Goalkeeper'], type: "edicion", categoryPath: ["Deportes"] },
+            "Entrenamiento": { matches: ['Training'], type: "edicion", categoryPath: ["Deportes"] },
+            "Especial": { matches: ['Special Edition'], type: "edicion", categoryPath: ["Deportes"] },
+            "Aniversario": { matches: ['Anniversary'], type: "edicion", categoryPath: ["Deportes"] },
+            "Conmemorativa": { matches: ['Commemorative Edition'], type: "edicion", categoryPath: ["Deportes"] },
         },
 
         features: {
-            "Manga Corta": {
-                matches: [],
-                type: "feature",
-                categoryPath: ["Deportes"]
-            },
-            "Manga Larga": {
-                matches: ['Long Sleeve', '长袖', '(长袖)'],
-                type: "feature",
-                categoryPath: ["Deportes"]
-            },
+            "Manga Corta": { matches: [], type: "feature", categoryPath: ["Deportes"] },
+            "Manga Larga": { matches: ['Long Sleeve', '长袖', '(长袖)'], type: "feature", categoryPath: ["Deportes"] },
         },
 
         caracteristicas: {
-            "Reversible": {
-                matches: ['Double Sided', '(双面风衣)'],
-                type: "caracteristica",
-                categoryPath: ["Deportes"]
-            },
-            "Terciopelo": {
-                matches: ['Velvet Thickened', "卡其色(加绒)蓝标", "红色(加绒)蓝标", "灰色(加绒)蓝标", "宝蓝色(加绒)蓝标", "白色(加绒)蓝标", "黑色(加绒)蓝标", "红色(加绒)绿标", "宝蓝色(加绒)绿标", "灰色(加绒)绿标", "白色(加绒)绿标", "卡其色(加绒)绿标", "黑色(加绒)绿标","卡其色(加绒)", "红色(加绒)", "白色(加绒)", "宝蓝色(加绒)", "灰色(加绒)", "黑色(加绒)"],
-                type: "caracteristica",
-                categoryPath: ["Deportes"]
-            }
+            "Reversible": { matches: ['Double Sided', '(双面风衣)'], type: "caracteristica", categoryPath: ["Deportes"] },
+            "Terciopelo": { matches: ['Velvet Thickened', "卡其色(加绒)蓝标", "红色(加绒)蓝标", "灰色(加绒)蓝标", "宝蓝色(加绒)蓝标", "白色(加绒)蓝标", "黑色(加绒)蓝标", "红色(加绒)绿标", "宝蓝色(加绒)绿标", "灰色(加绒)绿标", "白色(加绒)绿标", "卡其色(加绒)绿标", "黑色(加绒)绿标","卡其色(加绒)", "红色(加绒)", "白色(加绒)", "宝蓝色(加绒)", "灰色(加绒)", "黑色(加绒)"], type: "caracteristica", categoryPath: ["Deportes"] }
         },
         
         colors: {
@@ -3250,13 +3265,6 @@ module.exports = {
         }
     },
 
-
-    // Detector de temporadas
-    seasonDetector: {
-        regex: /(\d{4})(?:-(\d{2,4})|\/(\d{2,4})|\s+(\d{2,4}))|(\d{4})/g,
-        type: "temporada",
-        categoryPath: ["Deportes"]
-    },
 
 
     productOptions: {

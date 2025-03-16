@@ -3,7 +3,6 @@ const cheerio = require('cheerio');
 const fs = require('fs').promises;
 const path = require('path');
 const MAPPINGS = require('./mappings');
-const COMPOUND_PHRASES = require('./compoundPhrases');
 const args = process.argv.slice(2);
 
 // Configuración inicial con valores por defecto
@@ -81,8 +80,8 @@ async function ensureBaseFiles() {
 
 function generateNormalizedName(nameAnalysis) {
     const parts = {
-        team: nameAnalysis.tags.find(t => t.type === "equipo")?.name || "",
-        season: nameAnalysis.tags.find(t => t.type === "temporada")?.name || "",
+        equipo: nameAnalysis.tags.find(t => t.type === "equipo")?.name || "",
+        temporada: nameAnalysis.tags.find(t => t.type === "temporada")?.name || "",
         edition: nameAnalysis.tags.find(t => t.type === "edicion")?.name || "",
         color: nameAnalysis.tags.find(t => t.type === "color")?.name || "",
         caracteristica: nameAnalysis.tags.find(t => t.type === "caracteristica")?.name || "",
@@ -99,25 +98,25 @@ function generateNormalizedName(nameAnalysis) {
     // Construir el nombre en el orden específico solicitado
     const mainParts = [];
     
-    // Primera parte: Temporada y Equipo
-    if (parts.team) mainParts.push(parts.team); // Argentina
-    if (parts.season) mainParts.push(parts.season); // 1984
-    
-    // Segunda parte: Edición, color y Versión
+    // Primera parte: 
+    // Temporada y Equipo
+    if (parts.equipo) mainParts.push(parts.equipo); // Argentina
+    if (parts.marca) mainParts.push(parts.marca); // Nike
+    if (parts.temporada) mainParts.push(parts.temporada); // 1984
     if (parts.edition) mainParts.push(parts.edition); // Local
+
+    // Color y Jugador
     if (parts.color) mainParts.push(parts.color); // Rojo
+    if (parts.number) mainParts.push(parts.number); // #10
+    if (parts.player) mainParts.push(parts.player); // Maradona
     
     // Tercera parte: Categoría y Característica
     const productParts = [];
     if (parts.category) productParts.push(parts.category); // Camiseta, futbol
-    if (parts.version) mainParts.push(parts.version); // Retro
+    if (parts.version) productParts.push(parts.version); // Retro
     if (parts.feature) productParts.push(parts.feature); // Manga Corta
-    if (parts.marca) productParts.push(parts.marca); // Nike
-    if (parts.number) productParts.push(parts.number); // #10
-    if (parts.player) productParts.push(parts.player); // Maradona
     if (parts.caracteristica) productParts.push(parts.caracteristica); // Terciopelo
     if (parts.modelo) productParts.push(parts.modelo); // T142
-
     
     // Construir el nombre final
     let finalName = mainParts.join(" ");
@@ -136,14 +135,37 @@ function generateNormalizedName(nameAnalysis) {
 
 // Actualizar la función generateDescription para mantener consistencia
 function generateDescription(nameAnalysis) {
-    const team = nameAnalysis.tags.find(t => t.type === "equipo")?.name || "";
-    const season = nameAnalysis.tags.find(t => t.type === "temporada")?.name || "";
-    const edition = nameAnalysis.tags.find(t => t.type === "edicion")?.name || "";
-    const version = nameAnalysis.tags.find(t => t.type === "version")?.name || "";
+    const equipo = nameAnalysis.tags.find(t => t.type === "equipo")?.name || "";
+    const temporada = nameAnalysis.tags.find(t => t.type === "temporada")?.name || "";
+    const edition = nameAnalysis.tags.find(t => t.type === "edicion")?.name || ""; // Local/Visitante/Third
+    const color = nameAnalysis.tags.find(t => t.type === "color")?.name || "";
     const feature = nameAnalysis.tags.find(t => t.type === "feature")?.name || "";
+    const version = nameAnalysis.tags.find(t => t.type === "version")?.name || ""; // Jugador/Retro/Fanático
+    const category = nameAnalysis.categories?.map(cat => cat.name).join(" ") || "";
     
-    return `Indumentaria fabricada con materiales premium de primera calidad, diseñada para brindar máxima comodidad y durabilidad.`;
-    // return `Camiseta importada de calidad original.\nModelo ${team} ${season}, edición ${edition} en versión ${version}. Disponible en ${feature}.\n\nFabricada con materiales de primera calidad, diseñada para brindar máxima comodidad y durabilidad.\nIncorpora tecnologías oficiales como AeroCool, DryFit y otras, garantizando una excelente transpirabilidad.\nDetalles premium con escudo bordado o termosellado (según versión) y costuras reforzadas para mayor resistencia.`;
+    // Verificar si el producto es una camiseta de fútbol
+    if (category.includes("Camisetas") && category.includes("Fútbol")) {
+        // Primera línea: Equipación + edición + equipo + temporada
+        let firstLine = "";
+        if (edition) { firstLine = `Equipación ${edition.toLowerCase()} de ${equipo}`; } else { firstLine = `Camiseta de ${equipo}`; }
+        if (temporada) { firstLine += ` de la temporada ${temporada}.`; } else { firstLine += "."; }
+        
+        // Segunda línea: Tipo de camiseta + versión + características
+        let secondLine = "Camiseta de fútbol importada";
+        if (version) { secondLine += `, estilo ${version.toLowerCase()}`; }
+        if (color) { secondLine += `, color ${color.toLowerCase()}`; }
+        secondLine += `, ${feature.toLowerCase() || 'manga corta'}`;
+        secondLine += ".";
+
+        // Tercera línea: Tecnologías + calidad (sin referencia a marcas)
+        const thirdLine = "Confeccionada con tecnologías oficiales como Dri-Fit, Climacool, DryCell, entre otras. Materiales premium de primera calidad, diseñada para brindar máxima comodidad y durabilidad.";
+        
+        // Unir todo en párrafos separados
+        return `${firstLine}\n${secondLine}\n${thirdLine}`;
+    }
+    
+    // Descripción por defecto para otros productos
+    return "Indumentaria fabricada con materiales premium de primera calidad, diseñada para brindar máxima comodidad y durabilidad.";
 }
 
 // Función para extraer: Imágenes producto
@@ -320,12 +342,12 @@ function analyzeProductName(name) {
 
     let normalizedName = name.toUpperCase();
     let processedName = name;
-    let hasLongSleeve = false;
 
     // Definir mappingTypes al inicio
     const mappingTypes = {
         categories: MAPPINGS.categories,
-        teams: MAPPINGS.tags.teams,
+        equipos: MAPPINGS.tags.equipos,
+        temporadas: MAPPINGS.tags.temporadas,
         versions: MAPPINGS.tags.versions,
         editions: MAPPINGS.tags.editions,
         features: MAPPINGS.tags.features,
@@ -344,103 +366,54 @@ function analyzeProductName(name) {
         foundTagsMap.set(key, tag);
     };
 
-    // Procesar temporadas
-    const temporadaRegex = /(\d{4})(?:-(\d{2,4})|\/(\d{2,4})|\s+(\d{2,4}))|(\d{4})/g;
-    const temporadaMatches = name.matchAll(temporadaRegex);
-    
-    for (const match of temporadaMatches) {
-        const temporada = match[0];
-        recognizedWords.add(temporada);
-        addTag({
-            name: temporada,
-            type: "temporada",
-            categoryPath: ["Deportes"]
-        });
-        
-        temporada.split(/[-\/\s]/).forEach(num => {
-            recognizedWords.add(num.toLowerCase());
-        });
-    }
-
-    // Procesar frases compuestas
-    COMPOUND_PHRASES.phrases.forEach(({ phrase, normalized, type }) => {
-        if (normalizedName.includes(phrase.toUpperCase())) {
-            if (normalized === 'Manga Larga') {
-                hasLongSleeve = true;
-            }
-            phrase.split(' ').forEach(word => recognizedWords.add(word.toLowerCase()));
-            processedName = processedName.replace(phrase, `__${normalized}__`);
-            
-            let categoryPath = ["Deportes"];
-            if (type === "equipo") {
-                categoryPath = ["Deportes", "Fútbol", "Clubes"];
-            }
-            
-            addTag({
-                name: normalized,
-                type: type,
-                categoryPath: categoryPath
-            });
-        }
-    });
-
     // Procesar cada tipo de mapping > Primero itera sobre mappingTypes (categories: data), luego itera sobre categories del archivo mappings (Futbol: data) y analiza el key "matches"
+    let nameToAnalyze = normalizedName; // Copia del nombre para ir limpiando los matches
+
     Object.entries(mappingTypes).forEach(([mappingType, mappingData]) => {
         Object.entries(mappingData).forEach(([itemName, data]) => {
             if (data.matches) {
-                // Verificar coincidencias exactas para frases completas
-                const found = data.matches.some(match => {
-                    // Si es una frase compuesta (contiene espacios), hacemos una búsqueda directa
-                    if (match.includes(' ')) {
-                        if (normalizedName.includes(match.toUpperCase())) {
+                // Ordenar los matches de mayor a menor longitud (frases largas primero)
+                const sortedMatches = data.matches.sort((a, b) => b.length - a.length);
+
+                // Verificar coincidencias exactas para frases completas o palabras
+                const found = sortedMatches.some(match => {
+                    const regex = new RegExp(`(^|\\s|[^a-zA-Z])${match}($|\\s|[^a-zA-Z])`, 'i'); // Regex para coincidir palabra exacta
+
+                    if (regex.test(nameToAnalyze)) {
+                        // Agregar las palabras/frases reconocidas
+                        recognizedWords.add(match.toLowerCase());
+
+                        // Limpiar el match encontrado del nombre (para que no matchee después)
+                        nameToAnalyze = nameToAnalyze.replace(regex, ' '); // Reemplazar por espacio para no pegar palabras
+                        nameToAnalyze = nameToAnalyze.replace(/\s+/g, ' ').trim(); // Limpiar espacios dobles
+
+                        // Si es frase compuesta, también registrar cada palabra por separado
+                        if (match.includes(' ')) {
                             match.split(' ').forEach(word => recognizedWords.add(word.toLowerCase()));
-                            return true;
                         }
-                        return false;
-                    } else {
-                        // Para términos individuales, usamos la expresión regular que ya existía
-                        const regex = new RegExp(`(^|\\s|[^a-zA-Z])${match}($|\\s|[^a-zA-Z])`, 'i');
-                        if (regex.test(normalizedName)) {
-                            recognizedWords.add(match.toLowerCase());
-                            return true;
+
+                        // Agregar categoría o tag según corresponda
+                        if (mappingType === 'categories') {
+                            foundCategories.add({
+                                path: data.categoryPath,
+                                name: itemName,
+                                description: data.description
+                            });
+                        } else {
+                            addTag({
+                                name: itemName,
+                                type: data.type,
+                                categoryPath: data.categoryPath
+                            });
                         }
-                        return false;
+
+                        return true; // Ya encontró un match en este grupo, no sigue buscando más matches acá
                     }
+                    return false; // No encontró match, sigue buscando
                 });
-    
-                if (found) {
-                    if (mappingType === 'categories') {
-                        foundCategories.add({
-                            path: data.categoryPath,
-                            name: itemName,
-                            description: data.description
-                        });
-                    } else {
-                        addTag({
-                            name: itemName,
-                            type: data.type,
-                            categoryPath: data.categoryPath
-                        });
-                    }
-                }
             }
         });
     });
-
-    // Agregar manga corta/larga (una sola vez)
-    if (hasLongSleeve) {
-        addTag({
-            name: "Manga Larga",
-            type: "feature",
-            categoryPath: ["Deportes"]
-        });
-    } else {
-        addTag({
-            name: "Manga Corta",
-            type: "feature",
-            categoryPath: ["Deportes"]
-        });
-    }
 
     // Identificar todas las palabras que no matchearon con nada.
     processedName.split(/[\s-]+/).forEach(word => {
