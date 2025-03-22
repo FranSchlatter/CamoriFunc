@@ -646,7 +646,7 @@ module.exports = {
                 categoryPath: ["Clubes", "Serie A"]
             },
             "Venezia FC": {
-                matches: ['Venezia FC'],
+                matches: ['Venezia'],
                 type: "equipo",
                 categoryPath: ["Clubes", "Serie A"]
             },
@@ -729,7 +729,7 @@ module.exports = {
                 categoryPath: ["Clubes", "Brasileiro Série A"]
             },
             "Santos FC": {
-                matches: ['Santos FC'],
+                matches: ['Santos'],
                 type: "equipo",
                 categoryPath: ["Clubes", "Brasileiro Série A"]
             },
@@ -1732,7 +1732,7 @@ module.exports = {
                 categoryPath: ["Clubes", "Otros"]
             },
             "Cork City FC": {
-                matches: ["Cork City FC"],
+                matches: ["Cork City"],
                 type: "equipo",
                 categoryPath: ["Clubes", "Otros"]
             },
