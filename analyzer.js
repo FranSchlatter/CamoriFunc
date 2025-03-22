@@ -89,6 +89,8 @@ function generateNormalizedName(nameAnalysis) {
         category: nameAnalysis.categories?.map(cat => cat.name).join(" ") || "Otros",
         feature: nameAnalysis.tags.find(t => t.type === "feature")?.name || "",
         marca: nameAnalysis.tags.find(t => t.type === "marca")?.name || "",
+        sexo: nameAnalysis.tags.find(t => t.type === "sexo")?.name || "",
+        deporte: nameAnalysis.tags.find(t => t.type === "deporte")?.name || "",
         modelo: nameAnalysis.tags.find(t => t.type === "modelo")?.name || "",
         number: nameAnalysis.tags.find(t => t.type === "number")?.name || "",
         player: nameAnalysis.tags.find(t => t.type === "player")?.name || "",
@@ -112,8 +114,10 @@ function generateNormalizedName(nameAnalysis) {
     
     // Tercera parte: Categoría y Característica
     const productParts = [];
-    if (parts.category) productParts.push(parts.category); // Camiseta, futbol
+    if (parts.category) productParts.push(parts.category); // Camiseta
+    if (parts.deporte) productParts.push(parts.deporte); // Futbol
     if (parts.version) productParts.push(parts.version); // Retro
+    if (parts.sexo) productParts.push(parts.sexo); // Masculino
     if (parts.feature) productParts.push(parts.feature); // Manga Corta
     if (parts.caracteristica) productParts.push(parts.caracteristica); // Terciopelo
     if (parts.modelo) productParts.push(parts.modelo); // T142
@@ -139,25 +143,28 @@ function generateDescription(nameAnalysis) {
     const temporada = nameAnalysis.tags.find(t => t.type === "temporada")?.name || "";
     const edition = nameAnalysis.tags.find(t => t.type === "edicion")?.name || ""; // Local/Visitante/Third
     const color = nameAnalysis.tags.find(t => t.type === "color")?.name || "";
+    const sexo = nameAnalysis.tags.find(t => t.type === "sexo")?.name || "";
+    const deporte = nameAnalysis.tags.find(t => t.type === "deporte")?.name || "";
     const feature = nameAnalysis.tags.find(t => t.type === "feature")?.name || "";
     const version = nameAnalysis.tags.find(t => t.type === "version")?.name || ""; // Jugador/Retro/Fanático
     const category = nameAnalysis.categories?.map(cat => cat.name).join(" ") || "";
     
     // Verificar si el producto es una camiseta de fútbol
-    if (category.includes("Camisetas") && category.includes("Fútbol")) {
+    if (category.includes("Camisetas")) {
         // Primera línea: Equipación + edición + equipo + temporada
         let firstLine = "";
         if (edition) { firstLine = `Equipación ${edition.toLowerCase()} de ${equipo}`; } else { firstLine = `Camiseta de ${equipo}`; }
         if (temporada) { firstLine += ` de la temporada ${temporada}.`; } else { firstLine += "."; }
         
         // Segunda línea: Tipo de camiseta + versión + características
-        let secondLine = "Camiseta de fútbol importada";
+        let secondLine = `Camiseta de ${deporte || 'tipo'} importada`;
         if (version) { secondLine += `, estilo ${version.toLowerCase()}`; }
         if (color) { secondLine += `, color ${color.toLowerCase()}`; }
+        if (sexo) { secondLine += `, sexo ${sexo.toLowerCase()}`; }
         secondLine += `, ${feature.toLowerCase() || 'manga corta'}`;
         secondLine += ".";
 
-        // Tercera línea: Tecnologías + calidad (sin referencia a marcas)
+        // Tercera línea: Tecnologías + calidad 
         const thirdLine = "Confeccionada con tecnologías oficiales como Dri-Fit, Climacool, DryCell, entre otras. Materiales premium de primera calidad, diseñada para brindar máxima comodidad y durabilidad.";
         
         // Unir todo en párrafos separados
@@ -354,6 +361,8 @@ function analyzeProductName(name) {
         colors: MAPPINGS.tags.colors,
         caracteristicas: MAPPINGS.tags.caracteristicas,
         marcas: MAPPINGS.tags.marcas,
+        sexos: MAPPINGS.tags.sexo,
+        deportes: MAPPINGS.tags.deporte,
         modelos: MAPPINGS.tags.modelos,
         numbers: MAPPINGS.tags.numbers,
         players: MAPPINGS.tags.players,
@@ -414,6 +423,32 @@ function analyzeProductName(name) {
             }
         });
     });
+
+    // Agregar sexo Masculino por default
+    const hasSexoTag = Array.from(foundTagsMap.values()).some(tag => tag.type === "sexo");
+
+    if (!hasSexoTag) {
+        addTag({
+            name: "Masculino",
+            type: "sexo"
+        });
+    }
+
+    // Agregar tag Futbol a Camisetas "edicion" - "Entrenamiento"
+    const hasEntrenamientoTag = Array.from(foundTagsMap.values()).some(
+        tag => tag.type === "edicion" && tag.name === "Entrenamiento"
+    );
+
+    const hasDeporteTag = Array.from(foundTagsMap.values()).some(
+        tag => tag.type === "deporte"
+    );
+
+    if (hasEntrenamientoTag && !hasDeporteTag) {
+        addTag({
+            name: "Fútbol",
+            type: "deporte", // Ajusta el tipo según corresponda en tu estructura
+        });
+    }
 
     // Identificar todas las palabras que no matchearon con nada.
     processedName.split(/[\s-]+/).forEach(word => {
@@ -560,11 +595,13 @@ async function analyzeAllProducts() {
 
                         const productData = {
                             name: generateNormalizedName(nameAnalysis),
+                            originalName: product.name,
                             description: generateDescription(nameAnalysis),
                             price: detailAnalysis.productData.price,
                             images: detailAnalysis.productData.images,
+                            vendidas: detailAnalysis.productData.sales,
                             status: 'active',
-                            categoryIds: nameAnalysis.categories.map(c => c.path.join('/')),
+                            categoryIds: nameAnalysis.categories.length > 0 ? nameAnalysis.categories.map(c => c.path.join('/')) : ['Indumentaria Deportiva/Camisetas'],
                             tagIds: nameAnalysis.tags.map(t => ({type: t.type, name: t.name})),
                             options: {
                                 sizes: detailAnalysis.matchedOptions.sizes,
@@ -655,7 +692,7 @@ async function analyzeAllProducts() {
     }
 }
 
-// Funcion para analizar el detalle del producto
+// Función para analizar el detalle del producto
 async function analyzeProductDetail(url, productName) {
     try {
         // Api get de detail product, almacena en $
@@ -680,8 +717,13 @@ async function analyzeProductDetail(url, productName) {
             price: extractBasePrice($),
             sizes: [],
             badges: [],
-            customize: []
+            customize: [],
+            sales: 0  // Número de ventas por defecto en 0
         };
+
+        // Extraer número de ventas
+        const salesText = $('label.porder span').text().trim();
+        productData.sales = salesText ? parseInt(salesText, 10) : 0;
 
         // Helper para extraer precio para options
         const extractPrice = (priceStr) => {
@@ -736,7 +778,6 @@ async function analyzeProductDetail(url, productName) {
                             type: "size",
                             price: extractPrice(priceStr)
                         });
-                                      
                         unmappedOptions.sizes.add(newEntry);
                     }
                 });
@@ -775,7 +816,6 @@ async function analyzeProductDetail(url, productName) {
                             price: extractPrice(priceStr),
                             images: image || null
                         });
-                        
                         unmappedOptions.badges.add(newEntry);
                     }
                 });
@@ -811,7 +851,6 @@ async function analyzeProductDetail(url, productName) {
                             type: "customize",
                             price: extractPrice(priceStr),
                         });
-                    
                         unmappedOptions.customize.add(newEntry);
                     }
                 });

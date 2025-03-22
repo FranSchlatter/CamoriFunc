@@ -1,197 +1,74 @@
 // mappings.js
 module.exports = {
-    // Categorías con sus jerarquías
     categories: {
-        // Deportes y sus subcategorías
-        "Fútbol": {
-            matches: ['Soccer'],
-            description: "Deporte fútbol",
-            categoryPath: ["Deportes", "Fútbol"]
-        },
-            "Clubes": {
-                matches: ['Clubes', 'Teams'],
-                description: "Todos los clubes",
-                categoryPath: ["Deportes", "Fútbol", "Clubes"]
-            },
-                "Premier League": {
-                    matches: ['Premier League', 'EPL'],
-                    description: "Liga inglesa",
-                    categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
-                },
-                "La Liga": {
-                    matches: ['La Liga', 'Spanish League'],
-                    description: "Liga española",
-                    categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
-                },
-                "Serie A": {
-                    matches: ['Serie A', 'Italian League'],
-                    description: "Liga italiana",
-                    categoryPath: ["Deportes", "Fútbol", "Clubes", "Serie A"]
-                },
-                "Bundesliga": {
-                    matches: ['Bundesliga', 'German League'],
-                    description: "Liga alemana",
-                    categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
-                },
-                "Ligue 1": {
-                    matches: ['Ligue 1', 'French League'],
-                    description: "Liga francesa",
-                    categoryPath: ["Deportes", "Fútbol", "Clubes", "Ligue 1"]
-                },
-                "Brasileiro": {
-                    matches: ['Brasileirao', 'Brazilian League'],
-                    description: "Liga brasileña",
-                    categoryPath: ["Deportes", "Fútbol", "Clubes", "Brasileirao"]
-                },
-                "Primera División": {
-                    matches: ['Primera División', 'Argentina League'],
-                    description: "Liga argentina",
-                    categoryPath: ["Deportes", "Fútbol", "Clubes", "Primera División"]
-                },
-                "Otros": {
-                    matches: ['Otros'],
-                    description: "Otros",
-                    categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
-                },
-            "Selecciones": {
-                matches: ['National Teams', 'Teams'],
-                description: "Todos las selecciones",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones"]
-            },
-                "Copa America": {
-                    matches: ['National Teams', 'Teams'],
-                    description: "Copa America",
-                    categoryPath: ["Deportes", "Fútbol", "Selecciones", "Copa America"]
-                },
-                "Euro": {
-                    matches: ['National Teams', 'Teams'],
-                    description: "Euro",
-                    categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
-                },
-                "Otras": {
-                    matches: ['Otras'],
-                    description: "Otras",
-                    categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
-                },
-                
-        // Otros deportes
-        "Básquet": {
-            matches: ['NBA', 'Basketball', 'Básquet'],
-            description: "Deporte básquet",
-            categoryPath: ["Deportes", "Básquet"]
-        },
-            "NBA": {
-                matches: ['NBA'],
-                description: "Liga de básquet americana",
-                categoryPath: ["Deportes", "Básquet", "NBA"]
-            },
-                "Conferencia Este": {
-                    matches: ['Conferencia Este'],
-                    description: "NBA Conferencia Este",
-                    categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Este"]
-                },
-                "Conferencia Oeste": {
-                    matches: ['Conferencia Oeste'],
-                    description: "NBA Conferencia Oeste",
-                    categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Oeste"]
-                },
-                "Especiales": {
-                    matches: ['Especiales'],
-                    description: "NBA Especiales",
-                    categoryPath: ["Deportes", "Básquet", "NBA", "Especiales"]
-                },
-        "Rugby": {
-            matches: ['Rugby'],
-            description: "Deporte rugby",
-            categoryPath: ["Deportes", "Rugby"]
-        },
-        "Formula 1": {
-            matches: ['Racing', 'F1'],
-            description: "Deporte automovilismo",
-            categoryPath: ["Deportes", "Formula 1"]
-        },
-
-        // Indumentarias
+        // Deportiva
         "Camisetas": {
             matches: ['Jersey', 'Shirts', 'shirts'],
             description: "Indumentaria camisetas",
-            categoryPath: ["Indumentarias", "Camisetas"]
+            categoryPath: ["Indumentaria Deportiva", "Camisetas"]
         },
         "Shorts": {
-            matches: ['Shorts Pants', 'Pants', 'Pocket Pants'],
+            matches: ['Shorts Pants', 'Pocket Pants'],
             description: "Indumentaria shorts",
-            categoryPath: ["Indumentarias", "Shorts"]
+            categoryPath: ["Indumentaria Deportiva", "Shorts"]
         },
         "Medias": {
             matches: ['Socks'],
             description: "Accesorios medias deportivas",
-            categoryPath: ["Indumentarias", "Medias"]
+            categoryPath: ["Indumentaria Deportiva", "Medias"]
         },
         "Conjuntos Largos": {
             matches: ['Tracksuit', 'Tracksuit Jacket', 'Hoodie', 'Half Pull', '(卫衣套装)'],
             description: "Indumentaria conjuntos",
-            categoryPath: ["Indumentarias", "Conjuntos Largos"]
+            categoryPath: ["Indumentaria Deportiva", "Conjuntos Largos"]
         },
         "Conjuntos Cortos": {
             matches: ['Training Short', 'Tank top and shorts suit'],
             description: "Indumentaria conjuntos",
-            categoryPath: ["Indumentarias", "Conjuntos Cortos"]
+            categoryPath: ["Indumentaria Deportiva", "Conjuntos Cortos"]
         },
-        "Mujer": {
-            matches: ['Women'],
-            description: "Indumentaria Mujer",
-            categoryPath: ["Indumentarias", "Mujer"]
+
+        // Casual
+        "Remeras": {
+            matches: ['T-Shirt', 'Champion'],
+            description: "Indumentaria Remeras casual",
+            categoryPath: ["Indumentaria Casual", "Remeras"]
         },
-        "Niños": {
-            matches: ['Kids'],
-            description: "Indumentaria Niños",
-            categoryPath: ["Indumentarias", "Niños"]
+        "Pantalones Cortos": {
+            matches: ['Casual Short Pants'],
+            description: "Indumentaria Pantalones cortos casual",
+            categoryPath: ["Indumentaria Casual", "Pantalones Cortos"]
         },
-        "Bebes": {
-            matches: ['Baby Infant Crawl Suit'],
-            description: "Indumentaria Bebes",
-            categoryPath: ["Indumentarias", "Bebes"]
+        "Pantalones Largos": {
+            matches: ['Sweatpants'],
+            description: "Indumentaria Pantalones largos casual",
+            categoryPath: ["Indumentaria Casual", "Pantalones Largos"]
         },
-            "Remeras": {
-                matches: ['T-Shirt', 'Champion'],
-                description: "Indumentaria Remeras casual",
-                categoryPath: ["Casual", "Remeras"]
-            },
-            "Pantalones Cortos": {
-                matches: ['Casual Short Pants'],
-                description: "Indumentaria Pantalones cortos casual",
-                categoryPath: ["Casual", "Pantalones cortos"]
-            },
-            "Pantalones Largos": {
-                matches: ['Sweatpants'],
-                description: "Indumentaria Pantalones largos casual",
-                categoryPath: ["Casual", "Pantalones largos"]
-            },
-            "Chombas": {
-                matches: ['Polo'],
-                description: "Indumentaria Chombas casual",
-                categoryPath: ["Casual", "Chombas"]
-            },
-            "Buzos": {
-                matches: ['Hoody'],
-                description: "Indumentaria Chombas casual",
-                categoryPath: ["Casual", "Buzos"]
-            },
-            "Chalecos": {
-                matches: ['Vest'],
-                type: "edicion",
-                categoryPath: ["Casual", "Chalecos"]
-            },
-            "Camperones": {
-                matches: ['Cotton Coat'],
-                description: "Indumentaria de abrigo camperon",
-                categoryPath: ["Casual", "Camperones"]
-            },
-            "Rompevientos": {
-                matches: ['Windbreaker', 'Outdoor Jackets'],
-                description: "Indumentaria de abrigo rompeviento",
-                categoryPath: ["Casual", "Rompevientos"]
-            }
+        "Chombas": {
+            matches: ['Polo'],
+            description: "Indumentaria Chombas casual",
+            categoryPath: ["Indumentaria Casual", "Chombas"]
+        },
+        "Buzos": {
+            matches: ['Hoody'],
+            description: "Indumentaria Chombas casual",
+            categoryPath: ["Indumentaria Casual", "Buzos"]
+        },
+        "Rompevientos": {
+            matches: ['Windbreaker', 'Outdoor Jackets'],
+            description: "Indumentaria de abrigo rompeviento",
+            categoryPath: ["Indumentaria Casual", "Rompevientos"]
+        },
+        "Chalecos y Musculosas": {
+            matches: ['Vest'],
+            type: "edicion",
+            categoryPath: ["Indumentaria Casual", "Chalecos"]
+        },
+        "Camperones": {
+            matches: ['Cotton Coat'],
+            description: "Indumentaria de abrigo camperon",
+            categoryPath: ["Indumentaria Casual", "Camperones"]
+        }
     },
 
 
@@ -203,127 +80,127 @@ module.exports = {
             "Manchester City": {
                 matches: ['Man City'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
+                categoryPath: ["Clubes", "Premier League"]
             },
             "Manchester United": {
                 matches: ['Man Utd'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
+                categoryPath: ["Clubes", "Premier League"]
             },
             "Liverpool": {
                 matches: ['LIV'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
+                categoryPath: ["Clubes", "Premier League"]
             },
             "Chelsea": {
                 matches: ['CHE'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
+                categoryPath: ["Clubes", "Premier League"]
             },
             "Tottenham": {
                 matches: ['TOT'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
+                categoryPath: ["Clubes", "Premier League"]
             },
             "Arsenal": {
                 matches: ['ARS'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
+                categoryPath: ["Clubes", "Premier League"]
             },
             "Newcastle": {
                 matches: ['Newcastle'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
+                categoryPath: ["Clubes", "Premier League"]
             },
             "Brighton": {
                 matches: ['Brighton'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
+                categoryPath: ["Clubes", "Premier League"]
             },
             "Aston Villa": {
                 matches: ['Aston Villa'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
+                categoryPath: ["Clubes", "Premier League"]
             },
             "West Ham": {
                 matches: ['West Ham'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
+                categoryPath: ["Clubes", "Premier League"]
             },
             "Everton": {
                 matches: ['EVE'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
+                categoryPath: ["Clubes", "Premier League"]
             },
             "Crystal Palace": {
                 matches: ['Crystal Palace'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
+                categoryPath: ["Clubes", "Premier League"]
             },
             "Wolves": {
                 matches: ['Wolves'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
+                categoryPath: ["Clubes", "Premier League"]
             },
             "Leicester City": {
                 matches: ['Leicester City'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
+                categoryPath: ["Clubes", "Premier League"]
             },
             "Leeds United": {
                 matches: ['Leeds United'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
+                categoryPath: ["Clubes", "Premier League"]
             },
             "Sheffield United": {
                 matches: ['Sheffield United'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
+                categoryPath: ["Clubes", "Premier League"]
             },
             "Sunderland AFC": {
                 matches: ['Sunderland'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
+                categoryPath: ["Clubes", "Premier League"]
             },
             "Southampton": {
                 matches: ['Southampton'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
+                categoryPath: ["Clubes", "Premier League"]
             },
             "Fulham": {
                 matches: ['Fulham'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
+                categoryPath: ["Clubes", "Premier League"]
             },
             "Cardiff City": {
                 matches: ['Cardiff City'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
+                categoryPath: ["Clubes", "Premier League"]
             },
             "Burnley": {
                 matches: ['Burnley'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
+                categoryPath: ["Clubes", "Premier League"]
             },
             "Bournemouth": {
                 matches: ['Bournemouth'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
+                categoryPath: ["Clubes", "Premier League"]
             },
             "Norwich": {
                 matches: ['Norwich'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
+                categoryPath: ["Clubes", "Premier League"]
             },
             "Nottingham Forest": {
                 matches: ['Nottingham Forest'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
+                categoryPath: ["Clubes", "Premier League"]
             },
             "Ipswich Town": {
                 matches: ['Ipswich'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Premier League"]
+                categoryPath: ["Clubes", "Premier League"]
             },
 
 
@@ -331,162 +208,162 @@ module.exports = {
             "Real Madrid": {
                 matches: ['RMA'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Barcelona": {
                 matches: ['BAR'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Atletico Madrid": {
                 matches: ['ATM'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Girona": {
                 matches: ['Girona'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Sevilla": {
                 matches: ['Sevilla'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Valencia": {
                 matches: ['Valencia'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Villarreal": {
                 matches: ['Villarreal'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Real Betis": {
                 matches: ['Real Betis'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Bilbao": {
                 matches: ['Bilbao'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Cadiz": {
                 matches: ['Cadiz'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Real Sociedad": {
                 matches: ['Real Sociedad'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Osasuna": {
                 matches: ['Osasuna'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Celta": {
                 matches: ['Celta'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "RCD Espanyol": {
                 matches: ['RCD Espanyol'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Zaragoza": {
                 matches: ['Zaragoza'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Rayo Vallecano": {
                 matches: ['Rayo Vallecano'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Racing de Santander": {
                 matches: ['Santander'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Tenerife": {
                 matches: ['Tenerife'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Malaga": {
                 matches: ['Malaga'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Gijon": {
                 matches: ['Gijon'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Getafe": {
                 matches: ['Getafe'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Deportivo Alaves": {
                 matches: ['Alaves'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Deportivo de La Coruña": {
                 matches: ['La Coruna'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Las Palmas": {
                 matches: ['Las Palmas'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Granada": {
                 matches: ['Granada'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Deportivo Huesca": {
                 matches: ['Huesca'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Valladolid": {
                 matches: ['Valladolid'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Mallorca": {
                 matches: ['Mallorca'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Elche": {
                 matches: ['Elche'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Real Oviedo": {
                 matches: ['Real Oviedo'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Club Deportivo Leganes": {
                 matches: ['Leganes'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             "Almeria": {
                 matches: ['Almeria'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "La Liga"]
+                categoryPath: ["Clubes", "La Liga"]
             },
             
 
@@ -495,87 +372,87 @@ module.exports = {
             "París Saint-Germain": {
                 matches: ['PSG', 'PSG Paris'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Ligue 1"]
+                categoryPath: ["Clubes", "Ligue 1"]
             },
             "Marseille": {
                 matches: ['Marseille'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Ligue 1"]
+                categoryPath: ["Clubes", "Ligue 1"]
             },
             "Lyon": {
                 matches: ['Lyon', 'LyonPurple'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Ligue 1"]
+                categoryPath: ["Clubes", "Ligue 1"]
             },
             "Monaco": {
                 matches: ['Monaco'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Ligue 1"]
+                categoryPath: ["Clubes", "Ligue 1"]
             },
             "Lille": {
                 matches: ['Lille'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Ligue 1"]
+                categoryPath: ["Clubes", "Ligue 1"]
             },
             "RC Lens": {
                 matches: ['RC Lens'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Ligue 1"]
+                categoryPath: ["Clubes", "Ligue 1"]
             },
             "Stade Rennais": {
                 matches: ['Stade Rennais'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Ligue 1"]
+                categoryPath: ["Clubes", "Ligue 1"]
             },
             "OGC Nice": {
                 matches: ['OGC Nice'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Ligue 1"]
+                categoryPath: ["Clubes", "Ligue 1"]
             },
             "Auxerre": {
                 matches: ['Auxerre'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Ligue 1"]
+                categoryPath: ["Clubes", "Ligue 1"]
             },
             "Havre Athletic": {
                 matches: ['Havre Athletic'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Ligue 1"]
+                categoryPath: ["Clubes", "Ligue 1"]
             },
             "Stade Brestois": {
                 matches: ['Stade Brestois'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Ligue 1"]
+                categoryPath: ["Clubes", "Ligue 1"]
             },
             "Reims": {
                 matches: ['Reims'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Ligue 1"]
+                categoryPath: ["Clubes", "Ligue 1"]
             },
             "Metz": {
                 matches: ['Metz'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Ligue 1"]
+                categoryPath: ["Clubes", "Ligue 1"]
             },
             "Saint Etienne": {
                 matches: ['Saint Etienne'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Ligue 1"]
+                categoryPath: ["Clubes", "Ligue 1"]
             },
             "Toulouse": {
                 matches: ['Toulouse'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Ligue 1"]
+                categoryPath: ["Clubes", "Ligue 1"]
             },
             "Nantes": {
                 matches: ['Nantes'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Ligue 1"]
+                categoryPath: ["Clubes", "Ligue 1"]
             },
             "Strasbourg": {
                 matches: ['Strasbourg'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Ligue 1"]
+                categoryPath: ["Clubes", "Ligue 1"]
             },
 
 
@@ -583,132 +460,132 @@ module.exports = {
             "Bayern Munich": {
                 matches: ['Bayern'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+                categoryPath: ["Clubes", "Bundesliga"]
             },
             "Borussia Dortmund": {
                 matches: ['Dortmund'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+                categoryPath: ["Clubes", "Bundesliga"]
             },
             "RB Leipzig": {
                 matches: ['RB Leipzig'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+                categoryPath: ["Clubes", "Bundesliga"]
             },
             "Wolfsburg": {
                 matches: ['Wolfsburg'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+                categoryPath: ["Clubes", "Bundesliga"]
             },
             "Frankfurt": {
                 matches: ['Frankfurt'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+                categoryPath: ["Clubes", "Bundesliga"]
             },
             "Bayer 04 Leverkusen": {
                 matches: ['LeverKusen'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+                categoryPath: ["Clubes", "Bundesliga"]
             },
             "Monchengladbach": {
                 matches: ['Monchengladbach'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+                categoryPath: ["Clubes", "Bundesliga"]
             },
             "Schalke 04": {
                 matches: ['Schalke 04'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+                categoryPath: ["Clubes", "Bundesliga"]
             },
             "Werder Bremen": {
                 matches: ['Werder Bremen'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+                categoryPath: ["Clubes", "Bundesliga"]
             },
             "Berlin Union": {
                 matches: ['Berlin Union'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+                categoryPath: ["Clubes", "Bundesliga"]
             },
             "RB Salzburg": {
                 matches: ['Salzburg'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+                categoryPath: ["Clubes", "Bundesliga"]
             },
             "Hamburgo": {
                 matches: ['hamburg'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+                categoryPath: ["Clubes", "Bundesliga"]
             },
             "Colonia": {
                 matches: ['Koln'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+                categoryPath: ["Clubes", "Bundesliga"]
             },
             "Magdeburg": {
                 matches: ['Magdeburg'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+                categoryPath: ["Clubes", "Bundesliga"]
             }, 
             "Hertha Berliner": {
                 matches: ['Hertha BSC'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+                categoryPath: ["Clubes", "Bundesliga"]
             }, 
             "Kaiserslautern": {
                 matches: ['Kaiserslautern'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+                categoryPath: ["Clubes", "Bundesliga"]
             },
             "Stuttgart": {
                 matches: ['Stuttgart'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+                categoryPath: ["Clubes", "Bundesliga"]
             },
             "Holstein Kiel": {
                 matches: ['Holstein Kiel'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+                categoryPath: ["Clubes", "Bundesliga"]
             },
             "Fortuna Dusseldorf": {
                 matches: ['Fortuna Dusseldorf'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+                categoryPath: ["Clubes", "Bundesliga"]
             },
             "FSV Mainz 05": {
                 matches: ['Mainz 05'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+                categoryPath: ["Clubes", "Bundesliga"]
             },
             "Karlsruher": {
                 matches: ['Karlsruher'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+                categoryPath: ["Clubes", "Bundesliga"]
             },
             "Augsburgo": {
                 matches: ['Augsburg'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+                categoryPath: ["Clubes", "Bundesliga"]
             },
             "VfL Bochum": {
                 matches: ['VfL Bochum'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+                categoryPath: ["Clubes", "Bundesliga"]
             },
             "SC Freiburg": {
                 matches: ['Freiburg'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+                categoryPath: ["Clubes", "Bundesliga"]
             },
             "Hoffenheim": {
                 matches: ['Hoffenheim'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+                categoryPath: ["Clubes", "Bundesliga"]
             },
             "Heidenheim": {
                 matches: ['Heidenheim'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Bundesliga"]
+                categoryPath: ["Clubes", "Bundesliga"]
             },
 
 
@@ -716,112 +593,112 @@ module.exports = {
             "Juventus": {
                 matches: ['JUV'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Serie A"]
+                categoryPath: ["Clubes", "Serie A"]
             },
             "AC Milan": {
                 matches: ['ACM'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Serie A"]
+                categoryPath: ["Clubes", "Serie A"]
             },
             "Inter de Milan": {
                 matches: ['INT'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Serie A"]
+                categoryPath: ["Clubes", "Serie A"]
             },
             "Napoli": {
                 matches: ['Napoli'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Serie A"]
+                categoryPath: ["Clubes", "Serie A"]
             },
             "Roma": {
                 matches: ['Roma'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Serie A"]
+                categoryPath: ["Clubes", "Serie A"]
             },
             "Lazio": {
                 matches: ['Lazio'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Serie A"]
+                categoryPath: ["Clubes", "Serie A"]
             },
             "Parma": {
                 matches: ['Parma'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Serie A"]
+                categoryPath: ["Clubes", "Serie A"]
             },
             "Fiorentina": {
                 matches: ['Fiorentina'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Serie A"]
+                categoryPath: ["Clubes", "Serie A"]
             },
             "Atalanta": {
                 matches: ['Atalanta'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Serie A"]
+                categoryPath: ["Clubes", "Serie A"]
             },
             "Torino": {
                 matches: ['Torino'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Serie A"]
+                categoryPath: ["Clubes", "Serie A"]
             },
             "Sampdoria": {
                 matches: ['Sampdoria'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Serie A"]
+                categoryPath: ["Clubes", "Serie A"]
             },
             "Venezia FC": {
                 matches: ['Venezia FC'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Serie A"]
+                categoryPath: ["Clubes", "Serie A"]
             },
             "Cagliari": {
                 matches: ['Cagliari'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Serie A"]
+                categoryPath: ["Clubes", "Serie A"]
             },
             "Atlanta": {
                 matches: ['Atlanta'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Serie A"]
+                categoryPath: ["Clubes", "Serie A"]
             },
             "Bologna": {
                 matches: ['Bologna'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Serie A"]
+                categoryPath: ["Clubes", "Serie A"]
             },
             "Hellas Verona": {
                 matches: ['Verona'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Serie A"]
+                categoryPath: ["Clubes", "Serie A"]
             },
             "Calcio Monza": {
                 matches: ['Monza'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Serie A"]
+                categoryPath: ["Clubes", "Serie A"]
             },
             "Lecce": {
                 matches: ['Lecce'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Serie A"]
+                categoryPath: ["Clubes", "Serie A"]
             },
             "Calcio Como": {
                 matches: ['Como'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Serie A"]
+                categoryPath: ["Clubes", "Serie A"]
             },
             "Genoa Cricket": {
                 matches: ['Genoa'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Serie A"]
+                categoryPath: ["Clubes", "Serie A"]
             },
             "Empoli": {
                 matches: ['Empoli'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Serie A"]
+                categoryPath: ["Clubes", "Serie A"]
             },
             "Udinese Calcio": {
                 matches: ['Udinese'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Serie A"]
+                categoryPath: ["Clubes", "Serie A"]
             },
 
 
@@ -829,82 +706,82 @@ module.exports = {
             "Flamengo": {
                 matches: ['Flamengo', "Flamengo100th"],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Brasileiro Série A"]
+                categoryPath: ["Clubes", "Brasileiro Série A"]
             },
             "Palmeiras": {
                 matches: ['Palmeiras'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Brasileiro Série A"]
+                categoryPath: ["Clubes", "Brasileiro Série A"]
             },
             "Corinthians": {
                 matches: ['Corinthians'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Brasileiro Série A"]
+                categoryPath: ["Clubes", "Brasileiro Série A"]
             },
             "Atletico Mineiro": {
                 matches: ['Atletico Mineiro'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Brasileiro Série A"]
+                categoryPath: ["Clubes", "Brasileiro Série A"]
             },
             "Sao Paulo FC": {
-                matches: ['Sao Paulo FC'],
+                matches: ['Sao Paulo'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Brasileiro Série A"]
+                categoryPath: ["Clubes", "Brasileiro Série A"]
             },
             "Santos FC": {
                 matches: ['Santos FC'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Brasileiro Série A"]
+                categoryPath: ["Clubes", "Brasileiro Série A"]
             },
             "Fluminense": {
                 matches: ['Fluminense'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Brasileiro Série A"]
+                categoryPath: ["Clubes", "Brasileiro Série A"]
             },
             "Internacional": {
                 matches: ['Internacional'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Brasileiro Série A"]
+                categoryPath: ["Clubes", "Brasileiro Série A"]
             },
             "Botafogo": {
                 matches: ['Botafogo'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Brasileiro Série A"]
+                categoryPath: ["Clubes", "Brasileiro Série A"]
             },
             "Recife": {
                 matches: ['Recife'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Brasileiro Série A"]
+                categoryPath: ["Clubes", "Brasileiro Série A"]
             },
             "Bragantino": {
                 matches: ['Bragantino'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Brasileiro Série A"]
+                categoryPath: ["Clubes", "Brasileiro Série A"]
             },
             "Fortaleza": {
                 matches: ['Fortaleza'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Brasileiro Série A"]
+                categoryPath: ["Clubes", "Brasileiro Série A"]
             },
             "Cruzeiro": {
                 matches: ['Cruzeiro'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Brasileiro Série A"]
+                categoryPath: ["Clubes", "Brasileiro Série A"]
             },
             "Gremio": {
                 matches: ['Grêmio', 'Gremio'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Brasileiro Série A"]
+                categoryPath: ["Clubes", "Brasileiro Série A"]
             },
             "Vasco da": {
                 matches: ['Vasco da'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Brasileiro Série A"]
+                categoryPath: ["Clubes", "Brasileiro Série A"]
             },
             "Esporte Clube Vitoria": {
                 matches: ['Vitoria'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Brasileiro Série A"]
+                categoryPath: ["Clubes", "Brasileiro Série A"]
             },
 
 
@@ -912,47 +789,67 @@ module.exports = {
             "River Plate": {
                 matches: ['River Plate'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Primera División"]
+                categoryPath: ["Clubes", "Primera División"]
             },
             "Boca": {
                 matches: ['Boca', 'Boca Juniors'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Primera División"]
+                categoryPath: ["Clubes", "Primera División"]
             },
             "Independiente": {
                 matches: ['Independiente'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Primera División"]
+                categoryPath: ["Clubes", "Primera División"]
             },
             "Estudiantes": {
                 matches: ['La Plata'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Primera División"]
+                categoryPath: ["Clubes", "Primera División"]
             },
             "San Lorenzo": {
                 matches: ['San Lorenzo'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Primera División"]
+                categoryPath: ["Clubes", "Primera División"]
             },
             "Almirante Brown": {
                 matches: ['Almirante Brown'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Primera División"]
+                categoryPath: ["Clubes", "Primera División"]
             },
             "Huracan": {
                 matches: ['Huracan'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Primera División"]
+                categoryPath: ["Clubes", "Primera División"]
             },
             "Velez Sarsfield": {
                 matches: ['Velez Sarsfield'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Primera División"]
+                categoryPath: ["Clubes", "Primera División"]
             },
             "Atletico Tucuman": {
                 matches: ['Atletico Tucuman'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Primera División"]
+                categoryPath: ["Clubes", "Primera División"]
+            },
+            "Rosario Central": {
+                matches: ['Rosario Central'],
+                type: "equipo",
+                categoryPath: ["Clubes", "Primera División"]
+            },
+            "Lanus": {
+                matches: ['Lanus'],
+                type: "equipo",
+                categoryPath: ["Clubes", "Primera División"]
+            },
+            "Argentinos Juniors": {
+                matches: ['Argentinos Juniors'],
+                type: "equipo",
+                categoryPath: ["Clubes", "Primera División"]
+            },
+            "CA Tigre": {
+                matches: ['CA Tigre'],
+                type: "equipo",
+                categoryPath: ["Clubes", "Primera División"]
             },
 
         
@@ -960,17 +857,17 @@ module.exports = {
             "Universidad Catolica": {
                 matches: ['Universidad Catolica'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Chile Primera División"]
+                categoryPath: ["Clubes", "Chile Primera División"]
             },
             "Colo-Colo": {
                 matches: ['Colo'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Chile Primera División"]
+                categoryPath: ["Clubes", "Chile Primera División"]
             }, 
             "Deportivo Palestino": {
                 matches: ['Deportivo Palestino'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Chile Primera División"]
+                categoryPath: ["Clubes", "Chile Primera División"]
             }, 
 
 
@@ -978,87 +875,87 @@ module.exports = {
             "Pachuca": {
                 matches: ['Pachuca'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Liga MX"]
+                categoryPath: ["Clubes", "Liga MX"]
             },
             "Chivas": {
                 matches: ['Chivas'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Liga MX"]
+                categoryPath: ["Clubes", "Liga MX"]
             },
             "Necaxa": {
                 matches: ['Necaxa'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Liga MX"]
+                categoryPath: ["Clubes", "Liga MX"]
             },
             "Mazatlan": {
                 matches: ['Mazatlan'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Liga MX"]
+                categoryPath: ["Clubes", "Liga MX"]
             },
             "Juarez": {
                 matches: ['Juarez'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Liga MX"]
+                categoryPath: ["Clubes", "Liga MX"]
             },
             "Leon": {
                 matches: ['Leon'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Liga MX"]
+                categoryPath: ["Clubes", "Liga MX"]
             },
             "Tigres": {
                 matches: ['Tigres UANL'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Liga MX"]
+                categoryPath: ["Clubes", "Liga MX"]
             },
             "Puebla": {
                 matches: ['Puebla'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Liga MX"]
+                categoryPath: ["Clubes", "Liga MX"]
             },
             "Tijuana": {
                 matches: ['Tijuana'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Liga MX"]
+                categoryPath: ["Clubes", "Liga MX"]
             },
             "Club America": {
                 matches: ['Club America'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Liga MX"]
+                categoryPath: ["Clubes", "Liga MX"]
             },
             "Toluca": {
                 matches: ['Toluca'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Liga MX"]
+                categoryPath: ["Clubes", "Liga MX"]
             },
             "Santos Laguna": {
                 matches: ['Laguna'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Liga MX"]
+                categoryPath: ["Clubes", "Liga MX"]
             },
             "Cruz Azul": {
                 matches: ['Azul'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Liga MX"]
+                categoryPath: ["Clubes", "Liga MX"]
             },
             "Queretaro": {
                 matches: ['Queretaro'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Liga MX"]
+                categoryPath: ["Clubes", "Liga MX"]
             },
             "Tapatio": {
                 matches: ['Tapatio'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Liga MX"]
+                categoryPath: ["Clubes", "Liga MX"]
             },
             "Monterrey": {
                 matches: ['Monterrey'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Liga MX"]
+                categoryPath: ["Clubes", "Liga MX"]
             },
             "Atlas": {
                 matches: ['Atlas'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Liga MX"]
+                categoryPath: ["Clubes", "Liga MX"]
             },
 
 
@@ -1066,112 +963,112 @@ module.exports = {
             "Diego": {
                 matches: ['Diego'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "MLS"]
+                categoryPath: ["Clubes", "MLS"]
             },
             "Inter Miami": {
                 matches: ['Inter Miami'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "MLS"]
+                categoryPath: ["Clubes", "MLS"]
             },
             "Charlotte": {
                 matches: ['Charlotte', 'CHarlotte'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "MLS"]
+                categoryPath: ["Clubes", "MLS"]
             },
             "New York City": {
                 matches: ['York'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "MLS"]
+                categoryPath: ["Clubes", "MLS"]
             },
             "Los Angeles": {
                 matches: ['Los Angeles'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "MLS"]
+                categoryPath: ["Clubes", "MLS"]
             },
             "Orlando City": {
                 matches: ['Orlando'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "MLS"]
+                categoryPath: ["Clubes", "MLS"]
             },
             "Montreal": {
                 matches: ['Montreal'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "MLS"]
+                categoryPath: ["Clubes", "MLS"]
             },
             "Vancouver Whitecaps": {
                 matches: ['Vancouver Whitecaps'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "MLS"]
+                categoryPath: ["Clubes", "MLS"]
             },
             "Portland Timbers": {
                 matches: ['Portland Timbers'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "MLS"]
+                categoryPath: ["Clubes", "MLS"]
             },
             "Los Angeles Galaxy": {
                 matches: ['LA Galaxy'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "MLS"]
+                categoryPath: ["Clubes", "MLS"]
             },
             "New England Revolution": {
                 matches: ['Revolution'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "MLS"]
+                categoryPath: ["Clubes", "MLS"]
             },
             "Tampa Bay Mutiny": {
                 matches: ['Tampa Bay Mutiny'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "MLS"]
+                categoryPath: ["Clubes", "MLS"]
             },
             "Chicago Fire": {
                 matches: ['Chicago Fire'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "MLS"]
+                categoryPath: ["Clubes", "MLS"]
             },
             "Columbus Crew": {
                 matches: ['Columbus Crew'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "MLS"]
+                categoryPath: ["Clubes", "MLS"]
             },
             "D.C.United": {
                 matches: ["D.C.United"],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "MLS"]
+                categoryPath: ["Clubes", "MLS"]
             },
             "Austin FC": {
                 matches: ["Austin"],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "MLS"]
+                categoryPath: ["Clubes", "MLS"]
             },
             "Seattle Sounders FC": {
                 matches: ["Seattle Sounders"],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "MLS"]
+                categoryPath: ["Clubes", "MLS"]
             },
             "Sporting Kansas": {
                 matches: ['Kansas'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "MLS"]
+                categoryPath: ["Clubes", "MLS"]
             },
             "Nashville": {
                 matches: ['Nashville'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "MLS"]
+                categoryPath: ["Clubes", "MLS"]
             },
             "Philadelphia": {
                 matches: ['Philadelphia'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "MLS"]
+                categoryPath: ["Clubes", "MLS"]
             },
             "Toronto": {
                 matches: ['Toronto'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "MLS"]
+                categoryPath: ["Clubes", "MLS"]
             },
             "Minnesota": {
                 matches: ['Minnesota'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "MLS"]
+                categoryPath: ["Clubes", "MLS"]
             },
 
 
@@ -1179,22 +1076,22 @@ module.exports = {
             "Ajax": {
                 matches: ['Ajax'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Eredivise"]
+                categoryPath: ["Clubes", "Eredivise"]
             },
             "Feyenoord": {
                 matches: ['Feyenoord'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Eredivise"]
+                categoryPath: ["Clubes", "Eredivise"]
             },
             "PSV": {
                 matches: ['PSV'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Eredivise"]
+                categoryPath: ["Clubes", "Eredivise"]
             },
             "AZ Alkmaar": {
                 matches: ['Alkmaar'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Eredivise"]
+                categoryPath: ["Clubes", "Eredivise"]
             },
 
 
@@ -1202,17 +1099,17 @@ module.exports = {
             "Benfica": {
                 matches: ['Benfica'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Primeira Liga"]
+                categoryPath: ["Clubes", "Primeira Liga"]
             },
             "Porto": {
                 matches: ['Porto'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Primeira Liga"]
+                categoryPath: ["Clubes", "Primeira Liga"]
             },
             "Sporting Lisbon": {
                 matches: ['Sporting Lisbon'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Primeira Liga"]
+                categoryPath: ["Clubes", "Primeira Liga"]
             },
 
 
@@ -1220,609 +1117,634 @@ module.exports = {
             "Copenhagen": {
                 matches: ['Copenhagen'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Brugge": {
                 matches: ['Brugge'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Crvena Zvezda": {
                 matches: ['Crvena Zvezda'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "AIK": {
                 matches: ['AIK'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Vissel Kobe": {
                 matches: ['vissel kobe'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Millonarios": {
                 matches: ['Millonarios'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Yokohama F. Marinos": {
                 matches: ['Yokohama F. Marinos'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Coventry City": {
                 matches: ['Coventry'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Cerro Porteño": {
                 matches: ['Cerro Porteno'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "LDU Quito": {
                 matches: ['LDU Quito'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Galatasaray": {
                 matches: ['Galatasaray'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Fenerbahce": {
                 matches: ['Fenerbahce'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Nassr": {
                 matches: ['Nassr'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Ittihad": {
                 matches: ['Ittihad'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Olimpia": {
                 matches: ['Olimpia'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Criciuma": {
                 matches: ['Criciuma'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Bristol Rovers": {
                 matches: ['Bristol Rovers'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Ultimate Mostoles": {
                 matches: ['Ultimate Mostoles'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Urawa Red Diamonds": {
                 matches: ['Urawa Red Diamonds'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Sanfrecce Hiroshima": {
                 matches: ['Sanfrecce Hiroshima'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Ceara Sporting": {
                 matches: ['Ceara Sporting'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Luton Town": {
                 matches: ['Luton Town'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Sagan Tosu": {
                 matches: ['Sagan Tosu'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Young Africa": {
                 matches: ['Young Africa'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Versailles": {
                 matches: ['Versailles'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Birmingham": {
                 matches: ['Birmingham'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "AL AHLY": {
                 matches: ['AL AHLY'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Bolton": {
                 matches: ['Bolton'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Ivory Coast": {
                 matches: ['Ivory Coast'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Frosinone Calcio": {
                 matches: ['Frosinone Calcio'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "San Luis": {
                 matches: ['San Luis'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "FCSB": {
                 matches: ['FCSB'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Maccabi Haifa": {
                 matches: ['Maccabi Haifa'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "San Fernando": {
                 matches: ['San Fernando'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Ulsan": {
                 matches: ['Ulsan'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Coritiba": {
                 matches: ['Coritiba'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Shakhtar Donetsk": {
                 matches: ['Shakhtar Donetsk'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Aberdeen": {
                 matches: ['Aberdeen'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Salernitana": {
                 matches: ['Salernitana'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "BaHia": {
                 matches: ['BaHia'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Penarol": {
                 matches: ['Penarol'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Rangers": {
                 matches: ['Rangers'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Legia Warszawa": {
                 matches: ['Legia Warszawa'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Hull City": {
                 matches: ['Hull City'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Cliftonville": {
                 matches: ['Cliftonville'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Famalicao": {
                 matches: ['Famalicao'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Wycombe Wanderers": {
                 matches: ['Wycombe Wanderers'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Besiktas": {
                 matches: ['Besiktas'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Cerezo Osaka": {
                 matches: ['Cerezo Osaka'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "North Carolina": {
                 matches: ['North Carolina'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Swansea City": {
                 matches: ['Swansea City'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Michigan": {
                 matches: ['Michigan'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Bullets": {
                 matches: ['Bullets'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Los Angeles Dodgers": {
                 matches: ['LosAngelesDodgers'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Al-Ahli": {
                 matches: ['Ahli'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Al-Hilal": {
                 matches: ['Hilal'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Huddersfield": {
                 matches: ['Huddersfield'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Portsmouth": {
                 matches: ['Portsmouth'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Plymouth": {
                 matches: ['Plymouth'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Real Murcia": {
                 matches: ['Real Murcia'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Wrexham": {
                 matches: ['Wrexham'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Kabylie": {
                 matches: ['Kabylie'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "USM Alger": {
                 matches: ['USM Alger'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Bari": {
                 matches: ['Bari'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Burgos": {
                 matches: ['Burgos'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Blackburn": {
                 matches: ['Blackburn'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Preston North": {
                 matches: ['Preston North'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Derby County": {
                 matches: ['Derby County'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Albacete": {
                 matches: ['Albacete'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Mamelodi Sundowns": {
                 matches: ['Mamelodi Sundowns'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Recife Sports": {
                 matches: ['Recife Sports'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "West Bromwich Albion": {
                 matches: ['Bromwich'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Sheffield Wednesday": {
                 matches: ['Wednesday'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "FC Girondins de Burdeos": {
                 matches: ['Bordeaux'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Palermo": {
                 matches: ['Palermo'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Zenit": {
                 matches: ['Zenit'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Hajduk Split": {
                 matches: ['Hajduk Split'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Pirates": {
                 matches: ['Pirates'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Recreativo de Huelva": {
                 matches: ['Recreativo de Huelva'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Standard Liege": {
                 matches: ['Standard Liege'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Middlesbrough": {
                 matches: ['Middlesbrough'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Dinamo Zagreb": {
                 matches: ['Dinamo Zagreb'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Reading": {
                 matches: ['Reading'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
+            },
+            "Alianza Lima": {
+                matches: ['Alianza Lima'],
+                type: "equipo",
+                categoryPath: ["Clubes", "Otros"]
+            },
+            "Olympiacos": {
+                matches: ['Olympiacos'],
+                type: "equipo",
+                categoryPath: ["Clubes", "Otros"]
+            },
+            "Sport Emelec": {
+                matches: ['Sport Emelec'],
+                type: "equipo",
+                categoryPath: ["Clubes", "Otros"]
+            },
+            "Gamba Osaka": {
+                matches: ['Gamba Osaka'],
+                type: "equipo",
+                categoryPath: ["Clubes", "Otros"]
+            },
+            "Clube do Remo": {
+                matches: ['Clube do Remo'],
+                type: "equipo",
+                categoryPath: ["Clubes", "Otros"]
             },
 
             // NEWS FALTA CLASIFICAR
             "Paysandu": {
                 matches: ['Paysandu'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Kashima Antlers": {
                 matches: ['Kashima Antlers'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Kawasaki Frontale": {
                 matches: ['Kawasaki Frontale'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Lincoln City": {
                 matches: ['Lincoln'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Palestinian": {
                 matches: ['Palestinian'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Albacete Balompié": {
                 matches: ['Albacete Balompie'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Motagua": {
                 matches: ['Motagua'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Levante": {
                 matches: ['Levante'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Sporting Cristal": {
                 matches: ['Cristal'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Stoke City": {
                 matches: ['Stoke'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Figueirense": {
                 matches: ['Figueirense'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Cordoba": {
                 matches: ['Cordoba'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Queens Park": {
                 matches: ['Queens Park'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Deportivo Pereira": {
                 matches: ['Deportivo Pereira'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "San Jose Earthquakes": {
                 matches: ['San Jose Earthquakes'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Hibernian": {
                 matches: ['Hibernian'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Real Salt Lake": {
                 matches: ['Real Salt Lake'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Houston Dynamo": {
                 matches: ['Houston Dynamo'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Colorado Rapids": {
                 matches: ["Colorado Rapids"],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Athletico Paranaense": {
                 matches: ['Athletico Paranaense'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Northern Ireland": {
                 matches: ['Northern Ireland'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Lorient": {
                 matches: ['Lorient'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Louis City": {
                 matches: ['Louis City'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "xBuyer": {
                 matches: ['xBuyer'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Kunisports": {
                 matches: ['Kunisports'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Saiyans": {
                 matches: ['Saiyans'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Troncos": {
                 matches: ['Troncos'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Porcinos": {
                 matches: ['Porcinos'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Coscu Army": {
                 matches: ['#CA'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "The Strongest": {
                 matches: ['Strongest'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Bohemians": {
                 matches: ['Bohemians'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Munchen 1860": {
                 matches: ['Munchen 1860'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Hamburger": {
                 matches: ['Hamburger'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Victoria": {
                 matches: ['Victoria'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Newell's Old Boys": {
                 matches: ["Newell's Old Boys"],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Cork City FC": {
                 matches: ["Cork City FC"],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "Middlesbroughl": {
                 matches: ['Middlesbroughl'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             "AFC Richmond": {
                 matches: ['AFC Richmond'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Clubes", "Otros"]
+                categoryPath: ["Clubes", "Otros"]
             },
             
             
@@ -1832,77 +1754,77 @@ module.exports = {
             "Francia": {
                 matches: ['France'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
+                categoryPath: ["Selecciones", "Euro"]
             },
             "Inglaterra": {
                 matches: ['England'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
+                categoryPath: ["Selecciones", "Euro"]
             },
             "Alemania": {
                 matches: ['Germany'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
+                categoryPath: ["Selecciones", "Euro"]
             },
             "Portugal": {
                 matches: ['Portugal'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
+                categoryPath: ["Selecciones", "Euro"]
             },
             "España": {
                 matches: ['Spain'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
+                categoryPath: ["Selecciones", "Euro"]
             },
             "Italia": {
                 matches: ['Italy'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
+                categoryPath: ["Selecciones", "Euro"]
             },
             "Paises Bajos": {
                 matches: ['Netherlands'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
+                categoryPath: ["Selecciones", "Euro"]
             },
             "Gales": {
                 matches: ['Wales'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
+                categoryPath: ["Selecciones", "Euro"]
             },
             "Escocia": {
                 matches: ['Scotland'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
+                categoryPath: ["Selecciones", "Euro"]
             },
             "Dinamarca": {
                 matches: ['Denmark'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
+                categoryPath: ["Selecciones", "Euro"]
             },
             "Irlanda": {
                 matches: ['Ireland'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
+                categoryPath: ["Selecciones", "Euro"]
             },
             "Belgica": {
                 matches: ['Belgium'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
+                categoryPath: ["Selecciones", "Euro"]
             },
             "Croacia": {
                 matches: ['Croatia'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
+                categoryPath: ["Selecciones", "Euro"]
             },
             "Austria": {
                 matches: ['Austria'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
+                categoryPath: ["Selecciones", "Euro"]
             },
             "Ukraine": {
                 matches: ['Ukraine'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Euro"]
+                categoryPath: ["Selecciones", "Euro"]
             },
 
 
@@ -1910,67 +1832,67 @@ module.exports = {
             "Argentina": {
                 matches: ['Argentina'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Copa America"]
+                categoryPath: ["Selecciones", "Copa America"]
             },
             "Brasil": {
                 matches: ['Brazil'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Copa America"]
+                categoryPath: ["Selecciones", "Copa America"]
             },
             "Chile": {
                 matches: ['Chile'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Copa America"]
+                categoryPath: ["Selecciones", "Copa America"]
             },
             "Uruguay": {
                 matches: ['Uruguay'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Copa America"]
+                categoryPath: ["Selecciones", "Copa America"]
             },
             "Mexico": {
                 matches: ['Mexico', "'Mexico'"],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Copa America"]
+                categoryPath: ["Selecciones", "Copa America"]
             },
             "Canada": {
                 matches: ['Canada'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Copa America"]
+                categoryPath: ["Selecciones", "Copa America"]
             },
             "USA": {
                 matches: ['USA'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Copa America"]
+                categoryPath: ["Selecciones", "Copa America"]
             },
             "Colombia": {
                 matches: ['Colombia'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Copa America"]
+                categoryPath: ["Selecciones", "Copa America"]
             },
             "Venezuela": {
                 matches: ['Venezuela'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Copa America"]
+                categoryPath: ["Selecciones", "Copa America"]
             },
             "Peru": {
                 matches: ['Peru'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Copa America"]
+                categoryPath: ["Selecciones", "Copa America"]
             },
             "Paraguay": {
                 matches: ['Paraguay'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Copa America"]
+                categoryPath: ["Selecciones", "Copa America"]
             },
             "Ecuador": {
                 matches: ['Ecuador'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Copa America"]
+                categoryPath: ["Selecciones", "Copa America"]
             },
             "Bolivia": {
                 matches: ['Bolivia'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Copa America"]
+                categoryPath: ["Selecciones", "Copa America"]
             },
 
 
@@ -1979,207 +1901,207 @@ module.exports = {
             "Nigeria": {
                 matches: ['Nigeria'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "El Salvador": {
                 matches: ['Salvador'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Morocco": {
                 matches: ['Morocco'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Cameroon": {
                 matches: ['Cameroon'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Japan": {
                 matches: ['Japan'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Costa de marfil": {
                 matches: ["Cote d'Ivoire"],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Korea": {
                 matches: ['Korea'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Palestina": {
                 matches: ['Palestina'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Ghana": {
                 matches: ['Ghana'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Egypt": {
                 matches: ['Egypt'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Georgia": {
                 matches: ['Georgia'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Jamaica": {
                 matches: ['Jamaica'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Senegal": {
                 matches: ['Senegal'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Australia": {
                 matches: ['Australia'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Arabia Saudita": {
                 matches: ['Saudi Arabia'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Tunez": {
                 matches: ['Tunisia'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Guatemala": {
                 matches: ['Guatemala'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Filipinas": {
                 matches: ['Philippines'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Romania": {
                 matches: ['Romania'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Yugoslavia": {
                 matches: ['Yugoslavia'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Grecia": {
                 matches: ['Greece'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Argelia": {
                 matches: ['Algeria'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Qatar": {
                 matches: ['Qatar'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Panama": {
                 matches: ['Panama'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Honduras": {
                 matches: ['Honduras'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "China": {
                 matches: ['China'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Islandia": {
                 matches: ['Iceland'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Polonia": {
                 matches: ['Poland'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Eslovenia": {
                 matches: ['Slovenia'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Suiza": {
                 matches: ['Switzerland'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "República Checa": {
                 matches: ['Czech'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Noruega": {
                 matches: ['Norway'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Serbia": {
                 matches: ['Serbia'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Turquia": {
                 matches: ['Turkey'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Hungria": {
                 matches: ['Hungary'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Albania": {
                 matches: ['Albania'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Bulgaria": {
                 matches: ['Bulgaria'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Irak": {
                 matches: ['Iraque'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Suecia": {
                 matches: ['Sweden'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Unión Soviética": {
                 matches: ['Soviet union'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
             "Finlandia": {
                 matches: ['Finland'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Fútbol", "Selecciones", "Otras"]
+                categoryPath: ["Selecciones", "Otras"]
             },
 
 
@@ -2187,209 +2109,206 @@ module.exports = {
             "2024 Olympic Games": {
                 matches: ['2024 Olympic Games'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Especiales"]
+                categoryPath: ["NBA", "Especiales"]
             },
             "All Star": {
                 matches: ['ALL STAR'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Especiales"]
+                categoryPath: ["NBA", "Especiales"]
             },
             "Lakers": {
                 matches: ['LAKERS'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Oeste"]
+                categoryPath: ["NBA", "Conferencia Oeste"]
             },
             "Warriors": {
                 matches: ['WARRIORS'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Oeste"]
+                categoryPath: ["NBA", "Conferencia Oeste"]
             },
             "Chicago Bulls": {
                 matches: ['BULLS'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Este"]
+                categoryPath: ["NBA", "Conferencia Este"]
             },
             "Celtics": {
                 matches: ['CELTICS'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Este"]
+                categoryPath: ["NBA", "Conferencia Este"]
             },
             "Nets": {
                 matches: ['NETS'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Este"]
+                categoryPath: ["NBA", "Conferencia Este"]
             },
             "Heat": {
                 matches: ['HEAT'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Este"]
+                categoryPath: ["NBA", "Conferencia Este"]
             },
             "Grizzlies": {
                 matches: ['GRIZZLIES'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Oeste"]
+                categoryPath: ["NBA", "Conferencia Oeste"]
             },
             "Bucks": {
                 matches: ['BUCKS'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Este"]
+                categoryPath: ["NBA", "Conferencia Este"]
             },
             "Jazz": {
                 matches: ['JAZZ'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Oeste"]
+                categoryPath: ["NBA", "Conferencia Oeste"]
             },
             "Indiana Pacers": {
                 matches: ['Indiana Pacers'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Este"]
+                categoryPath: ["NBA", "Conferencia Este"]
             },
             "Cleveland Cavaliers": {
                 matches: ['Cleveland Cavaliers'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Este"]
+                categoryPath: ["NBA", "Conferencia Este"]
             },
             "Hawks": {
                 matches: ['HAWKS'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Este"]
+                categoryPath: ["NBA", "Conferencia Este"]
             },
             "Rockets": {
                 matches: ['ROCKETS'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Oeste"]
+                categoryPath: ["NBA", "Conferencia Oeste"]
             },
             "Raptors": {
                 matches: ['RAPTORS'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Este"]
+                categoryPath: ["NBA", "Conferencia Este"]
             },
             "Pelicans": {
                 matches: ['Pelicans'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Oeste"]
+                categoryPath: ["NBA", "Conferencia Oeste"]
             },
             "Oklahoma City Thunder": {
                 matches: ['OKC'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Oeste"]
+                categoryPath: ["NBA", "Conferencia Oeste"]
             },
             "Timberwolves": {
                 matches: ['TIMBERWOLVES'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Oeste"]
+                categoryPath: ["NBA", "Conferencia Oeste"]
             },
             "Nuggets": {
                 matches: ['NUGGETS'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Oeste"]
+                categoryPath: ["NBA", "Conferencia Oeste"]
             },
             "Kings": {
                 matches: ['Kings'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Oeste"]
+                categoryPath: ["NBA", "Conferencia Oeste"]
             },
             "OKC Thunder": {
                 matches: ['Thunder'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Oeste"]
+                categoryPath: ["NBA", "Conferencia Oeste"]
             },
             "Phoenix Suns": {
                 matches: ['SUNS'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Oeste"]
+                categoryPath: ["NBA", "Conferencia Oeste"]
             },
             "Wizards": {
                 matches: ['Wizards'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Este"]
+                categoryPath: ["NBA", "Conferencia Este"]
             },
             "San Antonio Spurs": {
                 matches: ['SA SPURS'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Oeste"]
+                categoryPath: ["NBA", "Conferencia Oeste"]
             },
             "Hornets": {
                 matches: ['HORNETS'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Este"]
+                categoryPath: ["NBA", "Conferencia Este"]
             },
             "Pistons": {
                 matches: ['Pistons'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Este"]
+                categoryPath: ["NBA", "Conferencia Este"]
             },
             "Dallas Mavericks": {
                 matches: ['Dallas Mavericks'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Oeste"]
+                categoryPath: ["NBA", "Conferencia Oeste"]
             },
             "Knicks": {
                 matches: ['KNICKS'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Este"]
+                categoryPath: ["NBA", "Conferencia Este"]
             },
             "Trail Blazers": {
                 matches: ['TRAIL BLAZERS'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Oeste"]
+                categoryPath: ["NBA", "Conferencia Oeste"]
             },
             "Clippers": {
                 matches: ['CLIPPERS'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Oeste"]
+                categoryPath: ["NBA", "Conferencia Oeste"]
             },
             "Philadelphia 76ers": {
                 matches: ['76ERS'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Este"]
+                categoryPath: ["NBA", "Conferencia Este"]
             },
             "Magic": {
                 matches: ['Magic'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Este"]
+                categoryPath: ["NBA", "Conferencia Este"]
             },
             "SA Spurs FOX": {
                 matches: ['FOX'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Básquet", "NBA", "Conferencia Oeste"]
+                categoryPath: ["NBA", "Conferencia Oeste"]
             },
 
             // Formula 1
             "Ducati": {
                 matches: ['DUCATI'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Formula 1"]
             },
             "Yamaha": {
                 matches: ['YAMaHA'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Formula 1"]
             },
             "Toyota": {
                 matches: ['Toyota'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Formula 1"]
             },
             "Mercedes": {
                 matches: ['Mercedes'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Formula 1"]
+            },
+            "Red Bull": {
+                matches: ['Red Bull'],
+                type: "equipo",
             },
             "Aston Martin": {
                 matches: ['Aston Martin'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Formula 1"]
             },
             "Ferrari": {
                 matches: ['Ferrari'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Formula 1"]
             },
             "McLaren": {
                 matches: ['McLaren'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Formula 1"]
             },
 
 
@@ -2397,134 +2316,144 @@ module.exports = {
             "Fi-Ji": {
                 matches: ['Jian'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Rugby"]
             },
             "Nueva Zelanda": {
                 matches: ['New Zealand'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Rugby"]
             },
             "All Blacks": {
                 matches: ['All Blacks'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Rugby"]
             },
             "Los Pumas": {
                 matches: ['Pumas'],
                 type: "equipo",
-                categoryPath: ["Deportes", "Rugby"]
             },
         },
 
         temporadas: {
-            "1950/51": { matches: [ "1950", "1950/51", "1950-51" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1951/52": { matches: [ "1951", "1951/52", "1951-52" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1952/53": { matches: [ "1952", "1952/53", "1952-53" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1953/54": { matches: [ "1953", "1953/54", "1953-54" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1954/55": { matches: [ "1954", "1954/55", "1954-55" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1955/56": { matches: [ "1955", "1955/56", "1955-56" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1956/57": { matches: [ "1956", "1956/57", "1956-57" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1957/58": { matches: [ "1957", "1957/58", "1957-58" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1958/59": { matches: [ "1958", "1958/59", "1958-59" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1959/60": { matches: [ "1959", "1959/60", "1959-60" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1960/61": { matches: [ "1960", "1960/61", "1960-61" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1961/62": { matches: [ "1961", "1961/62", "1961-62" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1962/63": { matches: [ "1962", "1962/63", "1962-63" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1963/64": { matches: [ "1963", "1963/64", "1963-64" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1964/65": { matches: [ "1964", "1964/65", "1964-65" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1965/66": { matches: [ "1965", "1965/66", "1965-66" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1966/67": { matches: [ "1966", "1966/67", "1966-67" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1967/68": { matches: [ "1967", "1967/68", "1967-68" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1968/69": { matches: [ "1968", "1968/69", "1968-69" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1969/70": { matches: [ "1969", "1969/70", "1969-70" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1970/71": { matches: [ "1970", "1970/71", "1970-71" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1971/72": { matches: [ "1971", "1971/72", "1971-72" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1972/73": { matches: [ "1972", "1972/73", "1972-73" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1973/74": { matches: [ "1973", "1973/74", "1973-74" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1974/75": { matches: [ "1974", "1974/75", "1974-75" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1975/76": { matches: [ "1975", "1975/76", "1975-76" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1976/77": { matches: [ "1976", "1976/77", "1976-77" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1977/78": { matches: [ "1977", "1977/78", "1977-78" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1978/79": { matches: [ "1978", "1978/79", "1978-79" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1979/80": { matches: [ "1979", "1979/80", "1979-80" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1980/81": { matches: [ "1980", "1980/81", "1980-81" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1981/82": { matches: [ "1981", "1981/82", "1981-82" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1982/83": { matches: [ "1982", "1982/83", "1982-83" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1983/84": { matches: [ "1983", "1983/84", "1983-84" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1984/85": { matches: [ "1984", "1984/85", "1984-85" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1985/86": { matches: [ "1985", "1985/86", "1985-86" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1986/87": { matches: [ "1986", "1986/87", "1986-87" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1987/88": { matches: [ "1987", "1987/88", "1987-88" ], type: "temporada", categoryPath: [ "Deportes" ] }, 
-            "1988/89": { matches: [ "1988", "1988/89", "1988-89" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1989/90": { matches: [ "1989", "1989/90", "1989-90" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1990/91": { matches: [ "1990", "1990/91", "1990-91" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1991/92": { matches: [ "1991", "1991/92", "1991-92" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1992/93": { matches: [ "1992", "1992/93", "1992-93" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1993/94": { matches: [ "1993", "1993/94", "1993-94", "1993客" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1994/95": { matches: [ "1994", "1994/95", "1994-95" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1995/96": { matches: [ "1995", "1995/96", "1995-96" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1996/97": { matches: [ "1996", "1996/97", "1996-97" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1997/98": { matches: [ "1997", "1997/98", "1997-98" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1998/99": { matches: [ "1998", "1998/99", "1998-99" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "1999/00": { matches: [ "1999", "1999/00", "1999-00" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "2000/01": { matches: [ "2000", "2000/01", "2000-01" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "2001/02": { matches: [ "2001", "2001/02", "2001-02" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "2002/03": { matches: [ "2002", "2002/03", "2002-03" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "2003/04": { matches: [ "2003", "2003/04", "2003-04" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "2004/05": { matches: [ "2004", "2004/05", "2004-05" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "2005/06": { matches: [ "2005", "2005/06", "2005-06" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "2006/07": { matches: [ "2006", "2006/07", "2006-07" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "2007/08": { matches: [ "2007", "2007/08", "2007-08" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "2008/09": { matches: [ "2008", "2008/09", "2008-09" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "2009/10": { matches: [ "2009", "2009/10", "2009-10" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "2010/11": { matches: [ "2010", "2010/11", "2010-11" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "2011/12": { matches: [ "2011", "2011/12", "2011-12" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "2012/13": { matches: [ "2012", "2012/13", "2012-13" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "2013/14": { matches: [ "2013", "2013/14", "2013-14" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "2014/15": { matches: [ "2014", "2014/15", "2014-15" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "2015/16": { matches: [ "2015", "2015/16", "2015-16" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "2016/17": { matches: [ "2016", "2016/17", "2016-17" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "2017/18": { matches: [ "2017", "2017/18", "2017-18" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "2018/19": { matches: [ "2018", "2018/19", "2018-19" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "2019/20": { matches: [ "2019", "2019/20", "2019-20" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "2020/21": { matches: [ "2020", "2020/21", "2020-21" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "2021/22": { matches: [ "2021", "2021/22", "2021-22" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "2022/23": { matches: [ "2022", "2022/23", "2022-23" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "2023/24": { matches: [ "2023", "2023/24", "2023-24" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "2024/25": { matches: [ "2024", "2024/25", "2024-25" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "2025/26": { matches: [ "2025", "2025/26", "2025-26" ], type: "temporada", categoryPath: [ "Deportes" ] },
-            "2026/27": { matches: [ "2026", "2026/27", "2026-27" ], type: "temporada", categoryPath: [ "Deportes" ] }
+            "1950/51": { matches: [ "1950", "1950/51", "1950-51" ], type: "temporada" },
+            "1951/52": { matches: [ "1951", "1951/52", "1951-52" ], type: "temporada" },
+            "1952/53": { matches: [ "1952", "1952/53", "1952-53" ], type: "temporada" },
+            "1953/54": { matches: [ "1953", "1953/54", "1953-54" ], type: "temporada" },
+            "1954/55": { matches: [ "1954", "1954/55", "1954-55" ], type: "temporada" },
+            "1955/56": { matches: [ "1955", "1955/56", "1955-56" ], type: "temporada" },
+            "1956/57": { matches: [ "1956", "1956/57", "1956-57" ], type: "temporada" },
+            "1957/58": { matches: [ "1957", "1957/58", "1957-58" ], type: "temporada" },
+            "1958/59": { matches: [ "1958", "1958/59", "1958-59" ], type: "temporada" },
+            "1959/60": { matches: [ "1959", "1959/60", "1959-60" ], type: "temporada" },
+            "1960/61": { matches: [ "1960", "1960/61", "1960-61" ], type: "temporada" },
+            "1961/62": { matches: [ "1961", "1961/62", "1961-62" ], type: "temporada" },
+            "1962/63": { matches: [ "1962", "1962/63", "1962-63" ], type: "temporada" },
+            "1963/64": { matches: [ "1963", "1963/64", "1963-64" ], type: "temporada" },
+            "1964/65": { matches: [ "1964", "1964/65", "1964-65" ], type: "temporada" },
+            "1965/66": { matches: [ "1965", "1965/66", "1965-66" ], type: "temporada" },
+            "1966/67": { matches: [ "1966", "1966/67", "1966-67" ], type: "temporada" },
+            "1967/68": { matches: [ "1967", "1967/68", "1967-68" ], type: "temporada" },
+            "1968/69": { matches: [ "1968", "1968/69", "1968-69" ], type: "temporada" },
+            "1969/70": { matches: [ "1969", "1969/70", "1969-70" ], type: "temporada" },
+            "1970/71": { matches: [ "1970", "1970/71", "1970-71" ], type: "temporada" },
+            "1971/72": { matches: [ "1971", "1971/72", "1971-72" ], type: "temporada" },
+            "1972/73": { matches: [ "1972", "1972/73", "1972-73" ], type: "temporada" },
+            "1973/74": { matches: [ "1973", "1973/74", "1973-74" ], type: "temporada" },
+            "1974/75": { matches: [ "1974", "1974/75", "1974-75" ], type: "temporada" },
+            "1975/76": { matches: [ "1975", "1975/76", "1975-76" ], type: "temporada" },
+            "1976/77": { matches: [ "1976", "1976/77", "1976-77" ], type: "temporada" },
+            "1977/78": { matches: [ "1977", "1977/78", "1977-78" ], type: "temporada" },
+            "1978/79": { matches: [ "1978", "1978/79", "1978-79" ], type: "temporada" },
+            "1979/80": { matches: [ "1979", "1979/80", "1979-80" ], type: "temporada" },
+            "1980/81": { matches: [ "1980", "1980/81", "1980-81" ], type: "temporada" },
+            "1981/82": { matches: [ "1981", "1981/82", "1981-82" ], type: "temporada" },
+            "1982/83": { matches: [ "1982", "1982/83", "1982-83" ], type: "temporada" },
+            "1983/84": { matches: [ "1983", "1983/84", "1983-84" ], type: "temporada" },
+            "1984/85": { matches: [ "1984", "1984/85", "1984-85" ], type: "temporada" },
+            "1985/86": { matches: [ "1985", "1985/86", "1985-86" ], type: "temporada" },
+            "1986/87": { matches: [ "1986", "1986/87", "1986-87" ], type: "temporada" },
+            "1987/88": { matches: [ "1987", "1987/88", "1987-88" ], type: "temporada" }, 
+            "1988/89": { matches: [ "1988", "1988/89", "1988-89" ], type: "temporada" },
+            "1989/90": { matches: [ "1989", "1989/90", "1989-90" ], type: "temporada" },
+            "1990/91": { matches: [ "1990", "1990/91", "1990-91" ], type: "temporada" },
+            "1991/92": { matches: [ "1991", "1991/92", "1991-92" ], type: "temporada" },
+            "1992/93": { matches: [ "1992", "1992/93", "1992-93" ], type: "temporada" },
+            "1993/94": { matches: [ "1993", "1993/94", "1993-94", "1993客" ], type: "temporada" },
+            "1994/95": { matches: [ "1994", "1994/95", "1994-95" ], type: "temporada" },
+            "1995/96": { matches: [ "1995", "1995/96", "1995-96" ], type: "temporada" },
+            "1996/97": { matches: [ "1996", "1996/97", "1996-97" ], type: "temporada" },
+            "1997/98": { matches: [ "1997", "1997/98", "1997-98" ], type: "temporada" },
+            "1998/99": { matches: [ "1998", "1998/99", "1998-99" ], type: "temporada" },
+            "1999/00": { matches: [ "1999", "1999/00", "1999-00" ], type: "temporada" },
+            "2000/01": { matches: [ "2000", "2000/01", "2000-01" ], type: "temporada" },
+            "2001/02": { matches: [ "2001", "2001/02", "2001-02" ], type: "temporada" },
+            "2002/03": { matches: [ "2002", "2002/03", "2002-03" ], type: "temporada" },
+            "2003/04": { matches: [ "2003", "2003/04", "2003-04" ], type: "temporada" },
+            "2004/05": { matches: [ "2004", "2004/05", "2004-05" ], type: "temporada" },
+            "2005/06": { matches: [ "2005", "2005/06", "2005-06" ], type: "temporada" },
+            "2006/07": { matches: [ "2006", "2006/07", "2006-07" ], type: "temporada" },
+            "2007/08": { matches: [ "2007", "2007/08", "2007-08" ], type: "temporada" },
+            "2008/09": { matches: [ "2008", "2008/09", "2008-09" ], type: "temporada" },
+            "2009/10": { matches: [ "2009", "2009/10", "2009-10" ], type: "temporada" },
+            "2010/11": { matches: [ "2010", "2010/11", "2010-11" ], type: "temporada" },
+            "2011/12": { matches: [ "2011", "2011/12", "2011-12" ], type: "temporada" },
+            "2012/13": { matches: [ "2012", "2012/13", "2012-13" ], type: "temporada" },
+            "2013/14": { matches: [ "2013", "2013/14", "2013-14" ], type: "temporada" },
+            "2014/15": { matches: [ "2014", "2014/15", "2014-15" ], type: "temporada" },
+            "2015/16": { matches: [ "2015", "2015/16", "2015-16" ], type: "temporada" },
+            "2016/17": { matches: [ "2016", "2016/17", "2016-17" ], type: "temporada" },
+            "2017/18": { matches: [ "2017", "2017/18", "2017-18" ], type: "temporada" },
+            "2018/19": { matches: [ "2018", "2018/19", "2018-19" ], type: "temporada" },
+            "2019/20": { matches: [ "2019", "2019/20", "2019-20" ], type: "temporada" },
+            "2020/21": { matches: [ "2020", "2020/21", "2020-21" ], type: "temporada" },
+            "2021/22": { matches: [ "2021", "2021/22", "2021-22" ], type: "temporada" },
+            "2022/23": { matches: [ "2022", "2022/23", "2022-23" ], type: "temporada" },
+            "2023/24": { matches: [ "2023", "2023/24", "2023-24" ], type: "temporada" },
+            "2024/25": { matches: [ "2024", "2024/25", "2024-25" ], type: "temporada" },
+            "2025/26": { matches: [ "2025", "2025/26", "2025-26" ], type: "temporada" },
+            "2026/27": { matches: [ "2026", "2026/27", "2026-27" ], type: "temporada" }
         },
 
         versions: {
-            "Jugador": { matches: ['Player Version', 'Playr'], type: "version",categoryPath: ["Deportes"] },
-            "Fanatico": { matches: ['Fans'], type: "version", categoryPath: ["Deportes"] },
-            "Retro": { matches: ['Retro'], type: "version", categoryPath: ["Deportes"] }
+            "Jugador": { matches: ['Player Version', 'Playr'], type: "version" },
+            "Fanatico": { matches: ['Fans'], type: "version" },
+            "Retro": { matches: ['Retro'], type: "version" }
         },
 
         editions: {
-            "Local": { matches: ['Home'], type: "edicion", categoryPath: ["Deportes"] },
-            "Visitante": { matches: ['Away', 'Awat'], type: "edicion", categoryPath: ["Deportes"] },
-            "Alternativa": { matches: ['Third'], type: "edicion", categoryPath: ["Deportes"] },
-            "Cuarta Equipacion": { matches: ['Fourth'], type: "edicion", categoryPath: ["Deportes"] },
-            "Arquero": { matches: ['Goalkeeper'], type: "edicion", categoryPath: ["Deportes"] },
-            "Entrenamiento": { matches: ['Training'], type: "edicion", categoryPath: ["Deportes"] },
-            "Especial": { matches: ['Special Edition'], type: "edicion", categoryPath: ["Deportes"] },
-            "Aniversario": { matches: ['Anniversary'], type: "edicion", categoryPath: ["Deportes"] },
-            "Limitada": { matches: ['Limited Edition'], type: "edicion", categoryPath: ["Deportes"] },
-            "Conmemorativa": { matches: ['Centenary', 'Commemorative Edition', 'Commemorate', "'Chinese Year'"], type: "edicion", categoryPath: ["Deportes"] },
+            "Local": { matches: ['Home'], type: "edicion" },
+            "Visitante": { matches: ['Away', 'Awat'], type: "edicion" },
+            "Alternativa": { matches: ['Third'], type: "edicion" },
+            "Cuarta Equipacion": { matches: ['Fourth'], type: "edicion" },
+            "Arquero": { matches: ['Goalkeeper'], type: "edicion" },
+            "Entrenamiento": { matches: ['Training'], type: "edicion" },
+            "Especial": { matches: ['Special Edition'], type: "edicion" },
+            "Aniversario": { matches: ['Anniversary'], type: "edicion" },
+            "Limitada": { matches: ['Limited Edition'], type: "edicion" },
+            "Conmemorativa": { matches: ['Centenary', 'Commemorative Edition', 'Commemorate', "'Chinese Year'"], type: "edicion" },
         },
 
         features: {
-            "Manga Corta": { matches: [], type: "feature", categoryPath: ["Deportes"] },
-            "Manga Larga": { matches: ['Long Sleeve', '长袖', '(长袖)'], type: "feature", categoryPath: ["Deportes"] },
+            "Manga Corta": { matches: [], type: "feature" },
+            "Manga Larga": { matches: ['Long Sleeve', '长袖', '(长袖)'], type: "feature" },
         },
 
         caracteristicas: {
-            "Reversible": { matches: ['Double Sided', '(双面风衣)'], type: "caracteristica", categoryPath: ["Deportes"] },
-            "Terciopelo": { matches: ['Velvet Thickened', "卡其色(加绒)蓝标", "红色(加绒)蓝标", "灰色(加绒)蓝标", "宝蓝色(加绒)蓝标", "白色(加绒)蓝标", "黑色(加绒)蓝标", "红色(加绒)绿标", "宝蓝色(加绒)绿标", "灰色(加绒)绿标", "白色(加绒)绿标", "卡其色(加绒)绿标", "黑色(加绒)绿标","卡其色(加绒)", "红色(加绒)", "白色(加绒)", "宝蓝色(加绒)", "灰色(加绒)", "黑色(加绒)"], type: "caracteristica", categoryPath: ["Deportes"] }
+            "Reversible": { matches: ['Double Sided', '(双面风衣)'], type: "caracteristica" },
+            "Terciopelo": { matches: ['Velvet Thickened', "卡其色(加绒)蓝标", "红色(加绒)蓝标", "灰色(加绒)蓝标", "宝蓝色(加绒)蓝标", "白色(加绒)蓝标", "黑色(加绒)蓝标", "红色(加绒)绿标", "宝蓝色(加绒)绿标", "灰色(加绒)绿标", "白色(加绒)绿标", "卡其色(加绒)绿标", "黑色(加绒)绿标","卡其色(加绒)", "红色(加绒)", "白色(加绒)", "宝蓝色(加绒)", "灰色(加绒)", "黑色(加绒)"], type: "caracteristica" }
         },
-        
+
+        sexo: {
+            "Masculino": { matches: [], type: "sexo" },
+            "Femenino": { matches: ['Women'], type: "sexo" },
+            "Niños": { matches: ['Kids'], type: "sexo"},
+            "Bebés": { matches: ['Baby Infant Crawl Suit'], type: "sexo"}
+        },
+
+        deporte: {
+            "Fútbol": { matches: ['Soccer'], type: "deporte" },
+            "Básquet": { matches: ['NBA', 'Basketball', 'Básquet'], type: "deporte" },
+            "Rugby": { matches: ['Rugby'], type: "deporte" },
+            "Automovilismo": { matches: ['Racing Suit'], type: "deporte" }
+        },
+       
         colors: {
             "Negro": { matches: ['Black', 'Blakc', 'Balck'], type: "color" },
             "Blanco": { matches: ['White', '&White'], type: "color" },
@@ -2533,6 +2462,7 @@ module.exports = {
             "Verde": { matches: ['Green'], type: "color" },
             "Amarillo": { matches: ['Yellow'], type: "color" },
             "Gris": { matches: ['Grey', 'gray'], type: "color" },
+            "Marron": { matches: ['Brown'], type: "color" },
             "Crema": { matches: ['Cream'], type: "color" },
             "Naranja": { matches: ['Orange'], type: "color" },
             "Violeta": { matches: ['Purple'], type: "color" },
@@ -2859,20 +2789,16 @@ module.exports = {
         },
 
         marcas: {
-            "Puma": {
-                matches: ['*PM', '(女)*PM', '*PM(球员童装)', '(长袖球员)*PM', '*PM浅绿', "#PM", "PM01",],
-                type: "marca"
-            },
-            "The North Face": {
-                matches: ['TNF'],
+            "Nike": {
+                matches: ['NK', '*AIR', "#NK", "AIR", '*nk'],
                 type: "marca"
             },
             "Adidas": {
-                matches: ['AD09', "a#d",  "#ad",],
+                matches: ['AD09', "a#d",  "#ad", '*ad'],
                 type: "marca"
             },
-            "Nike": {
-                matches: ['NK', '*AIR', "#NK", "AIR"],
+            "Puma": {
+                matches: ['*PM', '(女)*PM', '*PM(球员童装)', '(长袖球员)*PM', '*PM浅绿', "#PM", "PM01",],
                 type: "marca"
             },
             "Joma": {
@@ -2881,6 +2807,10 @@ module.exports = {
             },
             "Jordan": {
                 matches: ['Jordan'],
+                type: "marca"
+            },
+            "The North Face": {
+                matches: ['TNF'],
                 type: "marca"
             },
             "Descente": {
@@ -2911,7 +2841,6 @@ module.exports = {
                 matches: ['Yonex'],
                 type: "marca"
             },
-            
         },
 
         modelos:{

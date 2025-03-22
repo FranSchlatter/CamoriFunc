@@ -141,28 +141,7 @@ function mergeCategoryTrees(existing, newCategories) {
 
 async function processCategories(analysisReport) {
   const existingData = await readJsonFile(CATEGORIES_PATH) || { categories: [] };
-  const allCategoryPaths = new Set();
-
-  analysisReport.newTags.forEach(tag => {
-    if (tag.categoryPath) {
-      let currentPath = [];
-      tag.categoryPath.forEach(catName => {
-        currentPath.push(catName);
-        allCategoryPaths.add([...currentPath]);
-      });
-    }
-  });
-
-  const additionalCategories = Array.from(allCategoryPaths).map(path => ({
-    path: path,
-    name: path[path.length - 1],
-    description: `Categoría ${path[path.length - 1]}`
-  }));
-
-  const allCategories = [
-    ...analysisReport.newCategories,
-    ...additionalCategories
-  ];
+  const allCategories = analysisReport.newCategories;
 
   try {
     const newCategoryTree = buildCategoryTree(allCategories);
@@ -286,22 +265,16 @@ async function processTags(analysisReport, categoryMap) {
         continue;
       }
 
-      let categoryIds = [];
+      let categoryPath = [];
       if (newTag.categoryPath) {
-        const pathString = newTag.categoryPath.join('/');
-        const categoryId = categoryMap.get(pathString);
-
-        if (!categoryId) {
-          throw new Error(`Categoría no encontrada: ${pathString}`);
-        }
-        categoryIds = [categoryId];
+        categoryPath = newTag.categoryPath;
       }
 
       const tagToAdd = {
         id: crypto.randomUUID(),
         name: newTag.name,
         type: newTag.type,
-        categoryPath: categoryIds
+        categoryPath: categoryPath
       };
 
       newTags.push(tagToAdd);
@@ -421,9 +394,11 @@ async function processProducts(analysisReport) {
         const product = {
           id: crypto.randomUUID(),
           name: newProduct.name,
+          namegk: newProduct.originalName,
           description: newProduct.description,
           price: (newProduct.price || 0) * 2600 + 35000,
           image_url: newProduct.images,
+          vendidasgk: newProduct.vendidas,
           status: 'active',
           categoryIds,
           tagIds,
