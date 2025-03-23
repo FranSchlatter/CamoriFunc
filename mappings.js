@@ -61,8 +61,8 @@ module.exports = {
         },
         "Chalecos y Musculosas": {
             matches: ['Vest'],
-            type: "edicion",
-            categoryPath: ["Indumentaria Casual", "Chalecos"]
+            description: "Indumentaria de sin mangas",
+            categoryPath: ["Indumentaria Casual", "Chalecos y Musculosas"]
         },
         "Camperones": {
             matches: ['Cotton Coat'],
