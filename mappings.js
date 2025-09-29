@@ -4342,6 +4342,12 @@ module.exports = {
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/8/d/8d4a09dbabbd4f43.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
+            "UEL/Foundation10": {
+                matches: ["UEL (欧联45)右袖"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/09/27/2/3/2324fafdf75742d2.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
             "UEL24/Foundation/ZondaC": {
                 matches: ["UEL 2024 Winners +Zondacrypto(欧冠-亚特兰大+左袖广告)"],
                 type: "badge",
@@ -4556,7 +4562,7 @@ module.exports = {
 
             // > Bundersliga
             "BUN": {
-                matches: ["Bundesliga Black (黑色章)", "Bundesliga +GLS (黑德甲+左袖广告)", "Bundesliga +GLS (德普章+左袖广告)", "Bundesliga +GLS (黑色章+左袖广告)", 'Bundesliga +Hep..est (德普章+左袖广告)', 'Bundesliga +rel..NS (德普章+左袖广告)', 'Bundesliga +ih..ar (德普章+左袖广告)', "Bundesliga (德普章)", 'Bundesliga (德甲普章)', 'Bundesliga(普章)', 'Bundesliga +Sonepar (德普章+左袖广告)'],
+                matches: ['Bundesliga (德甲普)',"Bundesliga Black (黑色章)", "Bundesliga +GLS (黑德甲+左袖广告)", "Bundesliga +GLS (德普章+左袖广告)", "Bundesliga +GLS (黑色章+左袖广告)", 'Bundesliga +Hep..est (德普章+左袖广告)', 'Bundesliga +rel..NS (德普章+左袖广告)', 'Bundesliga +ih..ar (德普章+左袖广告)', "Bundesliga (德普章)", 'Bundesliga (德甲普章)', 'Bundesliga(普章)', 'Bundesliga +Sonepar (德普章+左袖广告)'],
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/10/31/8/b/8bdf7dd2865f6383.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
@@ -4584,6 +4590,12 @@ module.exports = {
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/28/f/1/f177882237d3e2a6.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "BUN WIN24-25": {
+                matches: ["Champion2024/2025(德金章)"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/09/27/b/4/b4f6ce8700ab793c.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "BUN/Allianz": {
                 matches: ["Bundesliga +Allianz (德普章+左袖广告)"],
@@ -4739,13 +4751,13 @@ module.exports = {
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/02/13/0/8/083b0795a0b2323a.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "Premier 2": {
-                matches: ["Premier league (Double)(英超)左右印"],
+                matches: ["Double (PreL) (34英超普)印双袖", "Premier league (Double)(英超)左右印"],
                 type: "badge",
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/09/19/d/f/dff13bc9845a4518.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "Premier/NoRac 2": {
-                matches: ["Pre L + NO..for(Double)(英超+章下字)左右印"],
+                matches: ["Double (PreL +NO..for) (英超普+章下字)印双袖", "Pre L + NO..for(Double)(英超+章下字)左右印"],
                 type: "badge",
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/09/19/2/e/2e6d76ee7c50fe9a.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
@@ -4785,7 +4797,7 @@ module.exports = {
 
             // > SerieA
             "SerieA/Enilive": {
-                matches: ["Serie A(意甲45)", "Serie A (意甲45)", "Serie A (意甲45)", "Serie A(意甲45)", "Serie A (意甲45)"],
+                matches: ["Serie A(意甲45)", "Serie A (意甲45)"],
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2024/12/16/4/6/462e2dd4ce4860bd.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
@@ -4977,7 +4989,7 @@ module.exports = {
                 images: "https://us03-imgcdn.ymcart.com/97006/2023/03/25/4/2/42870559c0bba37e.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "CALCIO": {
-                matches: ["L CALCIO (意甲0410)", "L CALCIO (意甲9803)", "L CALCIO (意甲9798)"],
+                matches: ["L CALCIO (意甲9697)", "L CALCIO (意甲0410)", "L CALCIO (意甲9803)", "L CALCIO (意甲9798)"],
                 type: "badge",
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/03/11/c/b/cb47520c4a7bb400.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
@@ -5444,6 +5456,18 @@ module.exports = {
                 price: 1,
                 images: "https://us03-imgcdn.ymcart.com/97006/2023/09/17/8/4/84fc7f1d2e6e2c4d.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
+            "LiveNation": {
+                matches: ["LIVE NATION (左袖广告)"],
+                type: "badge",
+                price: 1,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/09/25/e/c/eca76aa2204776c0.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "LiveNation/UCL/Fundation10": {
+                matches: ["UECL 2025 Winners +LIVE NATION (欧冠切尔西专用+左袖广告)"],
+                type: "badge",
+                price: 3,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/09/25/a/6/a6b00850d4d73155.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
             "Anime 2022": {
                 matches: ["Anime badge 2022世界杯动漫植绒"],
                 type: "badge",
@@ -5525,7 +5549,7 @@ module.exports = {
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/07/04/3/5/351a550628e0b106.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
             "LaLiga24/LaLiga45": {
-                matches: ["La Liga +24/25C(红标冠军+45西甲章)"],
+                matches: [ "La Liga +24/25C (红标冠军+45西甲章)", "La Liga +AMB..tv +24/25C (红标冠军+45西甲章+左袖广告)", "La Liga +24/25C(红标冠军+45西甲章)"],
                 type: "badge",
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/07/04/1/7/17ea338b29fda232.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
@@ -5542,7 +5566,30 @@ module.exports = {
                 price: 2,
                 images: "https://us03-imgcdn.ymcart.com/97006/2025/07/02/9/0/90c3c62dd3633327.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
             },
-            
+            "FIFA26Q/Foundation10": {
+                matches: ["UWC 2026 Qualifying (世预选-欧)"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/09/27/4/5/4503572f6503ed52.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "Ligue1Champions25": {
+                matches: ["2025-26 PSG Blue Special Edition Kids Training"],
+                type: "badge",
+                price: 2,
+                images: "https://us03-imgcdn.ymcart.com/97006/2025/09/27/5/a/5a0d075b3756971a.png?x-oss-process=image/quality,Q_90/auto-orient,1/resize,m_lfit,w_1500,h_1500/format,webp"
+            },
+            "": {
+                matches: [""],
+                type: "badge",
+                price: 2,
+                images: ""
+            },
+            "": {
+                matches: [""],
+                type: "badge",
+                price: 2,
+                images: ""
+            },
         },
         customize: {
             "Sin dorsal": {
@@ -5552,7 +5599,7 @@ module.exports = {
             },
             "Con dorsal": {
                 matches: [
-                        "Name / Number (24/25ad黄)", "Name / Number (24/25绿白)", "Name / Number (Nürnberg)(上带广告-名在号下)专用", "Name / Number (24/25ad白)(只印后面)", "Name/ Number (上带广告-名在号下)", "Name / Number (24/25ad绿)", "BAPE #93 (B-X Fonts)专用黑字", "Name / Number (24/25ad黑)(只印后面)", "Name / Number (24/25ad蓝)", "Name / Number (上带广告-名在号下)", "Name/ Number (带 Dortmund名在号下)", "Name / Number (White Fonts)(白色-名在号下)", "Name/ Number (Dortmund 上带广告-名在号下)", "Name/ Number ('上印DORTMUND‘)名在号下", "Name / Number (Dragon Font)龙年字体",
+                        "Name / Number (24/25ad绿-只印后面)", "Name / Number (小号NK下)", "Name / Number (24/25ad)只印后面", "Name / Number (24/25ad黄)", "Name / Number (24/25绿白)", "Name / Number (Nürnberg)(上带广告-名在号下)专用", "Name / Number (24/25ad白)(只印后面)", "Name/ Number (上带广告-名在号下)", "Name / Number (24/25ad绿)", "BAPE #93 (B-X Fonts)专用黑字", "Name / Number (24/25ad黑)(只印后面)", "Name / Number (24/25ad蓝)", "Name / Number (上带广告-名在号下)", "Name/ Number (带 Dortmund名在号下)", "Name / Number (White Fonts)(白色-名在号下)", "Name/ Number (Dortmund 上带广告-名在号下)", "Name/ Number ('上印DORTMUND‘)名在号下", "Name / Number (Dragon Font)龙年字体",
                         "Name / Number (欧冠字体)", "Name / Number (没广告名在号上)", "Name/ Number (只印后面) 银灰色字", "Name/ Number (只印后面)", "Name/ Number (名在号下)专用字体", "Name / Number (白色-名在号下)", "Name / Number (前小号印中间)", "Name / Number (名号广告色一至)", "Name / Number (Name On Number)名在号上", "Name / Number (Name Under Number)名在号下", "Name / Number (24/25ad绿) 只印后面", "Name / Number (24/25ad白) 只印后面", "Name / Number (24/25ad绿)上衣只印后面", "Name / Number (24/25ad白)上衣只印后面", "Name / Number (24/25ad蓝)上衣只印后面", "Name / Number (23/24主场字)", "Name / Number (24/25黑色ad)", "Name / Number (24/25ad白字)只印后面", "Name / Number (24/25ad黑字)", "Name / Number (24/25AD白字体)", "Name / Number (24/25AD蓝字体)", "Name / Number (24/25AD字体)", "Name / Number (24/25ad黄色)", "Name / Number (24/25ad红字)", "Name/ Number (没广告-名在号上)", "Name / Number (不印前小号)", "Name / Number (24/25主场字)", "Name / Number (24/25金色ad字)", "Name / Number (24/25金ad字)", "Name / Number (主场字)", "Name / Number (专用)", "Name / Number (前小号中间)", "Name / Number (白色前小号NK下)", "Name / Number (22/23ad白字)", "Name / Number (22/23ad黑字)", "Name / Number (前小号右标下)", "Name / Number (只印后面)22/23主场", "Name / Number (只印后面-客场黄字)", "Name / Number (24/25主场字) 只印后面", "Name / Number(黑衣标专用字)", "Name/ Number(名在号下)", "Name / Number (22/23ad黄色字)", "Name / Number (22-23ad黑字)", "Name / Number (22-23ad白字)", "Name / Number (只印背后)", "Name / Number (22/23 主场字体)只印背后", "Name / Number (20/21主场字体只印后面)", "Name / Number (前白后蓝)", "Name / Number (名在号上)主场字体", "Name/ Number (专用字体)", "Name/ NumberName / Number (League Fonts 07/08联赛字体)", "Name / NumberName / Number (League Fonts 07/08联赛字体)", "Name / Number (金色联赛字)", 
                         'Name / Number (Name Under Number)名在号下面', 'Name / Number (24/25红ad)', 'Name / Number (24/25绿ad)', 'Name / Number (周年蓝色字)', 'Name / Number (ad白字)', 'Name / Number (Holstein Kiel) (上带广告-名在号下)', 'Name / Number (只印后面ad红)', "Name / Number (24/25白ad)只印后面", "Name / Number (名与号在框内)", "Name / Number (24/25黑ad)只印后面", "Name / Number (名在号上-没广告)", "Name / Number (周年蓝色字)", 'Name /Number', "Name / Number (24/25ad白)只印后面", "Name / Number (24/25ad粉)", "Name / Number (24/25ad黑字)只印后面", "Name / Number (24/25ad)", 'Name / Number (24/25ad金)', 'Name / Number (名在a广告底下)', 'Name / Number (1.FC Magdeburg)(上带广告-名在号下)', 'Name / Number (24/25ad黑)', 'Name / Number (周年字体)', 'Name / Number (Frankfurt) (上带广告-名在号下)', 'Name / Number (24/25白色ad)', 'Name / Number (前小号NK下)', "Name / Number", "Name/ Number", "Name / Numbe", "Name/ Number (名在号下)", "Name / Number (24/25ad黑)只印后面", "Name / Number (专用周年标)", "Name / Number (只印后面)", "Name / Number (24/25ad红)", "Name / Number (名在号下)", "Name / Number (名在号上)", "Name / Number (FC Augsburg) (上带广告-名在号下)", "Name / Number (Mainz 05) (上带广告-名在号下)", "Name / Number (专用字体)", "Name / Number (只印后台)", "Name / Number (24/25黑ad)", "Name / Number (没广告-名在号上)", "Name / Number (24/25蓝ad)", "Name / Number (24/25白ad)", "Name / Number (没广告-名在号下)", "Name / Number (FC BAY.. MUN..)(带广告-名在号下)", "Name / Number (WERDER) (上带广告-名在号下)", "Name / Number (24/25ad蓝) 只印后面", "Name / Number (专用字体)前小号在PM下", "Name/ Number (RB Leipzig)(上带广告-名在号下)", "Name / Number (24/25ad白)", 'Name/Number'],
                 type: "customize",
@@ -5634,7 +5681,7 @@ module.exports = {
                 price: 4
             },
             "Con dorsal PreLeague fonts": {
-                matches: ["Name / Number (Pre League Fonts)联赛主场字", "Name / Number (Pre League Fonts) 联赛红字", "Name / Number (Pre League Fonts) 联赛白字", "Name / Number (Pre League Fonts)联赛白色字", "Name / Number (Pre League Fonts) 联赛字体", "Name / Number (Pre League Fonts)联赛红字", "Name / Number (Pre League Fonts)联赛白字", "Name / Number (Pre League Fonts)联赛白字体", 'Name / Number (Pre League Fonts)联赛黑字', "Name / Number (Pre League Fonts)联赛字体"],
+                matches: ["Name / Number (Pre League Fonts)联赛黄字", "Name / Number (Pre League Fonts)联赛主场字", "Name / Number (Pre League Fonts) 联赛红字", "Name / Number (Pre League Fonts) 联赛白字", "Name / Number (Pre League Fonts)联赛白色字", "Name / Number (Pre League Fonts) 联赛字体", "Name / Number (Pre League Fonts)联赛红字", "Name / Number (Pre League Fonts)联赛白字", "Name / Number (Pre League Fonts)联赛白字体", 'Name / Number (Pre League Fonts)联赛黑字', "Name / Number (Pre League Fonts)联赛字体"],
                 type: "customize",
                 price: 3
             },
@@ -5864,6 +5911,81 @@ module.exports = {
                 matches: ["Champions # 25 amt (冠军25/背下广告)"],
                 type: "customize",
                 price: 0
+            },
+            "Con dorsal Frankfurt con publicidad": {
+                matches: ["Name / Number ('Frankfurt') (带广告看章定位)"],
+                type: "customize",
+                price: 4
+            },
+            "Con dorsal WERDER": {
+                matches: ["Name / Number ( WERDER )(上带广告-名在号下)"],
+                type: "customize",
+                price: 4
+            },
+            "Con dorsal Münster": {
+                matches: ["Name / Number (Münster)(上带广告-名在号下)"],
+                type: "customize",
+                price: 4
+            },
+            "Con dorsal Kaiserslautern": {
+                matches: ["Name / Number (Kaiserslautern)(名在号上-下带广告)"],
+                type: "customize",
+                price: 4
+            },
+            "Con dorsal Leaseweb": {
+                matches: ["Name / Number (Leaseweb)(上带广告-名在号下)"],
+                type: "customize",
+                price: 4
+            },
+            "Con dorsal DRESDEN": {
+                matches: ["Name / Number (DRESDEN)(上带广告-名在号下)"],
+                type: "customize",
+                price: 4
+            },
+            "Con dorsal Dusseldorf": {
+                matches: ["Name / Number (Dusseldorf)(上带广告-名在号下)"],
+                type: "customize",
+                price: 3
+            },
+            "Con dorsal Karlsruher SC": {
+                matches: ["Name / Number (karlsruher SC)(上带广告-名在号下)"],
+                type: "customize",
+                price: 3
+            },
+            "Con dorsal FC Koln retro": {
+                matches: ["Name / Number (1.FC Köln)(上带广告-名在号下)"],
+                type: "customize",
+                price: 4
+            },
+            "Con dorsal CHICHARITO foto": {
+                matches: ["CHICHARITO #14 (印带图号)"],
+                type: "customize",
+                price: 0
+            },
+            "Con dorsal World Champions": {
+                matches: ["World Champions #25 (印世界冠军25)"],
+                type: "customize",
+                price: 0
+            },
+            "Con dorsal BIELEFELD": {
+                matches: ["Name/ Number (BIELEFELD)(上带广告-名在号下)"],
+                type: "customize",
+                price: 4
+            },
+            "Con dorsal MODRIC foto": {
+                matches: ["MODRIC #10 (印照片号码)"],
+                type: "customize",
+                price: 0
+            },
+            "Con dorsal Ligue2 fonts": {
+                matches: ["Name / Number (法乙的字体)"],
+                type: "customize",
+                price: 3
+            },
+            "Con dorsal SAFI CiMENTO": {
+                matches: ["Name / Number (SAFI CiMENTO)(上带广告-名在号下)"],
+                type: "customize",
+                price: 4
             }
         }
     }
